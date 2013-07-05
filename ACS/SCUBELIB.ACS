@@ -1,0 +1,30 @@
+#include "zcommon.acs"
+
+int Souls = 0;
+
+script 1 ENTER
+{
+	int goto_block;
+	switch (goto_block) {
+	case 0:
+		SetFont("BIGFONT");
+		goto_block = 2;
+		restart;
+	case 2:
+		if (!(Souls != 6)) {
+			Terminate;
+		}
+		if (CheckInventory("SoulCube")) {
+			Souls = CheckInventory("CubeAmmo");
+			if ((Souls == 5)) {
+				HudMessage(s:"Free Us!"; 0, 3, 0, 0.35, 1.0, 1);
+				SetMugshotState("Grin");
+			} else {
+				HudMessage(s:"Not Enough Souls"; 0, 3, 0, 0.35, 1.0, 1);
+			}
+		}
+		Delay(35);
+		goto_block = 2;
+		restart;
+	}
+}

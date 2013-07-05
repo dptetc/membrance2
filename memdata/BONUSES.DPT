@@ -1,0 +1,492 @@
+Actor PDA : CustomInventory 29876
+{
+	Height 16
+	Radius 11
+	Inventory.Icon "3PDAB0"
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.INVBAR
+	States
+	{
+	Spawn:
+		3PDA A -1
+		Stop
+	Use:
+		TNT1 A 0 A_Print("Saving...")
+		TNT1 A 1 AutoSave
+		Stop
+	} 
+}
+
+Actor Talisman : PowerupGiver
+{
+	Radius 11
+	Height 16
+	+FLOATBOB
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.INVBAR
+	Inventory.Icon "TaliB0"
+	Powerup.Type "SPEED"
+	states 
+	{
+	Spawn:
+		TALI A -1
+		stop
+	}   
+}
+
+Actor Heal1 : Health
+{
+	Radius 11
+	Height 16
+	Inventory.Amount 11
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		HPP1 A -1
+		stop
+	}   
+}
+
+Actor Heal2 : Health
+{
+	Radius 11
+	Height 16
+	Inventory.Amount 17
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		HPP2 A -1
+		stop
+	}   
+}
+
+Actor Heal3 : Health
+{
+	Radius 11
+	Height 16
+	Inventory.Amount 29
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		HPP3 A -1
+		stop
+	}   
+}
+
+Actor Heal4 : Health
+{
+	Radius 11
+	Height 16
+	Inventory.Amount 71
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		HPP4 A -1
+		stop
+	}   
+}
+
+Actor Venom1 : CustomInventory
+{
+	Radius 11
+	Height 16
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		MRP1 A -1
+		stop 
+	Pickup: 
+		TNT1 A 1 A_SpawnItemEx("PoisonTag1",0)
+		stop
+	}   
+}
+
+actor PoisonTag1 : CStaffMissile
+{
+	Radius 2
+	Height 2
+	States
+	{ 
+	Spawn: 
+		TNT1 A 4 A_Explode(7,4)
+		stop
+	}
+}
+
+Actor Venom2 : CustomInventory
+{
+	Radius 11
+	Height 16
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		MRP2 A -1
+		stop 
+	Pickup: 
+		TNT1 A 1 A_SpawnItemEx("PoisonTag2",0)
+		stop
+	}   
+}
+
+actor PoisonTag2 : CStaffMissile
+{
+	Radius 2
+	Height 2
+	States
+	{ 
+	Spawn: 
+		TNT1 A 4 A_Explode(16,4)
+		stop
+	}
+}
+
+Actor Venom3 : CustomInventory
+{
+	Radius 11
+	Height 16
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		MRP3 A -1
+		stop 
+	Pickup: 
+		TNT1 A 1 A_SpawnItemEx("PoisonTag3",0)
+		stop
+	}   
+}
+
+actor PoisonTag3 : CStaffMissile
+{
+	Radius 2
+	Height 2
+	States
+	{ 
+	Spawn: 
+		TNT1 A 4 A_Explode(26,4)
+		stop 
+	}
+}
+
+Actor Venom4 : CustomInventory
+{
+	Radius 11
+	Height 16
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP
+	states 
+	{
+	Spawn: 
+		MRP4 A -1
+		stop
+	Pickup: 
+		TNT1 A 1 A_SpawnItemEx("PoisonTag4",0)
+		stop
+	}   
+}
+
+actor PoisonTag4 : CStaffMissile
+{
+	Radius 2
+	Height 2
+	States
+	{ 
+	Spawn: 
+		TNT1 A 4 A_Explode(59,4)
+		stop
+	}
+}
+
+actor protectionWeaker1 : PowerProtection
+{
+	DamageFactor "normal", 1.5
+	DamageFactor "ice", 1.5
+	DamageFactor "fire", 1.5
+}
+
+actor protectionWeaker2 : PowerProtection
+{
+	DamageFactor "normal", 2
+	DamageFactor "ice", 2
+	DamageFactor "fire", 2
+}
+
+actor protectionWeaker3 : PowerProtection
+{
+	DamageFactor "normal", 2.5
+	DamageFactor "ice", 2.5
+	DamageFactor "fire", 2.5
+}
+
+actor protectionWeaker4 : PowerProtection
+{
+	DamageFactor "normal", 4
+	DamageFactor "ice", 4
+	DamageFactor "fire", 4
+}
+
+Actor PurpleGoo1 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionWeaker1"
+	PowerUp.color "Purple" 0.6
+	PowerUp.duration 160
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		PRP1 A -1
+		stop 
+	}   
+}
+
+Actor PurpleGoo2 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionWeaker2"
+	PowerUp.color "Purple" 0.68
+	PowerUp.duration 200
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		PRP2 A -1
+		stop 
+	}   
+}
+
+Actor PurpleGoo3 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionWeaker3"
+	PowerUp.color "Purple" 0.74
+	PowerUp.duration 210
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		PRP3 A -1
+		stop 
+	}   
+}
+
+Actor PurpleGoo4 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionWeaker4"
+	PowerUp.color "Purple" 0.86
+	PowerUp.duration 320
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		PRP4 A -1
+		stop 
+	}   
+}
+
+actor protectionupgrader1 : PowerProtection
+{
+	DamageFactor "normal", 0.75 
+	DamageFactor "ice", 0.75 
+	DamageFactor "fire", 0.75 
+}
+
+actor protectionUpgrader2 : PowerProtection
+{
+	DamageFactor "normal", 0.5
+	DamageFactor "ice", 0.5
+	DamageFactor "fire", 0.5
+}
+
+actor protectionUpgrader3 : PowerProtection
+{
+	DamageFactor "normal", 0.35
+	DamageFactor "ice", 0.35
+	DamageFactor "fire", 0.35
+}
+
+actor protectionUpgrader4 : PowerProtection
+{
+	DamageFactor "normal", 0.1
+	DamageFactor "ice", 0
+	DamageFactor "fire", 0.05
+}
+
+Actor GreenGoo1 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionupgrader1"
+	PowerUp.color "DarkGreen" 0.4
+	PowerUp.duration 160
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		RGP1 A -1
+		stop 
+	}   
+}
+
+Actor GreenGoo2 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionupgrader2"
+	PowerUp.color "DarkGreen" 0.4
+	PowerUp.duration 200
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		RGP2 A -1
+		stop 
+	}   
+}
+
+Actor GreenGoo3 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionupgrader3"
+	PowerUp.color "DarkGreen" 0.4
+	PowerUp.duration 210
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		RGP3 A -1
+		stop 
+	}   
+}
+
+Actor GreenGoo4 : PowerUpGiver 
+{
+	Radius 11
+	Height 16
+	PowerUp.Type "protectionupgrader4"
+	PowerUp.color "DarkGreen" 0.4
+	PowerUp.duration 320
+	+FLOATBOB
+	+INVENTORY.ALWAYSPICKUP 
+	states 
+	{
+	Spawn: 
+		RGP4 A -1
+		stop 
+	}   
+}
+
+actor angelring : PowerUpGiver
+{
+	Radius 8
+	Height 6
+	PowerUp.Type "Flight"
+	PowerUp.color "0f 0f 0f" 0.35
+	PowerUp.duration 2000
+	states
+	{ 
+	Spawn:
+		ROWL A -1 
+		stop
+	}
+}
+
+actor SuperHealPotion : CustomInventory
+{
+	Radius 11
+	Height 16
+	states
+	{ 
+	Spawn:
+		MSBL A -1
+		stop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("HealthBonus",50)
+		stop
+	}
+}
+
+actor UltraHealPotion : CustomInventory
+{
+	Radius 11
+	Height 16
+	states
+	{ 
+	Spawn:
+		MLBL A -1
+		stop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("HealthBonus",100)
+		stop
+	}
+}
+
+Actor MultiSphere : CustomInventory
+{
+	Radius 11
+	Height 16
+	states
+	{
+	Spawn:
+		MINS ABCD 4 bright
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("GreenGoo4",1)  
+		TNT1 A 0 A_GiveInventory("ArmorBonus",500)   
+		TNT1 A 1 A_GiveInventory("HealthBonus",500) 
+		stop
+	}
+}
+
+actor GeeBooBottle : CSTAFFMISSILE
+{
+	Speed 14
+	Damage 2
+	Radius 12
+	Height 12
+	PROJECTILE
+	-NOGRAVITY
+	+ROCKETTRAIL
+	+RANDOMIZE
+	DeathSound "GlassBreakER"
+	Gravity 0.05
+	states
+	{
+	Spawn:
+		RGP1 A 4 bright A_CustomMissile("GreenFlame1a",3,0,random(0,360),2,random(0,360))
+		Loop
+	Death: 
+		MISL A 0 A_Explode(26,16)
+		MISL A 0 A_SpawnItemEX("ember3",0)
+		MISL BCD 3 A_CustomMissile("GreenFlame5B",3,0,random(0,300),2,random(0,260))
+		Stop
+	}
+}

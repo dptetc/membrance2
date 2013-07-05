@@ -1,0 +1,554 @@
+splash NULL { }
+
+splash Water
+{
+	smallclass		WaterSplash
+	smallclip		4
+	smallsound		world/water
+
+	baseclass		WaterSplashBase
+	chunkclass		WaterSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift  8
+	chunkbasezvel	4
+	sound			world/water
+}
+
+splash Blood
+{
+	smallclass		BloodSplash
+	smallclip		5
+	smallsound		world/blood
+
+	baseclass		BloodSplashBase
+	chunkclass		BloodSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	4
+	sound			world/blood
+}
+
+splash Lava
+{
+	smallclass		LavaSmoke
+	smallclip		3
+	smallsound		world/lava
+
+	baseclass		LavaSplash
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lava
+}
+
+splash Slime
+{
+	smallclass		SludgeChunk
+	smallclip		3
+	smallsound		world/slime
+
+	baseclass		SludgeSplash
+	chunkclass		SludgeChunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/slime
+}
+
+splash Nuke
+{
+	smallclass		SlimeSplash
+	smallclip		3
+	smallsound		world/slime
+
+	baseclass		SlimeSplash
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/nuke
+}
+
+splash Hot
+{
+	smallclass		LavaSmoke
+	smallclip		3
+	smallsound		world/lava
+
+	baseclass		SlimeChunk
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/hot
+}
+
+splash Grass
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/grass
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/grass
+}
+
+splash Box
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/box
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/box
+}
+
+splash Hell
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/hell
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/hell
+}
+
+splash Skulls
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/skulls
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/skulls
+}
+
+splash Industrial
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/industrial
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/industrial
+}
+
+splash Industrial2
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/industrial
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/industrial2
+}
+
+splash Rock
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/rock
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/rock
+}
+
+splash Wood
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/wood
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/wood
+}
+
+splash NullSpace
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/nullspace
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/nullspace
+}
+
+splash Default
+{
+	smallclass		SlimeChunk
+	smallclip		0
+	smallsound		world/defaultterrain
+
+	baseclass		SlimeChunk
+	chunkclass		SlimeChunk
+	chunkxvelshift	0
+	chunkyvelshift	0
+	chunkzvelshift	0
+	chunkbasezvel	0
+	sound			world/defaultterrain
+}
+
+// Terrain definitions
+terrain Water
+{
+	splash			Water
+	footclip		26
+	liquid
+}
+
+terrain Lava
+{
+	splash			Lava
+	footclip		11
+	liquid
+}
+
+terrain Blood
+{
+	splash			Blood
+	footclip		11
+	liquid
+}
+
+terrain Slime
+{
+	splash			Slime
+	footclip		12
+	liquid
+}
+
+terrain Nuke
+{
+	splash			Nuke
+	footclip		19
+	liquid
+}
+
+terrain Hot
+{
+	splash			Hot
+	footclip		0
+	liquid
+}
+
+terrain Grass
+{
+	splash			Grass
+	footclip		1
+}
+
+terrain Box
+{
+	splash			Box
+	footclip		0
+}
+
+terrain Hell
+{
+	splash			Hell
+	footclip		2
+}
+
+terrain Skulls
+{
+	splash			Skulls
+	footclip		0
+}
+
+terrain Industrial
+{
+	splash			Industrial
+	footclip		0
+}
+
+terrain Industrial2
+{
+	splash			Industrial2
+	footclip		0
+}
+
+terrain Rock
+{
+	splash			Rock
+	footclip		0
+}
+
+terrain Wood
+{
+	splash			Wood
+	footclip		0
+}
+
+terrain Nullspace
+{
+	splash			Nullspace
+	footclip		0
+}
+
+terrain Default
+{
+	splash			Default
+	footclip		0
+}
+
+ifdoom
+// Doom 2 flats
+floor FLOOR0_1 Default
+floor FLOOR0_3 Default
+floor FLOOR0_6 Default
+floor FLOOR1_1 Default
+floor FLOOR1_7 Default
+floor FLOOR3_3 Default
+floor FLOOR4_1 Default
+floor FLOOR4_5 Default
+floor FLOOR4_6 Default
+floor FLOOR4_8 Industrial
+floor FLOOR5_1 Industrial
+floor FLOOR5_2 Default
+floor FLOOR5_3 Default
+floor FLOOR5_4 Default
+floor STEP1 Industrial2
+floor STEP2 Industrial2
+floor FLOOR6_1 Rock
+floor FLOOR6_2 Rock
+floor TLITE6_1 Default
+floor TLITE6_4 Default
+floor TLITE6_5 Default
+floor TLITE6_6 Default
+floor FLOOR7_1 Default
+floor FLOOR7_2 Default
+floor MFLR8_1 Default
+floor DEM1_1 Default
+floor DEM1_2 Default
+floor DEM1_3 Default
+floor DEM1_4 Default
+floor CEIL3_1 Default
+floor CEIL3_2 Default
+floor CEIL3_5 Default
+floor CEIL4_2 Default
+floor CEIL4_3 Default
+floor CEIL5_1 Default
+floor CEIL5_2 Default
+floor FLAT1 Default
+floor FLAT2 Default
+floor FLAT5 Default
+floor FLAT10 Rock
+floor FLAT14 Default
+floor FLAT18 Default
+floor FLAT20 Default
+floor FLAT22 Default
+floor FLAT23 Default
+floor FLAT5_4 Default
+floor FLAT5_5 Default
+floor CONS1_1 Default
+floor CONS1_5 Default
+floor CONS1_7 Default
+floor NUKAGE1 Nuke
+floor NUKAGE2 Nuke
+floor NUKAGE3 Nuke
+floor F_SKY1 Nullspace
+floor SFLR6_1 Hell
+floor SFLR6_4 Hell
+floor SFLR7_1 Hell
+floor SFLR7_4 Hell
+floor FLOOR0_2 Default
+floor FLOOR0_5 Default
+floor FLOOR0_7 Default
+floor FLOOR1_6 Default
+floor GATE1 Default
+floor GATE2 Default
+floor GATE3 Default
+floor GATE4 Default
+floor FWATER1 Water
+floor FWATER2 Water
+floor FWATER3 Water
+floor FWATER4 Water
+floor LAVA1 Lava
+floor LAVA2 Lava
+floor LAVA3 Lava
+floor LAVA4 Lava
+floor DEM1_5 Default
+floor DEM1_6 Default
+floor MFLR8_2 Default
+floor MFLR8_3 Rock
+floor MFLR8_4 Default
+floor CEIL1_1 Default
+floor CEIL1_2 Default
+floor CEIL1_3 Default
+floor CEIL3_3 Default
+floor CEIL3_4 Default
+floor CEIL3_6 Default
+floor CEIL4_1 Default
+floor BLOOD1 Blood
+floor BLOOD2 Blood
+floor BLOOD3 Blood
+floor FLAT1_1 Default
+floor FLAT1_2 Default
+floor FLAT1_3 Default
+floor FLAT5_1 Wood
+floor FLAT5_2 Wood
+floor FLAT5_3 Default
+floor FLAT5_6 Skulls
+floor FLAT5_7 Rock
+floor FLAT5_8 Rock
+floor CRATOP1 Box
+floor CRATOP2 Box
+floor FLAT3 Default
+floor FLAT4 Default
+floor FLAT8 Default
+floor FLAT9 Default
+floor FLAT17 Default
+floor FLAT19 Default
+floor COMP01 Default
+floor GRASS1 Grass
+floor GRASS2 Grass
+floor GRNLITE1 Default
+floor GRNROCK Rock
+floor RROCK01 Default
+floor RROCK02 Default
+floor RROCK03 Default
+floor RROCK04 Rock
+floor RROCK05 Hot
+floor RROCK06 Hot
+floor RROCK07 Hot
+floor RROCK08 Hot
+floor RROCK09 Default
+floor RROCK10 Default
+floor RROCK11 Default
+floor RROCK12 Default
+floor RROCK13 Rock
+floor RROCK14 Default
+floor RROCK15 Default
+floor RROCK16 Default
+floor RROCK17 Default
+floor RROCK18 Default
+floor RROCK19 Grass
+floor RROCK20 Default
+floor SLIME01 Slime
+floor SLIME02 Slime
+floor SLIME03 Slime
+floor SLIME04 Slime
+floor SLIME05 Slime
+floor SLIME06 Slime
+floor SLIME07 Slime
+floor SLIME08 Slime
+floor SLIME09 Hot
+floor SLIME10 Hot
+floor SLIME11 Hot
+floor SLIME12 Hot
+floor SLIME13 Default
+floor SLIME14 Industrial
+floor SLIME15 Industrial
+floor SLIME16 Industrial
+floor F_PWATR1 nuke
+floor F_PWATR2 nuke
+floor F_PWATR3 nuke
+Floor F_GLITE1 Default
+floor P_VENT01 Default
+floor P_SPLATR Default
+floor F_PIPING Default
+floor F_BIGSTN ROCK
+floor F_CRDMET Default
+floor F_001 Grass
+floor F_028 Default
+floor F_029 Default
+floor F_037 Default
+floor F_039 Default
+floor F_040 Default
+Floor F_BASHXL Default
+floor F_FLKLIT Default
+floor F_GDCONC Default
+floor F_GRATE Default
+floor F_SEWR04 ROCK
+floor F_TKSCRN default
+floor XP-VENTF Industrial
+floor ARED Hot
+floor ASWALL Default
+floor BALTF Default
+floor BALTF2 Default
+floor BLACK Default
+floor BLACKF Default
+floor BLACKWF Default
+floor BLOODW Blood
+floor BLUEF default
+floor BSLMFLR1 default
+floor CLAGFLR1 default
+floor CLAGFLR2 default
+floor COMP_B9 default
+floor COMP_G9 default
+floor COMP_R9 default
+floor COMP_W9 default
+floor COMP_Y9 default
+floor CONSOLE Industrial
+floor DALGRIS1 ROCK
+floor DALGRIS2 ROCK
+floor DALLES rock
+floor DALLES2 rock
+floor DIAMOND Industrial
+floor DMDCTF04 default
+floor DMDCTF05 default
+floor FACE-F blood
+floor FACE-FW blood
+floor FLAT25 default
+floor FLAT29 default
+floor FLAT30 default
+floor FLAT31 default
+floor FLAT32 default
+floor FLAT33 default
+floor FLOORTRK Industrial
+floor FLRTRK2 Industrial
+floor FWATERW water
+floor GRASS3 grass
+floor GRATE-F Industrial
+floor GREENF default

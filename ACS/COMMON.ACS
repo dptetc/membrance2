@@ -1,0 +1,7 @@
+#include "zcommon.acs"
+
+script 1 ENTER
+{
+consolecommand("movebob 0");
+terminate;
+}

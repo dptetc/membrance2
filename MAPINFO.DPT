@@ -1,0 +1,202 @@
+gameinfo
+{
+	titletime = 30
+	pagetime = 10
+	titlepage = "MEMTITLE"
+	creditpage = "MEMINFO"
+	infopage = "MEMINFO"
+	titlemusic = "MEMTITLE"
+	mapinfo = "mapinfo.txt"
+	statusbar = "sbarinfo.txt"
+	intermissionmusic = "MEMINTER"
+}
+clearepisodes
+episode MEM00
+{
+	name = "MEMBRANCE"
+	key = "M"
+}
+episode MEM14
+{
+	name = "MEMBRANCE II"
+	key = "M"
+}
+skill baby
+{
+	textcolor = White
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.5
+	EasyBossBrain
+	SpawnFilter = Baby
+	Name = "Don't kill me!"
+	Key = "d"
+}
+skill easy
+{
+	textcolor = Green
+	EasyBossBrain
+	SpawnFilter = Easy
+	Name = "I hate scary things"
+	Key = "i"
+}
+skill normal
+{
+	textcolor = Yellow
+	SpawnFilter = Normal
+	Name = "Shake it, baby!"
+	Key = "s"
+}
+skill hard
+{
+	textcolor = Red
+	SpawnFilter = Hard
+	Name = "Let's Rock!"
+	Key = "l"
+}
+skill nightmare
+{
+	textcolor = Darkred
+	AmmoFactor = 2
+	FastMonsters
+	DisableCheats
+	RespawnTime = 12
+	SpawnFilter = Nightmare
+	Name = "I'm 1337 Player!"
+	MustConfirm
+	Key = "i"
+}
+map TITLEMAP "TITLEMAP"
+{
+	cluster = 0
+	next = "TITLEMAP"
+	secretnext = "TITLEMAP"
+	sky1 = "RSKY1"
+	music = "D_DM2TTL"
+	nointermission
+}
+map MEM00 ""
+{
+	cluster = 0
+	next = "LOADING"
+	music = "INTRO"
+	nointermission
+}
+map LOADING ""
+{
+	cluster = 0
+	next = "MEM01"
+	music = "LOADING"
+	nointermission
+}
+map MEM01 "Ruins"
+{
+	cluster = 0
+	next = "MEM02"
+	secretnext = "MEM02"
+	sky1 = "RSKY0"
+	music = "1"
+}
+map MEM02 "Reactor"
+{
+	cluster = 0
+	next = "MEM03"
+	secretnext = "MEM07"
+	sky1 = "RSKY1"
+	music = "4"
+}
+map MEM03 "Destiny"
+{
+	cluster = 0
+	next = "MEM04"
+	secretnext = "MEM04"
+	sky1 = "RSKY1"
+	music = "D_SNOW"
+}
+map MEM04 "Knight's HellDome"
+{
+	cluster = 0
+	next = "MEM05"
+	secretnext = "MEM05"
+	sky1 = "RSKY1"
+	music = "SPIRAL"
+}
+map MEM05 "Stormy City"
+{
+	cluster = 0
+	next = "MEM06"
+	secretnext = "MEM06"
+	sky1 = "STORM1"
+	music = "3"
+}
+map MEM06 "Dark"
+{
+	cluster = 0
+	next = "MEM07"
+	secretnext = "MEM07"
+	sky1 = "RSKY3"
+	music = "D_DARK"
+}
+map MEM07 "Arena" 
+{
+	cluster = 0
+	next = "MEM08"
+	secretnext = "MEM08"
+	sky1 = "RSKY3"
+	music = "BOSS"
+}
+map MEM08 "Japan" //PUNISHER
+{
+	cluster = 0
+	next = "MEM09"
+	secretnext = "MEM09"
+	sky1 = "RSKY3"
+	music = "JAPAN4"
+}
+map MEM09 "HELL COMES"
+{
+	cluster = 0
+	next = "MEM10"
+	secretnext = "MEM10"
+	sky1 = "RSKY3"
+	music = "D_THEF"
+}
+map MEM10 "HELLDOME ENTERANCE"
+{
+	cluster = 0
+	next = "MEM11"
+	secretnext = "MEM11"
+	sky1 = "RSKY3"
+	music = "D_SEA"
+}
+map MEM11 "HELLDOME OUTDOORS"
+{
+	cluster = 0
+	next = "MEM12"
+	secretnext = "MEM12"
+	sky1 = "RSKY3"
+	music = "D_STLKS2"
+}
+map MEM12 "SATYR'S HALL"
+{
+	cluster = 0
+	next = "MEM13"
+	secretnext = "MEM13"
+	sky1 = "RSKY3"
+	music = "D_SATYR"
+}
+map MEM13 "SATYR'S TEMPLE"
+{
+	cluster = 0
+	next = "ENDMEM"
+	secretnext = "ENDMEM"
+	sky1 = "RSKY3"
+	music = "SATYR"
+	nointermission
+}
+map ENDMEM ""
+{
+	cluster = 0
+	next = "MEM14"
+	nointermission
+}

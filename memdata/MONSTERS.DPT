@@ -1,0 +1,3182 @@
+// BOSS
+
+ACTOR GreaterBaron : BaronOfHell 14910
+{
+	+NoInFighting
+	Health 24000
+	Radius 25
+	Height 54
+	Mass 2000
+	Speed 12
+	Scale 1.3
+	PainChance 185
+	Translation "16:39=104:111", "40:47=5:8", "48:79=32:47", "112:127=216:223"
+	MONSTER
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	+BOSS
+	DropItem "Talisman" 255
+	DropItem "PurpleGoo4" 255 4
+	DropItem "MultiSphere" 4
+	BloodColor "White"
+	BloodType "BloodSplat"
+	Obituary "%o was beat by greaterBaron's fireball."
+	States
+	{
+	Spawn:
+		BOSS A 15 A_Look
+		Loop
+	See:
+		BOSS AB 4 A_Chase
+		BOSS B 1 A_PlaySound("Step1")
+		BOSS CD 4 A_Chase
+		BOSS D 1 A_PlaySound("Step2")
+		Loop
+	Pain:
+		BOSS H 3 A_Pain
+		Goto See
+	Missile:
+		BOSS EF 7 A_Jump(255, "Missile2", "Missile3", "Missile4", "Missile5", "Missile6")
+		Goto See
+	Missile2:
+		BOSS EF 7 A_FaceTarget 
+		BOSS G 12 A_CustomMissile("GeeBooBottle")
+		Goto See
+	Missile4:
+		BOSS EF 15 A_FaceTarget 
+		BOSS G 12 A_CustomMissile("GreaterBaronStorm")
+		Goto See
+	Missile5:
+		BOSS EF 5 A_FaceTarget 
+		BOSS G 5 A_CustomMissile("GeeBooBottle")
+		Goto See
+	Missile6: 
+		BOSS EF 5 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBall",34, -15)
+		BOSS G 0 A_CustomMissile("BaronBall",34, -10)
+		BOSS G 0 A_CustomMissile("BaronBall",34, -5)
+		BOSS G 0 A_CustomMissile("BaronBall",34, 5)
+		BOSS G 0 A_CustomMissile("BaronBall",34, 10)
+		BOSS G 0 A_CustomMissile("BaronBall",34, 15)
+		BOSS G 10 A_CustomMissile("BaronBigBall",34, 0)
+		BOSS EF 5 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBigBall",34, -5)
+		BOSS G 0 A_CustomMissile("BaronBigBall",34, 0)
+		BOSS G 11 A_CustomMissile("BaronBigBall",34, 5)
+		Goto See
+	Missile3:
+		BOSS EF 2 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -10)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -5)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 0)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 5)
+		BOSS G 2 A_CustomMissile("BaronBall", 34, 10)
+		BOSS EF 2 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -10)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -5)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 0)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 5)
+		BOSS G 2 A_CustomMissile("BaronBall", 34, 10)
+		BOSS EF 2 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -10)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -5)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 0)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 5)
+		BOSS G 2 A_CustomMissile("BaronBall", 34, 10)
+		BOSS EF 2 A_FaceTarget 
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -10)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, -5)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 0)
+		BOSS G 0 A_CustomMissile("BaronBall", 34, 5)
+		BOSS G 2 A_CustomMissile("BaronBall", 34, 10)
+		Goto See
+	Melee:
+		Goto Missile
+	Death:
+		BOSS K 3 
+		BOSS K 3 
+		BOSS K 3 Radius_Quake (56,100,7,2,0)
+		BOSS K 6 A_Scream
+		BOSS L 6 A_NoBlocking
+		BOSS M 5 A_Mushroom("BaronBall",16)
+		BOSS M 77 
+		BOSS M -1 A_BossDeath
+		Stop
+	Raise:
+		TNT1 A 1
+		Goto See
+	}
+}
+
+ACTOR GreaterBaronStorm : MAGESTAFFFX2
+{
+	Radius 5
+	Height 5
+	Speed 35
+	Damage 500
+	Scale 2.5
+	SeeSound "GreenStorm/Fire"
+	DeathSound "Explosion2"
+	RenderStyle Add
+	PROJECTILE
+	+Nogravity
+	-PuffGetsOwner
+	-FIREDAMAGE
+	+FULLVOLDEATH
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_CustomMissile("GreenFlame1A",3,0,random(0,360),2,random(0,360))
+		TNT1 A 0 A_CustomMissile("GreenFlame1B",3,0,random(0,360),2,random(0,360))
+		TNT1 A 0 A_CustomMissile("GreenFlame2A",3,0,random(0,360),2,random(0,360))
+		TNT1 A 0 A_CustomMissile("GreenFlame2B",3,0,random(0,360),2,random(0,360))
+		TNT1 A 0 A_CustomMissile("GreenFlame4B",3,0,random(0,360),2,random(0,360))
+		HECF AB 4 Bright A_CustomMissile("GreenStormTrail")
+		HECF C 0 Bright
+		Loop
+	Death:
+		HECF CCCCCCCDDDDDDEEEEEE 2 Bright A_Explode(480,300)
+		stop
+	}
+}
+
+ACTOR GreenStormTrail
+{
+	Radius 5
+	Height 5
+	Damage 15
+	RenderStyle Add
+	SeeSound "Explosion"
+	PROJECTILE
+	+Nogravity
+	-PuffGetsOwner
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_CustomMissile("GreenFlame5A",3,0,random(0,360),2,random(0,360))
+		HECF CDE 4 Bright A_Explode(120, 130)
+		Stop
+	}
+}
+
+ACTOR BaronBigBall : GreenFireBall
+{
+	Scale 1.7
+	Damage 9
+	States
+	{
+	Death:
+		BAL7 C 6 Bright A_explode(46,46)
+		BAL7 DE 6 Bright 
+		Stop
+	}
+}
+
+ACTOR GreenFireBall1 : GreenFireBall
+{
+	Radius 8
+	Height 5
+	Speed 16
+	Damage 25
+	Translation "18:47=112:127", "172:191=112:127", "214:223=120:125", "232:235=126:127"
+	PROJECTILE
+	-Nogravity
+	Gravity 0.06
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_CustomMissile("GreenFlame3B",3,0,random(0,360),2,random(0,360))
+		FATB A 3 Bright A_CustomMissile("GreenFlame2B",3,0,random(0,360),2,random(0,360))
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_CustomMissile("GreenFlame3A",3,0,random(0,360),2,random(0,360))
+		FATB B 3 Bright A_CustomMissile("GreenFlame2A",3,0,random(0,360),2,random(0,360))
+		Loop
+	Death:
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		TNT1 A 0 A_SpawnItemEx("GreenFlame12B", 0, 0, 0, 0, 0, 0, 0, 128)
+		FBXP A 0 Bright A_Explode(100,120)
+		FBXP ABC 5 Bright 
+		stop
+	}
+}
+
+ACTOR Ember3 : Flame1A
+{
+	Scale 0.1
+	Speed 1
+	Translation "212:223=112:123", "232:235=124:127", "168:191=112:127", "28:47=112:127"
+	States
+	{
+	Spawn:
+		EMBR A 0
+		EMBR A 0 ThrustThingZ(0, Random(4, 16), 0, 0)
+		EMBR A 0 ThrustThing(Random(0, 255), Random(0, 1), 0, 0)
+		EMBR A 54 Bright
+	Death:
+		EMBR A 2 Bright A_FadeOut(0.1)
+		Loop
+	}
+}
+
+// BOSS 2
+
+ACTOR Satyr 10666
+{
+	+NoInFighting
+	Health 100500
+	Radius 72
+	Height 192
+	Speed 14
+	PainChance 50
+	Mass 600000
+	MONSTER 
+	+FLOORCLIP
+	+BOSS
+	MeleeDamage 255
+	DropItem "Nothing" 255
+	Scale 3
+	SeeSound "baron/sight"
+	PainSound "baron/pain"
+	DeathSound "baron/death"
+	ActiveSound "baron/active"
+	MeleeSound "baron/melee"
+	HitObituary "%o was mauled by a satyr."
+	BloodType "BloodSplat"
+	States
+	{
+	Spawn:
+		STYR AB 10 A_Look
+		Loop
+	See:
+		STYR A 0 A_JumpIfInventory("BecameInvisible",1,"SpeedWalk")
+		STYR AABBCCDD 3 A_Chase
+		Loop
+	SpeedWalk:
+		TNT1 A 0 A_Recoil(-6)
+		TNT1 A 1 A_Chase
+		STYR A 0 A_JumpIfInventory("BecameInvisible",1,"SpeedWalk")
+		Goto See
+	Missile:
+		STYR A 0 A_JumpIfInventory("BecameInvisible",1,"MeleeStealthEnd")
+		STYR E 6 A_SetTranslucent(6,1)
+		STYR E 1 A_SetTranslucent(5.75,1)
+		STYR E 1 A_SetTranslucent(5.5,1)
+		STYR E 1 A_SetTranslucent(5.25,1)
+		STYR E 1 A_SetTranslucent(5,1)
+		STYR E 1 A_SetTranslucent(4.75,1)
+		STYR E 1 A_SetTranslucent(4.5,1)
+		STYR E 1 A_SetTranslucent(4.25,1)
+		STYR E 1 A_SetTranslucent(4,1)
+		STYR E 1 A_SetTranslucent(3.75,1)
+		STYR E 1 A_SetTranslucent(3.5,1)
+		STYR E 1 A_SetTranslucent(3.25,1)
+		STYR E 1 A_SetTranslucent(3,1)
+		STYR E 1 A_SetTranslucent(2.75,1)
+		STYR E 1 A_SetTranslucent(2.5,1)
+		STYR E 1 A_SetTranslucent(2.25,1)
+		STYR E 1 A_SetTranslucent(2,1)
+		STYR E 1 A_SetTranslucent(1.75,1)
+		STYR E 1 A_SetTranslucent(1.5,1)
+		STYR E 1 A_SetTranslucent(1.25,1)
+		STYR E 1 A_SetTranslucent(1,1)
+		STYR E 1 A_SetTranslucent(0.75,1)
+		STYR E 1 A_SetTranslucent(0.5,1)
+		STYR E 1 A_SetTranslucent(0.25,1)
+		STYR F 1 A_SetTranslucent(0,1)
+		STYR G 0 A_GiveInventory("BecameInvisible",1)
+		Goto See
+	Melee:
+		STYR A 0 A_JumpIfInventory("BecameInvisible",1,"MeleeSteathEnd")
+		STYR EF 8 A_FaceTarget
+		STYR G 8 A_CustomBulletAttack(55,55,100,55,"NOBULLETPUFF")
+		Goto See
+	MeleeStealthEnd:
+		STYR E 1 A_SetTranslucent(1,1) 
+		STYR E 1 A_SetTranslucent(2,1) 
+		STYR E 1 A_SetTranslucent(3,1) 
+		STYR E 1 A_SetTranslucent(4,1) 
+		STYR E 1 A_SetTranslucent(5,1) 
+		STYR E 1 A_SetTranslucent(6,1) 
+		STYR E 1 A_SetTranslucent(8,0) 
+		STYR A 1 A_takeInventory("BecameInvisible",1)
+		STYR EF 8 A_FaceTarget
+		STYR G 8 A_CustomBulletAttack(55,55,100,55,"NOBULLETPUFF")
+		Goto See
+	Pain:
+		STYR H 2 A_Jump(56,"Missile")
+		STYR H 2 A_Pain
+		Goto See
+	Death:
+		STYR I 8
+		STYR J 8 A_Scream
+		STYR K 8 Radius_Quake (116,122,25,8,1)
+		STYR L 8 A_Fall
+		STYR MN 8
+		STYR O -1
+		Stop
+	}
+}
+
+ACTOR BecameInvisible : inventory
+{
+	Inventory.MaxAmount 1
+}
+
+// Monster Other
+
+ACTOR gaast replaces lostsoul 5231
+{
+	Health 60
+	DropItem "UltraHealPotion" 1
+	Speed 7
+	MONSTER
+	+Float
+	+NOGRAVITY
+	+FLOATBOB
+	+NOBLOOD
+	MeleeDamage 12
+	BloodColor "Pink"
+	States
+	{
+	spawn:
+		GAST A 10 A_look
+		loop
+	See:
+		GAST AAAAAAAAAAAAAAAA 4 A_Chase
+		loop
+	Melee:
+		GAST A 10 A_FaceTarget
+		GAST A 1 A_SkullAttack
+		GAST A 1 A_MeleeAttack
+		Goto See
+	Missile:
+		GAST A 0 A_Jump(127,"Missile2")
+		GAST A 10 A_FaceTarget
+		GAST A 1 A_SkullAttack
+		Goto See
+	Missile2:
+		GAST A 10 A_FaceTarget
+		GAST A 1 A_CustomMissile("LAZOR")
+		Goto See
+	Death:
+		TNT1 A 0 A_jump(128,"XDEATH")
+		MISL BCD 2 A_explode
+		TNT1 A 0 A_Fall
+		Stop
+	XDeath:
+		MISL BCD 2 A_explode(255,255,1) 
+		TNT1 A 0 A_SpawnItem("Spawnfire",0,0) 
+		Stop
+	}
+}
+
+ACTOR LAZOR
+{
+	Damage 16
+	Speed 32
+	Radius 4
+	Height 4
+	Projectile
+	+RIPPER
+	+BLOODLESSIMPACT
+	DamageType "LAZOR"
+	States
+	{
+	Spawn:
+		LASR A 10 Bright
+		Loop
+	Death:
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR Trite replaces Arachnotron
+{
+	HitObituary "%o was nipped by a Trite"
+	Health 90
+	Radius 20
+	Height 25
+	Mass 100
+	Speed 6
+	Scale 0.55
+	PainChance 192
+	BloodType "BloodSplat"
+	DropItem "Venom4" 255 4
+	DropItem "Heal1" 166
+	BloodColor DarkGreen
+	PainSound "Trite/Pain"
+	SeeSound "Trite/Sight"
+	DeathSound "Trite/Death"
+	ActiveSound "Trite/Active"
+	MeleeSound "Trite/MeleeHit"
+	MeleeDamage 2
+	MeleeThreshold 64
+	MaxTargetRange 160
+	MinMissileChance 10
+	Damage 2
+	Monster
+	+FloorClip
+	+DontHurtSpecies
+	+NoTarget
+	States
+	{
+	Spawn:
+		TRIT A 1 A_Look
+		Loop
+	See:
+		TRIT A 2 A_Chase("", "", 0)
+		TRIT A 2 A_Chase
+		TRIT A 0 A_PlaySoundEx("Trite/Step", "SoundSlot7", 0)
+		TRIT BB 2 A_Chase("Melee", "Missile", 2)
+		TRIT B 0 A_PlaySoundEx("Trite/Step", "SoundSlot7", 0)
+		TRIT CC 2 A_Chase
+		TRIT C 0 A_PlaySoundEx("Trite/Step", "SoundSlot7", 0)
+		TRIT DD 2 A_Chase("Melee", "Missile", 2)
+		TRIT D 0 A_PlaySoundEx("Trite/Step", "SoundSlot7", 0)
+		TRIT A 0 A_Jump(150,"See")
+		Goto Strafe
+	Strafe:
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT B 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT C 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		TRIT A 0 ThrustThing(angle*270/360-0, 1, 0, 0)
+		TRIT A 0 A_Chase
+		TRIT D 1 A_Recoil(-2)
+		Goto Missile
+	Melee:
+		TRIT A 6 A_FaceTarget
+		TRIT A 0 A_Jump(192, 2)
+		TRIT A 0 A_PlaySound("Trite/Attack")
+		TRIT E 6 A_MeleeAttack
+		Goto See
+	Missile:
+		TRIT A 0 A_Jump(128, "See")
+		TRIT AAA 3 A_FaceTarget
+		TRIT F 0 A_PlaySound("Trite/Attack")
+		TRIT F 0 A_SkullAttack
+		TRIT F 10 ThrustThingZ(0, 6, 0, 1)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		TRIT E 8 A_Stop
+		Goto See
+	Web:
+		TRIT F 0
+		TRIT F 0 A_ChangeFlag("LowGravity", 1)
+		TRIT F 0 A_ChangeFlag("NoDamage", 1)
+		TRIT F 0 A_ChangeFlag("NoPain", 1)
+		TRIT F 0 A_PlaySound("Trite/WebStart")
+		TRIT F 1 A_CheckFloor(1)
+		Goto Web+5
+		TRIT A 0 A_ChangeFlag("NoDamage", 0)
+		TRIT A 0 A_ChangeFlag("NoPain", 0)
+		TRIT A 0 A_ChangeFlag("LowGravity", 0)
+		TRIT A 12 A_PlaySound("Trite/WebEnd")
+		Goto Spawn
+	Pain:
+		TRIT E 3
+		TRIT E 3 A_Pain
+		Goto See
+	Death:
+		TRIT G 5 A_Scream
+		TRIT H 0 A_PlaySoundEx("Trite/Splat", "SoundSlot7", 0)
+		TRIT H 5 A_NoBlocking
+		TRIT IJK 5   A_Explode(50,50,1)
+		NULL A 0 A_spawnitemEx("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitemex("spiderspawner",16,0)
+		NULL A 0 A_spawnitem("spiderspawner",16,0)
+		Stop
+	}
+}
+
+ACTOR M_Spider 20000
+{
+	Health 1
+	Radius 4
+	Height 4
+	Mass 100
+	Speed 5
+	MeleeDamage 1
+	PainChance 255
+	scale .04
+	Monster
+	Obituary "%o was eaten by a spider"
+	maxstepheight 128
+	+NOBLOOD
+	+DROPOFF
+	+DONTOVERLAP
+	+NOTELEPORT
+	States
+	{
+	Spawn:
+		ANT1 A 1 A_Look
+		Loop
+	See:
+		ANT1 AABBAACCAABBAABC 1 A_Chase
+		Loop
+	Melee:
+		ANT1 A 10 A_MeleeAttack
+		Goto See
+	Death:
+		ANT1 D 70 A_Die
+		ANT1 EF 70
+		Stop
+	}
+}
+
+ACTOR SpiderSpawner
+{
+	Height 1
+	Radius 1
+	Speed 0
+	-COUNTKILL
+	+NOCLIP
+	+NOINTERACTION
+	+NOBLOCKMAP
+	Projectile 
+	States
+	{
+	Spawn:
+		TNT1 A 1 A_SpawnItemEx("M_Spider",0)
+		Stop
+	}
+}
+
+ACTOR RedNemezdaBest : cacodemon 10660
+{
+	+NoInFighting
+	Speed 16
+	FloatSpeed 32
+	Mass 999999999999999999
+	DamageType ice
+	BloodColor blue
+	Health 1600
+	RENDERSTYLE TRANSLUCENT
+	Alpha 0.5
+	meleedamage 10
+	PainChance 76
+	+FLOAT
+	+LOOKALLAROUND
+	+NOGRAVITY
+	-NOCLIP
+	-NOTELEOTHER
+	MissileType RedNemezdaIceBall
+	BloodType "BloodSplat"
+	Obituary "%o was destroyed by the red nemezda."
+	States
+	{
+	Spawn:
+		HEAD A 1 A_Look
+		Loop
+	See:
+		HEAD AAAAAAAAAAAAAAAAAAAAAAAA 1 A_Chase
+		HEAD A 1 A_Recoil(-4)
+		Loop
+	Missile:
+		HEAD B 5 A_Jump(46,"missile2")
+		HEAD B 5 A_FaceTarget
+		HEAD C 5 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		HEAD C 1 A_FaceTarget
+		HEAD D 1 Bright A_ComboAttack
+		Goto See
+	Missile2:
+		HEAD B 25 A_FaceTarget
+		HEAD C 15 A_FaceTarget
+	Missile3:
+		HEAD B 0 A_FaceTarget
+		HEAD DC 2 A_CustomMissile("RedNemezdaIceBall2", random(10,28),random(1,5))
+		HEAD B 1 A_FaceTarget
+		Goto Missile3+1
+	Pain:
+		HEAD E 3
+		HEAD E 3 A_Pain
+		HEAD F 6
+		Goto See
+	Death:
+		HEAD G 8
+		HEAD H 8 A_Scream
+		HEAD I 8
+		HEAD J 8
+		MISL BCD 8 A_Mushroom("RedNemezdaIceBall",8)
+		TNT1 A 0 A_NoBlocking
+		TNT1 A -1 A_SetFloorClip
+		Stop
+	Raise:
+		HEAD L 8 A_UnSetFloorClip
+		HEAD KJIHG 8
+		Goto See
+	}
+} 
+
+ACTOR PainElemental2 replaces PainElemental
+{
+	Health 400
+	Radius 31
+	Height 56
+	Mass 400
+	Speed 8
+	PainChance 128
+	Monster
+	+FLOAT 
+	+NOGRAVITY
+	SeeSound "pain/sight"
+	PainSound "pain/pain"
+	DeathSound "pain/death"
+	ActiveSound "pain/active"
+	BloodType "BloodSplat"
+	States
+	{
+	Spawn:
+		PAIN A 10 A_Look
+		Loop
+	See:
+		PAIN AABBCC 3 A_Chase
+		Loop
+	Missile:
+		PAIN D 5 A_FaceTarget
+		PAIN E 5 A_FaceTarget
+		PAIN F 4 Bright A_FaceTarget
+		PAIN F 1 Bright A_PainAttack("PainElemental3")
+		Goto See
+	Pain:
+		PAIN G 6
+		PAIN G 6 A_Pain
+		Goto See
+	Death:
+		PAIN H 8 Bright
+		PAIN I 8 Bright A_Scream
+		PAIN JK 8 Bright
+		PAIN L 8 Bright A_PainDie("PainElemental3")
+		PAIN M 8 Bright
+		Stop
+	Raise:
+		PAIN MLKJIH 8
+		Goto See
+	}
+}
+
+ACTOR PainElemental3
+{
+	Health 80
+	Radius 8
+	Height 14
+	Mass 400
+	Speed 16
+	PainChance 255
+	MeleeDamage 1
+	Scale 0.35
+	Monster
+	+FLOAT 
+	+FLOATBOB
+	+NOGRAVITY
+	SeeSound "pain/sight"
+	PainSound "pain/pain"
+	DeathSound "pain/death"
+	ActiveSound "pain/active"
+	BloodType "BloodSplat"
+	States
+	{
+	Spawn:
+		PAIN A 10 A_Look
+		Loop
+	See:
+		PAIN AABBCC 3 A_Chase
+		Loop
+	Melee:
+		PAIN D 5 A_FaceTarget
+		PAIN E 5 A_FaceTarget
+		PAIN F 4 Bright A_FaceTarget
+		PAIN F 1 Bright A_meleeattack
+		Goto See
+	Pain:
+		PAIN G 6
+		PAIN G 6 A_Pain
+		Goto See
+	Death:
+		PAIN H 8 Bright
+		PAIN I 8 Bright A_Scream
+		PAIN JK 8 Bright
+		PAIN L 8 Bright
+		PAIN M 8 Bright
+		Stop
+	Raise:
+		PAIN MLKJIH 8
+		Goto See
+	}
+}
+
+ACTOR NOBULLETPUFF 
+{
+	PROJECTILE
+	damagetype "EpicDeath"
+	States
+	{
+	Spawn:
+		TNT1 A 1  
+		Stop
+	}
+}
+
+ACTOR nemezdaBallpuff
+{ 
+	Scale 0.41
+	radius 2
+	height 2
+	PROJECTILE
+	States
+	{
+	Spawn:
+		PFOG A 1 Bright A_SetTranslucent(0.95, 1)
+		PFOG A 1 Bright A_SetTranslucent(0.85, 1)
+		PFOG B 1 Bright A_SetTranslucent(0.75, 1)
+		PFOG B 1 Bright A_SetTranslucent(0.65, 1)
+		PFOG C 1 Bright A_SetTranslucent(0.55, 1)
+		PFOG C 1 Bright A_SetTranslucent(0.45, 1)
+		PFOG D 1 Bright A_SetTranslucent(0.35, 1)
+		PFOG D 1 Bright A_SetTranslucent(0.25, 1)
+		PFOG E 2 Bright A_SetTranslucent(0.15, 1)
+		PFOG F 2 Bright A_SetTranslucent(0.05, 1)
+		Stop
+	}
+}
+
+ACTOR NemezdaBallparticle 
+{ 
+	Scale 0.14
+	Speed 2.5
+	Radius 4
+	Height 4
+	Alpha 0.7
+	RenderStyle add
+	+CLIENTSIDEONLY
+	+NOINTERACTION
+	+NOTDMATCH
+	States
+	{
+	Spawn:
+		PFOG ABC 3 Bright
+		PFOG D 3 Bright A_SetTranslucent(0.7, 1)
+		PFOG E 3 Bright A_SetTranslucent(0.5, 1)
+		PFOG F 3 Bright A_SetTranslucent(0.2, 1)
+		Stop
+	}
+}
+
+ACTOR NemezdaBallparticle2 
+{ 
+	Scale 0.46
+	Speed 0.4
+	Radius 3
+	Height 3
+	Alpha 0.5
+	RenderStyle Add
+	+CLIENTSIDEONLY
+	+NOINTERACTION
+	+NOTDMATCH
+	States
+	{
+	Spawn:
+		PFOG ABCDEF 4 Bright
+		Stop
+	}
+}
+
+ACTOR RedNemezdaIceBall : plasmaball
+{
+	speed 16
+	damagetype ice
+	renderstyle soultrans
+	+SHADOW
+	States
+	{
+	Spawn:
+		IFOG AB 6 Bright A_BishopMissileWeave
+		Loop
+	Death:
+		PFOG A 0 Bright A_SpawnItem("nemezdaBallpuff",0)
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle2",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle2",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle2",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle",3,0,random(0,360),2,random(0,360))
+		PFOG A 0 Bright A_CustomMissile("NemezdaBallparticle2",3,0,random(0,360),2,random(0,360))
+		TNT1 A 1 Bright A_CustomMissile("NemezdaBallparticle2",3,0,random(0,360),2,random(0,360))
+		Stop
+	}
+}
+
+ACTOR RedNemezdaIceBall2 : RedNemezdaIceBall
+{
+	speed 32
+	Damage 16
+	Scale 0.8
+	Translation "192:207=203:207"
+}
+
+
+ACTOR RedNemezdaIceBall3 : RedNemezdaIceBall
+{
+	speed 32
+	Damage 1
+	Scale 0.1
+	Translation "192:207=168:191"
+}
+
+ACTOR SuperImp 12000
+{
+	+NoInFighting
+	Health 25
+	Radius 22
+	Height 58
+	Mass 99999999999999999999999
+	BloodColor "00 00 FF"
+	Scale 1.1 
+	RenderStyle Stencil
+	StencilColor Blue
+	Translation "0:255=192:207"
+	MissileType RedNemezdaIceBall
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	+LOOKALLAROUND
+	Mass 100
+	Speed 12
+	PainChance 56
+	Scale 1.1
+	Monster
+	+FLOORCLIP
+	BloodType "BloodSplat"
+	SeeSound "imp/sight"
+	PainSound "imp/pain"
+	DeathSound "imp/death"
+	ActiveSound "imp/active"
+	HitObituary "$OB_IMPHIT"
+	Obituary "$OB_IMP"
+	States
+	{
+	Spawn:
+		TROO AB 1 A_Look
+		Loop
+	See:
+		TROO A 0 A_CustomMissile("ImpShadow1",0,0,180)
+		TROO AA 1 A_Chase
+		TROO A 0 A_CustomMissile("ImpShadow2",0,0,180)
+		TROO BB 1 A_Chase
+		TROO A 0 A_CustomMissile("ImpShadow3",0,0,180)
+		TROO CC 1 A_Chase
+		TROO A 0 A_CustomMissile("ImpShadow4",0,0,180)
+		TROO DD 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		TROO EF 4 A_FaceTarget
+		TROO G 3 A_ComboAttack
+		Goto See
+	Pain:
+		TROO H 1
+		TROO H 1 A_Pain
+		Goto See
+	Death:
+		TROO I 4
+		TROO J 4 A_Scream
+		TROO K 3
+		TROO L 3 A_NoBlocking
+		TROO M -1
+		Stop
+	XDeath:
+		TROO N 2
+		TROO O 2 A_XScream
+		TROO P 2
+		TROO Q 2 A_NoBlocking
+		TROO RST 2
+		TROO U -1
+		Stop
+	Raise:
+		TROO MLKJI 8
+		Goto See
+	}
+}
+
+ACTOR ImpShadow1 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=192:207"
+	States
+	{
+	Spawn:
+		TROO A 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR ImpShadow2 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=192:207"
+	States
+	{
+	Spawn:
+		TROO B 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR ImpShadow3 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=192:207"
+	States
+	{
+	Spawn:
+		TROO C 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR ImpShadow4 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=192:207"
+	States
+	{
+	Spawn:
+		TROO D 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR PossessedArmor : SuperImp 12001
+{
+	Health 2100
+	Translation "0:255=0:0"
+	BloodType "BloodSplat"
+	Speed 16
+	PainChance 16
+	States
+	{
+	See:
+		TROO A 0 A_CustomMissile("Imp2Shadow1",0,0,180)
+		TROO AA 1 A_Chase
+		TROO A 0 A_CustomMissile("Imp2Shadow2",0,0,180)
+		TROO BB 1 A_Chase
+		TROO A 0 A_CustomMissile("Imp2Shadow3",0,0,180)
+		TROO CC 1 A_Chase
+		TROO A 0 A_CustomMissile("Imp2Shadow4",0,0,180)
+		TROO DD 1 A_Chase
+		Loop
+	}
+}
+
+ACTOR Imp2Shadow1 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=0:0"
+	States
+	{
+	Spawn:
+		TROO A 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR Imp2Shadow2 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=0:0"
+	States
+	{
+	Spawn:
+		TROO B 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR Imp2Shadow3 
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=0:0"
+	States
+	{
+	Spawn:
+		TROO C 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR Imp2Shadow4
+{
+	alpha 0.8
+	RenderStyle Translucent
+	Scale 1.1
+	Translation "0:255=0:0"
+	States
+	{
+	Spawn:
+		TROO D 2 A_FadeOut(0.1)
+		Loop
+	}
+}
+
+ACTOR Zombieman1 : zombieman
+{
+	DropItem "PDA" 15
+	DropItem "Mem_Pistol"
+	DropItem "Clip" 255 18
+	BloodType "BloodSplat"
+}
+
+ACTOR Zombieman2 : zombieman1
+{
+	Scale 0.8
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS F 5 A_PosAttack
+		POSS E 1 A_CposRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR Zombieman3 : zombieman1
+{
+	Scale 0.9
+	States
+	{
+	Missile:
+		POSS E 15 A_FaceTarget
+		POSS F 1 A_PosAttack
+		POSS E 1 A_CposRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR Zombieman4 : zombieman1
+{
+	YScale 1.1
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS F 1 A_PosAttack
+		POSS E 1 A_PosAttack
+		Goto See
+	}
+}
+
+ACTOR Zombieman5 : zombieman1
+{
+	Scale 0.96
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS F 1 A_PosAttack
+		POSS E 10 A_FaceTarget
+		POSS E 1 A_PosAttack
+		Goto See
+	}
+}
+
+ACTOR Zombieman6 : zombieman1
+{
+	XScale 1.08
+	DropItem "PDA" 226
+	States
+	{
+	Missile:
+		POSS E 8 A_FaceTarget
+		POSS F 8 A_PosAttack
+		POSS E 8 A_CPosAttack
+		Goto Missile+1
+	}
+}
+
+ACTOR Zombieman7 : zombieman1
+{
+	Scale 0.97
+	DropItem "Venom3" 127
+	States
+	{
+	Missile:
+		POSS E 8 A_FaceTarget
+		POSS F 8 A_PosAttack
+		Goto See
+	}
+}
+
+ACTOR Zombieman8 : zombieman1
+{
+	XScale 0.9
+	DropItem "Venom1" 246
+	States
+	{
+	Missile:
+		POSS E 8 A_FaceTarget
+		POSS F 8 A_PosAttack
+		Goto See
+	}
+}
+
+ACTOR Zombieman9 : zombieman1
+{
+	Yscale 0.8
+	DropItem "Venom4" 116
+	MinMissileChance 2
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS EF 1 A_CustomBulletAttack (8, 0, 1, 3*random(1,5), "BulletPuff", 2048, 0)
+		Goto See
+	}
+}
+
+ACTOR Zombieman10 : zombieman1
+{
+	Scale 0.99
+	DropItem "Venom2" 256
+	MinMissileChance 2
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS EF 1 A_CustomRailgun(50, 2*random(2,5), "Blue", "White",0,2*random(2,5),2*random(2,5),"ShockPuff")
+		Goto See
+	}
+}
+
+ACTOR Zombieman11 : zombieman1
+{
+	Scale 0.79
+	DropItem "Venom4" 116
+	MinMissileChance 2
+	DropItem "SilencerAsItem" 115
+	Decal ShockGunScorch
+	DropItem "Megasphere" 116
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS EF 1 A_CustomBulletAttack(2,2,1,7,"ShockPuff")
+		Goto See
+	}
+}
+
+ACTOR Zombieman12 : zombieman1
+{
+	Scale 0.98
+	DropItem "Venom2" 256
+	DropItem "SilencerAsItem" 256
+	MinMissileChance 2
+	DropItem "UltraHealthPotion" 115
+	States
+	{
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS EF 1 A_CustomRailgun(75, 0, "Yellow", "Black",0)
+		Goto See
+	}
+}
+
+ACTOR Zombieman13 : zombieman1
+{
+	Scale 0.8
+	DropItem "Venom2" 256
+	MinMissileChance 2
+	States
+	{
+	Missile:
+		POSS E 1 A_FaceTarget
+		POSS EF 5 A_CustomMissile("RedNemezdaIceBall2", random(10,28),random(1,5))
+		POSS E 1 A_FaceTarget
+		Goto See
+	}
+}
+
+ACTOR ZombieMan14 : ZombieMan1
+{
+	DropItem "SilencerAsItem" 76
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	YScale 1.11
+}
+
+ACTOR ZombieMan15 : ZombieMan1
+{
+	DropItem "SilencerAsItem" 116
+	Yscale 0.9
+	States
+	{
+	See:
+		POSS AABBCCDD 4 A_FASTChase
+		Loop
+	Missile:
+		POSS E 10 A_FaceTarget
+		POSS F 8 A_BSPIATTACK
+		POSS E 8
+		Goto See
+	}
+}
+
+ACTOR ZombieMan16 : ZombieMan1
+{
+	DropItem CLIP
+	DropItem CELL 92
+	DropItem Medikit 92
+	Xscale 1.2
+	States
+	{
+	See:
+		POSS AABBCCDD 2 A_FASTChase
+		Loop
+	Missile:
+		POSS E 5 A_FaceTarget
+		POSS F 6 A_BSPIATTACK
+		POSS E 8 A_SPIDREFIRE
+		Goto MISSILE+1
+	}
+}
+
+ACTOR ZombieMan17 : ZombieMan1
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		POSS AB 10 A_Look
+		loop
+	See:
+		POSS A 0
+		POSS AABBCCDD 2 A_FastChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS G 0 Thing_ChangeTID(0,1564)
+		POSS A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	}
+}
+
+ACTOR ZombieManRuinsSpecial : Zombieman1 10778
+{
+	DropItem "SilencerAsItem" 255
+	Scale 0.9
+	Speed 10
+	MinMissileChance 118
+}
+
+ACTOR SilencerAsItem : CustomInventory
+{
+	Radius 11
+	Height 16
+	States
+	{ 
+	Spawn:
+		SOLT A -1
+		stop
+	PickUp:
+		TNT1 A 1 A_GiveInventory("Silencer",1)
+		stop
+	}
+}
+
+ACTOR ShotgunGuy1 : shotgunguy
+{
+	DropItem "PDA" 20
+	DropItem "Heal1" 12
+	DropItem "Mem_Shotgun"
+	DropItem "Shell" 255 4
+	BloodType "BloodSplat"
+}
+
+ACTOR ShotgunGuy2 : ShotgunGuy1
+{
+	YScale 1.2
+	States
+	{
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 10 Bright A_CposAttack
+		SPOS E 10
+		Goto See
+	}
+}
+
+ACTOR ShotgunGuy3 : ShotgunGuy1
+{
+	Yscale 0.97
+	States
+	{
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 10 Bright A_CposAttack
+		SPOS E 10 A_CposRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR ShotgunGuy4 : ShotgunGuy1
+{
+	xScale 0.9
+	States
+	{
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 10 Bright A_SPosAttackUseAtkSound
+		SPOS E 10 A_CposRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR ShotgunGuy5 : shotgunguy1
+{
+	xscale 1.1
+	States
+	{
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 0 Bright A_SposAttackUseAtkSound
+		SPOS F 10 Bright A_SposAttackUseAtkSound
+		SPOS E 10
+		Goto See
+	}
+}
+
+ACTOR ShotgunGuy6 : shotgunguy1
+{
+	scale 0.9
+	States
+	{
+	See:
+		SPOS AABBCCDD 3 A_FASTChase
+		Loop
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 10 Bright A_SposAttackUseAtkSound
+		SPOS E 10 A_CPOSREFIRE
+		Goto MISSILE+1
+	}
+}
+
+ACTOR ShotgunGuy7 : shotgunguy1
+{
+	Yscale 1.05
+	xscale 1.1
+	DropItem mem_Shotgun
+	DropItem Medikit 92
+	States
+	{
+	See:
+		SPOS AABBCCDD 2 A_FASTChase
+		Loop
+	Missile:
+		SPOS E 10 A_FaceTarget
+		SPOS F 0 Bright A_SposAttackUseAtkSound
+		SPOS F 10 Bright A_SposAttackUseAtkSound
+		SPOS E 10 A_CPOSREFIRE
+		Goto MISSILE+1
+	}
+}
+
+ACTOR ShotgunGuy8 : shotgunguy1
+{
+	XScale 0.9
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		SPOS AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS G 0 Thing_ChangeTID(0,1564)
+		SPOS A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		SPOS AABBCCDD 2 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	}
+}
+
+ACTOR ChaingunGuy1 : ChaingunGuy
+{
+	Xscale 1.1
+	DropItem "PDA" 38
+	DropItem "Heal2" 15
+	DropItem "Mem_Chaingun"
+	DropItem "Clip" 255 50
+	BloodType "BloodSplat"
+}
+
+ACTOR ChaingunGuy2 : ChaingunGuy1
+{
+	States
+	{
+	Missile:
+		CPOS E 10 A_FaceTarget
+		CPOS FE 3 Bright A_CPosAttack
+		CPOS F 1 A_CPosRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR ChaingunGuy3 : ChaingunGuy1
+{
+	States
+	{
+	Missile:
+		CPOS E 10 A_FaceTarget
+		CPOS FE 2 Bright A_CPosAttack
+		CPOS F 1 A_CPosRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR ChaingunGuy4 : ChaingunGuy1
+{
+	DropItem Chaingun
+	DropItem SHELLBOX 92
+	DropItem Medikit 92
+	States
+	{
+	Missile:
+		CPOS E 10 A_FaceTarget
+		CPOS FE 2 Bright A_SposAttackUseAtkSound
+		CPOS F 1 A_CPosRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR ChaingunGuy5 : ChaingunGuy1
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		CPOS AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		CPOS A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		POSS A 0
+		CPOS AABBCCDD 4 A_Chase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	Missile:
+		CPOS E 10 A_FaceTarget
+		CPOS FE 2 Bright A_SposAttackUseAtkSound
+		CPOS F 1 A_CPosRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR DoomImp1 : Doomimp
+{
+	DropItem "Heal1" 55
+	DropItem "Heal2" 25
+	BloodType "BloodSplat"
+}
+
+ACTOR DoomImp2 : DoomImp1
+{
+	Scale 0.9
+	+MISSILEMORE
+	+MISSILEEVENMORE
+}
+
+ACTOR DoomImp3 : DoomImp1
+{
+	States
+	{
+	See:
+		TROO AABBCCDD 3 A_FASTCHASE
+		Loop
+	}
+}
+
+ACTOR DoomImp4 : DoomImp1
+{
+	DropItem Medikit 92
+	SPEED 16
+	States
+	{
+	See:
+		TROO AABBCCDD 2 A_CHASE
+		Loop
+	Melee:
+	Missile:
+		TROO EF 1 A_FaceTarget
+		TROO G 1 A_TroopAttack 
+		Goto See
+	}
+}
+
+ACTOR DoomImp5 : DoomImp1
+{
+
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		TROO AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		TROO A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		TROO AABBCCDD 2 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	}
+}
+
+ACTOR Demon1 : demon
+{
+	DropItem "Heal2" 35
+	DropItem "Venom1" 63
+	DropItem "Venom3" 17
+	BloodType "BloodSplat"
+}
+
+ACTOR Demon2 : Demon1
+{
+	States
+	{
+	See:
+		SARG AABBCCDD 2 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Demon3 : Demon1
+{
+	States
+	{
+	Missile:
+		SARG EF 8 A_FaceTarget
+		SARG G 8 A_SkullAttack
+		SARG FE 8
+		Goto Missile
+	Melee:
+		SARG EF 8 A_FaceTarget
+		SARG G 8 A_SargAttack
+		Goto See
+	See:
+		SARG AABBCCDD 2 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Demon4 : Demon1
+{
+	DropItem Medikit 92
+	SPEED 16
+	States
+	{
+	Missile:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SkullAttack
+		SARG FE 1
+		Goto Missile
+	Melee:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SargAttack
+		Goto See
+	See:
+		SARG AABBCCDD 1 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Demon5 : Demon1
+{
+
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		SARG AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		SARG A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		POSS A 0
+		SARG AABBCCDD 1 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	Missile:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SkullAttack
+		SARG FE 1
+		Goto Missile
+	}
+}
+
+ACTOR Spectre1 : Spectre
+{
+	DropItem "Venom1" 216
+	DropItem "Heal4" 11
+	BloodType "BloodSplat"
+}
+
+ACTOR Spectre2 : Spectre1
+{
+	States
+	{
+	See:
+		SARG AABBCCDD 2 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Spectre3 : Spectre1
+{
+	States
+	{
+	Missile:
+		SARG EF 8 A_FaceTarget
+		SARG G 8 A_SkullAttack
+		SARG FE 8
+		Goto See
+	Melee:
+		SARG EF 8 A_FaceTarget
+		SARG G 8 A_SargAttack
+		Goto See
+	See:
+		SARG AABBCCDD 2 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Spectre4 : Spectre1
+{
+	DropItem Medikit 92
+	SPEED 16
+	States
+	{
+	Missile:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SkullAttack
+		SARG FE 1
+		Goto See
+	Melee:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SargAttack
+		Goto See
+	See:
+		SARG AABBCCDD 1 A_FASTChase
+		Loop
+	}
+}
+
+ACTOR Spectre5 : Spectre1
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("ShadowItem",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		SARG AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		SARG A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		POSS A 0
+		SARG AABBCCDD 1 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	Missile:
+		SARG EF 1 A_FaceTarget
+		SARG G 1 A_SkullAttack
+		SARG FE 1
+		Goto Missile
+	}
+}
+
+ACTOR CacoDemon1 : Cacodemon
+{
+	DropItem "heal1" 126
+	DropItem "Heal3" 54
+	DropItem "AngelRing" 65 
+	BloodType "BloodSplat"
+}
+
+ACTOR CacoDemon2 : CacoDemon1
+{
+	+MISSILEMORE
+}
+
+ACTOR CacoDemon3 : CacoDemon1
+{
+	+MISSILEMORE
+	States
+	{
+	See:
+		HEAD A 2 A_FASTChase
+		Loop
+	Missile:
+		HEAD B 2 A_FaceTarget
+		HEAD C 2 A_FaceTarget
+		HEAD D 2 Bright A_HeadAttack
+		Goto See
+	}
+}
+
+ACTOR CacoDemon4 : CacoDemon1
+{
+	DropItem Medikit 92
+	+MISSILEMORE
+	States
+	{
+	See:
+		HEAD A 2 A_FASTChase
+		Loop
+	Missile:
+		HEAD B 1 A_FaceTarget
+		HEAD C 1 A_FaceTarget
+		HEAD D 0 Bright A_FatAttack1("CACODEMONBALL")
+		HEAD D 0 Bright A_FatAttack3("CACODEMONBALL")
+		HEAD D 0 Bright A_FatAttack2("CACODEMONBALL")
+		HEAD D 1 Bright A_HeadAttack
+		Goto See
+	}
+}
+
+ACTOR CacoDemon5 : CacoDemon1
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		HEAD A 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		HEAD A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		HEAD A 2 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	}
+}
+
+ACTOR HellKnight1 : HellKnight 
+{
+	DropItem "Heal2" 26
+	DropItem "Heal4" 12
+	DropItem "PurpleGoo1" 57
+	BloodType "BloodSplat"
+	States
+	{
+	Missile:
+		BOS2 A 0 A_Jump(122, "Missile2")
+		BOS2 E 6 A_FaceTarget 
+		BOS2 F 6 
+		BOS2 G 6 Bright A_CustomMissile("BaronBall")
+		Goto See
+	Missile2:
+		BOS2 E 6 A_FaceTarget 
+		BOS2 F 6 
+		BOS2 G 6 Bright A_CustomMissile("GeeBooBottle")
+		Goto See
+	}
+}
+
+ACTOR HellKnight2 : HellKnight1
+{
+	Scale 1.12
+	DropItem "Heal4" 212
+	DropItem "Venom1" 21 23
+	DropItem "PurpleGoo3" 56 3
+	SPEED 12
+	+MISSILEMORE
+}
+
+ACTOR HellKnight3 : HellKnight1
+{
+	Scale 0.91
+	SPEED 9
+	+MISSILEMORE
+	States
+	{
+	See:
+		BOS2 AABBCCDD 3 A_FASTChase
+		Loop
+	Melee:
+	Missile:
+		BOS2 EF 8 A_FaceTarget
+		BOS2 G 8 A_BruisAttack
+		BOS2 G 0 A_jump(100,1)
+		Goto See
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-8)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-4)
+		BOS2 G 0 A_BruisAttack
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,8)
+		Goto See
+	}
+}
+
+ACTOR HellKnight4 : HellKnight1
+{
+	Scale 0.8
+	SPEED 12
+	+MISSILEMORE
+	DropItem Medikit 92
+	States
+	{
+	See:
+		BOS2 AABBCCDD 2 A_FASTChase
+		Loop
+	Melee:
+	Missile:
+		BOS2 EF 1 A_FaceTarget
+		BOS2 G 1 A_BruisAttack
+		BOS2 G 1 A_jump(100,1)
+		Goto See
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-7)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-3)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-6)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-2)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-5)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-1)
+		BOS2 G 0 A_BruisAttack
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,7)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,3)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,6)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,2)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,5)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,1)
+		Goto See
+	}
+}
+
+ACTOR HellKnight5 : HellKnight1
+{
+	Scale 1.5
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		BOS2 AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		BOS2 A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		BOS2 AABBCCDD 3 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	}
+}
+
+ACTOR BaronOfHell1 : baronofhell
+{
+	DropItem "Heal2" 45
+	DropItem "Heal4" 25
+	DropItem "PurpleGoo1" 65
+	DropItem "PurpleGoo3" 15
+	BloodType "BloodSplat"
+	States
+	{
+	Missile:
+		BOSS A 0 A_Jump(122, "Missile2")
+		BOSS E 6 A_FaceTarget 
+		BOSS F 6 
+		BOSS G 6 Bright A_CustomMissile("BaronBall")
+		Goto See
+	Missile2:
+		BOSS E 5 A_FaceTarget 
+		BOSS F 5
+		BOSS G 5 Bright A_CustomMissile("GeeBooBottle")
+		BOSS E 5 A_FaceTarget 
+		BOSS F 4 
+		BOSS G 4 Bright A_CustomMissile("GeeBooBottle")
+		Goto See
+	}
+}
+
+ACTOR BaronOfHell2 : BaronOfHell1
+{
+	Scale 1.2
+	SPEED 16
+}
+
+ACTOR BaronOfHell3 : BaronOfHell1
+{
+	YScale 0.9 
+	Xscale 1.2
+	SPEED 16
+	+MISSILEMORE
+	States
+	{
+	See:
+		BOSS AABBCCDD 3 A_FASTChase
+		Loop
+	Melee:
+	Missile:
+		BOSS EF 8 A_FaceTarget
+		BOSS G 8 A_BruisAttack
+		BOS2 G 0 A_jump(100,1)
+		Goto See
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-2)
+		BOS2 G 0 A_BruisAttack
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,2)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,4)
+		Goto See
+	}
+}
+
+ACTOR BaronOfHell4 : BaronOfHell1
+{
+	Scale 0.8
+	SPEED 16
+	DropItem Medikit 92
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	States
+	{
+	See:
+		BOSS AABBCCDD 3 A_FASTChase
+		Loop
+	Melee:
+	Missile:
+		BOSS EF 1 A_FaceTarget
+		BOSS G 1 A_BruisAttack
+		BOSS A 0 A_JUMP(128,"See")
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,-2)
+		BOS2 G 0 A_CustomMissile("BaronBall",24,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",24,0,-2)
+		BOS2 G 0 A_CustomMissile("BaronBall",16,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",16,0,-2)
+		BOS2 G 0 A_CustomMissile("BaronBall",8,0,-4)
+		BOS2 G 0 A_CustomMissile("BaronBall",8,0,-2)
+		BOS2 G 0 A_BruisAttack
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",32,0,2)
+		BOS2 G 0 A_CustomMissile("BaronBall",24,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",24,0,2)
+		BOS2 G 0 A_CustomMissile("BaronBall",16,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",16,0,2)
+		BOS2 G 0 A_CustomMissile("BaronBall",8,0,4)
+		BOS2 G 0 A_CustomMissile("BaronBall",8,0,2)
+		Goto See
+	}
+}
+
+ACTOR BaronOfHell5 : BaronOfHell1
+{
+	yscale 1.26
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("CheckWeapons",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		BOSS AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		BOSS A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		BOSS AABBCCDD 3 A_FASTChase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	}
+}
+
+ACTOR CyberDemon1 : CyberDemon
+{
+	DropItem "Talisman" 255 
+	DropItem "Venom4" 1
+	DropItem "AngelRing" 255
+	DropItem "Heal4" 211 2
+	DropItem "UltraHealthSphere" 16
+	BloodType "BloodSplat"
+}
+
+ACTOR CyberDemon2 : CyberDemon1
+{
+	Scale 0.85
+	States
+	{
+	Missile:
+		CYBR A 0
+		CYBR A 0 A_Jump(256,"Missile2","Missile3")
+		Goto See
+	Missile2:
+		CYBR E 12 Bright A_FaceTarget
+		CYBR F 3 Bright A_BspiAttack
+		CYBR A 0 A_Jump(92,"Missile")
+		CYBR E 4 Bright A_SpidRefire
+		Goto Missile2+1
+	Missile3:
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		Goto See
+	}
+}
+
+ACTOR CyberDemon3 : CyberDemon1
+{
+	Scale 1.1
+	States
+	{
+	Missile:
+		CYBR A 0
+		CYBR A 0 A_Jump(256,"Missile2","Missile3","Missile4")
+		Goto See
+	Missile2:
+		CYBR E 12 Bright A_FaceTarget
+		CYBR F 3 Bright A_BspiAttack
+		CYBR A 0 A_Jump(92,"Missile")
+		CYBR E 4 Bright A_SpidRefire
+		Goto Missile2+1
+	Missile3:
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		CYBR E 6 A_FaceTarget
+		CYBR F 6 A_CyberAttack
+		Goto See
+	Missile4:
+		CYBR E 24 A_FaceTarget
+		CYBR F 10 A_CustomMissile("BfgBall",55,0,0)
+		Goto See
+	}
+}
+
+ACTOR CyberDemon4 : CyberDemon1
+{
+	DropItem RocketBox
+	DropItem RocketBox
+	DropItem Bazooka 255 26
+	DropItem CellPack
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Berserk 92
+	Scale 1.4
+	States
+	{
+	Missile:
+		CYBR A 0
+		CYBR A 0 A_Jump(256,"Missile2","Missile3","Missile4")
+		Goto See
+	Missile2:
+		CYBR E 12 Bright A_FaceTarget
+		CYBR F 3 Bright A_BspiAttack
+		CYBR A 0 A_Jump(92,"Missile")
+		CYBR E 4 Bright A_SpidRefire
+		Goto Missile2+1
+	Missile3:
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		Goto See
+	Missile4:
+		CYBR E 24 A_FaceTarget
+		CYBR F 10 A_CustomMissile("BfgBall",55,0,0)
+		Goto See
+	Pain:
+		CYBR E 0 A_JUMP(128,6)
+		CYBR E 2 A_FaceTarget
+		CYBR F 0 A_FatAttack1("BfgBall")
+		CYBR F 0 A_FatAttack2("BfgBall")
+		CYBR F 10 A_FatAttack3("BfgBall")
+		CYBR G 10 A_Pain
+		Goto See
+		CYBR E 2 A_FaceTarget
+		CYBR F 0 A_FatAttack1("Rocket")
+		CYBR F 0 A_FatAttack2("Rocket")
+		CYBR F 10 A_FatAttack3("Rocket")
+		CYBR G 10 A_Pain
+		Goto See
+	}
+}
+
+ACTOR CyberDemon5 : CyberDemon1
+{
+	scale 1.4 
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("CheckWeapons",4)
+		TNT1 A 0 A_GiveInventory("TeleportItem",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		CYBR AB 10 A_Look
+		loop
+	See:
+		POSS A 0
+		CYBR A 3 A_Hoof
+		CYBR ABBCC 3 A_Chase
+		CYBR D 3 A_Metal
+		CYBR D 3
+		Loop
+	Missile:
+		CYBR A 0
+		CYBR A 0 A_Jump(256,"Missile2","Missile3","Missile4")
+		Goto See
+	Missile2:
+		CYBR E 12 Bright A_FaceTarget
+		CYBR F 3 Bright A_BspiAttack
+		CYBR A 0 A_Jump(92,"Missile")
+		CYBR E 4 Bright A_SpidRefire
+		Goto Missile2+1
+	Missile3:
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		CYBR E 1 A_FaceTarget
+		CYBR F 1 A_CyberAttack
+		Goto See
+	Missile4:
+		CYBR E 24 A_FaceTarget
+		CYBR F 10 A_CustomMissile("BfgBall",55,0,0)
+		Goto See
+	Pain:
+		CYBR E 0 A_JUMP(128,6)
+		CYBR E 2 A_FaceTarget
+		CYBR F 0 A_FatAttack1("ZeroFireBall")
+		CYBR F 0 A_FatAttack2("ZeroFireBall")
+		CYBR F 10 A_FatAttack3("ZeroFireBall")
+		CYBR G 10 A_Pain
+		Goto See
+		CYBR E 2 A_FaceTarget
+		CYBR F 0 A_FatAttack1("Rocket")
+		CYBR F 0 A_FatAttack2("Rocket")
+		CYBR F 10 A_FatAttack3("Rocket")
+		CYBR G 10 A_Pain
+		Goto See
+	}
+}
+
+ACTOR Revenant1 : revenant
+{
+	DropItem "Heal1" 215
+	DropItem "Heal3" 105
+	DropItem "Heal2" 166
+	DropItem "PurpleGoo2" 111
+	BloodType "BloodSplat"
+}
+
+ACTOR Revenant2 : Revenant1
+{
+	States
+	{
+	Missile:
+		SKEL J 1 Bright A_FaceTarget 
+		SKEL J 9 Bright A_FaceTarget
+		SKEL K 3 A_SkelMissile
+		SKEL K 3 A_SkelMissile
+		SKEL K 10 A_SkelMissile
+		SKEL K 10 A_FaceTarget
+		Goto See
+	}
+}
+
+ACTOR Revenant3 : Revenant1 
+{
+	yscale 0.9
+	DropItem "GreenGoo1" 111
+	States
+	{
+	Missile:
+		SKEL J 1 Bright A_FaceTarget 
+		SKEL J 9 Bright A_FaceTarget
+		SKEL K 2 A_SkelMissile
+		SKEL K 2 A_SkelMissile
+		SKEL K 2 A_SkelMissile
+		SKEL K 2 A_SkelMissile
+		SKEL K 2 A_SkelMissile
+		SKEL K 2 A_SkelMissile
+		SKEL K 10 A_FaceTarget
+		Goto See
+	}
+}
+
+ACTOR Revenant4 : Revenant1
+{
+	DropItem RocketBox 92
+	DropItem Heal2 126 2
+	DropItem Heal3 74 2
+	+NORADIUSDMG
+	Scale 1.2
+	States
+	{
+	Missile:
+		SKEL J 1 Bright A_FaceTarget 
+		SKEL J 9 Bright A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 5 A_FaceTarget
+		Goto See
+	}
+}
+
+ACTOR Revenant5 : Revenant1
+{
+	scale 0.87
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		SKEL AB 10 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		SKEL A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		SKEL AABBCCDD 4 A_Chase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	Missile:
+		SKEL J 1 Bright A_FaceTarget 
+		SKEL J 9 Bright A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 0 A_FaceTarget
+		SKEL K 2 A_CyberAttack
+		SKEL K 5 A_FaceTarget
+		Goto See
+	}
+}
+
+ACTOR Fatso1 : Fatso
+{
+	DropItem "heal1" 255
+	DropItem "Heal2" 165
+	DropItem "GreenGoo4" 122
+	DropItem "GreenGoo2" 111
+	BloodType "BloodSplat"
+}
+
+ACTOR Fatso2 : Fatso1
+{
+	yscale 1.3
+	States
+	{
+	Missile:
+		FATT G 20 A_FatRaise
+		FATT H 10 Bright A_FatAttack1("DoomImpFireBall")
+		FATT IG 5
+		FATT H 10 Bright A_FatAttack2("DoomImpFireBall")
+		FATT IG 5
+		FATT H 10 Bright A_FatAttack3("DoomImpFireBall")
+		FATT IG 5
+		Goto See 
+		Stop
+	}
+}
+
+ACTOR Fatso3 : Fatso1
+{
+	scale 0.9
+	States
+	{
+	Missile:
+		FATT G 20 A_FatRaise
+		FATT H 0 Bright A_FatAttack1("DoomImpFireBall")
+		FATT H 0 Bright A_FatAttack2("DoomImpFireBall")
+		FATT H 10 Bright A_FatAttack3("DoomImpFireBall")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("DoomImpFireBall")
+		FATT H 0 Bright A_FatAttack2("DoomImpFireBall")
+		FATT H 10 Bright A_FatAttack3("DoomImpFireBall")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("DoomImpFireBall")
+		FATT H 0 Bright A_FatAttack2("DoomImpFireBall")
+		FATT H 10 Bright A_FatAttack3("DoomImpFireBall")
+		FATT IG 5
+		Goto See
+	}
+}
+
+ACTOR Fatso4 : Fatso1
+{
+	+NORADIUSDMG
+	DropItem Medikit 92
+	scale 1.1
+	States
+	{
+	Missile:
+		FATT G 20 A_FatRaise
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		Goto See
+	}
+}
+
+ACTOR Fatso5 : Fatso1
+{
+	xscale 1.4
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		FATT AB 15 A_Look
+		loop
+	See2:
+		POSS A 0
+		POSS A 0 A_Jump(32,1)
+		Goto See
+		POSS A 0 A_FaceTarget
+		POSS G 0 Thing_ChangeTID(0,1564)
+		FATT A 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		Goto See+1
+	See:
+		POSS A 0
+		FATT AABBCCDDEEFF 4 A_Chase
+		POSS A 0 A_JumpIfInventory("TeleportItem",1,"See2")
+		Loop
+	Missile:
+		FATT G 20 A_FatRaise
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		FATT H 0 Bright A_FatAttack1("Rocket")
+		FATT H 0 Bright A_FatAttack2("Rocket")
+		FATT H 10 Bright A_FatAttack3("Rocket")
+		FATT IG 5
+		Goto See
+	}
+}
+
+ACTOR Archvile1 : ArchVile
+{
+	DropItem "Heal2" 255 5
+	DropItem "heal4" 255 2
+	DropItem "SuperHealPotion" 44 2
+	DropItem "UltraHealthPotion" 11
+	BloodType "BloodSplat"
+	xscale 1.9 
+}
+
+ACTOR ArchVile2 : ArchVile1
+{
+	scale 0.99
+	SPEED 20
+}
+
+ACTOR ArchVile3 : ArchVile1
+{
+	scale 1.2
+	SPEED 20
+	States
+	{
+	Missile:
+		VILE G 0 Bright A_VileStart
+		VILE G 10 Bright A_FaceTarget 
+		VILE H 8 Bright A_VileTarget
+		VILE IJKLMN 8 Bright A_FaceTarget 
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE P 20 Bright
+		Goto See
+	}
+}
+
+ACTOR ArchVile4 : ArchVile1
+{
+	yscale 1.4
+	DropItem Medikit 92
+	DropItem GreenGoo 66
+	DropItem MultiSphere 1
+	SPEED 20
+	States
+	{
+	See:
+		VILE A 0 A_JUMP(128,"See2")
+		VILE AABBCCDDEEFF 2 A_VileChase
+		Loop
+	See2:
+		VILE A 0 A_FaceTarget
+		VILE G 0 Thing_ChangeTID(0,1564)
+		VILE G 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		VILE GHJKLMNOP 1
+		Goto See+1
+
+	Missile:
+		VILE G 0 Bright A_VileStart
+		VILE G 10 Bright A_FaceTarget 
+		VILE H 8 Bright A_VileTarget
+		VILE IJKLMN 8 Bright A_FaceTarget 
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE P 20 Bright
+		Goto See
+	}
+}
+
+ACTOR ArchVile5 : ArchVile1
+{
+	scale 1.5
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("TeleportItem",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		VILE AB 10 A_Look
+		loop
+	See:
+		VILE A 0 A_JUMP(128,"See2")
+		VILE AABBCCDDEEFF 2 A_VileChase
+		Loop
+	See2:
+		VILE A 0 A_FaceTarget
+		VILE G 0 Thing_ChangeTID(0,1564)
+		VILE G 1 A_CustomMissile("MonsterTeleport",28,0,RANDOM(0,360))
+		VILE GHJKLMNOP 1
+		Goto See+1
+	Missile:
+		VILE G 0 Bright A_VileStart
+		VILE G 10 Bright A_FaceTarget 
+		VILE H 8 Bright A_VileTarget
+		VILE IJKLMN 8 Bright A_FaceTarget 
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE O 8 Bright A_VileAttack
+		VILE P 20 Bright
+		Goto See 
+	}
+}
+
+ACTOR SpiderMasterMind1 : SpiderMasterMind
+{
+	DropItem "Talisman" 255
+	DropItem "MultiSphere" 16
+	BloodType "BloodSplat"
+}
+
+ACTOR SpiderMasterMind2 : SpiderMasterMind1
+{
+	scale 1.1
+	States
+	{
+	Missile:
+		SPID A 20 Bright A_FaceTarget  
+		SPID G 3 Bright A_SPosAttackUseAtkSound
+		SPID H 3 Bright A_SposAttackUseAtkSound
+		SPID H 1 Bright A_SpidRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR SpiderMasterMind3 : SpiderMasterMind1
+{
+	scale 1.7
+	DropItem MultiSphere 20
+	DropItem Purplegoo4 210
+	States
+	{
+	Missile:
+		SPID A 20 Bright A_FaceTarget  
+		SPID G 2 Bright A_SPosAttackUseAtkSound
+		SPID H 2 Bright A_SposAttackUseAtkSound
+		SPID H 1 Bright A_SpidRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR SpiderMasterMind4 : SpiderMasterMind1
+{
+	DropItem SHELLBOX
+	DropItem SHELLBOX
+	DropItem SHELLBOX
+	DropItem SHELLBOX
+	DropItem SHELLBOX
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Medikit 128
+	DropItem Berserk 92
+	Scale 1.8
+	States
+	{
+	Missile:
+		SPID A 20 Bright A_FaceTarget  
+		SPID A 0 A_PLAYSOUND("WEAPONS/SSHOTF")
+		SPID G 2 Bright A_CustomBulletAttack(40,40,50,10)
+		SPID A 0 A_PLAYSOUND("WEAPONS/SSHOTF")
+		SPID H 2 Bright A_CustomBulletAttack(40,40,50,10) 
+		SPID H 1 Bright A_SpidRefire
+		Goto Missile+1
+	}
+}
+
+ACTOR SpiderMasterMind5 : SpiderMasterMind1
+{
+	xscale 1.45
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("TeleportItem",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",1,"Shadow")
+		Goto Spawn2
+	Shadow:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",1)
+		TNT1 A 0 A_JumpIfInventory("ShadowItem",2,"Stealth")
+		Goto Spawn2
+	Stealth:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("Shadow",0)
+		TNT1 A 0 A_ChangeFlag("Ghost",1)
+		Goto Spawn2
+	Spawn2:
+		SPID AB 10 A_Look
+		loop
+	See:
+		SPID A 3 A_Metal
+		SPID ABB 3 A_Chase
+		SPID C 3 A_Metal
+		SPID CDD 3 A_Chase
+		SPID E 3 A_Metal
+		SPID EFF 3 A_Chase
+		loop
+	Missile:
+		SPID A 20 Bright A_FaceTarget  
+		SPID A 0 A_PLAYSOUND("WEAPONS/SSHOTF")
+		SPID G 2 Bright A_CustomBulletAttack(40,40,50,10, "shockpuff")
+		SPID A 0 A_PLAYSOUND("WEAPONS/SSHOTF")
+		SPID H 2 Bright A_CustomBulletAttack(40,40,50,10, "shockpuff")
+		SPID H 1 Bright A_SpidRefire
+		Goto Missile+1
+	} 
+}
+
+ACTOR ShockPuff
+{
+	Radius 13
+	Height 8
+	Renderstyle Add
+	Alpha 0.91
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+RANDOMIZE
+	+PUFFONACTORS
+	States
+	{
+	Spawn:
+		DTFX ABCDE 3 Bright
+		DTFX FEDC 3 Bright A_CustomMissile("ShockPuffSpark",3,0,random(0,360),2,random(0,360))
+		DTFX BA 2 Bright
+		Stop
+	}
+}
+
+ACTOR ShockPuffSpark
+{
+	Radius 3
+	Height 3
+	Speed 2.5
+	RenderStyle Add
+	Alpha 0.86
+	Scale 0.25
+	+NOTDMATCH
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	States
+	{
+	Spawn:
+		DTFX ABCDEFEDCBA 4 Bright A_FadeOut(0.15)
+		Loop
+	}
+}
+
+ACTOR MonsterTeleport
+{
+	SPEED 20
+	+QUICKTORETALIATE
+	+NOBLOCKMAP 
+	+NOGRAVITY 
+	+DROPOFF 
+	+ACTIVATEIMPACT 
+	+ACTIVATEPCROSS 
+	+NOTELEPORT
+	+FLOORCLIP
+	RADIUS 16
+	HEIGHT 56
+	States
+	{
+	Spawn:
+		TNT1 A 0 
+		TNT1 A 0 A_ChangeFlag("FRIGHTENED",random(0,1))
+		Goto spawn2
+	SPAWN2:
+		TNT1 A 0 A_JUMP(64,"DEATH")
+		TNT1 A 5 A_Chase
+		Goto SPAWN2
+	DEATH:
+		NULL A 0 Thing_ChangeTID (0,1563)
+		NULL A 0 TeleportOther(1564,1563,1)
+		NULL A 0 Thing_ChangeTID (1564,120)
+		NULL A 0 Thing_Remove(1563)
+	}
+}
+
+// Working
+
+ACTOR ShadowItem : CustomInventory
+{
+	Inventory.MaxAmount 1
+}
+
+ACTOR TeleportItem : CustomInventory
+{
+	Inventory.MaxAmount 1
+}
+
+ACTOR CheckWeapons : CustomInventory
+{
+	Inventory.MaxAmount 255
+}
+
+ACTOR LAZORPROJECTILE : LAZOR
+{
+	Translation "0:255=196:198"
+	Speed 74
+	Damage 100
+	Decal DoomImpBall
+	DamageType LazorDamage
+	Seesound "Dalek2"
+	PROJECTILE
+	+RIPPER
+	+BLOODLESSIMPACT
+	+EXTREMEDEATH
+	Scale 11
+	States
+	{
+	Spawn:
+		LASR A 0 Bright A_CustomMissile("LAZORTRAIL6",0,0,180)     
+		LASR A 0 Bright A_CustomMissile("LAZORTRAIL5",0,0,180)
+		LASR A 0 Bright A_CustomMissile("LAZORTRAIL4",0,0,180)
+		LASR A 0 Bright A_CustomMissile("LAZORTRAIL3",0,0,180)
+		LASR A 0 Bright A_CustomMissile("LAZORTRAIL2",0,0,180)
+		LASR A 1 Bright A_CustomMissile("LAZORTRAIL",0,0,180)
+		Loop
+	Death:
+		TNT1 A 1 A_CustomMissile("LAZORTRAIL",0,0,180)
+		Stop
+	}
+}
+
+ACTOR LAZORTRAIL 
+{
+	Speed 1
+	Scale 11
+	PROJECTILE
+	renderstyle add
+	Translation "0:255=196:198"
+	States
+	{
+	Spawn:
+		LASR A 15 Bright
+		LASR A 1 A_FadeOut(0.1)
+		stop
+	}
+}
+
+ACTOR lazortrail2 : lazorTrail
+{
+	Speed 3
+}
+
+ACTOR lazortrail3 : lazorTrail
+{
+	Speed 4
+}
+
+ACTOR lazortrail4 : lazorTrail
+{
+	Speed 5
+}
+
+ACTOR lazortrail5 : lazorTrail
+{
+	Speed 6
+}
+
+ACTOR lazortrail6 : lazorTrail
+{
+	Speed 7
+}
+
+ACTOR dalek
+{
+	Speed 11
+	Health 1000
+	Radius 16
+	Height 56
+	MONSTER
+	+FLOORCLIP
+	+NOPAIN 
+	+NOBLOOD
+	ActiveSound "dalek"
+	States
+	{
+	Spawn:
+		PLAY A 2
+		loop
+	See:
+		PLAY ABCD 2 A_Chase
+		loop
+	Missile:
+		PLAY E 70 A_PlaySound("Dalek")
+		PLAY F 1 Bright A_FaceTarget
+		PLAY F 0 A_CustomMissile("LAZORPROJECTILE",31)
+		PLAY F 3 Bright
+		Goto See 
+	Death:
+		PLAY A 1 A_SpawnItemEx("DalekExplosion",6)
+		PLAY HIJKLM 5
+		PLAY M -1
+		stop
+	Xdeath:
+		PLAY A 1 A_SpawnItemEx("DalekExplosion2",6)
+		PLAY NOPQRSTUVW 5
+		PLAY W -1
+		Stop
+	Raise:
+		PLAY MLKJIH 5
+		Goto See
+	}
+}
+
+ACTOR dalekexplosion : Rocket 
+{
+	ExplosionRadius 98
+	States
+	{
+	Spawn:
+		Goto death
+	}
+}
+
+ACTOR dalekexplosion2 : Rocket 
+{
+	ExplosionDamage 126
+	ExplosionRadius 150
+	States
+	{
+	Spawn:
+		Goto death
+	}
+}

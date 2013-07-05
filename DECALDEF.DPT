@@ -1,0 +1,271 @@
+decal BirdSSmear1
+{
+	pic SQRTSPLT
+	x-scale 0.225
+	y-scale 0.225
+	shade "80 80 80"
+	randomflipx
+	animator WaterAnimator
+}
+
+Decal D3BloodSplat1 1
+{
+	Pic D3SPLT01
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat2 2
+{
+	Pic D3SPLT02
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat3 3
+{
+	Pic D3SPLT03
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat4 4
+{
+	Pic D3SPLT04
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat5 5
+{
+	Pic D3SPLT05
+	Shade "60 20 10"
+	X-Scale 0.5
+	Y-Scale 0.5
+}
+
+Decal D3BloodSplat6 6
+{
+	Pic D3SPLT06
+	Shade "60 20 10"
+	X-Scale 0.2
+	Y-Scale 0.2
+}
+
+Decal D3BloodSplat7 7
+{
+	Pic D3SPLT07
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat8 8
+{
+	Pic D3SPLT08
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat9 9
+{
+	Pic D3SPLT09
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat10 10
+{
+	Pic D3SPLT10
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat11 11
+{
+	Pic D3SPLT11
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat12 12
+{
+	Pic D3SPLT12
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat13 13
+{
+	Pic D3SPLT13
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat14 14
+{
+	Pic D3SPLT14
+	Shade "60 20 10"
+	X-Scale 0.5
+	Y-Scale 0.5
+}
+
+Decal D3BloodSplat15 15
+{
+	Pic D3SPLT15
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat16 16
+{
+	Pic D3SPLT16
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat17 17
+{
+	Pic D3SPLT17
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat18 18
+{
+	Pic D3SPLT18
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat19 19
+{
+	Pic D3SPLT19
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat20 20
+{
+	Pic D3SPLT20
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat21 21
+{
+	Pic D3SPLT21
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat22 22
+{
+	Pic D3SPLT22
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+Decal D3BloodSplat23 23
+{
+	Pic D3SPLT23
+	Shade "60 20 10"
+	X-Scale 0.25
+	Y-Scale 0.25
+}
+
+decal ShockGunScorchLower1
+{
+	pic DTFXE0
+	shade "00 00 00"
+	x-scale 1.1
+	y-scale 1.1
+	randomflipx
+	randomflipy
+}
+
+decal ShockGunScorch1
+{
+	pic DTFXE0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal ShockGunScorchLower1
+}
+
+decal ShockGunScorchLower2
+{
+	pic DTFXC0
+	shade "00 00 00"
+	x-scale 0.3
+	y-scale 0.3
+	randomflipx
+	randomflipy
+}
+
+decal ShockGunScorch2
+{
+	pic DTFXC0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal ShockGunScorchLower2
+}
+
+decalgroup ShockGunScorchLower
+{
+	ShockGunScorchLower1	1
+	ShockGunScorchLower2	1
+}
+
+decalgroup ShockGunScorch
+{
+	ShockGunScorch1	1
+	ShockGunScorch2	1
+}
+
+decalgroup D3BloodSplat
+{
+	D3BloodSplat1			1
+	D3BloodSplat2 			1
+	D3BloodSplat2			1
+	D3BloodSplat3			1
+	D3BloodSplat4			1
+	D3BloodSplat5			1
+	D3BloodSplat6			1
+	D3BloodSplat7			1
+	D3BloodSplat8			1
+	D3BloodSplat9			1
+	D3BloodSplat10			1
+	D3BloodSplat11			1
+	D3BloodSplat12			1
+	D3BloodSplat13			1
+	D3BloodSplat14			1
+	D3BloodSplat15			1
+	D3BloodSplat16			1
+	D3BloodSplat17			1
+	D3BloodSplat18			1
+	D3BloodSplat19			1
+	D3BloodSplat20			1
+	D3BloodSplat21			1
+	D3BloodSplat22			1
+	D3BloodSplat23			1
+}

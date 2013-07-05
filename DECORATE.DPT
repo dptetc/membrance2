@@ -1,0 +1,19 @@
+//------------------------------------
+// DPT DECORATE FILE, VER 1.03
+//------------------------------------
+// Programming Language: DECORATE
+//------------------------------------
+/*
+All content fully free, but the distribution of all content is under DartPower's License Free Information v4.1
+			For advice about the license, please write to the author to http://vk.com/dartpower
+					We accept no liability for legal persons, we hate "Corporations".
+*/
+//------------------------------------
+#INCLUDE "MEMDATA/FX.DPT"
+#INCLUDE "MEMDATA/BONUSES.DPT"
+#INCLUDE "MEMDATA/PLAYER.DPT"
+#INCLUDE "MEMDATA/WEAPONS.DPT"
+#INCLUDE "MEMDATA/MONSTERS.DPT"
+#INCLUDE "MEMDATA/FRIENDS.DPT"
+#INCLUDE "MEMDATA/OTHER.DPT"
+#INCLUDE "MEMDATA/RND.DPT"

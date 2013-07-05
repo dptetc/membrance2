@@ -1,0 +1,11 @@
+weaponsection "Membrance 2"
+setslot 1 Fists Combat_Chainsaw
+setslot 2 Colt.M2024 ZeroPistol
+setslot 3 Ventiled_Shotgun DoubleShotgun
+setslot 4 Groza M34
+setslot 5 Mem_Bazooka HandGrenade
+setslot 6 Mem_PlasmaGun Mem_Railgun
+setslot 7 Mem_BFG Mem_BFG2704
+
+clearplayerclasses
+addplayerclass MDoomPlayer

@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////// PLAYER //////////////////////////////////////////////////////////
+
+ACTOR MDoomPlayer : PlayerPawn
+{
+	Speed 1
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.DisplayName "Marine"
+	Player.CrouchSprite "PLYC"
+	Player.StartItem "Fists"
+	States
+	{
+	Spawn:
+		LEAD A -1
+		Loop
+	See:
+		LEAD A 5  A_SpawnItemEX("FootStep",30,0,0.001)
+		LEAD A 6  
+		LEAD B 5  A_SpawnItemEX("FootStep",30,0,0.001)
+		LEAD B 6  
+		LEAD C 5  A_SpawnItemEX("FootStep",30,0,0.001)
+		LEAD C 6  
+		LEAD D 5  A_SpawnItemEX("FootStep",30,0,0.001)
+		LEAD D 6  
+		Goto Spawn
+	Missile:
+		LEAD E 12 
+		Goto Spawn
+	Melee:
+		LEAD F 6 BRIGHT
+		Goto Missile
+	Pain:
+		LEAD G 4 
+		LEAD G 4 A_Pain
+		Goto Spawn
+	Death:
+		LEAD H 10
+		LEAD I 10 A_PlayerScream
+		LEAD J 10 A_NoBlocking
+		LEAD KLM 10
+		LEAD N -1
+		Stop
+	XDeath:
+		LEAD O 5
+		LEAD P 5 A_XScream
+		LEAD Q 5 A_NoBlocking
+		LEAD RSTUV 5
+		LEAD W -1
+		Stop
+	Death.EpicDeath:
+		LEAD O 5
+		LEAD P 5 A_XScream
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_SpawnItemEx("Ember3", 0, 0, 0, 0, 0, 0, 0, 128)
+		LEAD O 0 A_CustomMissile("GreenFlame1B",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_CustomMissile("GreenFlame2A",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_CustomMissile("GreenFlame1A",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_CustomMissile("GreenFlame2B",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_CustomMissile("GreenFlame3A",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_CustomMissile("GreenFlame3B",3,0,random(0,360),2,random(0,360))
+		LEAD O 0 A_SpawnItemEx("GreenFlame12B", 0, 0, 0, 0, 0, 0, 0, random(0,360))
+		LEAD O 0 A_SpawnItemEx("GreenFlame12B", 0, 0, 0, 0, 0, 0, 0, random(0,360))
+		LEAD O 0 A_SpawnItemEx("GreenFlame12B", 0, 0, 0, 0, 0, 0, 0, random(0,360))
+		LEAD O 0 A_SpawnItemEx("GreenFlame12B", 0, 0, 0, 0, 0, 0, 0, random(0,360))
+		LEAD Q 5 A_NoBlocking
+		LEAD RSTUV 5
+		LEAD W -1
+		Stop
+	}
+}
+
+actor FootStep
+{
+	+NOTDMATCH
+	States
+	{
+	Spawn:
+	Death:
+		TNT1 A 4
+		Stop
+	}
+}

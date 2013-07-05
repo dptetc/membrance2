@@ -1,0 +1,80 @@
+height 0;
+monospacefonts true, "0";
+
+statusbar Normal, forcescaled
+{
+	drawbar "HEALBAR", "BARNUL", Health, horizontal, 1, 20, 1;
+	drawnumber 3, BIGFONT, Yellow, health, 30, 40, 0, Red, 30, Green, 90;
+	drawbar "ARMORBAR", "BARNUL", Armor, horizontal, 190, 20, 1;
+	drawnumber 3, BIGFONT, Yellow, Armor, 210, 40, 0, Red, 30, Green, 90;
+	drawswitchableimage Radiation, "RADINORM", "RADIDNGR", 186, 86;
+	IsSelected "Combat_Chainsaw" {
+		drawimage "CSAWA0", 155, 27;
+	}
+	IsSelected "Colt.M2024" {
+		drawimage "CLIPA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "PISTA0", 155, 27;
+	}
+	IsSelected "Ventiled_Shotgun" {
+		drawimage "SHELA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "SHOTA0", 155, 27;
+	}
+	IsSelected "DoubleShotgun" {
+		drawimage "SHELA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "KSSGL0", 155, 27;
+	}
+	IsSelected "Groza" {
+		drawimage "AMMOA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "MCGNW0", 155, 27;
+	}
+	IsSelected "M34" {
+		drawimage "AMMOA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "MGUNA0", 155, 27;
+	}
+	IsSelected "Mem_Bazooka" {
+		drawimage "ROCKA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "LAUNA0", 155, 27;
+	}
+	IsSelected "ZeroPistol" {
+		drawimage "CELLA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "PLBTA0", 155, 27;
+	}
+	IsSelected "Mem_PlasmaGun" {
+		drawimage "CELLA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "PLASA0", 155, 27;
+	}
+	IsSelected "Mem_Railgun" {
+		drawimage "AMMOA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "RAILA0", 155, 27;
+	}  
+	IsSelected "Mem_BFG" {
+		drawimage "CELLA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "BFUGA0", 155, 27;
+	} 
+	IsSelected "Mem_BFG2704" {
+		drawimage "CELLA0", -21, -4;
+		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
+		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
+		drawimage "BFUGA0", 155, 27;
+	} 
+}
