@@ -102,7 +102,7 @@ map MEM02 "Reactor"
 	cluster = 0
 	next = "MEM03"
 	secretnext = "MEM07"
-	sky1 = "RSKY1"
+	sky1 = "SkyDome"
 	music = "4"
 }
 map MEM03 "Destiny"
