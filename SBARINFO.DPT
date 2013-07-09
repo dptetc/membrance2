@@ -1,80 +1,111 @@
+base Doom;
 height 0;
 monospacefonts true, "0";
 
-statusbar Normal, forcescaled
+statusbar normal, fullscreenoffsets
 {
-	drawbar "HEALBAR", "BARNUL", Health, horizontal, 1, 20, 1;
-	drawnumber 3, BIGFONT, Yellow, health, 30, 40, 0, Red, 30, Green, 90;
-	drawbar "ARMORBAR", "BARNUL", Armor, horizontal, 190, 20, 1;
-	drawnumber 3, BIGFONT, Yellow, Armor, 210, 40, 0, Red, 30, Green, 90;
-	drawswitchableimage Radiation, "RADINORM", "RADIDNGR", 186, 86;
-	IsSelected "Combat_Chainsaw" {
-		drawimage "CSAWA0", 155, 27;
+	DrawSelectedInventory alternateonempty, INDEXFON, 143, -32
+	{
+		DrawMugShot "STF", 5, 0, -32;
 	}
-	IsSelected "Colt.M2024" {
-		drawimage "CLIPA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "PISTA0", 155, 27;
+	DrawImage "HUD_OVE1", 0, -32;
+	DrawImage "HUD_OVE2", -121, -32;
+	DrawNumber 3, HUDFONT_DOOM, DarkGrey, Health, 71, -28, 0;
+	DrawNumber 3, HUDFONT_DOOM, Gold, Health, WhenNotZero, 71, -28, 0, Red, 25, Green, 51;
+	DrawNumber 3, HUDFONT_DOOM, DarkGrey, Armor, 117, -28, 0;
+	DrawNumber 3, HUDFONT_DOOM, Gold, Armor, WhenNotZero, 117, -28, 0, Red, 25, Green, 51;
+	DrawNumber 3, HUDFONT_DOOM, DarkGrey, Ammo1, -75, -28, 0;
+	DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 25, Green, 51;
+	InInventory FullHealth
+	{
+		DrawNumber 3, HUDFONT_DOOM, Blue, Health, 71, -28;
 	}
-	IsSelected "Ventiled_Shotgun" {
-		drawimage "SHELA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "SHOTA0", 155, 27;
+	InInventory BasicArmor, 101
+	{
+		DrawNumber 3, HUDFONT_DOOM, Blue, Armor, 117, -28;
 	}
-	IsSelected "DoubleShotgun" {
-		drawimage "SHELA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "KSSGL0", 155, 27;
+	IsSelected Pistol
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 50, Green, 101;
 	}
-	IsSelected "Groza" {
-		drawimage "AMMOA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "MCGNW0", 155, 27;
+	IsSelected Chaingun
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 50, Green, 101;
 	}
-	IsSelected "M34" {
-		drawimage "AMMOA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "MGUNA0", 155, 27;
+	IsSelected Shotgun, SuperShotgun
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 12, Green, 26;
 	}
-	IsSelected "Mem_Bazooka" {
-		drawimage "ROCKA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "LAUNA0", 155, 27;
+	IsSelected RocketLauncher
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 12, Green, 26;
 	}
-	IsSelected "ZeroPistol" {
-		drawimage "CELLA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "PLBTA0", 155, 27;
+	IsSelected PlasmaRifle
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 75, Green, 151;
 	}
-	IsSelected "Mem_PlasmaGun" {
-		drawimage "CELLA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "PLASA0", 155, 27;
+	IsSelected BFG9000
+	{
+		DrawNumber 3, HUDFONT_DOOM, Gold, Ammo1, WhenNotZero, -75, -28, 0, Red, 75, Green, 151;
 	}
-	IsSelected "Mem_Railgun" {
-		drawimage "AMMOA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "RAILA0", 155, 27;
-	}  
-	IsSelected "Mem_BFG" {
-		drawimage "CELLA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "BFUGA0", 155, 27;
-	} 
-	IsSelected "Mem_BFG2704" {
-		drawimage "CELLA0", -21, -4;
-		drawbar "AMMOBAR", "BARNUL", Ammo1, horizontal, 1, 185, 1;
-		drawnumber 3, BIGFONT, Yellow, Ammo1, 30, 160, 0, Red, 30, Green, 90;
-		drawimage "BFUGA0", 155, 27;
-	} 
+	DrawString SMALLFONT, white, "Ammo", -79, -9;
+	DrawString SMALLFONT, white, "Health", 72, -9;
+	DrawString SMALLFONT, white, "Armor", 117, -9;
+	DrawString SMALLFONT, white, "BULL", -34, -27;
+	Drawstring SMALLFONT, white, "SHEL", -34, -21;
+	Drawstring SMALLFONT, white, "RCKT", -34, -15;
+	Drawstring SMALLFONT, white, "CELL", -34, -9;	
+	DrawNumber 3, SMALLFONT, gold, ammo Clip, -6, -27;
+	DrawNumber 3, SMALLFONT, gold, ammo Shell, -6, -21;
+	DrawNumber 3, SMALLFONT, gold, ammo RocketAmmo, -6, -15;
+	Drawnumber 3, SMALLFONT, gold, ammo Cell, -6, -9;
+	WeaponAmmo Clip
+	{
+		DrawString SMALLFONT, Gold, "BULL", -34, -27;
+	}
+	WeaponAmmo Shell
+	{
+		DrawString SMALLFONT, Gold, "SHEL", -34, -21;
+	}
+	WeaponAmmo RocketAmmo
+	{
+		DrawString SMALLFONT, Gold, "RCKT", -34, -15;
+	}
+	WeaponAmmo Cell
+	{
+		DrawString SMALLFONT, Gold, "CELL", -34, -9;
+	}
+	gamemode cooperative, singleplayer
+	{
+		DrawSwitchableImage weaponslot 2, "STGNUM2", "STYSNUM2", -113, -36; 
+		DrawSwitchableImage weaponslot 3, "STGNUM3", "STYSNUM3", -106, -36;
+		DrawSwitchableImage weaponslot 4, "STGNUM4", "STYSNUM4", -99, -36;
+		DrawSwitchableImage weaponslot 5, "STGNUM5", "STYSNUM5", -92, -36;
+		DrawSwitchableImage weaponslot 6, "STGNUM6", "STYSNUM6", -85, -36;
+		DrawSwitchableImage weaponslot 7, "STGNUM7", "STYSNUM7", -78, -36;
+		
+		DrawSwitchableImage keyslot 2, "NOKEY", "BKEY", -60, -36;
+		DrawSwitchableImage keyslot 3, "NOKEY", "YKEY", -51, -36;
+		DrawSwitchableImage keyslot 1, "NOKEY", "RKEY", -42, -36;
+		DrawSwitchableImage keyslot 5, "NOSKULL", "BSKULL", -33, -37;
+		DrawSwitchableImage keyslot 6, "NOSKULL", "YSKULL", -25, -37;
+		DrawSwitchableImage keyslot 4, "NOSKULL", "RSKULL", -17, -37;
+	}
+	gamemode cooperative, deathmatch, teamgame
+	{
+		DrawNumber 3, SMALLFONT, orange, frags, 65, -40;
+		DrawString SMALLFONT, red, "Frags:", 45, -40;
+	}
+}
+
+statusbar fullscreen { }
+
+statusbar inventory
+{
+	drawinventorybar Doom, 7, INDEXFONT, 50, 170;
+}
+
+statusbar inventoryfullscreen, fullscreenoffsets
+{
+	drawinventorybar Doom, translucent, 7, INDEXFONT, -106+center, -31;
 }

@@ -32,7 +32,7 @@ ACTOR GreaterBaron : BaronOfHell 14910
 		BOSS CD 4 A_Chase
 		BOSS D 1 A_PlaySound("Step2")
 		Loop
-	Pain.FistPuff:
+	Pain.BloodFists:
 		TNT1 A 0 A_GiveToTarget("BloodFistItem",1)
 		Goto Pain
 	Pain:

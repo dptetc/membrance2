@@ -159,3 +159,13 @@ $random Fists/PUNCH { Fists/PUNCH1 Fists/PUNCH2 Fists/PUNCH3 Fists/PUNCH4 }
 Fists/SWING SWING
 
 RECHARGE RECHARGE
+
+weapons/chngun1			DSD3CG1
+weapons/chngun2			DSD3CG2
+weapons/chngun3			DSD3CG3
+weapons/chngunu			DSD3CR2
+weapons/chngunr			DSD3CR1
+weapons/chngunwndup		DSDWU
+weapons/chngunwnd		DSD3CGMO
+weapons/chngunwnddwn	DSD3CGWD
+$random weapons/minigun { weapons/chngun1 weapons/chngun2 weapons/chngun3 }

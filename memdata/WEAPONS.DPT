@@ -26,7 +26,7 @@ actor MEM_Weapon : Weapon replaces DoomWeapon
 
 //***********Fists***********\\
 
-ACTOR Fists : MEM_Weapon replaces Fist
+ACTOR Unarmed : MEM_Weapon replaces Fist
 {
 	Weapon.SelectionOrder 3700
 	Weapon.Kickback 20
@@ -34,13 +34,14 @@ ACTOR Fists : MEM_Weapon replaces Fist
 	States
 	{
 	Ready2:
-		FIST A 0 A_JumpIfInventory("BloodFistItem",0,"Ready")
+		FIST A 0 A_JumpIfInventory("BloodFistItem", 1, 1)
+		Goto Ready
 		FIST G 11 A_WeaponReady
 		Loop
 	Ready:
 		FIST A 0 A_JumpIfInventory("BloodFistItem",1,"Ready2")
 		FIST A 11 A_WeaponReady
-		Loop
+		Goto Ready
 	Deselect:
 		FIST A 1 A_Lower
 		Loop
@@ -66,9 +67,11 @@ ACTOR Fists : MEM_Weapon replaces Fist
 
 Actor FistPuff : BulletPuff
 {
+	DamageType BloodFists
 	States
 	{
 	Spawn:
+		PUFF A 0
 		PUFF A 0 A_JumpIfInventory("BloodFistItem",1,"Spawn2")
 		PUFF A 3 A_PlaySound("Fists/PUNCH")
 	Spawn2:
@@ -308,7 +311,7 @@ actor Colt.M2024 : MEM_Weapon replaces Pistol 10100
 		VUPG A 1
 		goto Ready
 	Spawn:
-		PIST A -1
+		PIST Z -1
 		stop
 	}
 }
@@ -374,7 +377,7 @@ actor BigSmokeSpawner
 	}
 }
 
-Actor BigSmoke : LittleSmoke // I know it's supposed to be called LARGE SMOKE, made special for fun
+Actor BigSmoke : LittleSmoke
 { 
 	Scale 1.3
 	Vspeed 0.26
@@ -432,6 +435,7 @@ actor Ventiled_Shotgun : MEM_Weapon replaces Shotgun
 		SHTG CBA 4
 		SHTG A 4
 		Goto Ready2
+		//TODO: RELOAD
 	Flash:
 		SHTF A 2 BRIGHT A_Light2
 		SHTF A 0 A_Light0
@@ -588,9 +592,9 @@ Actor Groza2 : MEM_Weapon
 	}
 }
 
-//***********Chaingun***********\\
+//***********M134***********\\
 
-Actor M34 : MEM_Weapon 5014
+Actor M134 : MEM_Weapon 5014
 {
 	obituary "%o was mowed down by %k's chaingun."
 	radius 20
@@ -674,6 +678,52 @@ actor MinigunIdled : Inventory
 	inventory.maxamount 1
 }
 
+//***********Minigun***********\\
+
+ACTOR Minigun : MEM_Weapon
+{
+	SpawnID 214
+	Radius 20
+	Height 16
+	Weapon.AmmoType "Clip" 
+	Weapon.AmmoGive 20
+	Weapon.AmmoUse 1
+	Weapon.Selectionorder 700
+	Weapon.Kickback 100
+	Inventory.PickupMessage "You got the minigun!"
+	Obituary "%o was drilled by %k's minigun."
+	AttackSound "weapons/minigun"
+	States
+	{
+	Spawn:
+		CHAN F -1
+		Loop
+	Ready:
+		D3CH A 1 A_WeaponReady
+		Loop
+	Deselect:
+		D3CH A 1 A_Lower
+		D3CH A 0 A_Lower
+		Loop
+	Select:
+		D3CH A 1 A_Raise
+		D3CH A 0 A_Raise
+		Loop
+	Fire:
+		D3CH C 2 A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+		D3CH D 2 A_FireBullets(5.6, 0, 1, 5, "BulletPuff")
+		D3CH A 2 A_ReFire
+		D3CH B 2
+		D3CH A 4
+		D3CH B 4
+		D3CH A 8
+		D3CH B 8
+		Goto Ready 
+	}
+}
+
+//***********Hand Grenade***********\\
+
 ACTOR HandGrenadeAmmo : Ammo
 {
 	Inventory.Amount 1
@@ -690,11 +740,9 @@ ACTOR HandGrenadeAmmo : Ammo
 	}
 }
 
-//***********Hand Grenade***********\\
-
 Actor GrenadeTimer : Inventory { Inventory.MaxAmount 90 }
 
-ACTOR HandGrenade : Weapon
+ACTOR HandGrenade : MEM_Weapon
 {
 	Inventory.PickupMessage "You got a hand grenade!"
 	Weapon.AmmoType "HandGrenadeAmmo"
@@ -733,14 +781,8 @@ ACTOR HandGrenade : Weapon
 	Hold:
 		GRNF C 1
 		GRNF A 0 A_TakeInventory("GrenadeTimer", 1)
-		GRNF A 0 A_JumpIfInventory("GrenadeTimer", 1, 1)
-		Goto Explode
 		GRNF A 0 A_ReFire
 		Goto Throw
-	Explode:
-		GRNF A 3 A_FireCustomMissile("ThrownGrenade_Exploded",0,1,0,0)
-		GRNF A 0 A_TakeInventory("GrenadeTimer", 90)
-		Goto Ready
 	}
 }
 
@@ -770,22 +812,9 @@ ACTOR ThrownGrenade
 	}
 }
 
-Actor ThrownGrenade_Exploded
-{
-	Damage 10
-	States
-	{
-	Spawn:
-		MISL B 0 A_PlaySound("weapons/grnexplode")
-		MISL B 0 A_Explode (150, 350, 0)
-		MISL BCD 3 Bright
-		Stop
-	}
-}
-
 //***********Bazooka***********\\
 
-Actor Mem_Bazooka : MEM_Weapon replaces RocketLauncher
+Actor Bazooka : MEM_Weapon replaces RocketLauncher
 {
 	Weapon.SelectionOrder 2500
 	Weapon.AmmoUse 1
@@ -1009,7 +1038,7 @@ actor ZeroFireBall
 
 //***********PlasmaGun***********\\
 
-Actor Mem_PlasmaGun : MEM_Weapon replaces PlasmaRifle
+Actor PlasmaGun : MEM_Weapon replaces PlasmaRifle
 {
 	Weapon.SelectionOrder 100
 	Weapon.AmmoUse 1
@@ -1158,7 +1187,7 @@ Actor IceBallParticle2
 
 //***********RailGun***********\\
 
-ACTOR Mem_Railgun : MEM_Weapon 5012
+ACTOR Railgun : MEM_Weapon 5012
 {
 	Radius 22
 	Height 18
@@ -1248,7 +1277,7 @@ Actor RailgunFlasher
 
 //***********BFG9000***********\\
 
-Actor Mem_BFG : MEM_Weapon replaces BFG9000
+Actor BFG : MEM_Weapon replaces BFG9000
 {
 	Weapon.SelectionOrder 2800
 	Weapon.AmmoUse 40
@@ -1431,7 +1460,7 @@ actor BFGSPRAY4
 
 //***********BFG2704***********\\
 
-ACTOR Mem_BFG2704 : BFG9000 5013
+ACTOR BFG2704 : BFG9000 5013
 {
 	Height 24
 	Radius 17
@@ -1646,7 +1675,6 @@ Actor SoulCube : weapon
 	Weapon.SelectionOrder 350
 	Inventory.PickupSound "misc/usgpickup" 
 	Obituary "$o'soul was taken by %k."
-	Weapon.SlotNumber 8
 	+WEAPON.NO_AUTO_SWITCH
 	AttackSound "skull/melee" 
 	damagetype Cube
@@ -1803,3 +1831,5 @@ actor CubeAmmo : Ammo
 	Ammo.BackpackAmount 0
 	Ammo.BackpackMaxAmount 5
 }
+
+//***********TEST***********\\

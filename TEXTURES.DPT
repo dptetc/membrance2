@@ -1,0 +1,55 @@
+graphic HUD_OVE1, 121, 32 {
+	patch HUDGRA1, 0, 0 {}
+}
+
+graphic HUD_OVE2, 121, 32 {
+	patch HUDGRA2, 0, 0 {}
+}
+
+graphic BKEY, 16, 14 { 
+   yscale 2.25
+   xscale 2.25
+   patch KEY_B, 0, 0 { rotate 270 }
+}
+
+graphic RKEY, 16, 14 { 
+   yscale 2.25
+   xscale 2.25
+   patch KEY_R, 0, 0 { rotate 270 }
+}
+
+graphic YKEY, 16, 14 { 
+   yscale 2.25
+   xscale 2.25
+   patch KEY_Y, 0, 0 { rotate 270 }
+}
+
+graphic BSKULL, 13, 16 { 
+   yscale 2.25
+   xscale 2.25
+   patch SKULL_B, 0, 0 { }
+}
+
+graphic RSKULL, 13, 16 { 
+   yscale 2.25
+   xscale 2.25
+   patch SKULL_R, 0, 0 { }
+}
+
+graphic YSKULL, 13, 16 { 
+   yscale 2.25
+   xscale 2.25
+   patch SKULL_Y, 0, 0 { }
+}
+
+graphic NOKEY, 16, 14 { 
+   yscale 2.25
+   xscale 2.25
+   patch KEY_NO, 0, 0 { rotate 270 }
+}
+
+graphic NOSKULL, 13, 16 { 
+   yscale 2.25
+   xscale 2.25
+   patch SKULL_NO, 0, 0 { }
+}

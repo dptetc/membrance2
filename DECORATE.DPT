@@ -9,6 +9,7 @@ All content fully free, but the distribution of all content is under DartPower's
 					We accept no liability for legal persons, we hate "Corporations".
 */
 //------------------------------------
+#INCLUDE "MEMDATA/PREDEFINES.DPT"
 #INCLUDE "MEMDATA/FX.DPT"
 #INCLUDE "MEMDATA/BONUSES.DPT"
 #INCLUDE "MEMDATA/PLAYER.DPT"

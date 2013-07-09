@@ -10,7 +10,7 @@ ACTOR MDoomPlayer : PlayerPawn
 	PainChance 255
 	Player.DisplayName "Marine"
 	Player.CrouchSprite "PLYC"
-	Player.StartItem "Fists"
+	Player.StartItem "Unarmed"
 	States
 	{
 	Spawn:

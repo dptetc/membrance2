@@ -3,5 +3,6 @@
 script 1 ENTER
 {
 consolecommand("movebob 0");
+consolecommand("HUD_SCALE 1");
 terminate;
 }

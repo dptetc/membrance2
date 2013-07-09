@@ -1,0 +1,11 @@
+#library "fullhp.acs"
+#include "zcommon.acs"
+
+Script "Full health check" Enter
+{
+  If(GetActorProperty(0, APROP_Health) > 100) GiveInventory("FullHealth", 1);
+  Else TakeInventory("FullHealth", 1);
+
+  Delay(1);
+  Restart;
+}
