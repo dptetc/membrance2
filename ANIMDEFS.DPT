@@ -161,3 +161,29 @@ warp texture LAVAWALL
 
 flat	FWATER1		range	FWATERG		tics 2 
 texture	STORM1		range	STORM39  	tics 8
+
+texture FAN_1_1 range FAN_1_3 tics 3
+
+texture FAN_2_1 range FAN_2_4 tics 3
+
+texture FAN_3_1 range FAN_3_4 tics 6
+
+texture STM_1_1 range STM_1_4 tics 2
+
+texture STM_2_1 range STM_2_4 tics 2
+
+texture FFIELD_1 range FFIELD_3 tics 3
+
+texture NEON_1 range NEON_3 tics 15
+
+texture LTR_1 range LTR_3 tics 3
+
+texture SNOW_1 range SNOW_3 tics 1
+
+texture LMCP_1_1 range LMCP_1_4 tics 4
+
+texture LMCP_2_1 range LMCP_2_4 tics 4
+
+texture LMCP_3_1 range LMCP_3_4 tics 4
+
+texture LMCP_4_1 range LMCP_4_4 tics 4

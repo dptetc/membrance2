@@ -1,1 +1,72 @@
 ACTOR FullHealth : Inventory {}
+
+Actor Radiation : CustomInventory {}
+
+Actor RechargeHealth : Health
+{
+	Inventory.PickupSound "RECHARGE"
+	Inventory.UseSound "RECHARGE"
+}
+
+ACTOR BecameInvisible : inventory
+{
+	Inventory.MaxAmount 1
+}
+
+ACTOR NoBulletPuff 
+{
+	PROJECTILE
+	damagetype "EpicDeath"
+	States
+	{
+	Spawn:
+		TNT1 A 1  
+		Stop
+	}
+}
+
+ACTOR MonsterTeleport
+{
+	Speed 20
+	+QUICKTORETALIATE
+	+NOBLOCKMAP 
+	+NOGRAVITY 
+	+DROPOFF 
+	+ACTIVATEIMPACT 
+	+ACTIVATEPCROSS 
+	+NOTELEPORT
+	+FLOORCLIP
+	RADIUS 16
+	HEIGHT 56
+	States
+	{
+	Spawn:
+		TNT1 A 0 
+		TNT1 A 0 A_ChangeFlag("FRIGHTENED",random(0,1))
+		Goto Spawn2
+	Spawn2:
+		TNT1 A 0 A_Jump(64,"Death")
+		TNT1 A 5 A_Chase
+		Goto Spawn2
+	Death:
+		NULL A 0 Thing_ChangeTID (0,1563)
+		NULL A 0 TeleportOther(1564,1563,1)
+		NULL A 0 Thing_ChangeTID (1564,120)
+		NULL A 0 Thing_Remove(1563)
+	}
+}
+
+ACTOR ShadowItem : CustomInventory
+{
+	Inventory.MaxAmount 1
+}
+
+ACTOR TeleportItem : CustomInventory
+{
+	Inventory.MaxAmount 1
+}
+
+ACTOR CheckWeapons : CustomInventory
+{
+	Inventory.MaxAmount 255
+}

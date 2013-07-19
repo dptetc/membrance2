@@ -512,13 +512,16 @@ Actor Groza : MEM_Weapon replaces Chaingun
 		GRZA A 1 A_WeaponReady
 		Loop
 	Deselect2:
+		GRZA A 0 SetPlayerProperty(0,0,2)
 		GRZA A 0 A_Lower
 		Loop
 	Deselect:
+		GRZA A 0 SetPlayerProperty(0,0,2)
 		GRZA A 1 A_Lower
 		GRZA A 0 A_Lower
 		Loop
 	Select:
+		GRZA A 0 SetPlayerProperty(0,1,2)
 		GRZA A 1 A_Raise
 		GRZA A 0 A_Raise
 		Loop
@@ -559,14 +562,17 @@ Actor Groza2 : MEM_Weapon
 		GRZA D 1 A_WeaponReady
 		Loop
 	Deselect2:
+		GRZA A 0 SetPlayerProperty(0,0,2)
 		GRZA D 0 A_ZoomFactor(1.0)
 		GRZA D 0 A_Lower
 		Loop
 	Deselect:
+		GRZA A 0 SetPlayerProperty(0,0,2)
 		GRZA D 0 A_ZoomFactor(1.0)
 		GRZA D 1 A_Lower
 		Loop
 	Select:
+		GRZA A 0 SetPlayerProperty(0,1,2)
 		GRZA D 1 A_Raise
 		GRZA D 0 A_Raise
 		Loop

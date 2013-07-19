@@ -11,7 +11,7 @@ ACTOR GreaterBaron : BaronOfHell 14910
 	Scale 1.3
 	PainChance 185
 	Translation "16:39=104:111", "40:47=5:8", "48:79=32:47", "112:127=216:223"
-	MONSTER
+	Monster
 	+FLOORCLIP
 	+DONTHURTSPECIES
 	+BOSS
@@ -242,7 +242,7 @@ ACTOR Satyr 10666
 	Speed 14
 	PainChance 50
 	Mass 600000
-	MONSTER 
+	Monster 
 	+FLOORCLIP
 	+BOSS
 	MeleeDamage 255
@@ -330,11 +330,6 @@ ACTOR Satyr 10666
 	}
 }
 
-ACTOR BecameInvisible : inventory
-{
-	Inventory.MaxAmount 1
-}
-
 // Monster Other
 
 ACTOR gaast replaces lostsoul 5231
@@ -343,7 +338,7 @@ ACTOR gaast replaces lostsoul 5231
 	Health 60
 	DropItem "UltraHealPotion" 1
 	Speed 7
-	MONSTER
+	Monster
 	+Float
 	+NOGRAVITY
 	+FLOATBOB
@@ -364,7 +359,7 @@ ACTOR gaast replaces lostsoul 5231
 		GAST A 1 A_MeleeAttack
 		Goto See
 	Missile:
-		GAST A 0 A_Jump(127,"Missile2")
+		GAST A 0 A_Jump(random(0,255),"Missile2")
 		GAST A 10 A_FaceTarget
 		GAST A 1 A_SkullAttack
 		Goto See
@@ -881,18 +876,6 @@ ACTOR PainElemental3
 	}
 }
 
-ACTOR NoBulletPuff 
-{
-	PROJECTILE
-	damagetype "EpicDeath"
-	States
-	{
-	Spawn:
-		TNT1 A 1  
-		Stop
-	}
-}
-
 ACTOR nemezdaBallpuff
 { 
 	Scale 0.41
@@ -959,7 +942,7 @@ ACTOR NemezdaBallparticle2
 
 ACTOR RedNemezdaIceBall : plasmaball
 {
-	speed 16
+	Speed 16
 	damagetype ice
 	renderstyle soultrans
 	+SHADOW
@@ -990,7 +973,7 @@ ACTOR RedNemezdaIceBall : plasmaball
 
 ACTOR RedNemezdaIceBall2 : RedNemezdaIceBall
 {
-	speed 32
+	Speed 32
 	Damage 16
 	Scale 0.8
 	Translation "192:207=203:207"
@@ -999,7 +982,7 @@ ACTOR RedNemezdaIceBall2 : RedNemezdaIceBall
 
 ACTOR RedNemezdaIceBall3 : RedNemezdaIceBall
 {
-	speed 32
+	Speed 32
 	Damage 1
 	Scale 0.1
 	Translation "192:207=168:191"
@@ -1018,13 +1001,12 @@ ACTOR SuperImp 12000
 	StencilColor Blue
 	Translation "0:255=192:207"
 	MissileType RedNemezdaIceBall
-	+MissileMORE
-	+MissileEVENMORE
+	+MISSILEMORE
+	+MISSILEEVENMORE
 	+LOOKALLAROUND
 	Mass 100
 	Speed 12
 	PainChance 56
-	Scale 1.1
 	Monster
 	+FLOORCLIP
 	BloodType "BloodSplat"
@@ -1302,7 +1284,6 @@ ACTOR Zombieman1 : zombieman
 ACTOR Zombieman2 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.8
 	States
 	{
 	Missile:
@@ -1345,7 +1326,6 @@ ACTOR Zombieman2 : zombieman1
 ACTOR Zombieman3 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.9
 	States
 	{
 	Missile:
@@ -1388,7 +1368,6 @@ ACTOR Zombieman3 : zombieman1
 ACTOR Zombieman4 : zombieman1
 {
 	PainChance "Cube", 255
-	YScale 1.1
 	States
 	{
 	Missile:
@@ -1431,9 +1410,8 @@ ACTOR Zombieman4 : zombieman1
 ACTOR Zombieman5 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.96
-	+MissileMORE
-	+MissileEVENMORE
+	+MISSILEMORE
+	+MISSILEEVENMORE
 	States
 	{
 	Missile:
@@ -1477,7 +1455,6 @@ ACTOR Zombieman5 : zombieman1
 ACTOR Zombieman6 : zombieman1
 {
 	PainChance "Cube", 255
-	XScale 1.08
 	DropItem "PDA" 226
 	States
 	{
@@ -1521,7 +1498,6 @@ ACTOR Zombieman6 : zombieman1
 ACTOR Zombieman7 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.97
 	DropItem "Venom3" 127
 	States
 	{
@@ -1564,7 +1540,6 @@ ACTOR Zombieman7 : zombieman1
 ACTOR Zombieman8 : zombieman1
 {
 	PainChance "Cube", 255
-	XScale 0.9
 	DropItem "Venom1" 246
 	States
 	{
@@ -1607,7 +1582,6 @@ ACTOR Zombieman8 : zombieman1
 ACTOR Zombieman9 : zombieman1
 {
 	PainChance "Cube", 255
-	Yscale 0.8
 	DropItem "Venom4" 116
 	MinMissileChance 2
 	States
@@ -1651,7 +1625,6 @@ ACTOR Zombieman9 : zombieman1
 ACTOR Zombieman10 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.99
 	DropItem "Venom2" 256
 	MinMissileChance 2
 	States
@@ -1695,7 +1668,6 @@ ACTOR Zombieman10 : zombieman1
 ACTOR Zombieman11 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.79
 	DropItem "Venom4" 116
 	MinMissileChance 2
 	DropItem "SilencerAsItem" 115
@@ -1742,7 +1714,6 @@ ACTOR Zombieman11 : zombieman1
 ACTOR Zombieman12 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.98
 	DropItem "Venom2" 256
 	DropItem "SilencerAsItem" 256
 	MinMissileChance 2
@@ -1788,7 +1759,6 @@ ACTOR Zombieman12 : zombieman1
 ACTOR Zombieman13 : zombieman1
 {
 	PainChance "Cube", 255
-	Scale 0.8
 	DropItem "Venom2" 256
 	MinMissileChance 2
 	States
@@ -1834,9 +1804,8 @@ ACTOR ZombieMan14 : ZombieMan1
 {
 	PainChance "Cube", 255
 	DropItem "SilencerAsItem" 76
-	+MissileMORE
-	+MissileEVENMORE
-	YScale 1.11
+	+MISSILEMORE
+	+MISSILEEVENMORE
 	States
 	{
 	Pain.Cube:
@@ -1875,7 +1844,6 @@ ACTOR ZombieMan15 : ZombieMan1
 {
 	PainChance "Cube", 255
 	DropItem "SilencerAsItem" 116
-	Yscale 0.9
 	States
 	{
 	See:
@@ -1924,7 +1892,6 @@ ACTOR ZombieMan16 : ZombieMan1
 	DropItem CLIP
 	DropItem CELL 92
 	DropItem Medikit 92
-	Xscale 1.2
 	States
 	{
 	See:
@@ -2033,47 +2000,6 @@ ACTOR ZombieMan17 : ZombieMan1
 	}
 }
 
-ACTOR ZombieManRuinsSpecial : Zombieman1 10778
-{
-	PainChance "Cube", 255
-	DropItem "SilencerAsItem" 255
-	Scale 0.9
-	Speed 10
-	MinMissileChance 118
-	States
-	{
-	Pain.Cube:
-		POSS G 3
-		POSS G 0 A_GiveToTarget ("RechargeHealth", 10)
-		POSS G 3 A_Pain
-		Goto See
-	Death:
-		POSS H 0 A_GiveToTarget ("CubeAmmo", 1)
-		POSS H 5
-		POSS I 5 A_Scream
-		POSS J 5 A_NoBlocking
-		POSS K 5
-		POSS L -1
-		Stop   
-	Death.Cube:
-		POSS H 0 A_GiveToTarget ("RechargeHealth", 20)
-		POSS H 5
-		POSS I 5 A_Scream
-		POSS J 5 A_NoBlocking
-		POSS K 5
-		POSS L -1
-		Stop 
-	XDeath:
-		POSS M 0 A_GiveToTarget ("CubeAmmo", 1)
-		POSS M 5
-		POSS N 5 A_XScream
-		POSS O 5 A_NoBlocking
-		POSS PQRST 5
-		POSS U -1
-		stop
-	}
-}
-
 ACTOR SilencerAsItem : CustomInventory
 {
 	Radius 11
@@ -2081,7 +2007,7 @@ ACTOR SilencerAsItem : CustomInventory
 	States
 	{ 
 	Spawn:
-		SOLT A -1
+		SILC A -1
 		Stop
 	PickUp:
 		TNT1 A 1 A_GiveInventory("Silencer",1)
@@ -2134,7 +2060,6 @@ ACTOR ShotgunGuy1 : shotgunguy
 ACTOR ShotgunGuy2 : ShotgunGuy1
 {
 	PainChance "Cube", 255
-	YScale 1.2
 	States
 	{
 	Missile:
@@ -2177,7 +2102,6 @@ ACTOR ShotgunGuy2 : ShotgunGuy1
 ACTOR ShotgunGuy3 : ShotgunGuy1
 {
 	PainChance "Cube", 255
-	Yscale 0.97
 	States
 	{
 	Missile:
@@ -2220,7 +2144,6 @@ ACTOR ShotgunGuy3 : ShotgunGuy1
 ACTOR ShotgunGuy4 : ShotgunGuy1
 {
 	PainChance "Cube", 255
-	xScale 0.9
 	States
 	{
 	Missile:
@@ -2263,7 +2186,6 @@ ACTOR ShotgunGuy4 : ShotgunGuy1
 ACTOR ShotgunGuy5 : shotgunguy1
 {
 	PainChance "Cube", 255
-	xscale 1.1
 	States
 	{
 	Missile:
@@ -2307,7 +2229,6 @@ ACTOR ShotgunGuy5 : shotgunguy1
 ACTOR ShotgunGuy6 : shotgunguy1
 {
 	PainChance "Cube", 255
-	scale 0.9
 	States
 	{
 	See:
@@ -2353,8 +2274,6 @@ ACTOR ShotgunGuy6 : shotgunguy1
 ACTOR ShotgunGuy7 : shotgunguy1
 {
 	PainChance "Cube", 255
-	Yscale 1.05
-	xscale 1.1
 	DropItem mem_Shotgun
 	DropItem Medikit 92
 	States
@@ -2403,7 +2322,6 @@ ACTOR ShotgunGuy7 : shotgunguy1
 ACTOR ShotgunGuy8 : shotgunguy1
 {
 	PainChance "Cube", 255
-	XScale 0.9
 	States
 	{
 	Spawn:
@@ -2469,7 +2387,6 @@ ACTOR ShotgunGuy8 : shotgunguy1
 ACTOR ChaingunGuy1 : ChaingunGuy
 {
 	PainChance "Cube", 255
-	Xscale 1.1
 	DropItem "PDA" 38
 	DropItem "Heal2" 15
 	DropItem "Mem_Chaingun"
@@ -2752,9 +2669,8 @@ ACTOR DoomImp1 : Doomimp
 
 ACTOR DoomImp2 : DoomImp1
 {
-	Scale 0.9
-	+MissileMORE
-	+MissileEVENMORE
+	+MISSILEMORE
+	+MISSILEEVENMORE
 	States
 	{
 	Pain.Cube:
@@ -2833,7 +2749,7 @@ ACTOR DoomImp3 : DoomImp1
 ACTOR DoomImp4 : DoomImp1
 {
 	DropItem Medikit 92
-	SPEED 16
+	Speed 16
 	States
 	{
 	See:
@@ -3055,7 +2971,7 @@ ACTOR Demon3 : Demon1
 ACTOR Demon4 : Demon1
 {
 	DropItem Medikit 92
-	SPEED 16
+	Speed 16
 	States
 	{
 	Missile:
@@ -3272,7 +3188,7 @@ ACTOR Spectre3 : Spectre1
 ACTOR Spectre4 : Spectre1
 {
 	DropItem Medikit 92
-	SPEED 16
+	Speed 16
 	States
 	{
 	Missile:
@@ -3558,7 +3474,7 @@ ACTOR CacoDemon1 : Cacodemon
 
 ACTOR CacoDemon2 : CacoDemon1
 {
-	+MissileMORE
+	+MISSILEMORE
 	States
 	{
 	Pain.Cube:
@@ -3588,7 +3504,7 @@ ACTOR CacoDemon2 : CacoDemon1
 
 ACTOR CacoDemon3 : CacoDemon1
 {
-	+MissileMORE
+	+MISSILEMORE
 	States
 	{
 	See:
@@ -3627,7 +3543,7 @@ ACTOR CacoDemon3 : CacoDemon1
 ACTOR CacoDemon4 : CacoDemon1
 {
 	DropItem Medikit 92
-	+MissileMORE
+	+MISSILEMORE
 	States
 	{
 	See:
@@ -3770,12 +3686,11 @@ ACTOR HellKnight1 : HellKnight
 
 ACTOR HellKnight2 : HellKnight1
 {
-	Scale 1.12
 	DropItem "Heal4" 212
 	DropItem "Venom1" 21 23
 	DropItem "PurpleGoo3" 56 3
-	SPEED 12
-	+MissileMORE
+	Speed 12
+	+MISSILEMORE
 	States
 	{
 	Pain.Cube:
@@ -3806,9 +3721,8 @@ ACTOR HellKnight2 : HellKnight1
 
 ACTOR HellKnight3 : HellKnight1
 {
-	Scale 0.91
-	SPEED 9
-	+MissileMORE
+	Speed 9
+	+MISSILEMORE
 	States
 	{
 	See:
@@ -3854,9 +3768,8 @@ ACTOR HellKnight3 : HellKnight1
 
 ACTOR HellKnight4 : HellKnight1
 {
-	Scale 0.8
-	SPEED 12
-	+MissileMORE
+	Speed 12
+	+MISSILEMORE
 	DropItem Medikit 92
 	States
 	{
@@ -3913,7 +3826,6 @@ ACTOR HellKnight4 : HellKnight1
 
 ACTOR HellKnight5 : HellKnight1
 {
-	Scale 1.5
 	States
 	{
 	Spawn:
@@ -3999,8 +3911,7 @@ ACTOR BaronOfHell1 : baronofhell
 
 ACTOR BaronOfHell2 : BaronOfHell1
 {
-	Scale 1.2
-	SPEED 16
+	Speed 16
 	States
 	{
 	Pain.Cube:
@@ -4031,10 +3942,8 @@ ACTOR BaronOfHell2 : BaronOfHell1
 
 ACTOR BaronOfHell3 : BaronOfHell1
 {
-	YScale 0.9 
-	Xscale 1.2
-	SPEED 16
-	+MissileMORE
+	Speed 16
+	+MISSILEMORE
 	States
 	{
 	See:
@@ -4080,11 +3989,10 @@ ACTOR BaronOfHell3 : BaronOfHell1
 
 ACTOR BaronOfHell4 : BaronOfHell1
 {
-	Scale 0.8
-	SPEED 16
+	Speed 16
 	DropItem Medikit 92
-	+MissileMORE
-	+MissileEVENMORE
+	+MISSILEMORE
+	+MISSILEEVENMORE
 	States
 	{
 	See:
@@ -4141,7 +4049,6 @@ ACTOR BaronOfHell4 : BaronOfHell1
 
 ACTOR BaronOfHell5 : BaronOfHell1
 {
-	yscale 1.26
 	States
 	{
 	Spawn:
@@ -4237,7 +4144,6 @@ ACTOR CyberDemon1 : CyberDemon
 
 ACTOR CyberDemon2 : CyberDemon1
 {
-	Scale 0.85
 	States
 	{
 	Missile:
@@ -4285,7 +4191,6 @@ ACTOR CyberDemon2 : CyberDemon1
 
 ACTOR CyberDemon3 : CyberDemon1
 {
-	Scale 1.1
 	States
 	{
 	Missile:
@@ -4346,7 +4251,6 @@ ACTOR CyberDemon4 : CyberDemon1
 	DropItem Medikit 128
 	DropItem Medikit 128
 	DropItem Berserk 92
-	Scale 1.4
 	States
 	{
 	Missile:
@@ -4412,7 +4316,6 @@ ACTOR CyberDemon4 : CyberDemon1
 
 ACTOR CyberDemon5 : CyberDemon1
 {
-	scale 1.4 
 	States
 	{
 	Spawn:
@@ -4571,7 +4474,6 @@ ACTOR Revenant2 : Revenant1
 
 ACTOR Revenant3 : Revenant1 
 {
-	yscale 0.9
 	DropItem "GreenGoo1" 111
 	States
 	{
@@ -4615,7 +4517,6 @@ ACTOR Revenant4 : Revenant1
 	DropItem Heal2 126 2
 	DropItem Heal3 74 2
 	+NORADIUSDMG
-	Scale 1.2
 	States
 	{
 	Missile:
@@ -4659,7 +4560,6 @@ ACTOR Revenant4 : Revenant1
 
 ACTOR Revenant5 : Revenant1
 {
-	scale 0.87
 	States
 	{
 	Spawn:
@@ -4765,7 +4665,6 @@ ACTOR Fatso1 : Fatso
 
 ACTOR Fatso2 : Fatso1
 {
-	yscale 1.3
 	States
 	{
 	Missile:
@@ -4804,7 +4703,6 @@ ACTOR Fatso2 : Fatso1
 
 ACTOR Fatso3 : Fatso1
 {
-	scale 0.9
 	States
 	{
 	Missile:
@@ -4850,7 +4748,6 @@ ACTOR Fatso4 : Fatso1
 {
 	+NORADIUSDMG
 	DropItem Medikit 92
-	scale 1.1
 	States
 	{
 	Missile:
@@ -4894,7 +4791,6 @@ ACTOR Fatso4 : Fatso1
 
 ACTOR Fatso5 : Fatso1
 {
-	xscale 1.4
 	States
 	{
 	Spawn:
@@ -4973,7 +4869,6 @@ ACTOR Archvile1 : ArchVile
 	DropItem "SuperHealPotion" 44 2
 	DropItem "UltraHealthPotion" 11
 	BloodType "BloodSplat"
-	xscale 1.9
 	States
 	{
 	Pain.Cube:
@@ -5002,8 +4897,7 @@ ACTOR Archvile1 : ArchVile
 
 ACTOR ArchVile2 : ArchVile1
 {
-	scale 0.99
-	SPEED 20
+	Speed 20
 	States
 	{
 	Pain.Cube:
@@ -5032,8 +4926,7 @@ ACTOR ArchVile2 : ArchVile1
 
 ACTOR ArchVile3 : ArchVile1
 {
-	scale 1.2
-	SPEED 20
+	Speed 20
 	States
 	{
 	Missile:
@@ -5073,11 +4966,10 @@ ACTOR ArchVile3 : ArchVile1
 
 ACTOR ArchVile4 : ArchVile1
 {
-	yscale 1.4
 	DropItem Medikit 92
 	DropItem GreenGoo 66
 	DropItem MultiSphere 1
-	SPEED 20
+	Speed 20
 	States
 	{
 	See:
@@ -5127,7 +5019,6 @@ ACTOR ArchVile4 : ArchVile1
 
 ACTOR ArchVile5 : ArchVile1
 {
-	scale 1.5
 	States
 	{
 	Spawn:
@@ -5226,7 +5117,6 @@ ACTOR SpiderMasterMind1 : SpiderMasterMind
 
 ACTOR SpiderMasterMind2 : SpiderMasterMind1
 {
-	scale 1.1
 	States
 	{
 	Missile:
@@ -5261,7 +5151,6 @@ ACTOR SpiderMasterMind2 : SpiderMasterMind1
 
 ACTOR SpiderMasterMind3 : SpiderMasterMind1
 {
-	scale 1.7
 	DropItem MultiSphere 20
 	DropItem Purplegoo4 210
 	States
@@ -5308,7 +5197,6 @@ ACTOR SpiderMasterMind4 : SpiderMasterMind1
 	DropItem Medikit 128
 	DropItem Medikit 128
 	DropItem Berserk 92
-	Scale 1.8
 	States
 	{
 	Missile:
@@ -5345,7 +5233,6 @@ ACTOR SpiderMasterMind4 : SpiderMasterMind1
 
 ACTOR SpiderMasterMind5 : SpiderMasterMind1
 {
-	xscale 1.45
 	States
 	{
 	Spawn:
@@ -5445,54 +5332,6 @@ ACTOR ShockPuffSpark
 	}
 }
 
-ACTOR MonsterTeleport
-{
-	SPEED 20
-	+QUICKTORETALIATE
-	+NOBLOCKMAP 
-	+NOGRAVITY 
-	+DROPOFF 
-	+ACTIVATEIMPACT 
-	+ACTIVATEPCROSS 
-	+NOTELEPORT
-	+FLOORCLIP
-	RADIUS 16
-	HEIGHT 56
-	States
-	{
-	Spawn:
-		TNT1 A 0 
-		TNT1 A 0 A_ChangeFlag("FRIGHTENED",random(0,1))
-		Goto Spawn2
-	Spawn2:
-		TNT1 A 0 A_Jump(64,"Death")
-		TNT1 A 5 A_Chase
-		Goto Spawn2
-	Death:
-		NULL A 0 Thing_ChangeTID (0,1563)
-		NULL A 0 TeleportOther(1564,1563,1)
-		NULL A 0 Thing_ChangeTID (1564,120)
-		NULL A 0 Thing_Remove(1563)
-	}
-}
-
-// Working
-
-ACTOR ShadowItem : CustomInventory
-{
-	Inventory.MaxAmount 1
-}
-
-ACTOR TeleportItem : CustomInventory
-{
-	Inventory.MaxAmount 1
-}
-
-ACTOR CheckWeapons : CustomInventory
-{
-	Inventory.MaxAmount 255
-}
-
 ACTOR LazorProjectile : Lazor
 {
 	Translation "0:255=196:198"
@@ -5569,7 +5408,7 @@ ACTOR Dalek
 	Health 1000
 	Radius 16
 	Height 56
-	MONSTER
+	Monster
 	+FLOORCLIP
 	+NOPAIN 
 	+NOBLOOD
@@ -5577,37 +5416,37 @@ ACTOR Dalek
 	States
 	{
 	Spawn:
-		PLAY A 2
+		DALK A 2
 		Loop
 	See:
-		PLAY ABCD 2 A_Chase
+		DALK ABCD 2 A_Chase
 		Loop
 	Missile:
-		PLAY E 70 A_PlaySound("Dalek")
-		PLAY F 1 Bright A_FaceTarget
-		PLAY F 0 A_CustomMissile("LAZORPROJECTILE",31)
-		PLAY F 3 Bright
+		DALK E 70 A_PlaySound("Dalek")
+		DALK F 1 Bright A_FaceTarget
+		DALK F 0 A_CustomMissile("LAZORPROJECTILE",31)
+		DALK F 3 Bright
 		Goto See 
 	Death:
-		PLAY A 0 A_GiveToTarget ("CubeAmmo",1)
-		PLAY A 1 A_SpawnItemEx("DalekExplosion",6)
-		PLAY HIJKLM 5
-		PLAY M -1
+		DALK A 0 A_GiveToTarget ("CubeAmmo",1)
+		DALK A 1 A_SpawnItemEx("DalekExplosion",6)
+		DALK HIJKLM 5
+		DALK M -1
 		Stop
 	Death.Cube:
-		PLAY A 0 A_GiveToTarget ("RechargeHealth",200)
-		PLAY A 1 A_SpawnItemEx("DalekExplosion",6)
-		PLAY HIJKLM 5
-		PLAY M -1
+		DALK A 0 A_GiveToTarget ("RechargeHealth",200)
+		DALK A 1 A_SpawnItemEx("DalekExplosion",6)
+		DALK HIJKLM 5
+		DALK M -1
 		Stop
 	XDeath:
-		PLAY A 0 A_GiveToTarget ("CubeAmmo", 1)
-		PLAY A 1 A_SpawnItemEx("DalekExplosion2",6)
-		PLAY NOPQRSTUVW 5
-		PLAY W -1
+		DALK A 0 A_GiveToTarget ("CubeAmmo", 1)
+		DALK A 1 A_SpawnItemEx("DalekExplosion2",6)
+		DALK NOPQRSTUVW 5
+		DALK W -1
 		Stop
 	Raise:
-		PLAY MLKJIH 5
+		DALK MLKJIH 5
 		Goto See
 	}
 }
@@ -5633,4 +5472,59 @@ ACTOR DalekExplosion2 : Rocket
 	}
 }
 
-Actor RechargeHealth : Health { Inventory.PickupSound "RECHARGE" Inventory.UseSound "RECHARGE" }
+ACTOR BloodDemon 3123
+{              
+	//$Category Monsters
+	Health 150 
+	PainChance 180 
+	Speed 10 
+	Radius 30 
+	Height 56 
+	Mass 400 
+	Damage 2
+	Monster 
+	+FLOORCLIP 
+	SeeSound "demon/sight" 
+	AttackSound "demon/melee" 
+	PainSound "demon/pain" 
+	DeathSound "demon/death" 
+	ActiveSound "demon/active" 
+	Obituary "%o was gored by a Mauler Demon."
+	HitObituary "%o was mauled by a Mauler Demon"
+	States 
+	{ 
+	Spawn: 
+		MAUD AB 10 A_Look 
+		Loop 
+	See: 
+		MAUD AABBCCDD 2 A_Chase 
+		Loop 
+	Melee: 
+		MAUD EF 8 A_FaceTarget 
+		MAUD G 8 A_SargAttack 
+		Goto See 
+	Missile: 
+		MAUD E 0 A_Jumpifcloser(224, 2)
+		Goto See
+		MAUD E 4 A_FaceTarget 
+		MAUD F 10 A_SkullAttack 
+		MAUD G 5 A_Gravity
+		Goto See 
+	Pain: 
+		MAUD H 2 
+		MAUD H 2 A_Pain 
+		Goto See 
+	Death: 
+		MAUD I 8 
+		MAUD J 8 A_Scream 
+		MAUD K 4 
+		MAUD L 4 A_Fall 
+		MAUD M 4 
+		MAUD N -1 
+		Stop 
+	Raise: 
+		MAUD N 5 
+		MAUD MLKJI 5 
+		Goto See 
+	} 
+}
