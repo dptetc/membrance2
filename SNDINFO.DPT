@@ -169,3 +169,7 @@ weapons/chngunwndup		DSDWU
 weapons/chngunwnd		DSD3CGMO
 weapons/chngunwnddwn	DSD3CGWD
 $random weapons/minigun { weapons/chngun1 weapons/chngun2 weapons/chngun3 }
+
+weapons/PhaseBFGidle NEWRAILO
+weapons/PhaseBFGf DSPLASMA
+weapons/PhaseBFGcool RAILGF1

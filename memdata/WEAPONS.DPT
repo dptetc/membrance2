@@ -1639,6 +1639,103 @@ Actor BFGparticle
 	}
 }  
 
+//***********PhaseBFG***********\\
+
+Actor PhaseBFG : MEM_Weapon
+{
+	Radius 20
+	Height 20
+	Weapon.Selectionorder 2800
+	Weapon.AmmoUse 5
+	Weapon.AmmoGive 40
+	Weapon.AmmoType "Cell"
+	Weapon.Kickback 100
+	Inventory.Pickupmessage "PhaseBFG"
+	+WEAPON.NOAUTOFIRE
+	+WEAPON.NOLMS
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Ready:
+		PHAS A 0 A_PlaySound ("weapons/PhaseBFGidle")
+		PHAS A 1 A_WeaponReady
+		PHAS A 1 A_WeaponReady
+		PHAS B 1 A_WeaponReady
+		PHAS B 1 A_WeaponReady
+		PHAS C 1 A_WeaponReady
+		PHAS C 1 A_WeaponReady
+		PHAS D 1 A_WeaponReady
+		PHAS D 1 A_WeaponReady
+	RealReady:
+		PHAS E 1 A_WeaponReady
+		PHAS F 1 A_WeaponReady
+		PHAS F 1 A_WeaponReady
+		PHAS E 1 A_WeaponReady
+		Loop
+	Deselect:
+		PHAS E 1 A_Lower
+		Loop
+	Select:
+		PHAS E 1 A_Raise
+		Loop
+	Fire:
+		PHAS E 20 A_PlaySound ("weapons/PhaseBFGf")
+		PHAS F 4
+		PHAS G 1
+		PHAS H 1
+		PHAS I 1
+		Goto Hold
+	Hold:
+		PHAS J 2 A_GunFlash
+		PHAS K 2
+		PHAS L 2 A_FireBullets(0,0,1,0,"PhaseBFGShot")
+		PHAS M 2
+		PHAS N 0 A_ReFire
+		PHAS O 35 A_PlaySound ("weapons/PhaseBFGcool")
+		Goto RealReady
+	Flash:
+		TNT1 A 2 Bright A_Light1
+		TNT1 A 3 Bright
+		Goto LightDone
+		Stop
+	}
+}
+
+ACTOR PhaseBFGShot
+{
+	SpawnID 217
+	Radius 11
+	Height 8
+	Speed 20
+	Damage 160
+	DamageType BFG10k
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ACTIVATEIMPACT
+	+ACTIVATEPCROSS
+	+NOTELEPORT 
+	+PUFFONACTORS
+	+PUFFGETSOWNER
+	+FORCERADIUSDMG
+	Renderstyle Add
+	Alpha 0.75
+	SeeSound "weapons/bfg10kx"
+	AttackSound "weapons/bfg10kx"
+	Obituary "%o was blasted by %k's BFG10K."
+	States
+	{
+	Spawn:
+		BFGA A 0 Bright
+		BFGA A 3 Bright A_Detonate
+		BFGA BCDEFGH 3 Bright
+		Stop
+	}
+}
+
+//***********TEST***********\\
+
 Actor Mem_RicoChet replaces bulletpuff
 { 
 	Radius 1

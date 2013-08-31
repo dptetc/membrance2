@@ -16,7 +16,7 @@ episode MEM00
 	name = "MEMBRANCE"
 	key = "M"
 }
-episode MEM14
+episode ENDMEM2
 {
 	name = "MEMBRANCE II"
 	key = "M"
@@ -194,7 +194,18 @@ map MEM13 "SATYR'S TEMPLE"
 	music = "SATYR"
 	nointermission
 }
+map MEM14 "Kepler-22b Landing"
+{
+	cluster = 0
+	music = "Kepler"
+}
 map ENDMEM ""
+{
+	cluster = 0
+	next = "MEM14"
+	nointermission
+}
+map ENDMEM2 ""
 {
 	cluster = 0
 	next = "MEM14"

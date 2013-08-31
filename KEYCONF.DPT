@@ -5,7 +5,7 @@ setslot 3 Ventiled_Shotgun DoubleShotgun
 setslot 4 Groza M134 Minigun
 setslot 5 Bazooka HandGrenade
 setslot 6 PlasmaGun Railgun
-setslot 7 BFG BFG2704
+setslot 7 BFG BFG2704 PhaseBFG
 setslot 8 SoulCube
 
 clearplayerclasses
