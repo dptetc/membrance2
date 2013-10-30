@@ -1,2 +1,2 @@
-#include "shaders/common.shader"
+#include "shaders/_common.shaderpack"
 #include "shaders/brightmaps_test.shader"

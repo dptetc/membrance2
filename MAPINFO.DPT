@@ -91,6 +91,7 @@ map LOADING ""
 }
 map MEM01 "Ruins"
 {
+	exitpic = "KEPLER22B"
 	cluster = 0
 	next = "MEM02"
 	secretnext = "MEM02"
@@ -99,6 +100,7 @@ map MEM01 "Ruins"
 }
 map MEM02 "Reactor"
 {
+	exitpic = "INTERPIC"
 	cluster = 0
 	next = "MEM03"
 	secretnext = "MEM07"
@@ -107,18 +109,20 @@ map MEM02 "Reactor"
 }
 map MEM03 "Destiny"
 {
+	exitpic = "INTERPIC"
 	cluster = 0
 	next = "MEM04"
 	secretnext = "MEM04"
-	sky1 = "RSKY1"
+	sky1 = "INTERSTELLAR"
 	music = "D_SNOW"
 }
 map MEM04 "Knight's HellDome"
 {
+	exitpic = "KEPLERSNOW"
 	cluster = 0
 	next = "MEM05"
 	secretnext = "MEM05"
-	sky1 = "RSKY1"
+	sky1 = "INTERSTELLAR"
 	music = "SPIRAL"
 }
 map MEM05 "Stormy City"
