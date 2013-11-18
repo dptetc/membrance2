@@ -1,2 +1,3 @@
 #include "shaders/_common.shaderpack"
+#include "shaders/_int_skybox.shader"
 #include "shaders/brightmaps_test.shader"

@@ -53,3 +53,11 @@ graphic NOSKULL, 13, 16 {
    xscale 2.25
    patch SKULL_NO, 0, 0 { }
 }
+
+remap 9999A0 ESMERAL1 
+remap 9999B0 ESMERAL2 
+remap 9999C0 ESMERAL3 
+remap 9999D0 ESMERAL4
+remap 9999E0 ESMERAL5
+remap 9999F0 ESMERAL6
+remap 9999G0 ESMERAL7

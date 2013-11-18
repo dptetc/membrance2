@@ -100,10 +100,10 @@ statusbar normal, fullscreenoffsets
 
 statusbar fullscreen { }
 
-statusbar automap,  fullscreenoffsets
+/*statusbar automap,  fullscreenoffsets
 {
 DrawImage "AUTOMAP", 0, 0;
-}
+}*/
 
 statusbar inventory
 {

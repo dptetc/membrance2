@@ -173,3 +173,10 @@ $random weapons/minigun { weapons/chngun1 weapons/chngun2 weapons/chngun3 }
 weapons/PhaseBFGidle NEWRAILO
 weapons/PhaseBFGf DSPLASMA
 weapons/PhaseBFGcool RAILGF1
+
+SonicRushAdventure/Item                 dsgotesm
+SonicRushAdventure/ItemActive           dsesmact
+
+Steam/Loop	STEMLOOP
+Steam/Fire	STEMFIRE
+

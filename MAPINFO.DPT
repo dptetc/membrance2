@@ -16,11 +16,11 @@ episode MEM00
 	name = "MEMBRANCE"
 	key = "M"
 }
-episode MEM14
+/*episode MEM14
 {
 	name = "MEMBRANCE II"
 	key = "M"
-}
+}*/
 skill baby
 {
 	textcolor = White

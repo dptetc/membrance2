@@ -2,7 +2,7 @@
 
 int Souls = 0;
 
-script 1 ENTER
+script 438 ENTER
 {
 	int goto_block;
 	switch (goto_block) {

@@ -1,4 +1,3 @@
-/*
 09.06.2013:
 //Missing Void*
 //Поменять текстуры на MEM01 в скайбоксе.
@@ -35,10 +34,24 @@
 Заменить Fists на Unarmed
 08.07.2013:
 Сюжет таков:
-Eartth, 2451 A.D. Humans exhausted all resources from the Earth, then people began to extract energy from the nucleus, the nucleus becomes unstable, people found on Mars rare material that made ​​them portal that can be sent to any potentially habitable exoplanets, but on the ground there was a man who created a biorobot Sfax, who was sent to earth yet long ago, in 1995, he was immortal, he could not get old, but he could die.
+Earth, 2451 A.D. Humans exhausted all resources from the Earth, then people began to extract energy from the nucleus, the nucleus becomes unstable, people found on Mars rare material that made ​​them portal that can be sent to any potentially habitable exoplanets, but on the ground there was a man who created a biorobot Sfax, who was sent to earth yet long ago, in 1995, he was immortal, he could not get old, but he could die.
 The scientists decided to use it as a test, and he stepped into the portal. 
-потом люди начали добывать энергию из ядра, ядро стало нестабильным, люди нашли на марсе редкие материалы, и сделали из них портал, способный отправлять на любые потенциально обитаемые экзопланеты, но на земле был человек, которого создали сфакс как биоробота, которого отправили на землю ещё давно, в 1995 году, он был бессмертен, он не мог стареть, но мог умереть.
+Земля, 2451 нашей эры, люди исчерпали все ресурсы с Земли, потом люди начали добывать энергию из ядра, ядро стало нестабильным, люди нашли на марсе редкие материалы, и сделали из них портал, способный отправлять на любые потенциально обитаемые экзопланеты, но на земле был человек, которого создали сфакс как биоробота, которого отправили на землю ещё давно, в 1995 году, он был бессмертен, он не мог стареть, но мог умереть.
 Ученые решили использовать его в качестве тестируемого, и он шагнул в портал.
 09.07.2013:
 Переделать AK-47 под думовские руки.
-*/
+11.11.2013:
+1. На MEM01, где на спавне 3д-пол, поднять обычный пол. + Перетащить игроков на спавн.
+Баги:
+//1. Дверь на спавне MEM03 не имеет боковых текстур.
+//2. На MEM00 неправильно отбирается оружие + игрок не застывает.
+//3. На MEM02 неправильная текстура, где проход, там где ещё двое барона/хеллера.
+4. На MEM02 неправильно сделан телепорт к телепорту + 2 телепорт (рядом со спавном) там кривой лайндеф // 2 пофиксено, 1 - ???
+//5. На MEM03 много текстур с неправильными координатами. // Частично фикс
+6. На MEM13 смерть хуевая.
+//7. На MEM03 освещение в комнате с ССГ хуевое.
+8. На MEM03 блок-лайны на секретной дали. // НЕ исправлено :\
+9. Монстры слишком быстрые. (Большинство)
+10. На большинстве уровней есть НЕ секреты, помечающиеся секретами
+11. Птички не LOOKALLAROUND с A_WANDER
+12. На MEM05 много чего не доработано
