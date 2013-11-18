@@ -1,9 +1,9 @@
 Skybox INTERSTELLAR
 {
-	interstellar_up
-	interstellar_ft
-	interstellar_dn
-	interstellar_bk
-	interstellar_up
-	interstellar_dn
+	is_rt
+	is_ft
+	is_lf
+	is_bk
+	is_up
+	is_dn
 }
