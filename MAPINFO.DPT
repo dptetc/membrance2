@@ -204,3 +204,8 @@ map ENDMEM ""
 	next = "MEM14"
 	nointermission
 }
+map TITLEMAP ""
+{
+	music = "MEMTITLE"
+	nointermission
+}
