@@ -31,6 +31,7 @@ ACTOR Unarmed : MEM_Weapon replaces Fist
 	Weapon.SelectionOrder 3700
 	Weapon.Kickback 20
 	+NOAUTOFIRE
+	DamageType BloodFists
 	States
 	{
 	Ready2:
