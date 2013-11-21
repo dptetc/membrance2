@@ -161,6 +161,7 @@ actor Bird 1917
 	{
 	Spawn:
 		BIRD ABC 10 A_Look
+		BIRD ABC 10 A_Wander
 		loop
 	See:
 		BIRD ABC 6 A_Chase
