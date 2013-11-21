@@ -1,0 +1,183 @@
+
+/* VOICE */
+
+vox0 vox0
+vox1 vox1
+vox2 vox2
+vox3 vox3
+vox4 vox4
+
+/* FX */
+
+FIRELOP1 FIRELOP1
+FIRELOP2 FIRELOP2
+FIRELOP3 FIRELOP3
+
+$random fire/loop { FIRELOP1 FIRELOP2 FIRELOP3 }
+
+SFX/FireStart	FIRESTRT
+SFX/FireLoop1	FIRELOP1
+SFX/FireLoop2	FIRELOP2
+SFX/FireLoop3	FIRELOP3
+SFX/FireDie	FIREDIE
+
+$Limit SFX/FireStart	0
+$Limit SFX/FireLoop	0
+$Limit SFX/FireDie	0
+
+/* MONSTERS */
+
+$Random Trite/Sight { TRITSIG1 TRITSIG2 TRITSIG3 }
+TRITSIG1		TRITSIG1
+TRITSIG2		TRITSIG2
+TRITSIG3		TRITSIG3
+TRITSIG4		TRITSIG4
+$Random Trite/Active { TRITACT1 TRITACT2 TRITACT3 }
+TRITACT1		TRITACT1
+TRITACT2		TRITACT2
+TRITACT3		TRITACT3
+$Random Trite/Attack { TRITATT1 TRITATT2 TRITATT3 }
+TRITATT1		TRITATT1
+TRITATT2		TRITATT2
+TRITATT3		TRITATT3
+$Random Trite/MeleeHit { TRITHIT1 TRITHIT2 }
+TRITHIT1		TRITHIT1
+TRITHIT2		TRITHIT2
+$Random Trite/Step { TRITSTE1 TRITSTE2 TRITSTE3 TRITSTE4 }
+TRITSTE1		TRITSTE1
+TRITSTE2		TRITSTE2
+TRITSTE3		TRITSTE3
+TRITSTE4		TRITSTE4
+Trite/WebStart		TRITWEB1
+Trite/WebEnd		TRITWEB2
+$Random Trite/Pain { TRITPAI1 TRITPAI2 TRITPAI3 }
+TRITPAI1		TRITPAI1
+TRITPAI2		TRITPAI2
+TRITPAI3		TRITPAI3
+$Random Trite/Death { TRITDEA1 TRITDEA2 TRITDEA3 }
+TRITDEA1		TRITDEA1
+TRITDEA2		TRITDEA2
+TRITDEA3		TRITDEA3
+$Random Trite/Splat { TRITSPL1 TRITSPL2 }
+TRITSPL1		TRITSPL1
+TRITSPL2		TRITSPL2
+
+$Volume Trite/Sight 0.5
+$Volume Trite/Active 0.5
+$Volume Trite/Attack 0.5
+$Volume Trite/MeleeHit 0.5
+$Volume Trite/Pain 0.5
+$Volume Trite/Death 0.5
+$Volume Trite/Splat 0.5
+$Volume Trite/Step 0.2
+
+DALLEK						DALEK
+DALEK2						DALEK2
+
+/* WORLD SOUNDS */
+
+alarm alarm
+
+world/watersplash			dswater
+world/sludgegloop			dsslime
+world/lavasizzle			dslava
+world/water					dswater
+world/blood					dsblood
+world/lava					dslava
+world/slime					dsslime
+world/nuke					dsnuke
+world/hot					dshot
+world/grass					dsgrass
+world/ice					dsice
+world/box					dsbox
+world/hell					dshell
+world/skulls				dsskulls
+world/industrial			dsindus1
+world/industrial2			dsindus2
+world/roof					dsroof
+world/rock					dsrock
+world/wood					dswood
+world/nullspace				dsnulspc
+world/defaultterrain		dsdefter
+
+/* MENU */
+
+menu/activate				dscursor
+menu/backup					dscursor
+menu/prompt					dscursor
+menu/cursor					dscursor
+menu/change					dscursor
+menu/invalid				dscursor
+menu/dismiss				dscursor
+menu/choose					dscursor
+menu/clear					dscursor
+menu/quit1					dscursor
+menu/quit2					dscursor
+
+/* WEAPONS */
+
+Weapons/RailgunFire			NEWRAILF
+Weapons/RailgunLoop			NEWRAILO
+$limit Weapons/RailgunFire 0
+
+Weapons/MinigunIdleReady	MINGIDLE
+Weapons/MinigunIdleFire		MINGIDFR
+Weapons/MinigunFIRE			MINGFIRE
+
+Weapons/DoubleBarreled		DSDBLSHT
+Weapons/GlockFire			GLOCK
+Weapons/GlockSilenced		GLOCKSLD
+Weapons/GlockSilencerON		GLOCKSIL
+Weapons/GlockSilencerOFF	GLOCKSLF
+
+Weapons/ShotgunDeploy		SHOTDEPL
+Weapons/ShotgunFire			SHOTGUNF
+Weapons/ShotgunShells		SHOTSHEL
+Weapons/ShotgunUse			SHOTPUMP
+
+Weapons/GrozaFire1			DSGROZA1
+Weapons/GrozaFire2			DSGROZA2
+Weapons/GrozaFire3			DSGROZA3
+Weapons/GrozaFire4			DSGROZA4
+
+$random Weapons/GrozaFire { Weapons/GrozaFire1 Weapons/GrozaFire2 Weapons/GrozaFire3 Weapons/GrozaFire4 }
+
+Fists/GORE1 GORE1
+Fists/GORE2 GORE2
+Fists/GORE3 GORE3
+Fists/GORE4 GORE4
+$random Fists/GORE { Fists/GORE1 Fists/GORE2 Fists/GORE3 Fists/GORE4 }
+Fists/IMPACT1 IMPACT1
+Fists/IMPACT2 IMPACT2
+Fists/IMPACT3 IMPACT3
+$random Fists/IMPACT { Fists/IMPACT1 Fists/IMPACT2 Fists/IMPACT3 }
+Fists/PUNCH1 PUNCH1
+Fists/PUNCH2 PUNCH2
+Fists/PUNCH3 PUNCH3
+Fists/PUNCH4 PUNCH4
+$random Fists/PUNCH { Fists/PUNCH1 Fists/PUNCH2 Fists/PUNCH3 Fists/PUNCH4 }
+Fists/SWING SWING
+
+RECHARGE RECHARGE
+
+weapons/chngun1			DSD3CG1
+weapons/chngun2			DSD3CG2
+weapons/chngun3			DSD3CG3
+weapons/chngunu			DSD3CR2
+weapons/chngunr			DSD3CR1
+weapons/chngunwndup		DSDWU
+weapons/chngunwnd		DSD3CGMO
+weapons/chngunwnddwn	DSD3CGWD
+$random weapons/minigun { weapons/chngun1 weapons/chngun2 weapons/chngun3 }
+
+weapons/PhaseBFGidle NEWRAILO
+weapons/PhaseBFGf DSPLASMA
+weapons/PhaseBFGcool RAILGF1
+
+SonicRushAdventure/Item                 dsgotesm
+SonicRushAdventure/ItemActive           dsesmact
+
+Steam/Loop	STEMLOOP
+Steam/Fire	STEMFIRE
+
+NOAMMO NOAMMO

@@ -1,0 +1,2734 @@
+Add include path 2: "./"
+Program include path is 3: "H:\!DartPower_Projects\membrance2\membrance2-compilers\acc\"
+AS> 000000 = "ACS" (4 bytes)
+SL> 000004 (skip int)
+---- OuterInclude ----
+*Including zcommon.acs
+*Include file found at .\membrance2-compilers\acc/zcommon.acs
+---- OuterInclude ----
+*Including zspecial.acs
+*Include file found at .\membrance2-compilers\acc/zspecial.acs
+---- OuterSpecialDef ----
+Inserting global identifier: polyobj_rotateleft (SY_SPECIAL)
+Inserting global identifier: polyobj_rotateright (SY_SPECIAL)
+Inserting global identifier: polyobj_move (SY_SPECIAL)
+Inserting global identifier: polyobj_movetimes8 (SY_SPECIAL)
+Inserting global identifier: polyobj_doorswing (SY_SPECIAL)
+Inserting global identifier: polyobj_doorslide (SY_SPECIAL)
+Inserting global identifier: line_horizon (SY_SPECIAL)
+Inserting global identifier: door_close (SY_SPECIAL)
+Inserting global identifier: door_open (SY_SPECIAL)
+Inserting global identifier: door_raise (SY_SPECIAL)
+Inserting global identifier: door_lockedraise (SY_SPECIAL)
+Inserting global identifier: door_animated (SY_SPECIAL)
+Inserting global identifier: autosave (SY_SPECIAL)
+Inserting global identifier: thing_raise (SY_SPECIAL)
+Inserting global identifier: startconversation (SY_SPECIAL)
+Inserting global identifier: thing_stop (SY_SPECIAL)
+Inserting global identifier: floor_lowerbyvalue (SY_SPECIAL)
+Inserting global identifier: floor_lowertolowest (SY_SPECIAL)
+Inserting global identifier: floor_lowertonearest (SY_SPECIAL)
+Inserting global identifier: floor_raisebyvalue (SY_SPECIAL)
+Inserting global identifier: floor_raisetohighest (SY_SPECIAL)
+Inserting global identifier: floor_raisetonearest (SY_SPECIAL)
+Inserting global identifier: stairs_builddown (SY_SPECIAL)
+Inserting global identifier: stairs_buildup (SY_SPECIAL)
+Inserting global identifier: floor_raiseandcrush (SY_SPECIAL)
+Inserting global identifier: pillar_build (SY_SPECIAL)
+Inserting global identifier: pillar_open (SY_SPECIAL)
+Inserting global identifier: stairs_builddownsync (SY_SPECIAL)
+Inserting global identifier: stairs_buildupsync (SY_SPECIAL)
+Inserting global identifier: forcefield (SY_SPECIAL)
+Inserting global identifier: clearforcefield (SY_SPECIAL)
+Inserting global identifier: floor_raisebyvaluetimes8 (SY_SPECIAL)
+Inserting global identifier: floor_lowerbyvaluetimes8 (SY_SPECIAL)
+Inserting global identifier: floor_movetovalue (SY_SPECIAL)
+Inserting global identifier: ceiling_waggle (SY_SPECIAL)
+Inserting global identifier: teleport_zombiechanger (SY_SPECIAL)
+Inserting global identifier: ceiling_lowerbyvalue (SY_SPECIAL)
+Inserting global identifier: ceiling_raisebyvalue (SY_SPECIAL)
+Inserting global identifier: ceiling_crushandraise (SY_SPECIAL)
+Inserting global identifier: ceiling_lowerandcrush (SY_SPECIAL)
+Inserting global identifier: ceiling_crushstop (SY_SPECIAL)
+Inserting global identifier: ceiling_crushraiseandstay (SY_SPECIAL)
+Inserting global identifier: floor_crushstop (SY_SPECIAL)
+Inserting global identifier: ceiling_movetovalue (SY_SPECIAL)
+Inserting global identifier: glassbreak (SY_SPECIAL)
+Inserting global identifier: sector_setlink (SY_SPECIAL)
+Inserting global identifier: scroll_wall (SY_SPECIAL)
+Inserting global identifier: line_settextureoffset (SY_SPECIAL)
+Inserting global identifier: sector_changeflags (SY_SPECIAL)
+Inserting global identifier: line_setblocking (SY_SPECIAL)
+Inserting global identifier: line_settexturescale (SY_SPECIAL)
+Inserting global identifier: polyobj_or_movetospot (SY_SPECIAL)
+Inserting global identifier: plat_perpetualraise (SY_SPECIAL)
+Inserting global identifier: plat_stop (SY_SPECIAL)
+Inserting global identifier: plat_downwaitupstay (SY_SPECIAL)
+Inserting global identifier: plat_downbyvalue (SY_SPECIAL)
+Inserting global identifier: plat_upwaitdownstay (SY_SPECIAL)
+Inserting global identifier: plat_upbyvalue (SY_SPECIAL)
+Inserting global identifier: floor_lowerinstant (SY_SPECIAL)
+Inserting global identifier: floor_raiseinstant (SY_SPECIAL)
+Inserting global identifier: floor_movetovaluetimes8 (SY_SPECIAL)
+Inserting global identifier: ceiling_movetovaluetimes8 (SY_SPECIAL)
+Inserting global identifier: teleport (SY_SPECIAL)
+Inserting global identifier: teleport_nofog (SY_SPECIAL)
+Inserting global identifier: thrustthing (SY_SPECIAL)
+Inserting global identifier: damagething (SY_SPECIAL)
+Inserting global identifier: teleport_newmap (SY_SPECIAL)
+Inserting global identifier: teleport_endgame (SY_SPECIAL)
+Inserting global identifier: teleportother (SY_SPECIAL)
+Inserting global identifier: teleportgroup (SY_SPECIAL)
+Inserting global identifier: teleportinsector (SY_SPECIAL)
+Inserting global identifier: thing_setconversation (SY_SPECIAL)
+Inserting global identifier: acs_execute (SY_SPECIAL)
+Inserting global identifier: acs_suspend (SY_SPECIAL)
+Inserting global identifier: acs_terminate (SY_SPECIAL)
+Inserting global identifier: acs_lockedexecute (SY_SPECIAL)
+Inserting global identifier: acs_executewithresult (SY_SPECIAL)
+Inserting global identifier: acs_lockedexecutedoor (SY_SPECIAL)
+Inserting global identifier: polyobj_movetospot (SY_SPECIAL)
+Inserting global identifier: polyobj_stop (SY_SPECIAL)
+Inserting global identifier: polyobj_moveto (SY_SPECIAL)
+Inserting global identifier: polyobj_or_moveto (SY_SPECIAL)
+Inserting global identifier: polyobj_or_rotateleft (SY_SPECIAL)
+Inserting global identifier: polyobj_or_rotateright (SY_SPECIAL)
+Inserting global identifier: polyobj_or_move (SY_SPECIAL)
+Inserting global identifier: polyobj_or_movetimes8 (SY_SPECIAL)
+Inserting global identifier: pillar_buildandcrush (SY_SPECIAL)
+Inserting global identifier: floorandceiling_lowerbyvalue (SY_SPECIAL)
+Inserting global identifier: floorandceiling_raisebyvalue (SY_SPECIAL)
+Inserting global identifier: ceiling_lowerandcrushdist (SY_SPECIAL)
+Inserting global identifier: sector_settranslucent (SY_SPECIAL)
+Inserting global identifier: floor_raiseandcrushdoom (SY_SPECIAL)
+Inserting global identifier: light_forcelightning (SY_SPECIAL)
+Inserting global identifier: light_raisebyvalue (SY_SPECIAL)
+Inserting global identifier: light_lowerbyvalue (SY_SPECIAL)
+Inserting global identifier: light_changetovalue (SY_SPECIAL)
+Inserting global identifier: light_fade (SY_SPECIAL)
+Inserting global identifier: light_glow (SY_SPECIAL)
+Inserting global identifier: light_flicker (SY_SPECIAL)
+Inserting global identifier: light_strobe (SY_SPECIAL)
+Inserting global identifier: light_stop (SY_SPECIAL)
+Inserting global identifier: thing_damage (SY_SPECIAL)
+Inserting global identifier: radius_quake (SY_SPECIAL)
+Inserting global identifier: thing_move (SY_SPECIAL)
+Inserting global identifier: thing_setspecial (SY_SPECIAL)
+Inserting global identifier: thrustthingz (SY_SPECIAL)
+Inserting global identifier: usepuzzleitem (SY_SPECIAL)
+Inserting global identifier: thing_activate (SY_SPECIAL)
+Inserting global identifier: thing_deactivate (SY_SPECIAL)
+Inserting global identifier: thing_remove (SY_SPECIAL)
+Inserting global identifier: thing_destroy (SY_SPECIAL)
+Inserting global identifier: thing_projectile (SY_SPECIAL)
+Inserting global identifier: thing_spawn (SY_SPECIAL)
+Inserting global identifier: thing_projectilegravity (SY_SPECIAL)
+Inserting global identifier: thing_spawnnofog (SY_SPECIAL)
+Inserting global identifier: floor_waggle (SY_SPECIAL)
+Inserting global identifier: thing_spawnfacing (SY_SPECIAL)
+Inserting global identifier: sector_changesound (SY_SPECIAL)
+Inserting global identifier: player_removeitem (SY_SPECIAL)
+Inserting global identifier: player_giveitem (SY_SPECIAL)
+Inserting global identifier: player_setteam (SY_SPECIAL)
+Inserting global identifier: team_score (SY_SPECIAL)
+Inserting global identifier: team_givepoints (SY_SPECIAL)
+Inserting global identifier: teleport_nostop (SY_SPECIAL)
+Inserting global identifier: setglobalfogparameter (SY_SPECIAL)
+Inserting global identifier: fs_execute (SY_SPECIAL)
+Inserting global identifier: sector_setplanereflection (SY_SPECIAL)
+Inserting global identifier: ceiling_crushandraisedist (SY_SPECIAL)
+Inserting global identifier: generic_crusher2 (SY_SPECIAL)
+Inserting global identifier: sector_setceilingscale2 (SY_SPECIAL)
+Inserting global identifier: sector_setfloorscale2 (SY_SPECIAL)
+Inserting global identifier: plat_upnearestwaitdownstay (SY_SPECIAL)
+Inserting global identifier: noisealert (SY_SPECIAL)
+Inserting global identifier: sendtocommunicator (SY_SPECIAL)
+Inserting global identifier: thing_projectileintercept (SY_SPECIAL)
+Inserting global identifier: thing_changetid (SY_SPECIAL)
+Inserting global identifier: thing_hate (SY_SPECIAL)
+Inserting global identifier: thing_projectileaimed (SY_SPECIAL)
+Inserting global identifier: changeskill (SY_SPECIAL)
+Inserting global identifier: thing_settranslation (SY_SPECIAL)
+Inserting global identifier: line_mirror (SY_SPECIAL)
+Inserting global identifier: line_alignceiling (SY_SPECIAL)
+Inserting global identifier: line_alignfloor (SY_SPECIAL)
+Inserting global identifier: sector_setrotation (SY_SPECIAL)
+Inserting global identifier: sector_setceilingpanning (SY_SPECIAL)
+Inserting global identifier: sector_setfloorpanning (SY_SPECIAL)
+Inserting global identifier: sector_setceilingscale (SY_SPECIAL)
+Inserting global identifier: sector_setfloorscale (SY_SPECIAL)
+Inserting global identifier: setplayerproperty (SY_SPECIAL)
+Inserting global identifier: ceiling_lowertohighestfloor (SY_SPECIAL)
+Inserting global identifier: ceiling_lowerinstant (SY_SPECIAL)
+Inserting global identifier: ceiling_raiseinstant (SY_SPECIAL)
+Inserting global identifier: ceiling_crushraiseandstaya (SY_SPECIAL)
+Inserting global identifier: ceiling_crushandraisea (SY_SPECIAL)
+Inserting global identifier: ceiling_crushandraisesilenta (SY_SPECIAL)
+Inserting global identifier: ceiling_raisebyvaluetimes8 (SY_SPECIAL)
+Inserting global identifier: ceiling_lowerbyvaluetimes8 (SY_SPECIAL)
+Inserting global identifier: generic_floor (SY_SPECIAL)
+Inserting global identifier: generic_ceiling (SY_SPECIAL)
+Inserting global identifier: generic_door (SY_SPECIAL)
+Inserting global identifier: generic_lift (SY_SPECIAL)
+Inserting global identifier: generic_stairs (SY_SPECIAL)
+Inserting global identifier: generic_crusher (SY_SPECIAL)
+Inserting global identifier: plat_downwaitupstaylip (SY_SPECIAL)
+Inserting global identifier: plat_perpetualraiselip (SY_SPECIAL)
+Inserting global identifier: translucentline (SY_SPECIAL)
+Inserting global identifier: sector_setcolor (SY_SPECIAL)
+Inserting global identifier: sector_setfade (SY_SPECIAL)
+Inserting global identifier: sector_setdamage (SY_SPECIAL)
+Inserting global identifier: teleport_line (SY_SPECIAL)
+Inserting global identifier: sector_setgravity (SY_SPECIAL)
+Inserting global identifier: stairs_buildupdoom (SY_SPECIAL)
+Inserting global identifier: sector_setwind (SY_SPECIAL)
+Inserting global identifier: sector_setfriction (SY_SPECIAL)
+Inserting global identifier: sector_setcurrent (SY_SPECIAL)
+Inserting global identifier: scroll_texture_both (SY_SPECIAL)
+Inserting global identifier: scroll_floor (SY_SPECIAL)
+Inserting global identifier: scroll_ceiling (SY_SPECIAL)
+Inserting global identifier: acs_executealways (SY_SPECIAL)
+Inserting global identifier: plat_raiseandstaytx0 (SY_SPECIAL)
+Inserting global identifier: thing_setgoal (SY_SPECIAL)
+Inserting global identifier: plat_upbyvaluestaytx (SY_SPECIAL)
+Inserting global identifier: plat_toggleceiling (SY_SPECIAL)
+Inserting global identifier: light_strobedoom (SY_SPECIAL)
+Inserting global identifier: light_minneighbor (SY_SPECIAL)
+Inserting global identifier: light_maxneighbor (SY_SPECIAL)
+Inserting global identifier: floor_transfertrigger (SY_SPECIAL)
+Inserting global identifier: floor_transfernumeric (SY_SPECIAL)
+Inserting global identifier: changecamera (SY_SPECIAL)
+Inserting global identifier: floor_raisetolowestceiling (SY_SPECIAL)
+Inserting global identifier: floor_raisebyvaluetxty (SY_SPECIAL)
+Inserting global identifier: floor_raisebytexture (SY_SPECIAL)
+Inserting global identifier: floor_lowertolowesttxty (SY_SPECIAL)
+Inserting global identifier: floor_lowertohighest (SY_SPECIAL)
+Inserting global identifier: exit_normal (SY_SPECIAL)
+Inserting global identifier: exit_secret (SY_SPECIAL)
+Inserting global identifier: elevator_raisetonearest (SY_SPECIAL)
+Inserting global identifier: elevator_movetofloor (SY_SPECIAL)
+Inserting global identifier: elevator_lowertonearest (SY_SPECIAL)
+Inserting global identifier: healthing (SY_SPECIAL)
+Inserting global identifier: door_closewaitopen (SY_SPECIAL)
+Inserting global identifier: floor_donut (SY_SPECIAL)
+Inserting global identifier: floorandceiling_lowerraise (SY_SPECIAL)
+Inserting global identifier: ceiling_raisetonearest (SY_SPECIAL)
+Inserting global identifier: ceiling_lowertolowest (SY_SPECIAL)
+Inserting global identifier: ceiling_lowertofloor (SY_SPECIAL)
+Inserting global identifier: ceiling_crushraiseandstaysila (SY_SPECIAL)
+Inserting global identifier: getlineudmfint (SY_SPECIAL)
+Inserting global identifier: getlineudmffixed (SY_SPECIAL)
+Inserting global identifier: getthingudmfint (SY_SPECIAL)
+Inserting global identifier: getthingudmffixed (SY_SPECIAL)
+Inserting global identifier: getsectorudmfint (SY_SPECIAL)
+Inserting global identifier: getsectorudmffixed (SY_SPECIAL)
+Inserting global identifier: getsideudmfint (SY_SPECIAL)
+Inserting global identifier: getsideudmffixed (SY_SPECIAL)
+Inserting global identifier: getactorvelx (SY_SPECIAL)
+Inserting global identifier: getactorvely (SY_SPECIAL)
+Inserting global identifier: getactorvelz (SY_SPECIAL)
+Inserting global identifier: setactivator (SY_SPECIAL)
+Inserting global identifier: setactivatortotarget (SY_SPECIAL)
+Inserting global identifier: getactorviewheight (SY_SPECIAL)
+Inserting global identifier: getchar (SY_SPECIAL)
+Inserting global identifier: getairsupply (SY_SPECIAL)
+Inserting global identifier: setairsupply (SY_SPECIAL)
+Inserting global identifier: setskyscrollspeed (SY_SPECIAL)
+Inserting global identifier: getarmortype (SY_SPECIAL)
+Inserting global identifier: spawnspotforced (SY_SPECIAL)
+Inserting global identifier: spawnspotfacingforced (SY_SPECIAL)
+Inserting global identifier: checkactorproperty (SY_SPECIAL)
+Inserting global identifier: setactorvelocity (SY_SPECIAL)
+Inserting global identifier: setuservariable (SY_SPECIAL)
+Inserting global identifier: getuservariable (SY_SPECIAL)
+Inserting global identifier: radius_quake2 (SY_SPECIAL)
+Inserting global identifier: checkactorclass (SY_SPECIAL)
+Inserting global identifier: setuserarray (SY_SPECIAL)
+Inserting global identifier: getuserarray (SY_SPECIAL)
+Inserting global identifier: soundsequenceonactor (SY_SPECIAL)
+Inserting global identifier: soundsequenceonsector (SY_SPECIAL)
+Inserting global identifier: soundsequenceonpolyobj (SY_SPECIAL)
+Inserting global identifier: getpolyobjx (SY_SPECIAL)
+Inserting global identifier: getpolyobjy (SY_SPECIAL)
+Inserting global identifier: checksight (SY_SPECIAL)
+Inserting global identifier: spawnforced (SY_SPECIAL)
+Inserting global identifier: announcersound (SY_SPECIAL)
+Inserting global identifier: setpointer (SY_SPECIAL)
+Inserting global identifier: acs_namedexecute (SY_SPECIAL)
+Inserting global identifier: acs_namedsuspend (SY_SPECIAL)
+Inserting global identifier: acs_namedterminate (SY_SPECIAL)
+Inserting global identifier: acs_namedlockedexecute (SY_SPECIAL)
+Inserting global identifier: acs_namedlockedexecutedoor (SY_SPECIAL)
+Inserting global identifier: acs_namedexecutewithresult (SY_SPECIAL)
+Inserting global identifier: acs_namedexecutealways (SY_SPECIAL)
+Inserting global identifier: uniquetid (SY_SPECIAL)
+Inserting global identifier: istidused (SY_SPECIAL)
+Inserting global identifier: sqrt (SY_SPECIAL)
+Inserting global identifier: fixedsqrt (SY_SPECIAL)
+Inserting global identifier: vectorlength (SY_SPECIAL)
+Inserting global identifier: sethudcliprect (SY_SPECIAL)
+Inserting global identifier: sethudwrapwidth (SY_SPECIAL)
+Inserting global identifier: setcvar (SY_SPECIAL)
+Inserting global identifier: getusercvar (SY_SPECIAL)
+Inserting global identifier: setusercvar (SY_SPECIAL)
+Inserting global identifier: getcvarstring (SY_SPECIAL)
+Inserting global identifier: setcvarstring (SY_SPECIAL)
+Inserting global identifier: getusercvarstring (SY_SPECIAL)
+Inserting global identifier: setusercvarstring (SY_SPECIAL)
+Inserting global identifier: lineattack (SY_SPECIAL)
+Inserting global identifier: playsound (SY_SPECIAL)
+Inserting global identifier: stopsound (SY_SPECIAL)
+Inserting global identifier: strcmp (SY_SPECIAL)
+Inserting global identifier: stricmp (SY_SPECIAL)
+Inserting global identifier: strcasecmp (SY_SPECIAL)
+Inserting global identifier: strleft (SY_SPECIAL)
+Inserting global identifier: strright (SY_SPECIAL)
+Inserting global identifier: strmid (SY_SPECIAL)
+Inserting global identifier: getactorclass (SY_SPECIAL)
+Inserting global identifier: getweapon (SY_SPECIAL)
+Inserting global identifier: soundvolume (SY_SPECIAL)
+Inserting global identifier: playactorsound (SY_SPECIAL)
+Inserting global identifier: spawndecal (SY_SPECIAL)
+Inserting global identifier: checkfont (SY_SPECIAL)
+Inserting global identifier: resetmap (SY_SPECIAL)
+Inserting global identifier: playerisspectator (SY_SPECIAL)
+Inserting global identifier: consoleplayernumber (SY_SPECIAL)
+Inserting global identifier: getteamproperty (SY_SPECIAL)
+Inserting global identifier: getplayerlivesleft (SY_SPECIAL)
+Inserting global identifier: setplayerlivesleft (SY_SPECIAL)
+Inserting global identifier: kickfromgame (SY_SPECIAL)
+Inserting global identifier: getteamscore (SY_SPECIAL)
+Inserting global identifier: setteamscore (SY_SPECIAL)
+Inserting global identifier: __endoflist__ (SY_SPECIAL)
+*Leaving .\membrance2-compilers\acc/zspecial.acs
+Freeing constants for depth 2
+---- OuterInclude ----
+*Including zdefs.acs
+*Include file found at .\membrance2-compilers\acc/zdefs.acs
+---- OuterDefine ----
+Inserting global identifier: true (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: false (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: on (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: off (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: yes (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: no (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: line_front (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: line_back (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: side_front (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: side_back (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: texture_top (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: texture_middle (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: texture_bottom (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: texflag_top (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: texflag_middle (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: texflag_bottom (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: texflag_addoffset (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: game_single_player (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: game_net_cooperative (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: game_net_deathmatch (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: game_title_map (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: class_fighter (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: class_cleric (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: class_mage (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: skill_very_easy (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: skill_easy (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: skill_normal (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: skill_hard (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: skill_very_hard (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: block_nothing (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: block_creatures (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: block_everything (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: block_railing (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: block_players (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: scroll (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: carry (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: scroll_and_carry (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: mod_unknown (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: mod_rocket (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: mod_r_splash (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: mod_plasmarifle (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: mod_bfg_boom (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: mod_bfg_splash (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: mod_chainsaw (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: mod_sshotgun (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: mod_water (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: mod_slime (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: mod_lava (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: mod_crush (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: mod_telefrag (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: mod_falling (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: mod_suicide (SY_CONSTANT)
+Constant value: 18
+---- OuterDefine ----
+Inserting global identifier: mod_barrel (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: mod_exit (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: mod_splash (SY_CONSTANT)
+Constant value: 21
+---- OuterDefine ----
+Inserting global identifier: mod_hit (SY_CONSTANT)
+Constant value: 22
+---- OuterDefine ----
+Inserting global identifier: mod_railgun (SY_CONSTANT)
+Constant value: 23
+---- OuterDefine ----
+Inserting global identifier: mod_ice (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: mod_disintegrate (SY_CONSTANT)
+Constant value: 25
+---- OuterDefine ----
+Inserting global identifier: mod_poison (SY_CONSTANT)
+Constant value: 26
+---- OuterDefine ----
+Inserting global identifier: mod_electric (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: movie_played (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: movie_played_novideo (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: movie_played_aborted (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: movie_failed (SY_CONSTANT)
+Constant value: -1
+---- OuterDefine ----
+Inserting global identifier: prop_frozen (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: prop_notarget (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: prop_instantweaponswitch (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: prop_fly (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: prop_totallyfrozen (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: prop_buddha (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: prop_invulnerability (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: prop_strength (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: prop_invisibility (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: prop_radiationsuit (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: prop_allmap (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: prop_infrared (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: prop_weaponlevel2 (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: prop_flight (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: prop_speed (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: input_oldbuttons (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: input_buttons (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: input_pitch (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: input_yaw (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: input_roll (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: input_forwardmove (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: input_sidemove (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: input_upmove (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: modinput_oldbuttons (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: modinput_buttons (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: modinput_pitch (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: modinput_yaw (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: modinput_roll (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: modinput_forwardmove (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: modinput_sidemove (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: modinput_upmove (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: bt_attack (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: bt_use (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: bt_jump (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: bt_crouch (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: bt_turn180 (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: bt_altattack (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: bt_reload (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: bt_zoom (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: bt_speed (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: bt_strafe (SY_CONSTANT)
+Constant value: 512
+---- OuterDefine ----
+Inserting global identifier: bt_moveright (SY_CONSTANT)
+Constant value: 1024
+---- OuterDefine ----
+Inserting global identifier: bt_moveleft (SY_CONSTANT)
+Constant value: 2048
+---- OuterDefine ----
+Inserting global identifier: bt_back (SY_CONSTANT)
+Constant value: 4096
+---- OuterDefine ----
+Inserting global identifier: bt_forward (SY_CONSTANT)
+Constant value: 8192
+---- OuterDefine ----
+Inserting global identifier: bt_right (SY_CONSTANT)
+Constant value: 16384
+---- OuterDefine ----
+Inserting global identifier: bt_left (SY_CONSTANT)
+Constant value: 32768
+---- OuterDefine ----
+Inserting global identifier: bt_lookup (SY_CONSTANT)
+Constant value: 65536
+---- OuterDefine ----
+Inserting global identifier: bt_lookdown (SY_CONSTANT)
+Constant value: 131072
+---- OuterDefine ----
+Inserting global identifier: bt_moveup (SY_CONSTANT)
+Constant value: 262144
+---- OuterDefine ----
+Inserting global identifier: bt_movedown (SY_CONSTANT)
+Constant value: 524288
+---- OuterDefine ----
+Inserting global identifier: bt_showscores (SY_CONSTANT)
+Constant value: 1048576
+---- OuterDefine ----
+Inserting global identifier: bt_user1 (SY_CONSTANT)
+Constant value: 2097152
+---- OuterDefine ----
+Inserting global identifier: bt_user2 (SY_CONSTANT)
+Constant value: 4194304
+---- OuterDefine ----
+Inserting global identifier: bt_user3 (SY_CONSTANT)
+Constant value: 8388608
+---- OuterDefine ----
+Inserting global identifier: bt_user4 (SY_CONSTANT)
+Constant value: 16777216
+---- OuterDefine ----
+Inserting global identifier: cr_untranslated (SY_CONSTANT)
+Constant value: -1
+---- OuterDefine ----
+Inserting global identifier: cr_brick (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: cr_tan (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: cr_gray (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: cr_grey (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: cr_green (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: cr_brown (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: cr_gold (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: cr_red (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: cr_blue (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: cr_orange (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: cr_white (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: cr_yellow (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: cr_black (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: cr_lightblue (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: cr_cream (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: cr_olive (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: cr_darkgreen (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: cr_darkred (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: cr_darkbrown (SY_CONSTANT)
+Constant value: 18
+---- OuterDefine ----
+Inserting global identifier: cr_purple (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: cr_darkgray (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: cr_darkgrey (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: cr_cyan (SY_CONSTANT)
+Constant value: 21
+---- OuterDefine ----
+Inserting global identifier: hudmsg_plain (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: hudmsg_fadeout (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: hudmsg_typeon (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: hudmsg_fadeinout (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: hudmsg_log (SY_CONSTANT)
+Constant value: -2147483648
+---- OuterDefine ----
+Inserting global identifier: hudmsg_colorstring (SY_CONSTANT)
+Constant value: 1073741824
+---- OuterDefine ----
+Inserting global identifier: hudmsg_addblend (SY_CONSTANT)
+Constant value: 536870912
+---- OuterDefine ----
+Inserting global identifier: hudmsg_alpha (SY_CONSTANT)
+Constant value: 268435456
+---- OuterDefine ----
+Inserting global identifier: hudmsg_nowrap (SY_CONSTANT)
+Constant value: 134217728
+---- OuterDefine ----
+Inserting global identifier: hudmsg_layer_overhud (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: hudmsg_layer_underhud (SY_CONSTANT)
+Constant value: 4096
+---- OuterDefine ----
+Inserting global identifier: hudmsg_layer_overmap (SY_CONSTANT)
+Constant value: 8192
+---- OuterDefine ----
+Inserting global identifier: hudmsg_notwith3dview (SY_CONSTANT)
+Constant value: 65536
+---- OuterDefine ----
+Inserting global identifier: hudmsg_notwithfullmap (SY_CONSTANT)
+Constant value: 131072
+---- OuterDefine ----
+Inserting global identifier: hudmsg_notwithoverlaymap (SY_CONSTANT)
+Constant value: 262144
+---- OuterDefine ----
+Inserting global identifier: marineweapon_dummy (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: marineweapon_fist (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: marineweapon_berserkfist (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: marineweapon_chainsaw (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: marineweapon_pistol (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: marineweapon_shotgun (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: marineweapon_supershotgun (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: marineweapon_chaingun (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: marineweapon_rocketlauncher (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: marineweapon_plasmarifle (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: marineweapon_railgun (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: marineweapon_bfg (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: aprop_health (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: aprop_speed (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: aprop_damage (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: aprop_alpha (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: aprop_renderstyle (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: aprop_seesound (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: aprop_attacksound (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: aprop_painsound (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: aprop_deathsound (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: aprop_activesound (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: aprop_ambush (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: aprop_invulnerable (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: aprop_jumpz (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: aprop_chasegoal (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: aprop_frightened (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: aprop_gravity (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: aprop_friendly (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: aprop_spawnhealth (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: aprop_dropped (SY_CONSTANT)
+Constant value: 18
+---- OuterDefine ----
+Inserting global identifier: aprop_notarget (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: aprop_species (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: aprop_nametag (SY_CONSTANT)
+Constant value: 21
+---- OuterDefine ----
+Inserting global identifier: aprop_score (SY_CONSTANT)
+Constant value: 22
+---- OuterDefine ----
+Inserting global identifier: aprop_notrigger (SY_CONSTANT)
+Constant value: 23
+---- OuterDefine ----
+Inserting global identifier: aprop_damagefactor (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: aprop_mastertid (SY_CONSTANT)
+Constant value: 25
+---- OuterDefine ----
+Inserting global identifier: aprop_targettid (SY_CONSTANT)
+Constant value: 26
+---- OuterDefine ----
+Inserting global identifier: aprop_tracertid (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: aprop_waterlevel (SY_CONSTANT)
+Constant value: 28
+---- OuterDefine ----
+Inserting global identifier: aprop_scalex (SY_CONSTANT)
+Constant value: 29
+---- OuterDefine ----
+Inserting global identifier: aprop_scaley (SY_CONSTANT)
+Constant value: 30
+---- OuterDefine ----
+Inserting global identifier: aprop_dormant (SY_CONSTANT)
+Constant value: 31
+---- OuterDefine ----
+Inserting global identifier: aprop_mass (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: aprop_accuracy (SY_CONSTANT)
+Constant value: 33
+---- OuterDefine ----
+Inserting global identifier: aprop_stamina (SY_CONSTANT)
+Constant value: 34
+---- OuterDefine ----
+Inserting global identifier: aprop_height (SY_CONSTANT)
+Constant value: 35
+---- OuterDefine ----
+Inserting global identifier: aprop_radius (SY_CONSTANT)
+Constant value: 36
+---- OuterDefine ----
+Inserting global identifier: aprop_reactiontime (SY_CONSTANT)
+Constant value: 37
+---- OuterDefine ----
+Inserting global identifier: aprop_meleerange (SY_CONSTANT)
+Constant value: 38
+---- OuterDefine ----
+Inserting global identifier: style_none (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: style_normal (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: style_fuzzy (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: style_soultrans (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: style_optfuzzy (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: style_stencil (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: style_translucent (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: style_add (SY_CONSTANT)
+Constant value: 65
+---- OuterDefine ----
+Inserting global identifier: style_shaded (SY_CONSTANT)
+Constant value: 66
+---- OuterDefine ----
+Inserting global identifier: style_translucentstencil (SY_CONSTANT)
+Constant value: 67
+---- OuterDefine ----
+Inserting global identifier: levelinfo_par_time (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: levelinfo_clusternum (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: levelinfo_levelnum (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: levelinfo_total_secrets (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: levelinfo_found_secrets (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: levelinfo_total_items (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: levelinfo_found_items (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: levelinfo_total_monsters (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: levelinfo_killed_monsters (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: levelinfo_suck_time (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: playerinfo_team (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: playerinfo_aimdist (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: playerinfo_color (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: playerinfo_gender (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: playerinfo_neverswitch (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: playerinfo_movebob (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: playerinfo_stillbob (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: playerinfo_playerclass (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: playerinfo_fov (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: playerinfo_desiredfov (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: not_bottom (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: not_middle (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: not_top (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: not_floor (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: not_ceiling (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: damage_players (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: damage_nonplayers (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: damage_in_air (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: damage_subclasses_protect (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: mrf_oldeffects (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: mrf_addstamina (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: mrf_fullhealth (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: mrf_undobytomeofpower (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: mrf_undobychaosdevice (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: mrf_failnotelefrag (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: mrf_failnolaugh (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: mrf_wheninvulnerable (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: mrf_loseactualweapon (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: mrf_newtidbehaviour (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: mrf_undobydeath (SY_CONSTANT)
+Constant value: 512
+---- OuterDefine ----
+Inserting global identifier: mrf_undobydeathforced (SY_CONSTANT)
+Constant value: 1024
+---- OuterDefine ----
+Inserting global identifier: mrf_undobydeathsaves (SY_CONSTANT)
+Constant value: 2048
+---- OuterDefine ----
+Inserting global identifier: t_rock1 (SY_CONSTANT)
+Constant value: 41
+---- OuterDefine ----
+Inserting global identifier: t_rock2 (SY_CONSTANT)
+Constant value: 42
+---- OuterDefine ----
+Inserting global identifier: t_rock3 (SY_CONSTANT)
+Constant value: 43
+---- OuterDefine ----
+Inserting global identifier: t_dirt1 (SY_CONSTANT)
+Constant value: 44
+---- OuterDefine ----
+Inserting global identifier: t_dirt2 (SY_CONSTANT)
+Constant value: 45
+---- OuterDefine ----
+Inserting global identifier: t_dirt3 (SY_CONSTANT)
+Constant value: 46
+---- OuterDefine ----
+Inserting global identifier: t_dirt4 (SY_CONSTANT)
+Constant value: 47
+---- OuterDefine ----
+Inserting global identifier: t_dirt5 (SY_CONSTANT)
+Constant value: 48
+---- OuterDefine ----
+Inserting global identifier: t_dirt6 (SY_CONSTANT)
+Constant value: 49
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass1 (SY_CONSTANT)
+Constant value: 54
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass2 (SY_CONSTANT)
+Constant value: 55
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass3 (SY_CONSTANT)
+Constant value: 56
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass4 (SY_CONSTANT)
+Constant value: 57
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass5 (SY_CONSTANT)
+Constant value: 58
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass6 (SY_CONSTANT)
+Constant value: 59
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass7 (SY_CONSTANT)
+Constant value: 60
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass8 (SY_CONSTANT)
+Constant value: 61
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass9 (SY_CONSTANT)
+Constant value: 62
+---- OuterDefine ----
+Inserting global identifier: t_stainedglass0 (SY_CONSTANT)
+Constant value: 63
+---- OuterDefine ----
+Inserting global identifier: t_none (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: t_shotguy (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: t_chainguy (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: t_baron (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: t_zombie (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: t_imp (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: t_arachnotron (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: t_spidermastermind (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: t_demon (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: t_spectre (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: t_impfireball (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: t_clip (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: t_shells (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: t_cacodemon (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: t_revenant (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: t_bridge (SY_CONSTANT)
+Constant value: 21
+---- OuterDefine ----
+Inserting global identifier: t_armorbonus (SY_CONSTANT)
+Constant value: 22
+---- OuterDefine ----
+Inserting global identifier: t_stimpack (SY_CONSTANT)
+Constant value: 23
+---- OuterDefine ----
+Inserting global identifier: t_medkit (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: t_soulsphere (SY_CONSTANT)
+Constant value: 25
+---- OuterDefine ----
+Inserting global identifier: t_shotgun (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: t_chaingun (SY_CONSTANT)
+Constant value: 28
+---- OuterDefine ----
+Inserting global identifier: t_rocketlauncher (SY_CONSTANT)
+Constant value: 29
+---- OuterDefine ----
+Inserting global identifier: t_plasmagun (SY_CONSTANT)
+Constant value: 30
+---- OuterDefine ----
+Inserting global identifier: t_bfg (SY_CONSTANT)
+Constant value: 31
+---- OuterDefine ----
+Inserting global identifier: t_chainsaw (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: t_supershotgun (SY_CONSTANT)
+Constant value: 33
+---- OuterDefine ----
+Inserting global identifier: t_plasmabolt (SY_CONSTANT)
+Constant value: 51
+---- OuterDefine ----
+Inserting global identifier: t_tracer (SY_CONSTANT)
+Constant value: 53
+---- OuterDefine ----
+Inserting global identifier: t_greenarmor (SY_CONSTANT)
+Constant value: 68
+---- OuterDefine ----
+Inserting global identifier: t_bluearmor (SY_CONSTANT)
+Constant value: 69
+---- OuterDefine ----
+Inserting global identifier: t_cell (SY_CONSTANT)
+Constant value: 75
+---- OuterDefine ----
+Inserting global identifier: t_bluekeycard (SY_CONSTANT)
+Constant value: 85
+---- OuterDefine ----
+Inserting global identifier: t_redkeycard (SY_CONSTANT)
+Constant value: 86
+---- OuterDefine ----
+Inserting global identifier: t_yellowkeycard (SY_CONSTANT)
+Constant value: 87
+---- OuterDefine ----
+Inserting global identifier: t_yellowskullkey (SY_CONSTANT)
+Constant value: 88
+---- OuterDefine ----
+Inserting global identifier: t_redskullkey (SY_CONSTANT)
+Constant value: 89
+---- OuterDefine ----
+Inserting global identifier: t_blueskullkey (SY_CONSTANT)
+Constant value: 90
+---- OuterDefine ----
+Inserting global identifier: t_templargeflame (SY_CONSTANT)
+Constant value: 98
+---- OuterDefine ----
+Inserting global identifier: t_stealthbaron (SY_CONSTANT)
+Constant value: 100
+---- OuterDefine ----
+Inserting global identifier: t_stealthknight (SY_CONSTANT)
+Constant value: 101
+---- OuterDefine ----
+Inserting global identifier: t_stealthzombie (SY_CONSTANT)
+Constant value: 102
+---- OuterDefine ----
+Inserting global identifier: t_stealthshotguy (SY_CONSTANT)
+Constant value: 103
+---- OuterDefine ----
+Inserting global identifier: t_lostsoul (SY_CONSTANT)
+Constant value: 110
+---- OuterDefine ----
+Inserting global identifier: t_vile (SY_CONSTANT)
+Constant value: 111
+---- OuterDefine ----
+Inserting global identifier: t_mancubus (SY_CONSTANT)
+Constant value: 112
+---- OuterDefine ----
+Inserting global identifier: t_hellknight (SY_CONSTANT)
+Constant value: 113
+---- OuterDefine ----
+Inserting global identifier: t_cyberdemon (SY_CONSTANT)
+Constant value: 114
+---- OuterDefine ----
+Inserting global identifier: t_painelemental (SY_CONSTANT)
+Constant value: 115
+---- OuterDefine ----
+Inserting global identifier: t_wolfss (SY_CONSTANT)
+Constant value: 116
+---- OuterDefine ----
+Inserting global identifier: t_stealtharachnotron (SY_CONSTANT)
+Constant value: 117
+---- OuterDefine ----
+Inserting global identifier: t_stealthvile (SY_CONSTANT)
+Constant value: 118
+---- OuterDefine ----
+Inserting global identifier: t_stealthcacodemon (SY_CONSTANT)
+Constant value: 119
+---- OuterDefine ----
+Inserting global identifier: t_stealthchainguy (SY_CONSTANT)
+Constant value: 120
+---- OuterDefine ----
+Inserting global identifier: t_stealthsergeant (SY_CONSTANT)
+Constant value: 121
+---- OuterDefine ----
+Inserting global identifier: t_stealthimp (SY_CONSTANT)
+Constant value: 122
+---- OuterDefine ----
+Inserting global identifier: t_stealthmancubus (SY_CONSTANT)
+Constant value: 123
+---- OuterDefine ----
+Inserting global identifier: t_stealthrevenant (SY_CONSTANT)
+Constant value: 124
+---- OuterDefine ----
+Inserting global identifier: t_barrel (SY_CONSTANT)
+Constant value: 125
+---- OuterDefine ----
+Inserting global identifier: t_cacodemonshot (SY_CONSTANT)
+Constant value: 126
+---- OuterDefine ----
+Inserting global identifier: t_rocket (SY_CONSTANT)
+Constant value: 127
+---- OuterDefine ----
+Inserting global identifier: t_bfgshot (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: t_arachnotronplasma (SY_CONSTANT)
+Constant value: 129
+---- OuterDefine ----
+Inserting global identifier: t_blood (SY_CONSTANT)
+Constant value: 130
+---- OuterDefine ----
+Inserting global identifier: t_puff (SY_CONSTANT)
+Constant value: 131
+---- OuterDefine ----
+Inserting global identifier: t_megasphere (SY_CONSTANT)
+Constant value: 132
+---- OuterDefine ----
+Inserting global identifier: t_invulnerability (SY_CONSTANT)
+Constant value: 133
+---- OuterDefine ----
+Inserting global identifier: t_berserk (SY_CONSTANT)
+Constant value: 134
+---- OuterDefine ----
+Inserting global identifier: t_invisibility (SY_CONSTANT)
+Constant value: 135
+---- OuterDefine ----
+Inserting global identifier: t_ironfeet (SY_CONSTANT)
+Constant value: 136
+---- OuterDefine ----
+Inserting global identifier: t_computermap (SY_CONSTANT)
+Constant value: 137
+---- OuterDefine ----
+Inserting global identifier: t_lightamp (SY_CONSTANT)
+Constant value: 138
+---- OuterDefine ----
+Inserting global identifier: t_ammobox (SY_CONSTANT)
+Constant value: 139
+---- OuterDefine ----
+Inserting global identifier: t_rocketammo (SY_CONSTANT)
+Constant value: 140
+---- OuterDefine ----
+Inserting global identifier: t_rocketbox (SY_CONSTANT)
+Constant value: 141
+---- OuterDefine ----
+Inserting global identifier: t_battery (SY_CONSTANT)
+Constant value: 142
+---- OuterDefine ----
+Inserting global identifier: t_shellbox (SY_CONSTANT)
+Constant value: 143
+---- OuterDefine ----
+Inserting global identifier: t_backpack (SY_CONSTANT)
+Constant value: 144
+---- OuterDefine ----
+Inserting global identifier: t_guts (SY_CONSTANT)
+Constant value: 145
+---- OuterDefine ----
+Inserting global identifier: t_bloodpool (SY_CONSTANT)
+Constant value: 146
+---- OuterDefine ----
+Inserting global identifier: t_bloodpool1 (SY_CONSTANT)
+Constant value: 147
+---- OuterDefine ----
+Inserting global identifier: t_bloodpool2 (SY_CONSTANT)
+Constant value: 148
+---- OuterDefine ----
+Inserting global identifier: t_flamingbarrel (SY_CONSTANT)
+Constant value: 149
+---- OuterDefine ----
+Inserting global identifier: t_brains (SY_CONSTANT)
+Constant value: 150
+---- OuterDefine ----
+Inserting global identifier: t_scriptedmarine (SY_CONSTANT)
+Constant value: 151
+---- OuterDefine ----
+Inserting global identifier: t_healthbonus (SY_CONSTANT)
+Constant value: 152
+---- OuterDefine ----
+Inserting global identifier: t_mancubusshot (SY_CONSTANT)
+Constant value: 153
+---- OuterDefine ----
+Inserting global identifier: t_baronball (SY_CONSTANT)
+Constant value: 154
+---- OuterDefine ----
+Inserting global identifier: t_clink (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: t_mummyleader (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: t_beast (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: t_mummy (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: t_knight (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: t_impleader (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: t_mummyghost (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: t_mummyleaderghost (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: t_wimpywandammo (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: t_heftywandammo (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: t_itemegg (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: t_itemflight (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: t_itemteleport (SY_CONSTANT)
+Constant value: 18
+---- OuterDefine ----
+Inserting global identifier: t_wizard (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: t_ironlich (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: t_itemhealthpotion (SY_CONSTANT)
+Constant value: 23
+---- OuterDefine ----
+Inserting global identifier: t_itemhealthflash (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: t_itemhealthflask (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: t_itemhealthfull (SY_CONSTANT)
+Constant value: 25
+---- OuterDefine ----
+Inserting global identifier: t_crossbow (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: t_blaster (SY_CONSTANT)
+Constant value: 28
+---- OuterDefine ----
+Inserting global identifier: t_phoenixrod (SY_CONSTANT)
+Constant value: 29
+---- OuterDefine ----
+Inserting global identifier: t_skullrod (SY_CONSTANT)
+Constant value: 30
+---- OuterDefine ----
+Inserting global identifier: t_mace (SY_CONSTANT)
+Constant value: 31
+---- OuterDefine ----
+Inserting global identifier: t_gauntlets (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: t_wimpycrossbowammo (SY_CONSTANT)
+Constant value: 33
+---- OuterDefine ----
+Inserting global identifier: t_heftycrossbowammo (SY_CONSTANT)
+Constant value: 34
+---- OuterDefine ----
+Inserting global identifier: t_wimpymaceammo (SY_CONSTANT)
+Constant value: 35
+---- OuterDefine ----
+Inserting global identifier: t_heftymaceammo (SY_CONSTANT)
+Constant value: 36
+---- OuterDefine ----
+Inserting global identifier: t_wimpyblasterammo (SY_CONSTANT)
+Constant value: 37
+---- OuterDefine ----
+Inserting global identifier: t_heftyblasterammo (SY_CONSTANT)
+Constant value: 38
+---- OuterDefine ----
+Inserting global identifier: t_morphblast (SY_CONSTANT)
+Constant value: 40
+---- OuterDefine ----
+Inserting global identifier: t_shield1 (SY_CONSTANT)
+Constant value: 68
+---- OuterDefine ----
+Inserting global identifier: t_shield2 (SY_CONSTANT)
+Constant value: 69
+---- OuterDefine ----
+Inserting global identifier: t_itemtimebomb (SY_CONSTANT)
+Constant value: 72
+---- OuterDefine ----
+Inserting global identifier: t_itemtorch (SY_CONSTANT)
+Constant value: 73
+---- OuterDefine ----
+Inserting global identifier: t_bluekey (SY_CONSTANT)
+Constant value: 85
+---- OuterDefine ----
+Inserting global identifier: t_greenkey (SY_CONSTANT)
+Constant value: 86
+---- OuterDefine ----
+Inserting global identifier: t_yellowkey (SY_CONSTANT)
+Constant value: 87
+---- OuterDefine ----
+Inserting global identifier: t_sound_wind (SY_CONSTANT)
+Constant value: 110
+---- OuterDefine ----
+Inserting global identifier: t_sound_waterfall (SY_CONSTANT)
+Constant value: 111
+---- OuterDefine ----
+Inserting global identifier: t_beastball (SY_CONSTANT)
+Constant value: 120
+---- OuterDefine ----
+Inserting global identifier: t_feather (SY_CONSTANT)
+Constant value: 121
+---- OuterDefine ----
+Inserting global identifier: t_chicken (SY_CONSTANT)
+Constant value: 122
+---- OuterDefine ----
+Inserting global identifier: t_volcanoball (SY_CONSTANT)
+Constant value: 123
+---- OuterDefine ----
+Inserting global identifier: t_tinyvolcanoball (SY_CONSTANT)
+Constant value: 124
+---- OuterDefine ----
+Inserting global identifier: t_pod (SY_CONSTANT)
+Constant value: 125
+---- OuterDefine ----
+Inserting global identifier: t_podgenerator (SY_CONSTANT)
+Constant value: 126
+---- OuterDefine ----
+Inserting global identifier: t_knightaxe (SY_CONSTANT)
+Constant value: 127
+---- OuterDefine ----
+Inserting global identifier: t_knightbloodaxe (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: t_knightghost (SY_CONSTANT)
+Constant value: 129
+---- OuterDefine ----
+Inserting global identifier: t_mummyhead (SY_CONSTANT)
+Constant value: 131
+---- OuterDefine ----
+Inserting global identifier: t_snake (SY_CONSTANT)
+Constant value: 132
+---- OuterDefine ----
+Inserting global identifier: t_iteminvulnerability (SY_CONSTANT)
+Constant value: 133
+---- OuterDefine ----
+Inserting global identifier: t_itemtome (SY_CONSTANT)
+Constant value: 134
+---- OuterDefine ----
+Inserting global identifier: t_iteminvisibility (SY_CONSTANT)
+Constant value: 135
+---- OuterDefine ----
+Inserting global identifier: t_itembagofholding (SY_CONSTANT)
+Constant value: 136
+---- OuterDefine ----
+Inserting global identifier: t_itemallmap (SY_CONSTANT)
+Constant value: 137
+---- OuterDefine ----
+Inserting global identifier: t_snakeprojectile (SY_CONSTANT)
+Constant value: 138
+---- OuterDefine ----
+Inserting global identifier: t_snakeprojectilebig (SY_CONSTANT)
+Constant value: 139
+---- OuterDefine ----
+Inserting global identifier: t_wizardshot (SY_CONSTANT)
+Constant value: 140
+---- OuterDefine ----
+Inserting global identifier: t_dsparilteleportdest (SY_CONSTANT)
+Constant value: 141
+---- OuterDefine ----
+Inserting global identifier: t_dsparilonserpent (SY_CONSTANT)
+Constant value: 142
+---- OuterDefine ----
+Inserting global identifier: t_dsparilalone (SY_CONSTANT)
+Constant value: 143
+---- OuterDefine ----
+Inserting global identifier: t_serpentfireball (SY_CONSTANT)
+Constant value: 144
+---- OuterDefine ----
+Inserting global identifier: t_dsparilblueshot (SY_CONSTANT)
+Constant value: 145
+---- OuterDefine ----
+Inserting global identifier: t_dsparilwizardspawner (SY_CONSTANT)
+Constant value: 146
+---- OuterDefine ----
+Inserting global identifier: t_crossbowmainblast (SY_CONSTANT)
+Constant value: 147
+---- OuterDefine ----
+Inserting global identifier: t_crossbowminiblast (SY_CONSTANT)
+Constant value: 148
+---- OuterDefine ----
+Inserting global identifier: t_crossbowpowerblast (SY_CONSTANT)
+Constant value: 149
+---- OuterDefine ----
+Inserting global identifier: t_volcano (SY_CONSTANT)
+Constant value: 150
+---- OuterDefine ----
+Inserting global identifier: t_powerwandminiblast (SY_CONSTANT)
+Constant value: 151
+---- OuterDefine ----
+Inserting global identifier: t_powerwandbiggerblast (SY_CONSTANT)
+Constant value: 152
+---- OuterDefine ----
+Inserting global identifier: t_deathball (SY_CONSTANT)
+Constant value: 153
+---- OuterDefine ----
+Inserting global identifier: t_nogravitymaceball (SY_CONSTANT)
+Constant value: 154
+---- OuterDefine ----
+Inserting global identifier: t_bouncymaceball (SY_CONSTANT)
+Constant value: 155
+---- OuterDefine ----
+Inserting global identifier: t_heavymaceball (SY_CONSTANT)
+Constant value: 156
+---- OuterDefine ----
+Inserting global identifier: t_ripper (SY_CONSTANT)
+Constant value: 157
+---- OuterDefine ----
+Inserting global identifier: t_wimpyskullrodammo (SY_CONSTANT)
+Constant value: 158
+---- OuterDefine ----
+Inserting global identifier: t_heftyskullrodammo (SY_CONSTANT)
+Constant value: 159
+---- OuterDefine ----
+Inserting global identifier: t_skullrodblast (SY_CONSTANT)
+Constant value: 160
+---- OuterDefine ----
+Inserting global identifier: t_wimpyphoenixrodammo (SY_CONSTANT)
+Constant value: 161
+---- OuterDefine ----
+Inserting global identifier: t_heftyphoenixrodammo (SY_CONSTANT)
+Constant value: 162
+---- OuterDefine ----
+Inserting global identifier: t_phoenixshot (SY_CONSTANT)
+Constant value: 163
+---- OuterDefine ----
+Inserting global identifier: t_ironlichblueshot (SY_CONSTANT)
+Constant value: 164
+---- OuterDefine ----
+Inserting global identifier: t_whirlwind (SY_CONSTANT)
+Constant value: 165
+---- OuterDefine ----
+Inserting global identifier: t_redteleglitter (SY_CONSTANT)
+Constant value: 166
+---- OuterDefine ----
+Inserting global identifier: t_blueteleglitter (SY_CONSTANT)
+Constant value: 167
+---- OuterDefine ----
+Inserting global identifier: t_centaur (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: t_centaurleader (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: t_demon1 (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: t_ettin (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: t_firegargoyle (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: t_waterlurker (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: t_waterlurkerleader (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: t_wraith (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: t_wraithburied (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: t_fireball1 (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: t_mana1 (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: t_mana2 (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: t_itemboots (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: t_itempork (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: t_itemsummon (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: t_itemtportother (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: t_bishop (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: t_icegolem (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: t_dragonskinbracers (SY_CONSTANT)
+Constant value: 22
+---- OuterDefine ----
+Inserting global identifier: t_itemboostmana (SY_CONSTANT)
+Constant value: 26
+---- OuterDefine ----
+Inserting global identifier: t_fighteraxe (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: t_fighterhammer (SY_CONSTANT)
+Constant value: 28
+---- OuterDefine ----
+Inserting global identifier: t_fightersword1 (SY_CONSTANT)
+Constant value: 29
+---- OuterDefine ----
+Inserting global identifier: t_fightersword2 (SY_CONSTANT)
+Constant value: 30
+---- OuterDefine ----
+Inserting global identifier: t_fightersword3 (SY_CONSTANT)
+Constant value: 31
+---- OuterDefine ----
+Inserting global identifier: t_clericstaff (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: t_clericholy1 (SY_CONSTANT)
+Constant value: 33
+---- OuterDefine ----
+Inserting global identifier: t_clericholy2 (SY_CONSTANT)
+Constant value: 34
+---- OuterDefine ----
+Inserting global identifier: t_clericholy3 (SY_CONSTANT)
+Constant value: 35
+---- OuterDefine ----
+Inserting global identifier: t_mageshards (SY_CONSTANT)
+Constant value: 36
+---- OuterDefine ----
+Inserting global identifier: t_magestaff1 (SY_CONSTANT)
+Constant value: 37
+---- OuterDefine ----
+Inserting global identifier: t_magestaff2 (SY_CONSTANT)
+Constant value: 38
+---- OuterDefine ----
+Inserting global identifier: t_magestaff3 (SY_CONSTANT)
+Constant value: 39
+---- OuterDefine ----
+Inserting global identifier: t_arrow (SY_CONSTANT)
+Constant value: 50
+---- OuterDefine ----
+Inserting global identifier: t_dart (SY_CONSTANT)
+Constant value: 51
+---- OuterDefine ----
+Inserting global identifier: t_poisondart (SY_CONSTANT)
+Constant value: 52
+---- OuterDefine ----
+Inserting global identifier: t_ripperball (SY_CONSTANT)
+Constant value: 53
+---- OuterDefine ----
+Inserting global identifier: t_blade (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: t_iceshard (SY_CONSTANT)
+Constant value: 65
+---- OuterDefine ----
+Inserting global identifier: t_flame_small (SY_CONSTANT)
+Constant value: 66
+---- OuterDefine ----
+Inserting global identifier: t_flame_large (SY_CONSTANT)
+Constant value: 67
+---- OuterDefine ----
+Inserting global identifier: t_mesharmor (SY_CONSTANT)
+Constant value: 68
+---- OuterDefine ----
+Inserting global identifier: t_falconshield (SY_CONSTANT)
+Constant value: 69
+---- OuterDefine ----
+Inserting global identifier: t_platinumhelm (SY_CONSTANT)
+Constant value: 70
+---- OuterDefine ----
+Inserting global identifier: t_amuletofwarding (SY_CONSTANT)
+Constant value: 71
+---- OuterDefine ----
+Inserting global identifier: t_itemflechette (SY_CONSTANT)
+Constant value: 72
+---- OuterDefine ----
+Inserting global identifier: t_itemrepulsion (SY_CONSTANT)
+Constant value: 74
+---- OuterDefine ----
+Inserting global identifier: t_mana3 (SY_CONSTANT)
+Constant value: 75
+---- OuterDefine ----
+Inserting global identifier: t_puzzskull (SY_CONSTANT)
+Constant value: 76
+---- OuterDefine ----
+Inserting global identifier: t_puzzgembig (SY_CONSTANT)
+Constant value: 77
+---- OuterDefine ----
+Inserting global identifier: t_puzzgemred (SY_CONSTANT)
+Constant value: 78
+---- OuterDefine ----
+Inserting global identifier: t_puzzgemgreen1 (SY_CONSTANT)
+Constant value: 79
+---- OuterDefine ----
+Inserting global identifier: t_puzzgemgreen2 (SY_CONSTANT)
+Constant value: 80
+---- OuterDefine ----
+Inserting global identifier: t_puzzgemblue1 (SY_CONSTANT)
+Constant value: 81
+---- OuterDefine ----
+Inserting global identifier: t_puzzgemblue2 (SY_CONSTANT)
+Constant value: 82
+---- OuterDefine ----
+Inserting global identifier: t_puzzbook1 (SY_CONSTANT)
+Constant value: 83
+---- OuterDefine ----
+Inserting global identifier: t_puzzbook2 (SY_CONSTANT)
+Constant value: 84
+---- OuterDefine ----
+Inserting global identifier: t_metalkey (SY_CONSTANT)
+Constant value: 85
+---- OuterDefine ----
+Inserting global identifier: t_smallmetalkey (SY_CONSTANT)
+Constant value: 86
+---- OuterDefine ----
+Inserting global identifier: t_axekey (SY_CONSTANT)
+Constant value: 87
+---- OuterDefine ----
+Inserting global identifier: t_firekey (SY_CONSTANT)
+Constant value: 88
+---- OuterDefine ----
+Inserting global identifier: t_emeraldkey (SY_CONSTANT)
+Constant value: 89
+---- OuterDefine ----
+Inserting global identifier: t_macekey (SY_CONSTANT)
+Constant value: 90
+---- OuterDefine ----
+Inserting global identifier: t_silverkey (SY_CONSTANT)
+Constant value: 91
+---- OuterDefine ----
+Inserting global identifier: t_rustykey (SY_CONSTANT)
+Constant value: 92
+---- OuterDefine ----
+Inserting global identifier: t_hornkey (SY_CONSTANT)
+Constant value: 93
+---- OuterDefine ----
+Inserting global identifier: t_serpentkey (SY_CONSTANT)
+Constant value: 94
+---- OuterDefine ----
+Inserting global identifier: t_waterdrip (SY_CONSTANT)
+Constant value: 95
+---- OuterDefine ----
+Inserting global identifier: t_tempsmallflame (SY_CONSTANT)
+Constant value: 96
+---- OuterDefine ----
+Inserting global identifier: t_permsmallflame (SY_CONSTANT)
+Constant value: 97
+---- OuterDefine ----
+Inserting global identifier: t_permlargeflame (SY_CONSTANT)
+Constant value: 99
+---- OuterDefine ----
+Inserting global identifier: t_demon_mash (SY_CONSTANT)
+Constant value: 100
+---- OuterDefine ----
+Inserting global identifier: t_demon2_mash (SY_CONSTANT)
+Constant value: 101
+---- OuterDefine ----
+Inserting global identifier: t_ettin_mash (SY_CONSTANT)
+Constant value: 102
+---- OuterDefine ----
+Inserting global identifier: t_centaur_mash (SY_CONSTANT)
+Constant value: 103
+---- OuterDefine ----
+Inserting global identifier: t_thrustspikeup (SY_CONSTANT)
+Constant value: 104
+---- OuterDefine ----
+Inserting global identifier: t_thrustspikedown (SY_CONSTANT)
+Constant value: 105
+---- OuterDefine ----
+Inserting global identifier: t_flesh_drip1 (SY_CONSTANT)
+Constant value: 106
+---- OuterDefine ----
+Inserting global identifier: t_flesh_drip2 (SY_CONSTANT)
+Constant value: 107
+---- OuterDefine ----
+Inserting global identifier: t_spark_drip (SY_CONSTANT)
+Constant value: 108
+---- OuterDefine ----
+Inserting global identifier: actor_none (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: actor_world (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: actor_player (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: actor_bot (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: actor_voodoodoll (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: actor_monster (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: actor_alive (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: actor_dead (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: actor_missile (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: actor_generic (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: secseq_floor (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: secseq_ceiling (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: secseq_fullheight (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: secseq_interior (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: chan_auto (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: chan_weapon (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: chan_voice (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: chan_item (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: chan_body (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: chan_listenerz (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: chan_maybe_local (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: chan_ui (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: chan_nopause (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: attn_none (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: attn_norm (SY_CONSTANT)
+Constant value: 65536
+---- OuterDefine ----
+Inserting global identifier: attn_idle (SY_CONSTANT)
+Constant value: 65601
+---- OuterDefine ----
+Inserting global identifier: attn_static (SY_CONSTANT)
+Constant value: 196608
+---- OuterDefine ----
+Inserting global identifier: sound_see (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: sound_attack (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: sound_pain (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: sound_death (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: sound_active (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: sound_use (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: sound_bounce (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: sound_wallbounce (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: sound_crushpain (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: sound_howl (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: sdf_absangle (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: sdf_permanent (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: aaptr_default (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: aaptr_null (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: aaptr_target (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: aaptr_master (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: aaptr_tracer (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: aaptr_player_gettarget (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: aaptr_player_getconversation (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: aaptr_player1 (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: aaptr_player2 (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: aaptr_player3 (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: aaptr_player4 (SY_CONSTANT)
+Constant value: 512
+---- OuterDefine ----
+Inserting global identifier: aaptr_player5 (SY_CONSTANT)
+Constant value: 1024
+---- OuterDefine ----
+Inserting global identifier: aaptr_player6 (SY_CONSTANT)
+Constant value: 2048
+---- OuterDefine ----
+Inserting global identifier: aaptr_player7 (SY_CONSTANT)
+Constant value: 4096
+---- OuterDefine ----
+Inserting global identifier: aaptr_player8 (SY_CONSTANT)
+Constant value: 8192
+---- OuterDefine ----
+Inserting global identifier: aaptr_friendplayer (SY_CONSTANT)
+Constant value: 16384
+---- OuterDefine ----
+Inserting global identifier: ptrop_unsafetarget (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: ptrop_unsafemaster (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: ptrop_nosafeguards (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: team_blue (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: team_red (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: no_team (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: tprop_name (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: tprop_score (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: tprop_isvalid (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: tprop_numplayers (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: tprop_numliveplayers (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: tprop_textcolor (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: tprop_playerstartnum (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: tprop_spread (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: tprop_carrier (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: tprop_assister (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: tprop_fragcount (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: tprop_deathcount (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: tprop_wincount (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: tprop_pointcount (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: tprop_returntics (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: tprop_teamitem (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: tprop_winnertheme (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: tprop_losertheme (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: is_waitingforplayers (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: is_firstcountdown (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: is_inprogress (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: is_bossfight (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: is_wavecomplete (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: is_countdown (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: t_grenade (SY_CONSTANT)
+Constant value: 216
+---- OuterDefine ----
+Inserting global identifier: t_bfg10kshot (SY_CONSTANT)
+Constant value: 217
+---- OuterDefine ----
+Inserting global identifier: t_darkimpfireball (SY_CONSTANT)
+Constant value: 218
+---- OuterDefine ----
+Inserting global identifier: t_cacolanternshot (SY_CONSTANT)
+Constant value: 219
+---- OuterDefine ----
+Inserting global identifier: t_abaddonshot (SY_CONSTANT)
+Constant value: 221
+---- OuterDefine ----
+Inserting global identifier: t_darkimp (SY_CONSTANT)
+Constant value: 155
+---- OuterDefine ----
+Inserting global identifier: t_blooddemon (SY_CONSTANT)
+Constant value: 156
+---- OuterDefine ----
+Inserting global identifier: t_ssgguy (SY_CONSTANT)
+Constant value: 157
+---- OuterDefine ----
+Inserting global identifier: t_hectebus (SY_CONSTANT)
+Constant value: 158
+---- OuterDefine ----
+Inserting global identifier: t_cacolantern (SY_CONSTANT)
+Constant value: 159
+---- OuterDefine ----
+Inserting global identifier: t_belphegor (SY_CONSTANT)
+Constant value: 215
+---- OuterDefine ----
+Inserting global identifier: t_abaddon (SY_CONSTANT)
+Constant value: 220
+---- OuterDefine ----
+Inserting global identifier: t_pistol (SY_CONSTANT)
+Constant value: 162
+---- OuterDefine ----
+Inserting global identifier: t_grenadelauncher (SY_CONSTANT)
+Constant value: 163
+---- OuterDefine ----
+Inserting global identifier: t_railgun (SY_CONSTANT)
+Constant value: 164
+---- OuterDefine ----
+Inserting global identifier: t_bfg10000 (SY_CONSTANT)
+Constant value: 165
+---- OuterDefine ----
+Inserting global identifier: t_minigun (SY_CONSTANT)
+Constant value: 214
+---- OuterDefine ----
+Inserting global identifier: t_maxhealthbonus (SY_CONSTANT)
+Constant value: 166
+---- OuterDefine ----
+Inserting global identifier: t_maxarmorbonus (SY_CONSTANT)
+Constant value: 167
+---- OuterDefine ----
+Inserting global identifier: t_redarmor (SY_CONSTANT)
+Constant value: 168
+---- OuterDefine ----
+Inserting global identifier: t_turbosphere (SY_CONSTANT)
+Constant value: 169
+---- OuterDefine ----
+Inserting global identifier: t_antigravbelt (SY_CONSTANT)
+Constant value: 170
+---- OuterDefine ----
+Inserting global identifier: t_timefreezer (SY_CONSTANT)
+Constant value: 171
+---- OuterDefine ----
+Inserting global identifier: t_infragoggles (SY_CONSTANT)
+Constant value: 172
+---- OuterDefine ----
+Inserting global identifier: t_infratracker (SY_CONSTANT)
+Constant value: 173
+---- OuterDefine ----
+Inserting global identifier: t_translucency (SY_CONSTANT)
+Constant value: 174
+---- OuterDefine ----
+Inserting global identifier: t_doomsphere (SY_CONSTANT)
+Constant value: 175
+---- OuterDefine ----
+Inserting global identifier: t_randompowerup (SY_CONSTANT)
+Constant value: 176
+---- OuterDefine ----
+Inserting global identifier: t_blueflag (SY_CONSTANT)
+Constant value: 177
+---- OuterDefine ----
+Inserting global identifier: t_redflag (SY_CONSTANT)
+Constant value: 178
+---- OuterDefine ----
+Inserting global identifier: t_whiteflag (SY_CONSTANT)
+Constant value: 179
+---- OuterDefine ----
+Inserting global identifier: t_strength (SY_CONSTANT)
+Constant value: 180
+---- OuterDefine ----
+Inserting global identifier: t_rage (SY_CONSTANT)
+Constant value: 181
+---- OuterDefine ----
+Inserting global identifier: t_drain (SY_CONSTANT)
+Constant value: 182
+---- OuterDefine ----
+Inserting global identifier: t_spread (SY_CONSTANT)
+Constant value: 183
+---- OuterDefine ----
+Inserting global identifier: t_resistance (SY_CONSTANT)
+Constant value: 184
+---- OuterDefine ----
+Inserting global identifier: t_regeneration (SY_CONSTANT)
+Constant value: 185
+---- OuterDefine ----
+Inserting global identifier: t_prosperity (SY_CONSTANT)
+Constant value: 186
+---- OuterDefine ----
+Inserting global identifier: t_reflection (SY_CONSTANT)
+Constant value: 187
+---- OuterDefine ----
+Inserting global identifier: t_highjump (SY_CONSTANT)
+Constant value: 188
+---- OuterDefine ----
+Inserting global identifier: t_haste (SY_CONSTANT)
+Constant value: 189
+---- OuterDefine ----
+Inserting global identifier: ev_keydown (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: ev_keyrepeat (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: ev_keyup (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: ev_char (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: ev_mousemove (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: ev_lbuttondown (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: ev_lbuttonup (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: ev_lbuttondblclick (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: ev_mbuttondown (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: ev_mbuttonup (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: ev_mbuttondblclick (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: ev_rbuttondown (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: ev_rbuttonup (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: ev_rbuttondblclick (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: ev_wheeldown (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: ev_wheelup (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: gkm_shift (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: gkm_ctrl (SY_CONSTANT)
+Constant value: 512
+---- OuterDefine ----
+Inserting global identifier: gkm_alt (SY_CONSTANT)
+Constant value: 1024
+---- OuterDefine ----
+Inserting global identifier: gkm_lbutton (SY_CONSTANT)
+Constant value: 2048
+---- OuterDefine ----
+Inserting global identifier: gkm_mbutton (SY_CONSTANT)
+Constant value: 4096
+---- OuterDefine ----
+Inserting global identifier: gkm_rbutton (SY_CONSTANT)
+Constant value: 8192
+---- OuterDefine ----
+Inserting global identifier: gk_pgdn (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: gk_pgup (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: gk_home (SY_CONSTANT)
+Constant value: 3
+---- OuterDefine ----
+Inserting global identifier: gk_end (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: gk_left (SY_CONSTANT)
+Constant value: 5
+---- OuterDefine ----
+Inserting global identifier: gk_right (SY_CONSTANT)
+Constant value: 6
+---- OuterDefine ----
+Inserting global identifier: gk_alert (SY_CONSTANT)
+Constant value: 7
+---- OuterDefine ----
+Inserting global identifier: gk_backspace (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: gk_tab (SY_CONSTANT)
+Constant value: 9
+---- OuterDefine ----
+Inserting global identifier: gk_linefeed (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: gk_down (SY_CONSTANT)
+Constant value: 10
+---- OuterDefine ----
+Inserting global identifier: gk_vtab (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: gk_up (SY_CONSTANT)
+Constant value: 11
+---- OuterDefine ----
+Inserting global identifier: gk_formfeed (SY_CONSTANT)
+Constant value: 12
+---- OuterDefine ----
+Inserting global identifier: gk_return (SY_CONSTANT)
+Constant value: 13
+---- OuterDefine ----
+Inserting global identifier: gk_f1 (SY_CONSTANT)
+Constant value: 14
+---- OuterDefine ----
+Inserting global identifier: gk_f2 (SY_CONSTANT)
+Constant value: 15
+---- OuterDefine ----
+Inserting global identifier: gk_f3 (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: gk_f4 (SY_CONSTANT)
+Constant value: 17
+---- OuterDefine ----
+Inserting global identifier: gk_f5 (SY_CONSTANT)
+Constant value: 18
+---- OuterDefine ----
+Inserting global identifier: gk_f6 (SY_CONSTANT)
+Constant value: 19
+---- OuterDefine ----
+Inserting global identifier: gk_f7 (SY_CONSTANT)
+Constant value: 20
+---- OuterDefine ----
+Inserting global identifier: gk_f8 (SY_CONSTANT)
+Constant value: 21
+---- OuterDefine ----
+Inserting global identifier: gk_f9 (SY_CONSTANT)
+Constant value: 22
+---- OuterDefine ----
+Inserting global identifier: gk_f10 (SY_CONSTANT)
+Constant value: 23
+---- OuterDefine ----
+Inserting global identifier: gk_f11 (SY_CONSTANT)
+Constant value: 24
+---- OuterDefine ----
+Inserting global identifier: gk_f12 (SY_CONSTANT)
+Constant value: 25
+---- OuterDefine ----
+Inserting global identifier: gk_del (SY_CONSTANT)
+Constant value: 26
+---- OuterDefine ----
+Inserting global identifier: gk_escape (SY_CONSTANT)
+Constant value: 27
+---- OuterDefine ----
+Inserting global identifier: gk_free1 (SY_CONSTANT)
+Constant value: 28
+---- OuterDefine ----
+Inserting global identifier: gk_free2 (SY_CONSTANT)
+Constant value: 29
+---- OuterDefine ----
+Inserting global identifier: gk_free3 (SY_CONSTANT)
+Constant value: 30
+---- OuterDefine ----
+Inserting global identifier: gk_cescape (SY_CONSTANT)
+Constant value: 31
+---- OuterDefine ----
+Inserting global identifier: changelevel_keepfacing (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: changelevel_resetinventory (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: changelevel_nomonsters (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: changelevel_changeskill (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: changelevel_nointermission (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: changelevel_resethealth (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: changelevel_preraiseweapon (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: no_change (SY_CONSTANT)
+Constant value: 2147418112
+---- OuterDefine ----
+Inserting global identifier: secf_silent (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: secf_nofallingdamage (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: secf_floordrop (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: secf_norespawn (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: blockf_creatures (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: blockf_monsters (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: blockf_players (SY_CONSTANT)
+Constant value: 4
+---- OuterDefine ----
+Inserting global identifier: blockf_floaters (SY_CONSTANT)
+Constant value: 8
+---- OuterDefine ----
+Inserting global identifier: blockf_projectiles (SY_CONSTANT)
+Constant value: 16
+---- OuterDefine ----
+Inserting global identifier: blockf_everything (SY_CONSTANT)
+Constant value: 32
+---- OuterDefine ----
+Inserting global identifier: blockf_railing (SY_CONSTANT)
+Constant value: 64
+---- OuterDefine ----
+Inserting global identifier: blockf_use (SY_CONSTANT)
+Constant value: 128
+---- OuterDefine ----
+Inserting global identifier: blockf_sight (SY_CONSTANT)
+Constant value: 256
+---- OuterDefine ----
+Inserting global identifier: fogp_density (SY_CONSTANT)
+Constant value: 0
+---- OuterDefine ----
+Inserting global identifier: fogp_outsidedensity (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: fogp_skyfog (SY_CONSTANT)
+Constant value: 2
+---- OuterDefine ----
+Inserting global identifier: printname_levelname (SY_CONSTANT)
+Constant value: -1
+---- OuterDefine ----
+Inserting global identifier: printname_level (SY_CONSTANT)
+Constant value: -2
+---- OuterDefine ----
+Inserting global identifier: printname_skill (SY_CONSTANT)
+Constant value: -3
+---- OuterDefine ----
+Inserting global identifier: csf_nofakefloors (SY_CONSTANT)
+Constant value: 1
+---- OuterDefine ----
+Inserting global identifier: csf_noblockall (SY_CONSTANT)
+*Leaving .\membrance2-compilers\acc/zdefs.acs
+Freeing constants for depth 2
+Constant value: 2
+---- OuterInclude ----
+*Including zwvars.acs
+*Include file found at .\membrance2-compilers\acc/zwvars.acs
+*Leaving .\membrance2-compilers\acc/zwvars.acs
+Freeing constants for depth 2
+*Leaving .\membrance2-compilers\acc/zcommon.acs
+Freeing constants for depth 1
+---- OuterMapVar ----
+Inserting global identifier: souls (SY_MAPVAR)
+---- OuterScript ----
+Freeing local identifiers
+Script number: 444
+Script type: enter
+---- LeadingWhileUntil ----
+AC> 000008 = #167:PCD_PUSHBYTE
+AB> 000009 = 1
+AC> 000010 = #79:PCD_IFNOTGOTO
+SL> 000011 (skip int)
+---- ProcessInternFunc ----
+AC> 000015 = #3:PCD_PUSHNUMBER
+AL> 000016 = 320
+AC> 000020 = #167:PCD_PUSHBYTE
+AB> 000021 = 240
+AC> 000022 = #167:PCD_PUSHBYTE
+AB> 000023 = 1
+AC> Last 2 PCD_PUSHBYTEs changed to #176:PCD_PUSH2BYTES
+AC> 000023 = #254:PCD_SETHUDSIZE
+---- ProcessInternFunc ----
+Adding string 0:
+  "BIGFONT"
+AC> 000025 = #167:PCD_PUSHBYTE
+AB> 000026 = 0
+AC> 000027 = #165:PCD_SETFONT
+---- LeadingIf ----
+AC> 000028 = #29:PCD_PUSHMAPVAR
+AB> 000029 = 0
+AC> 000030 = #167:PCD_PUSHBYTE
+AB> 000031 = 6
+AC> 000032 = #20:PCD_NE
+AC> 000033 = #75:PCD_NEGATELOGICAL
+AC> 000034 = #79:PCD_IFNOTGOTO
+SL> 000035 (skip int)
+---- LeadingTerminate ----
+AC> 000039 = #1:PCD_TERMINATE
+WL> 000035 = 40
+---- LeadingIf ----
+---- ProcessInternFunc ----
+Adding string 1:
+  "SoulCube"
+AC> 000040 = #167:PCD_PUSHBYTE
+AB> 000041 = 1
+AC> 000042 = #147:PCD_CHECKINVENTORY
+AC> 000043 = #79:PCD_IFNOTGOTO
+SL> 000044 (skip int)
+---- LeadingVarAssign ----
+---- ProcessInternFunc ----
+Adding string 2:
+  "CubeAmmo"
+AC> 000048 = #167:PCD_PUSHBYTE
+AB> 000049 = 2
+AC> 000050 = #147:PCD_CHECKINVENTORY
+AC> 000051 = #26:PCD_ASSIGNMAPVAR
+AB> 000052 = 0
+---- LeadingIf ----
+AC> 000053 = #29:PCD_PUSHMAPVAR
+AB> 000054 = 0
+AC> 000055 = #167:PCD_PUSHBYTE
+AB> 000056 = 5
+AC> 000057 = #19:PCD_EQ
+AC> 000058 = #79:PCD_IFNOTGOTO
+SL> 000059 (skip int)
+---- LeadingHudMessage ----
+AC> 000063 = #85:PCD_BEGINPRINT
+Adding string 3:
+  "Free Us!"
+AC> 000064 = #167:PCD_PUSHBYTE
+AB> 000065 = 3
+AC> 000066 = #87:PCD_PRINTSTRING
+AC> 000067 = #159:PCD_MOREHUDMESSAGE
+AC> 000068 = #167:PCD_PUSHBYTE
+AB> 000069 = 0
+AC> 000070 = #167:PCD_PUSHBYTE
+AB> 000071 = 3
+AC> 000072 = #167:PCD_PUSHBYTE
+AB> 000073 = 5
+AC> Last 3 PCD_PUSHBYTEs changed to #177:PCD_PUSH3BYTES
+AC> 000072 = #3:PCD_PUSHNUMBER
+AL> 000073 = 22937
+AC> 000077 = #3:PCD_PUSHNUMBER
+AL> 000078 = 62259
+AC> 000082 = #167:PCD_PUSHBYTE
+AB> 000083 = 1
+AC> 000084 = #162:PCD_ENDHUDMESSAGEBOLD
+---- ProcessInternFunc ----
+Adding string 4:
+  "Grin"
+AC> 000085 = #167:PCD_PUSHBYTE
+AB> 000086 = 4
+AC> 000087 = #341:PCD_SETMUGSHOTSTATE
+AC> 000089 = #52:PCD_GOTO
+SL> 000090 (skip int)
+WL> 000059 = 94
+---- ProcessInternFunc ----
+Adding string 5:
+  "NOAMMO"
+AC> 000094 = #167:PCD_PUSHBYTE
+AB> 000095 = 5
+AC> 000096 = #167:PCD_PUSHBYTE
+AB> 000097 = 127
+AC> Last 2 PCD_PUSHBYTEs changed to #176:PCD_PUSH2BYTES
+AC> 000097 = #103:PCD_LOCALAMBIENTSOUND
+---- LeadingHudMessage ----
+AC> 000098 = #85:PCD_BEGINPRINT
+Adding string 6:
+  "Not Enough Souls"
+AC> 000099 = #167:PCD_PUSHBYTE
+AB> 000100 = 6
+AC> 000101 = #87:PCD_PRINTSTRING
+AC> 000102 = #159:PCD_MOREHUDMESSAGE
+AC> 000103 = #167:PCD_PUSHBYTE
+AB> 000104 = 0
+AC> 000105 = #167:PCD_PUSHBYTE
+AB> 000106 = 3
+AC> 000107 = #167:PCD_PUSHBYTE
+AB> 000108 = 5
+AC> Last 3 PCD_PUSHBYTEs changed to #177:PCD_PUSH3BYTES
+AC> 000107 = #3:PCD_PUSHNUMBER
+AL> 000108 = 22937
+AC> 000112 = #3:PCD_PUSHNUMBER
+AL> 000113 = 62259
+AC> 000117 = #167:PCD_PUSHBYTE
+AB> 000118 = 1
+AC> 000119 = #162:PCD_ENDHUDMESSAGEBOLD
+WL> 000090 = 120
+WL> 000044 = 120
+---- ProcessInternFunc ----
+AC> 000120 = #167:PCD_PUSHBYTE
+AB> 000121 = 35
+AC> 000122 = #55:PCD_DELAY
+AC> 000123 = #52:PCD_GOTO
+AL> 000124 = 8
+WL> 000011 = 128
+AC> 000128 = #1:PCD_TERMINATE
+---- PC_CloseObject ----
+AB> 000129 = 0
+AB> 000130 = 0
+AB> 000131 = 0
+Creating dummy scripts to make WadAuthor happy.
+AD> 000132 = (4 bytes)
+AL> 000136 = 8
+Script 444, address = 8, arg count = 0
+AW> 000140 = 444
+AB> 000142 = 4
+AB> 000143 = 0
+AL> 000144 = 8
+---- STR_WriteChunk 0 ----
+AD> 000148 = (4 bytes)
+SL> 000152 (skip int)
+AD> 000156 = (4 bytes)
+AL> 000160 = 7
+AL> 000164 = 0
+AL> 000168 = 40
+AL> 000172 = 48
+AL> 000176 = 57
+AL> 000180 = 66
+AL> 000184 = 75
+AL> 000188 = 80
+AL> 000192 = 87
+AS> 000196 = "BIGFONT" (8 bytes)
+AS> 000204 = "SoulCube" (9 bytes)
+AS> 000213 = "CubeAmmo" (9 bytes)
+AS> 000222 = "Free Us!" (9 bytes)
+AS> 000231 = "Grin" (5 bytes)
+AS> 000236 = "NOAMMO" (7 bytes)
+AS> 000243 = "Not Enough Souls" (17 bytes)
+WL> 000152 = 104
+AL> 000260 = 132
+AD> 000264 = (4 bytes)
+WL> 000004 = 268
+AL> 000268 = 0
+AL> 000272 = 0

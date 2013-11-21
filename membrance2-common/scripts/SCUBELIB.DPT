@@ -1,0 +1,26 @@
+#include "zcommon.acs"
+
+int Souls = 0;
+
+script 444 ENTER
+{
+	While(true)
+	{
+		SetHudSize(320,240,1);
+		SetFont("BIGFONT");
+		if (!(Souls != 6)) {
+			Terminate;
+		}
+		if (CheckInventory("SoulCube")) {
+			Souls = CheckInventory("CubeAmmo");
+			if ((Souls == 5)) {
+				HudMessageBold(s:"Free Us!"; HUDMSG_PLAIN, 3, CR_GOLD, 0.35, 0.95, 1);
+				SetMugshotState("Grin");
+			} else {
+				LocalAmbientSound("NOAMMO",127);
+				HudMessageBold(s:"Not Enough Souls"; HUDMSG_PLAIN, 3, CR_GOLD, 0.35, 0.95, 1);
+			}
+		}
+		Delay(35);
+	}
+}
