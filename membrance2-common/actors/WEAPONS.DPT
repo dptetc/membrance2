@@ -231,7 +231,7 @@ actor Colt.M2024 : MEM_Weapon replaces Pistol 10100
 		VUPG A 0 A_JumpIfInventory("silencerusing",1,"FireWithSilencer")
 		VUPG A 0 A_AlertMonsters
 		VUPG A 0 A_PlaySound("Weapons/GlockFire")
-		COLT B 0 A_FireCustomMissile("CasingSpawnerZ1",0,0,3) // все делай по аналогии
+		COLT B 0 A_FireCustomMissile("CasingSpawnerZ1",0,0,3)
 		COLT B 0 A_FireCustomMissile("littleSmokeSpawner",0,0,3)
 		VUPG B 0 A_FireBullets (2.0, 2.0, -1, 4, "BulletPuff", 1,1255)
 		VUPF A 2 A_GunFlash
@@ -243,7 +243,7 @@ actor Colt.M2024 : MEM_Weapon replaces Pistol 10100
 		COLT A 0 A_PlaySound("Weapons/GlockSilenced")
 		COLT B 0 A_FireCustomMissile("LittleSmokeSpawner",0,0,0)
 		COLT B 0 A_FireCustomMissile("littleSmokeSpawner",0,0,3)
-		COLT B 0 A_FireCustomMissile("CasingSpawnerZ1",0,0,3) // все делай по аналогии
+		COLT B 0 A_FireCustomMissile("CasingSpawnerZ1",0,0,3)
 		COLT B 0 A_FireBullets (2.0, 2.0, -1, 4, "BulletPuff", 1,1255)
 		COLT B 2 A_GunFlash
 		COLT C 2 
@@ -635,13 +635,13 @@ Actor M134 : MEM_Weapon 5014
 		M34G A 0 A_PlaySound("MinigunIdleFire")
 		M34G A 0 A_JumpIfInventory("MiniGunIdled",1,"Fire2")
 		M34G A 0 A_FirECustomMissile("Littlesmokespawner",0,0,0)
-		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3) // все делай по аналогии
+		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3)
 		M34G A 0 A_FireBullets (5.6, 0, 1, 5, "BulletPuff")
 		M34F A 4 A_GunFlash
 		M34G A 0 A_PlayWeaponSound("MinigunFIRE")
 		M34G A 0 A_PlaySound("MinigunIdleFire")
 		M34G A 0 A_FirECustomMissile("Bigsmokespawner",0,0,0)
-		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3) // все делай по аналогии
+		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3)
 		M34F B 4 A_FireBullets (5.6, 0, 1, 5, "BulletPuff")
 		M34G B 0 A_ReFire
 		goto Ready
@@ -649,13 +649,13 @@ Actor M134 : MEM_Weapon 5014
 		M34G A 0 A_PlayWeaponSound("MinigunFIRE")
 		M34G A 0 A_PlaySound("MinigunIdleFire")
 		M34G A 0 A_FirECustomMissile("Bigsmokespawner",0,0,0)
-		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3) // все делай по аналогии
+		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3)
 		M34G A 0 A_FireBullets (5.6, 0, 1, 4, "BulletPuff")
 		M34F A 2 A_GunFlash
 		M34G A 0 A_PlayWeaponSound("MinigunFIRE")
 		M34G A 0 A_PlaySound("MinigunIdleFire")
 		M34G A 0 A_FirECustomMissile("Bigsmokespawner",0,0,0)
-		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3) // все делай по аналогии
+		M34G B 0 A_FireCustomMissile("CasingSpawnerZ2",0,0,3)
 		M34F B 1 A_FireBullets (5.6, 0, 1, 4, "BulletPuff")
 		M34G B 0 A_ReFire
 		goto Ready
@@ -1829,14 +1829,15 @@ actor SoulCubeProj
 	Scale 0.5
 	PROJECTILE
 	+SKYEXPLODE
-	+SEEKERMISSILE//+SCREENSEEKER
+	+SEEKERMISSILE // ???
+	+SCREENSEEKER
 	states
 	{
 	Spawn:
-		SCBW A 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW B 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW C 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW D 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
+		SCBW A 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW B 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW C 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW D 1 A_SeekerMissile (90, 90, SMF_PRECISE)
 		Loop
 	Death:
 		TNT1 A 0 A_CustomMissile ("SoulCubeReturnSpawner",0,0,0,0,0)
@@ -1880,7 +1881,7 @@ actor SoulCubeReturner : Ammo
 	damage 0
 	Scale 0.5
 	+MISSILE
-	//+STEPMISSILE
+	+STEPMISSILE
 	+SEEKERMISSILE
 	+PAINLESS
 	+NONSHOOTABLE
@@ -1889,10 +1890,10 @@ actor SoulCubeReturner : Ammo
 	states
 	{
 	Spawn:
-		SCBW A 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW B 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW C 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
-		SCBW D 1 A_SeekerMissile (90, 90)//, SMF_PRECISE)
+		SCBW A 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW B 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW C 1 A_SeekerMissile (90, 90, SMF_PRECISE)
+		SCBW D 1 A_SeekerMissile (90, 90, SMF_PRECISE)
 		Loop
 	Death:
 		TNT1 A -1
@@ -1918,7 +1919,7 @@ actor SoulCubeGenerator : CustomInventory
 	states
 	{
 	Spawn:
-		SCBG ABCD 5 A_SeekerMissile (90, 90)//, SMF_PRECISE)
+		SCBG ABCD 5 A_SeekerMissile (90, 90, SMF_PRECISE)
 		Loop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("SoulCube", 1, 3)
@@ -1931,6 +1932,8 @@ actor SoulCubeGenerator : CustomInventory
 
 actor CubeAmmo : Ammo
 {
+	Inventory.PickupSound "RECHARGE"
+	Inventory.UseSound "RECHARGE"
 	Inventory.MaxAmount 5
 	Ammo.BackpackAmount 0
 	Ammo.BackpackMaxAmount 5

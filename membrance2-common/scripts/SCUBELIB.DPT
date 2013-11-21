@@ -8,7 +8,7 @@ script 444 ENTER
 	{
 		SetHudSize(320,240,1);
 		SetFont("BIGFONT");
-		if (!(Souls != 6)) {
+		if (Souls >= 6) {
 			Terminate;
 		}
 		if (CheckInventory("SoulCube")) {
