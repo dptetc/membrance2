@@ -91,7 +91,7 @@ map LOADING ""
 }
 map MEM01 "Ruins"
 {
-	exitpic = "KEPLER22B"
+	exitpic = "K22B"
 	cluster = 0
 	next = "MEM02"
 	secretnext = "MEM02"
@@ -118,7 +118,7 @@ map MEM03 "Destiny"
 }
 map MEM04 "Knight's HellDome"
 {
-	exitpic = "KEPLERSNOW"
+	exitpic = "KSNOWPIC"
 	cluster = 0
 	next = "MEM05"
 	secretnext = "MEM05"

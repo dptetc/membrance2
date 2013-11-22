@@ -2,12 +2,6 @@ ACTOR FullHealth : Inventory {}
 
 Actor Radiation : CustomInventory {}
 
-Actor RechargeHealth : Health
-{
-	Inventory.PickupSound "RECHARGE"
-	Inventory.UseSound "RECHARGE"
-}
-
 ACTOR BecameInvisible : inventory
 {
 	Inventory.MaxAmount 1
@@ -16,7 +10,6 @@ ACTOR BecameInvisible : inventory
 ACTOR NoBulletPuff 
 {
 	PROJECTILE
-	damagetype "EpicDeath"
 	States
 	{
 	Spawn:

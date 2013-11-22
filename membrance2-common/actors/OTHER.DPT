@@ -242,8 +242,7 @@ Actor SteamSpawner : SwitchableDecoration 17300
 	}
 }
 
-Actor SteamParticle
-{
+Actor SteamParticle {
 	Height 1
 	Radius 1
 	+Missile
@@ -252,8 +251,7 @@ Actor SteamParticle
 	RenderStyle Add
 	Scale 0.4
 	Alpha 0.65
-	States
-	{
+	States {
 	Spawn:
 		STEM A 2 A_SetTranslucent(0.6, 1)
 		STEM B 2 A_SetTranslucent(0.55, 1)
@@ -268,5 +266,22 @@ Actor SteamParticle
 		STEM K 2 A_SetTranslucent(0.1, 1)
 		STEM L 2 A_SetTranslucent(0.05, 1)
 		Stop
+	}
+}
+
+actor ArmoredUACtruckGreen 10687 {
+	//$Category "Special"
+	//$Title "Armored UAC Truck"
+	Radius 36
+	Height 64
+	+SOLID
+	+SHOOTABLE
+	+NODAMAGE
+	+NOBLOOD
+	+CANPASS
+	States {
+	Spawn:
+		ATRU A 35 A_PlaySound("TRUKIDLE", CHAN_AUTO, 127, 1, ATTN_IDLE)
+		Loop
 	}
 }

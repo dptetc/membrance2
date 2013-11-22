@@ -1,141 +1,141 @@
 Actor Zombies : RandomSpawner replaces ZombieMan
 {
-DropItem "ZombieMan1"
-DropItem "ZombieMan2"
-DropItem "ZombieMan3"
-DropItem "ZombieMan4"
-DropItem "ZombieMan5"
-DropItem "ZombieMan6"
-DropItem "ZombieMan7"
-DropItem "ZombieMan8"
-DropItem "ZombieMan9"
-DropItem "ZombieMan10"
-DropItem "ZombieMan11"
-DropItem "ZombieMan12"
-DropItem "ZombieMan13"
-DropItem "ZombieMan14"
-DropItem "ZombieMan15"
-DropItem "ZombieMan16"
-DropItem "ZombieMan17"
+	DropItem "ZombieMan1"
+	DropItem "ZombieMan2"
+	DropItem "ZombieMan3"
+	DropItem "ZombieMan4"
+	DropItem "ZombieMan5"
+	DropItem "ZombieMan6"
+	DropItem "ZombieMan7"
+	DropItem "ZombieMan8"
+	DropItem "ZombieMan9"
+	DropItem "ZombieMan10"
+	DropItem "ZombieMan11"
+	DropItem "ZombieMan12"
+	DropItem "ZombieMan13"
+	DropItem "ZombieMan14"
+	DropItem "ZombieMan15"
+	DropItem "ZombieMan16"
+	DropItem "ZombieMan17"
 }
 
 Actor Shotguns : RandomSpawner replaces ShotgunGuy
 {
-DropItem "ShotgunGuy1"
-DropItem "ShotgunGuy2"
-DropItem "ShotgunGuy3"
-DropItem "ShotgunGuy4"
-DropItem "ShotgunGuy5"
-DropItem "ShotgunGuy6"
-DropItem "ShotgunGuy7"
-DropItem "ShotgunGuy8"
+	DropItem "ShotgunGuy1"
+	DropItem "ShotgunGuy2"
+	DropItem "ShotgunGuy3"
+	DropItem "ShotgunGuy4"
+	DropItem "ShotgunGuy5"
+	DropItem "ShotgunGuy6"
+	DropItem "ShotgunGuy7"
+	DropItem "ShotgunGuy8"
 }
 
 Actor Chaingunners : RandomSpawner replaces ChaingunGuy
 {
-DropItem "ChaingunGuy1"
-DropItem "ChaingunGuy2"
-DropItem "ChaingunGuy3"
-DropItem "ChaingunGuy4"
-DropItem "ChaingunGuy5"
+	DropItem "ChaingunGuy1"
+	DropItem "ChaingunGuy2"
+	DropItem "ChaingunGuy3"
+	DropItem "ChaingunGuy4"
+	DropItem "ChaingunGuy5"
 }
 
 Actor Imps : RandomSpawner replaces DoomImp
 {
-DropItem "DoomImp1"
-DropItem "DoomImp2"
-DropItem "DoomImp3"
-DropItem "DoomImp4"
-DropItem "DoomImp5"
+	DropItem "DoomImp1"
+	DropItem "DoomImp2"
+	DropItem "DoomImp3"
+	DropItem "DoomImp4"
+	DropItem "DoomImp5"
 }
 
 Actor Demons : RandomSpawner replaces Demon
 {
-DropItem "Demon1"
-DropItem "Demon2"
-DropItem "Demon3"
-DropItem "Demon4"
-DropItem "Demon5"
+	DropItem "Demon1-PlaceHolder"
+	DropItem "Demon2-PlaceHolder"
+	DropItem "Demon3"
+	DropItem "Demon4"
+	DropItem "Demon5"
 }
 
 Actor MasterSpectra : RandomSpawner replaces Spectre
 {
-DropItem "Spectre1"
-DropItem "Spectre2"
-DropItem "Spectre3"
-DropItem "Spectre4"
-DropItem "Spectre5"
+	DropItem "Spectre1"
+	DropItem "Spectre2"
+	DropItem "Spectre3"
+	DropItem "Spectre4"
+	DropItem "Spectre5"
 }
 
 Actor Golova : RandomSpawner replaces Cacodemon
 {
-DropItem "CacoDemon1"
-DropItem "CacoDemon2"
-DropItem "CacoDemon3"
-DropItem "CacoDemon4"
-DropItem "CacoDemon5"
+	DropItem "CacoDemon1"
+	DropItem "CacoDemon2"
+	DropItem "CacoDemon3"
+	DropItem "CacoDemon4"
+	DropItem "CacoDemon5"
 }
 
 Actor HellKnights : RandomSpawner replaces HellKnight
 {
-DropItem "HellKnight1"
-DropItem "HellKnight2"
-DropItem "HellKnight3"
-DropItem "HellKnight4"
-DropItem "HellKnight5"
+	DropItem "HellKnight1"
+	DropItem "HellKnight2"
+	DropItem "HellKnight3"
+	DropItem "HellKnight4"
+	DropItem "HellKnight5"
 }
 
 Actor BaronsOfHell : RandomSpawner replaces BaronOfHell
 {
-DropItem "BaronOfHell1"
-DropItem "BaronOfHell2"
-DropItem "BaronOfHell3"
-DropItem "BaronOfHell4"
-DropItem "BaronOfHell5"
+	DropItem "BaronOfHell1"
+	DropItem "BaronOfHell2"
+	DropItem "BaronOfHell3"
+	DropItem "BaronOfHell4"
+	DropItem "BaronOfHell5"
 }
 
 Actor CyberDemons : RandomSpawner replaces CyberDemon
 {
-DropItem "CyberDemon1"
-DropItem "CyberDemon2"
-DropItem "CyberDemon3"
-DropItem "CyberDemon4"
-DropItem "CyberDemon5"
+	DropItem "CyberDemon1"
+	DropItem "CyberDemon2"
+	DropItem "CyberDemon3"
+	DropItem "CyberDemon4"
+	DropItem "CyberDemon5"
 
 }
 
 Actor Skeletons : RandomSpawner replaces Revenant
 {
-DropItem "Revenant1"
-DropItem "Revenant2"
-DropItem "Revenant3"
-DropItem "Revenant4"
-DropItem "Revenant5"
+	DropItem "Revenant1"
+	DropItem "Revenant2"
+	DropItem "Revenant3"
+	DropItem "Revenant4"
+	DropItem "Revenant5"
 }
 
 Actor Fatsos : RandomSpawner replaces Fatso
 {
-DropItem "Fatso1"
-DropItem "Fatso2"
-DropItem "Fatso3"
-DropItem "Fatso4"
-DropItem "Fatso5"
+	DropItem "Fatso1"
+	DropItem "Fatso2"
+	DropItem "Fatso3"
+	DropItem "Fatso4"
+	DropItem "Fatso5"
 }
 
 Actor Archi : RandomSpawner replaces ArchVile
 {
-DropItem "ArchVile1"
-DropItem "ArchVile2"
-DropItem "ArchVile3"
-DropItem "ArchVile4"
-DropItem "ArchVile5"
+	DropItem "ArchVile1"
+	DropItem "ArchVile2"
+	DropItem "ArchVile3"
+	DropItem "ArchVile4"
+	DropItem "ArchVile5"
 }
 
 Actor SpiderMasterMinds : RandomSpawner replaces SpiderMasterMind
 {
-DropItem "SpiderMasterMind1"
-DropItem "SpiderMasterMind2"
-DropItem "SpiderMasterMind3"
-DropItem "SpiderMasterMind4"
-DropItem "SpiderMasterMind5"
+	DropItem "SpiderMasterMind1"
+	DropItem "SpiderMasterMind2"
+	DropItem "SpiderMasterMind3"
+	DropItem "SpiderMasterMind4"
+	DropItem "SpiderMasterMind5"
 }

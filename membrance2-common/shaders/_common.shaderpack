@@ -46,13 +46,6 @@ pointlight CANDLE
 	size 32
 	offset 0 16 0
 }
-object Rocket2
-{
-	frame MISLA { light SMALLREDTORCH }
-	frame MISLB { light BIGREDTORCH }
-	frame MISLC { light BIGREDTORCH }
-	frame MISLD { light SMALLYELLOWTORCH }
-}
 object ZEROFIREBALL
 {
 	frame TNT1A { light MediumFireGL }
@@ -97,12 +90,6 @@ object PlasmaBall2
 	frame PLS1E { light SMALLREDTORCH }
 	frame PLS1F { light SMALLREDTORCH }
 	frame PLS1G { light BIGREDTORCH }
-}
-object BFGPARTICLE
-{
-	frame SLMSA { light SmallFireGL }
-	frame SLMSB { light SmallFireGL }
-	frame SLMSC { light SMALLREDTORCH }
 }
 object BFGBallPARTICLE
 {
