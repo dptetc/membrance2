@@ -27,6 +27,7 @@ $Limit SFX/FireDie	0
 
 /* MONSTERS */
 
+//Trite
 $Random Trite/Sight { TRITSIG1 TRITSIG2 TRITSIG3 }
 TRITSIG1		TRITSIG1
 TRITSIG2		TRITSIG2
@@ -71,8 +72,216 @@ $Volume Trite/Death 0.5
 $Volume Trite/Splat 0.5
 $Volume Trite/Step 0.2
 
-DALLEK						DALEK
+//Dalek
+DALEK						DALEK
 DALEK2						DALEK2
+
+//CGunSpider
+CGunSpider/Sight	DSCSPISE
+CGunSpider/Death	DSCSPIDI
+CGunSpider/Attack	DSCSPIFI
+
+//Diabloist
+monster/diasit dsdiasit
+monster/diapai dsdiapai
+monster/diadth dsdiadth
+monster/diaact dsdiaact
+weapons/firbfi dsfirbfi
+weapons/firmfi dsfirmfi
+weapons/firex4 dsfirex4
+weapons/diasht dsdiasht
+weapons/firex3 dsfirex3
+
+ClericFlameFire         dshellfi
+ClericFlameExplode      dshellex
+ClericFlameCircle       dsfirex5
+
+//Deep One
+$random deepone/pain { deepone/hurt1 deepone/hurt2 deepone/hurt3 deepone/hurt4 }
+
+deepone/hurt1 	DEEPPN1
+deepone/hurt2 	DEEPPN2
+deepone/hurt3  	DEEPPN3
+deepone/hurt4 	DEEPPN4
+
+$random deepone/active { deepone/groan1 deepone/groan2 }
+
+deepone/groan1 	DEEPGN1
+deepone/groan2 	DEEPGN2
+
+$random deepone/meleegrowl { deepone/attack1 deepone/attack2 }
+
+deepone/melee		DSCLAW
+
+deepone/attack1 	DEEPAK1
+deepone/attack2 	DEEPAK2
+
+deepone/sight 		DEEPSEE
+deepone/stealth		DEEPSTTH
+
+deepone/death 	DEEPDTH
+
+deepone/fire 	DEEPFIRE
+
+deepone/firehit 	DEEPFHIT
+
+//CacoLich
+CacoLich/Sight INSSIT
+CacoLich/Active DSTRTACT
+CacoLich/Pain NESSPN
+CacoLich/Death DSDMDETH
+
+CacoFlame/Attack LICHFLAM
+CacoFlame/Attack LICHFLAM
+CacoLich/Sight INSSIT
+CacoLich/Active DSTRTACT
+CacoLich/Pain NESSPN
+CacoLich/Death DSDMDETH
+
+//GateKeeper
+gate/sight see
+gate/attack fight
+gate/pain pain
+gate/death death
+FLAME FLAME
+spider/walk1 dsmetal
+spider/walk2 dsmetal1
+spider/walk3 dsmetal2
+$random spider/walk { spider/walk1 spider/walk2 spider/walk3 }
+gate/PLASMA1 DSPLAS1
+gate/PLASMA2 DSPLAS2
+$random gate/PLASMA { gate/PLASMA1 gate/PLASMA2 }
+gate/PLASMA3 DSPLAS3
+gate/PLASMA4 DSPLAS4
+$random gate/PLASMASHOT { gate/PLASMA3 gate/PLASMA4 }
+bodyfade BODYFADE
+fire fire
+IMPACT IMPACT
+gate/active1 act1
+gate/active2 act2
+gate/active3 act3
+$random gate/active { gate/active1 gate/active2 gate/active3 }
+gate/yell yell
+
+//Hectebus
+Hectebus/Sight		DSHECSIT
+Hectebus/Pain		DSHCPAIN
+Hectebus/Death		DSHECDTH
+Hectebus/Active		DSHECACT
+$Random hectebus/attack	{ HectAtk1 HectAtk2 }
+HectAtk1		DSHECATK
+HectAtk2		DSHCATK2
+$Random hectebus/step { HectStp1 HectStp2 HectStp3 HectStp4 HectStp5 }
+HectStp1		DSHECST1
+HectStp2		DSHECST2
+HectStp3		DSHECST3
+HectStp4		DSHECST4
+HectStp5		DSHECST5
+
+//ProfaneOne
+profane/sight dsprosee
+profane/death dsprodth
+profane/die dsprogib
+profane/blood dsbldpuk
+profane/melee dsproclw
+profane/poison dspsnsht
+profane/poisondie dspsnhit
+
+vomit1 vomit1
+vomit2 vomit2
+vomit3 vomit3
+$RANDOM profane/vomit { vomit1 vomit2 vomit3 }
+
+//ForgottenOne
+$Random Forgotten/Attack { FRGOATK1 FRGOATK2 FRGOATK3 }
+FRGOATK1	FRGOATK1
+FRGOATK2	FRGOATK2
+FRGOATK3	FRGOATK3
+$Random Forgotten/Active { FRGOACT1 FRGOACT2 FRGOACT3 }
+FRGOACT1	FRGOACT1
+FRGOACT2	FRGOACT2
+FRGOACT3	FRGOACT3
+FRGOACT4	FRGOACT4
+$Random Forgotten/Pain { FRGOPAI1 FRGOPAI2 FRGOPAI3 }
+FRGOPAI1	FRGOPAI1
+FRGOPAI2	FRGOPAI2
+FRGOPAI3	FRGOPAI3
+$Random Forgotten/Death { FRGODEA1 FRGODEA2 FRGODEA3 }
+FRGODEA1	FRGODEA1
+FRGODEA2	FRGODEA2
+FRGODEA3	FRGODEA3
+
+//Defiler
+Defiler/Attack	DEFIATK
+Defiler/Sight	DEFISIT
+Defiler/Death	DEFIDETH
+
+//Incarnate
+monster/incsit                dsincsit
+monster/incdth                dsincdth
+monster/incexp                dsincexp
+monster/incact                dsincact
+monster/incatk                dsincatk
+monster/inchit                dsinchit
+monster/hadsit                dshadsit
+monster/haddth                dshaddth
+monster/hadexp                dshadexp
+monster/hadtel                dshadtel
+monster/hadwlk                dshadwlk
+
+//AutoShotgunGuy
+asgguy/asgfir dsasgfir
+asgguy/asgout dsasgout
+asgguy/asgin dsasgin
+asgguy/asgld1 dsasgld1
+
+//Incubus
+incubus/sight			dsincsit
+incubus/attack1			dsincat1
+incubus/attack2			dsincat2
+incubus/pain			dsincpai
+incubus/death			dsincdth
+incubus/active			dsincact
+incubus/shot			dsincsht
+incubus/hit			dsinchit
+weapons/hominglaunch		dshomlnc
+weapons/homingexplode		dshomxpl
+$limit weapons/rocklf     32
+
+$random incubus/walk	{ dsinwlk1 dsinwlk2 dsinwlk3 dsinwlk4 }
+dsinwlk1	dsinwlk1
+dsinwlk2	dsinwlk2
+dsinwlk3	dsinwlk3
+dsinwlk4	dsinwlk4
+
+incubus2/sight			dsgicsit
+incubus2/attack1	        dsgicat1
+incubus2/attack2		dsgicat2
+incubus2/pain			dsgicpai
+incubus2/death			dsgicdth
+incubus2/active			dsgicact
+
+$random incubus2/walk	{ dsgiwlk1 dsgiwlk2 dsgiwlk3 dsgiwlk4 }
+dsgiwlk1	dsgiwlk1
+dsgiwlk2	dsgiwlk2
+dsgiwlk3	dsgiwlk3
+dsgiwlk4	dsgiwlk4
+
+$random weapons/flameballexplode { dsflbxp1 dsflbxp2 dsflbxp3 }
+dsflbxp1        dsflbxp1
+dsflbxp2        dsflbxp2
+dsflbxp3        dsflbxp3
+
+//DuneWarrior
+dune/sight DSDNWSIT
+dune/pain DSDNWPAI
+dune/death DSDNWDTH
+dune/active DSDNWACT
+dune/bounce BOUNCE2
+catharsi/shotdth DSSLSHDT
+catharsi/thermtick DSSLTHTI
+catharsi/shotsit DSSLSHOT
+catharsi/shotdth DSSLSHDT
 
 /* WORLD SOUNDS */
 
@@ -99,6 +308,8 @@ world/rock					dsrock
 world/wood					dswood
 world/nullspace				dsnulspc
 world/defaultterrain		dsdefter
+
+TRUKIDLE TRUKIDLE
 
 /* MENU */
 
@@ -181,5 +392,3 @@ Steam/Loop	STEMLOOP
 Steam/Fire	STEMFIRE
 
 NOAMMO NOAMMO
-
-TRUKIDLE TRUKIDLE

@@ -7,7 +7,6 @@ decal BirdSSmear1
 	randomflipx
 	animator WaterAnimator
 }
-
 Decal D3BloodSplat1 1
 {
 	Pic D3SPLT01
@@ -15,7 +14,6 @@ Decal D3BloodSplat1 1
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat2 2
 {
 	Pic D3SPLT02
@@ -23,7 +21,6 @@ Decal D3BloodSplat2 2
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat3 3
 {
 	Pic D3SPLT03
@@ -31,7 +28,6 @@ Decal D3BloodSplat3 3
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat4 4
 {
 	Pic D3SPLT04
@@ -39,7 +35,6 @@ Decal D3BloodSplat4 4
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat5 5
 {
 	Pic D3SPLT05
@@ -47,7 +42,6 @@ Decal D3BloodSplat5 5
 	X-Scale 0.5
 	Y-Scale 0.5
 }
-
 Decal D3BloodSplat6 6
 {
 	Pic D3SPLT06
@@ -55,7 +49,6 @@ Decal D3BloodSplat6 6
 	X-Scale 0.2
 	Y-Scale 0.2
 }
-
 Decal D3BloodSplat7 7
 {
 	Pic D3SPLT07
@@ -63,7 +56,6 @@ Decal D3BloodSplat7 7
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat8 8
 {
 	Pic D3SPLT08
@@ -71,7 +63,6 @@ Decal D3BloodSplat8 8
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat9 9
 {
 	Pic D3SPLT09
@@ -79,7 +70,6 @@ Decal D3BloodSplat9 9
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat10 10
 {
 	Pic D3SPLT10
@@ -87,7 +77,6 @@ Decal D3BloodSplat10 10
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat11 11
 {
 	Pic D3SPLT11
@@ -95,7 +84,6 @@ Decal D3BloodSplat11 11
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat12 12
 {
 	Pic D3SPLT12
@@ -103,7 +91,6 @@ Decal D3BloodSplat12 12
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat13 13
 {
 	Pic D3SPLT13
@@ -111,7 +98,6 @@ Decal D3BloodSplat13 13
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat14 14
 {
 	Pic D3SPLT14
@@ -119,7 +105,6 @@ Decal D3BloodSplat14 14
 	X-Scale 0.5
 	Y-Scale 0.5
 }
-
 Decal D3BloodSplat15 15
 {
 	Pic D3SPLT15
@@ -127,7 +112,6 @@ Decal D3BloodSplat15 15
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat16 16
 {
 	Pic D3SPLT16
@@ -135,7 +119,6 @@ Decal D3BloodSplat16 16
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat17 17
 {
 	Pic D3SPLT17
@@ -143,7 +126,6 @@ Decal D3BloodSplat17 17
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat18 18
 {
 	Pic D3SPLT18
@@ -151,7 +133,6 @@ Decal D3BloodSplat18 18
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat19 19
 {
 	Pic D3SPLT19
@@ -159,7 +140,6 @@ Decal D3BloodSplat19 19
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat20 20
 {
 	Pic D3SPLT20
@@ -167,7 +147,6 @@ Decal D3BloodSplat20 20
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat21 21
 {
 	Pic D3SPLT21
@@ -175,7 +154,6 @@ Decal D3BloodSplat21 21
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat22 22
 {
 	Pic D3SPLT22
@@ -183,7 +161,6 @@ Decal D3BloodSplat22 22
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 Decal D3BloodSplat23 23
 {
 	Pic D3SPLT23
@@ -191,7 +168,6 @@ Decal D3BloodSplat23 23
 	X-Scale 0.25
 	Y-Scale 0.25
 }
-
 decal ShockGunScorchLower1
 {
 	pic DTFXE0
@@ -201,7 +177,6 @@ decal ShockGunScorchLower1
 	randomflipx
 	randomflipy
 }
-
 decal ShockGunScorch1
 {
 	pic DTFXE0
@@ -210,7 +185,6 @@ decal ShockGunScorch1
 	animator GoAway
 	lowerdecal ShockGunScorchLower1
 }
-
 decal ShockGunScorchLower2
 {
 	pic DTFXC0
@@ -220,7 +194,6 @@ decal ShockGunScorchLower2
 	randomflipx
 	randomflipy
 }
-
 decal ShockGunScorch2
 {
 	pic DTFXC0
@@ -229,19 +202,16 @@ decal ShockGunScorch2
 	animator GoAway
 	lowerdecal ShockGunScorchLower2
 }
-
 decalgroup ShockGunScorchLower
 {
 	ShockGunScorchLower1	1
 	ShockGunScorchLower2	1
 }
-
 decalgroup ShockGunScorch
 {
 	ShockGunScorch1	1
 	ShockGunScorch2	1
 }
-
 decalgroup D3BloodSplat
 {
 	D3BloodSplat1			1
@@ -269,3 +239,164 @@ decalgroup D3BloodSplat
 	D3BloodSplat22			1
 	D3BloodSplat23			1
 }
+decal LowerPlasma1
+{
+	pic PLASMA1
+	shade "00 00 00"
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decal LowerPlasma2
+{
+	pic PLASMA2
+	shade "00 00 00"
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decalgroup LowerPlasma
+{
+	LowerPlasma1	1
+	LowerPlasma2	1
+}
+decal LaserScorch1
+{
+	pic BFGLITE1
+	shade "00 00 00"
+	fullbright
+	randomflipx
+	animator GoAway2
+	lowerdecal LowerPlasma
+}
+decal LaserScorch2
+{
+	pic BFGLITE2
+	shade "00 00 00"
+	fullbright
+	randomflipy
+	animator GoAway2
+	lowerdecal LowerPlasma
+}
+decalgroup LaserScorch
+{
+	LaserScorch1	1
+	LaserScorch2	1
+}
+decal GateKeeperBulletchip1
+{
+	pic PLASMA1
+	shade "00 00 00"
+	x-scale 0.125
+	y-scale 0.125
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decal GateKeeperBulletchip2
+{
+	pic PLASMA2
+	shade "00 00 00"
+	x-scale 0.125
+	y-scale 0.125
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decalgroup GateKeeperBulletchip
+{
+	GateKeeperBulletchip1	1
+	GateKeeperBulletchip2	1
+}
+decal GateKeeperPlasma1
+{
+	pic PLASMA1
+	shade "00 00 00"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decal GateKeeperPlasma2
+{
+	pic PLASMA2
+	shade "00 00 00"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+decalgroup GateKeeperPlasma
+{
+	GateKeeperPlasma1	1
+	GateKeeperPlasma2	1
+}
+decal GateScorch
+{
+	pic SCORCH1
+	shade "00 00 00"
+	x-scale 0.75
+	y-scale 0.75
+	randomflipx
+	randomflipy
+	animator GoAway2
+}
+// Incubus HomingRocket Shot Scorches
+decal IncubusHomingRocketShotScorch
+{
+	pic SCORCH1
+	shade "00 00 00"
+	x-scale 0.5
+	y-scale 0.5
+	animator Clean
+	randomflipx
+	randomflipy
+}
+decal IncubusHomingRocketShotScorch2
+{
+	pic SCORCH1
+	shade "00 00 00"
+	x-scale 0.7
+	y-scale 0.7
+	animator Clean
+	randomflipx
+	randomflipy
+}
+// Incubus Flameball Scorches
+decal IncubusFlameBallScorch
+{
+	pic SCORCH1
+	shade "00 00 00"
+	x-scale 0.7
+	y-scale 0.7
+	animator Clean
+	randomflipx
+	randomflipy
+}
+// Incubus Photon Shot Scorches
+decal IncubusPhotonShotScorchLower
+{
+	pic INCSC0
+	x-scale 0.6
+	y-scale 0.6
+	shade "00 00 00"
+	animator Clean
+	randomflipx
+	randomflipy
+}
+decal IncubusPhotonShotScorch
+{
+	pic INCSC0
+	x-scale 0.6
+	y-scale 0.6
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal IncubusPhotonShotScorchLower
+}
+generator IncubusHomingRocketShot		IncubusHomingRocketShotScorch
+generator IncubusHomingRocketShot2		IncubusHomingRocketShotScorch2
+generator IncubusFlameBall		        IncubusFlameBallScorch
+generator IncubusPhotonShot				IncubusPhotonShotScorch

@@ -1,0 +1,1508 @@
+/* Blood Demon */
+BrightMap Sprite MAUDA1C1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDA1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDA2C8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDA2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDA3C7
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDA3.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDA7C3
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDA7.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDA8C2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDA8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDB1D1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDB1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDB2D8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDB2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDB3D7
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDB3.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDB7D3
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDB7.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDB8D2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDB8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDE1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDE1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDE2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDE2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDE8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDE8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDF1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDF1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDF2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDF2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDF8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDF8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDG1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDG1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDG2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDG2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDG8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDG8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDH1
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDH1.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDH2
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDH2.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDH3
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDH3.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDH4
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDH4.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDH8
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDH8.png"
+	DisableFullBright
+}
+BrightMap Sprite MAUDI0
+{
+	Map "shaders/brightmaps/BloodDemon/BMMAUDI0.png"
+	DisableFullBright
+}
+/* CGunSpider */
+BrightMap Sprite CSPIA1D1
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIA2A8
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIA3A7
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIA4A6
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIA5D5
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIG1
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIG1.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIG2G8
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIG2.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIG3G7
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIG4G6
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIG5
+{
+	Map "shaders/brightmaps/CGunSpider/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIH1
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIH1.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIH2H8
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIH2.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIH3H7
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIH3.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIH4H6
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIH4.png"
+	DisableFullBright
+}
+BrightMap Sprite CSPIH5
+{
+	Map "shaders/brightmaps/CGunSpider/BMCSPIH5.png"
+	DisableFullBright
+}
+/* Diabloist */
+BrightMap Sprite DIABA1D1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABA1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABA2D8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABA2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABA7D3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABA7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABA8D2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABA8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABB1E1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABB1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABB2E8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABB2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABB8E2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABB8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABC1F1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABC1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABC2F8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABC2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABC8F2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABC8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABG8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABG8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABH8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABH8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABI8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABI8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABJ8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABJ8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABK8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABK8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABL8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABL8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABM8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABM8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABN8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABN8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABO8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABO8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABP8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABP8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABQ1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABQ1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABQ2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABQ2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABQ3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABQ3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIABQ4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIABQ4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2A8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2A8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2B8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2B8.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C1
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C1.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C2
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C2.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C3
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C3.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C4
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C4.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C5
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C5.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C6
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C6.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C7
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C7.png"
+	DisableFullBright
+}
+BrightMap Sprite DIA2C8
+{
+	Map "shaders/brightmaps/Diabloist/BMDIA2C8.png"
+	DisableFullBright
+}
+/* ChaingunMajor */
+BrightMap Sprite CPS2E1
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2E1.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2E2E8
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2E2.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2E3E7
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2E3.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2E4E6
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2E4.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2F1
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2F1.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2F2F8
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2F2.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2F3F7
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2F3.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2F4F6
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2F4.png"
+	DisableFullBright
+}
+BrightMap Sprite CPS2F5
+{
+	Map "shaders/brightmaps/ChaingunMajor/BMCPS2F5.png"
+	DisableFullBright
+}
+/* Hectebus */
+BrightMap Sprite HECTG1
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTG1.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTG2G8
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTG2.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTG3G7
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTG3.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTH1
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTH1.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTH2H8
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTH2.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTH3H7
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTH3.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTH4H6
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTH4.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTH5
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTH5.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU1
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU1.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU2V8
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU2.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU3V7
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU3.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU4V6
+{
+	Map "shaders/brightmaps/Hectebus/BMBLACK.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU5
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU5.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU6V4
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU6.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU7V3
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU7.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTU8V2
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTU8.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTV1
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTV1.png"
+	DisableFullBright
+}
+BrightMap Sprite HECTV5
+{
+	Map "shaders/brightmaps/Hectebus/BMHECTV5.png"
+	DisableFullBright
+}
+/* Incarnate */
+BrightMap Sprite INCAA1D1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA2D8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA3D7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA4D6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA5D5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA6D4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA7D3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAA8D2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAA8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB1E1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB2E8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB3E7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB4E6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB5E5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB6E4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB7E3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAB8E2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAB8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC1F1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC2F8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC3F7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC4F6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC5F5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC6F4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC7F3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAC8F2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAC8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG1R1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG2R8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG3R7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG4R6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG5R5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG6R4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG7R3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAG8R2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAG8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH1S1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH2S8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH3S7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH4S6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH5S5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH6S4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH7S3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAH8S2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAH8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI1T1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI2T8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI3T7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI4T6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI6T4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI7T3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAI8T2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAI8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAJ8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAJ8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAK8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAK8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAL8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAL8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU1
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU1.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU2
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU2.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU3
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU3.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU4
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU4.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU5
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU5.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU6
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU6.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU7
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU7.png"
+	DisableFullBright
+}
+BrightMap Sprite INCAU8
+{
+	Map "shaders/brightmaps/Incarnate/BMINCAU8.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXA0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXA0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXB0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXB0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXC0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXC0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXD0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXD0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXE0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXE0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXF0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXF0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXG0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXG0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXH0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXH0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXI0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXI0.png"
+	DisableFullBright
+}
+BrightMap Sprite INCXJ0
+{
+	Map "shaders/brightmaps/Incarnate/BMINCXJ0.png"
+	DisableFullBright
+}
+/* AutoShotgunGuy */
+BrightMap Sprite ASGZE1
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZE1.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZE2E8
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZE2.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZE3E7
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZE3.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZF1
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZF1.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZF2F8
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZF2.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZF3F7
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZF3.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZF4F6
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZF4.png"
+	DisableFullBright
+}
+BrightMap Sprite ASGZF5
+{
+	Map "shaders/brightmaps/AutoShotgunGuy/BMASGZF5.png"
+	DisableFullBright
+}
+/* DuneWarrior */
+BrightMap Sprite ZHRTA1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTA1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTA2A8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTA2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTB1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTB1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTB2B8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTB2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTC1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTC1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTC2C8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTC2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTD1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTD1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTD2D8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTD2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTE1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTE1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTF1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTF1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTF2F8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTF2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTF3F7
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTF3.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTF4F6
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTF4.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTF5
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTF5.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTG1
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTG1.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTG2G8
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTG2.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTH0
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTH0.png"
+	DisableFullBright
+}
+BrightMap Sprite ZHRTJ0
+{
+	Map "shaders/brightmaps/DuneWarrior/BMZHRTJ0.png"
+	DisableFullBright
+}

@@ -1,6 +1,3525 @@
+// Arachnotron
+
+actor CGunSpider 12456
+{
+	obituary "%o was filled full of lead by an Arachnotron."
+	health 450
+	radius 64
+	height 64
+	mass 600
+	speed 12
+	painchance 128
+	seesound "CGunSpider/Sight"
+	painsound "baby/pain"
+	deathsound "CGunSpider/Death"
+	activesound "baby/active"
+	attacksound "CGunSpider/Attack"
+	dropitem "ClipBox" 64
+	decal "bulletchip"
+	MONSTER
+	+FLOORCLIP
+	states
+	{
+	Spawn:
+		CSPI AB 10 A_Look
+		loop
+	See:
+		CSPI A 20
+		CSPI A 3 A_BabyMetal
+		CSPI ABBCC 3 A_Chase
+		CSPI D 3 A_BabyMetal
+		CSPI DEEFF 3 A_Chase
+		Goto See+1
+	Missile:
+		CSPI A 20 bright A_FaceTarget
+		CSPI G 4 bright A_CPosAttack
+		CSPI G 0 bright A_CPosAttack
+		CSPI H 4 bright
+		CSPI H 1 bright A_SpidRefire
+		Goto Missile+1
+	Pain:
+		CSPI I 3
+		CSPI I 3 A_Pain
+		Goto See+1
+	Death:
+		CSPI J 20 A_Scream
+		CSPI K 7 A_NoBlocking
+		CSPI LMNO 7
+		CSPI P -1 A_BossDeath
+		Stop
+	Raise:
+		CSPI PONMLKJ 5
+		Goto See+1
+	}
+}
+
+// Archvile
+
+Actor Diabloist 30112 
+{
+	Obituary "%o got was set ablaze by a Diabloist."
+	Health 1400
+	Radius 20 
+	Height 56 
+	Mass 500 
+	Speed 15 
+	PainChance 10
+	BloodColor "08 08 08"
+	Monster
+	+FireResist
+	+FloorClip
+	+NoTarget
+	+NoRadiusDmg
+	+MissileMore
+	+Boss
+	+DontHurtSpecies
+	+QuickToRetaliate
+	SeeSound "Monster/diasit" 
+	PainSound "Monster/diapai" 
+	DeathSound "Monster/diadth" 
+	ActiveSound "Monster/diaact" 
+	States 
+	{ 
+	Spawn: 
+		DIAB AB 10 A_Look 
+		Loop 
+	See: 
+		DIAB AABBCCDDEEFF 2 A_Chase 
+		Loop 
+	Missile:
+		DIAB G 0 Bright A_Jump(128, "Missile2")
+		DIAB G 0 Bright A_FaceTarget
+		DIAB G 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB I 3 A_CustomMissile("DFire", 32, 0, 0)
+		DIAB H 3 Bright A_FaceTarget
+		DIAB G 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB I 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB G 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB I 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB G 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB I 3 Bright A_FaceTarget
+		DIAB G 3 Bright A_FaceTarget
+		DIAB H 3 Bright A_FaceTarget
+		DIAB I 3 Bright A_FaceTarget
+		DIAB G 0 Bright A_Jump(128, "Missile3")       
+		Goto See
+	Missile2:
+		DIAB N 5 Bright A_FaceTarget
+		DIAB O 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB P 0 Bright A_FaceTarget
+		DIAB P 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB N 0 Bright A_FaceTarget
+		DIAB N 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB O 0 Bright A_FaceTarget
+		DIAB O 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB P 0 Bright A_FaceTarget
+		DIAB P 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB N 0 Bright A_FaceTarget
+		DIAB N 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB O 0 Bright A_FaceTarget
+		DIAB O 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB P 0 Bright A_FaceTarget
+		DIAB P 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB N 0 Bright A_FaceTarget
+		DIAB N 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB O 0 Bright A_FaceTarget
+		DIAB O 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB P 0 Bright A_FaceTarget
+		DIAB P 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB N 0 Bright A_FaceTarget
+		DIAB N 5 Bright A_CustomMissile("DFlare", 40, 0, Random(-4, 4))
+		DIAB O 0 Bright A_FaceTarget
+		DIAB P 5 Bright
+		DIAB P 0 Bright A_Jump(64, "Missile3")
+		DIAB P 0 Bright A_Jump(128, "Missile4")
+		Goto See
+	Missile3:
+		DIAB GHIJKLM 5 Bright A_FaceTarget
+		DIAB N 5 Bright A_FaceTarget
+		DIAB O 1 Bright A_Playsound ("weapons/firbfi")
+		DIAB O 4 Bright A_CustomMissile ("DMissile",32,0,0)
+		DIAB P 5 Bright
+		DIAB P 0 Bright A_Jump (128,1)
+		Goto See
+	Missile4:
+		DIA2 A 8 Bright A_FaceTarget
+		DIA2 B 8 Bright A_FaceTarget
+		DIA2 C 0 Bright A_CustomMissile ("DTracer",0,-40,0)
+		DIA2 C 8 Bright A_CustomMissile ("DTracer",0,40,0)
+		Goto See 
+	Pain: 
+		DIAB Q 5 
+		DIAB Q 5 A_Pain 
+		Goto See 
+	Death: 
+		DIAB Q 7 
+		DIAB R 7 A_Scream 
+		DIAB S 7 A_NoBlocking 
+		DIAB TUVW 7 
+		DIAB XY 5 
+		DIAB Z -1 
+		Stop    
+	} 
+}
+
+Actor DFire
+{
+	Obituary "%o got was set ablaze by a Diabloist."
+	Radius 0
+	Height 1
+	Speed 0
+	RenderStyle Add
+	DamageType Fire
+	ALPHA 1.00
+	+NoGravity
+	+SeekerMissile
+	+NoTarget
+	+NoDamageThrust
+	States
+	{
+	Spawn:
+		HLFR A 2 Bright A_StartFire
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR B 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR A 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR B 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR C 2 Bright A_FireCrackle
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR B 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR C 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR B 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR C 2 Bright A_Fire 
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR D 2 Bright A_Fire 
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR C 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR D 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR C 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR D 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR E 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR D 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR E 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(5, 32)
+		HLFR D 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR E 2 Bright A_FireCrackle
+		TNT1 A 0 Bright A_Explode(4, 32)
+		HLFR F 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(3, 32)
+		HLFR E 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(3, 32)
+		HLFR F 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(3, 32)
+		HLFR E 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(2, 32)
+		HLFR F 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(2, 32)
+		HLFR G 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(2, 32)
+		HLFR H 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(1, 32)
+		HLFR G 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(1, 32)
+		HLFR H 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(1, 32)
+		HLFR G 2 Bright A_Fire
+		TNT1 A 0 Bright A_Explode(1, 32)
+		HLFR H 2 Bright A_Fire
+		Stop
+	}
+}
+
+ACTOR DFlare
+{
+	Radius 5
+	Height 5
+	Speed 25
+	Damage 4
+	SpawnID 252
+	RenderStyle Add
+	DamageType Fire
+	Alpha 0.85
+	Projectile
+	+ThruGhost
+	Obituary "%o got was set ablaze by a Diabloist."
+	Seesound "weapons/firmfi"
+	DeathSound "weapons/firex4"
+	States
+	{
+	Spawn:
+		VBAL AB 3 Bright A_SpawnItemEx("MFlareFX", 0, 0, 0, 0, 0, 0, 0, 128)
+		Loop
+	Death:
+		CBAL CDEFG 3 Bright
+		Stop
+	}
+}
+
+Actor DMissile : CFlameMissile
+{
+	+ThruGhost
+}
+
+Actor DTracer
+{
+	Radius 5
+	Height 5
+	Speed 15
+	ReactionTime 175
+	Damage 10
+	DamageType Fire
+	RenderStyle Add
+	Alpha 0.67
+	Projectile
+	+SeekerMissile
+	+FloorHugger
+	+ThruGhost
+	-NoGravity
+	Obituary "%o got was set ablaze by a Diabloist."
+	Seesound "weapons/diasht"
+	DeathSound "weapons/firex3"   
+	States
+	{
+	Spawn:
+		TNT1 A 1 Bright A_SeekerMissile(10, 15)
+		TNT1 A 0 Bright A_Countdown
+		TNT1 A 0 Bright A_SpawnItemEx("DTracerPuff", 0, 0, 0, 0, 0, 0, 0, 128)
+		Loop
+	Death:
+		FTRA K 4 Bright
+		FTRA L 4 Bright A_Explode(64, 64)
+		FTRA MNO 3 Bright
+		Stop
+	}
+}
+
+Actor MFlareFX
+{   
+	Radius 0
+	Height 1
+	Speed 0
+	Projectile
+	RenderStyle Add
+	Alpha 0.67
+	States
+	{
+	Spawn:
+		FDFX ABCDEF 4 Bright
+		Stop 
+	}
+}
+
+Actor DTracerPuff
+{
+	Radius 1
+	Height 1
+	Speed 0
+	RenderStyle Add
+	DamageType Fire
+	Alpha 0.67
+	Projectile
+	+FloorHugger
+	-NoGravity
+	States
+	{
+	Spawn:
+		FTRA ABCDEFGHIJ 3 Bright A_Explode(4, 8)
+		Stop
+	}
+}
+
+Actor DMissileTrail : CFlameFloor
+{
+	+ThruGhost
+}
+
+Actor DMissileCircle : CircleFlame
+{
+	+ThruGhost
+}
+
+// Baron Of Hell
+
+actor DeepOne 11300
+{
+	obituary "%o was driven mad by a Deep One."
+	hitobituary "%o got whiplashed by a Deep One."
+	health 2000
+	radius 24
+	height 64
+	mass 1000
+	speed 8
+	BloodColor "purple"
+	painchance 50
+	meleedamage 20
+	meleerange 64
+	seesound "deepone/sight"
+	painsound "deepone/pain"
+	deathsound "deepone/death"
+	activesound "deepone/active"
+	meleesound "deepone/melee"
+	MONSTER
+	+FLOORCLIP
+	+BOSSDEATH
+	+MISSILEEVENMORE
+	states
+	{
+	Spawn:
+		CUTH DD 6 A_Look
+		loop
+	See:
+		CUTH ABCD 6 A_Chase
+		loop
+	Melee:
+		CUTH E 0 A_FaceTarget 
+		CUTH E 6 A_PlaySound ("deepone/meleegrowl") 
+		CUTH F 6 A_FaceTarget
+		CUTH G 2 A_MeleeAttack
+		CUTH HI 2
+		Goto See
+	Missile:
+		CUTH J 0 A_JumpIfCloser (32,"Melee") 
+		CUTH J 0 A_Jump (20, "Hide") 
+		CUTH J 8 A_FaceTarget
+		CUTH K 0 A_CustomMissile("DeepOneBall",42,15)
+		CUTH K 8  bright A_CPosRefire
+		Goto Missile+1
+	Pain:
+		CUTH L 0 A_TakeInventory("squidinviso", 255)
+		CUTH L 2 A_ChangeFlag("STEALTH", 0)
+		CUTH L 2 A_Pain
+		Goto See
+	Hide:
+		CUTH I 1 A_JumpIfInventory("squidinviso",1,"Unhide")
+		CUTH I 0 A_GiveInventory("squidinviso", 1)
+		CUTH I 2 A_PlaySound ("deepone/stealth")
+		CUTH I 10 A_ChangeFlag("STEALTH", 1)
+		Goto See
+	Unhide:
+		CUTH D 0 A_TakeInventory("squidinviso", 255)
+		CUTH D 2 A_ChangeFlag("STEALTH", 0)
+		CUTH D 2 A_PlaySound ("deepone/stealth")
+		Goto See	
+	Death:
+		CUTH M 0 A_Jump(128,"AltDeath")
+		CUTH M 10
+		CUTH N 10 A_Scream
+		CUTH O 10
+		CUTH P 10 A_NoBlocking
+		CUTH Q -1
+		Stop
+	AltDeath:
+		CUTH R 5
+		CUTH S 5 A_Scream
+		CUTH T 5
+		CUTH U 5 A_NoBlocking
+		CUTH V 5
+		CUTH W -1
+		Stop	
+	Raise:
+		CUTH PONM 8
+		Goto See
+	}
+}
+
+actor DeepOneBall
+{
+	Radius 13
+	Height 8
+	Speed 25
+	Damage 5
+	Projectile
+	+RANDOMIZE
+	+ROCKETTRAIL
+	+SEEKERMISSILE
+	RenderStyle Add
+	Alpha 0.75
+	SeeSound "deepone/fire"
+	DeathSound "deepone/firehit"
+	States
+	{
+	Spawn:
+		OLDP A 0 A_Tracer
+		OLDP A 0 bright A_BishopMissileWeave
+		OLDP A 2 bright A_BishopMissileWeave
+		OLDP B 0 A_Tracer
+		OLDP B 0 bright A_BishopMissileWeave
+		OLDP B 2 bright A_BishopMissileWeave
+		loop
+		//OLDP A 2 bright A_Weave(-2, 2, 2.0, 1.0)
+		//OLDP B 2 bright A_Weave(-2, 2, 2.0, 1.0)
+		//Goto spawn+3
+	Death:
+		OLDP C 0 A_Scream
+		OLDP CDEF 4 bright 
+		Stop
+	}
+}
+
+ACTOR squidinviso : Inventory
+{
+	Inventory.amount 0
+	Inventory.maxamount 1
+}
+
+// Cacodemon
+
+ACTOR CacoLich1 3131
+{
+	Health 500
+	Speed 12
+	Radius 31
+	Height 56
+	PainChance 96
+	Mass 500
+	SeeSound "CacoLich/Sight"
+	ActiveSound "CacoLich/Active"
+	PainSound "CacoLich/Pain"
+	DeathSound "CacoLich/Death"
+	Obituary "%o was blasted by the Cacolich"
+	MONSTER
+	+NOGRAVITY
+	+FLOAT
+	States
+	{
+	Spawn:
+		CALI A 1 A_Look
+		Loop
+	See:
+		CALI A 4 A_Chase
+		Loop
+	Missile:
+		CALI B 6 A_FaceTarget
+		CALI C 6 A_CustomMissile("CacoLichBall", 35, 0, 0)
+		CALI D 6 A_FaceTarget
+		CALI D 0 A_Jump(16,23)
+		CALI EF 5 A_FaceTarget
+		CALI GFGFGFGFGFGFGFGFGF 1 A_CustomMissile("CacoLichFlameFar", 24, 0, 0)
+		CALI FE 5 A_FaceTarget
+		CALI E 0
+		Goto See	
+	Melee:
+		CALI EF 5 A_FaceTarget
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 0)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 1)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 2)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 3)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 4)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 5)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 6)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 7)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 8)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 9)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 10)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 12)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 12)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 13)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 14)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 15)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 16)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 17)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 18)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 19)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 20)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 19)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 18)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 17)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 16)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 15)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 14)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 13)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 12)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 11)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 10)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 9)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 8)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 7)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 6)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 5)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 4)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 3)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 2)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, 1)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 0)
+		CALI G 0 A_SpidRefire
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -1)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -2)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -3)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -4)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -5)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -6)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -7)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -8)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -9)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -10)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -12)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -12)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -13)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -14)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -15)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -16)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -17)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -18)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -19)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -20)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -19)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -18)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -17)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -16)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -15)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -14)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -13)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -12)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -11)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -10)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -9)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -8)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -7)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -6)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -5)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -4)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -3)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, -2)
+		CALI F 1 A_CustomMissile("CacoLichFlame", 24, 0, -1)
+		CALI G 1 A_CustomMissile("CacoLichFlame", 24, 0, 0)
+		Goto See
+	Pain:
+		CALI H 3
+		CALI I 6 A_Pain
+		Goto See
+	Death:
+		CALI J 0
+		CALI J 0 A_SetFloorClip
+		CALI J 6 A_Scream
+		CALI KLMN 6
+		Wait
+	Crash:
+		CALI OP 6
+		CALI Q 6 A_NoBlocking
+		CALI R 6
+		CALI S -1
+		Stop
+	}
+}
+
+ACTOR CacoLichBall
+{
+	Radius 8
+	Height 6
+	Speed 12
+	Damage 7
+	PROJECTILE
+	+SEEKERMISSILE
+	RENDERSTYLE ADD
+	ALPHA 0.8
+	SeeSound "Imp/attack"
+	DeathSound "Imp/shotx"
+	Decal CacoScorch
+	States
+	{
+	Spawn:
+		CBAL AB 4 BRIGHT A_SeekerMissile(5,15)
+		Loop
+	Death:
+		CBAL CDEFG 6 BRIGHT
+		Stop
+	}
+}
+
+	ACTOR CacoLichFlameFar
+{
+	Radius 4
+	Height 6
+	Speed 30
+	Damage 4
+	PROJECTILE
+	+STRIFEDAMAGE
+	RENDERSTYLE ADD
+	ALPHA 0.8
+	SeeSound "CacoFlame/attack"
+	States
+	{
+	Spawn:
+		CFIR ABCDEFGHIJKLMOP 1
+		Stop
+	Death:
+		CFIR HIJKLMOP 1
+		Stop
+	}
+}
+
+ACTOR CacoLichFlame
+{
+	Radius 4
+	Height 6
+	Speed 28
+	Damage 1
+	PROJECTILE
+	+STRIFEDAMAGE
+	RENDERSTYLE ADD
+	ALPHA 0.8
+	SeeSound "CacoFlame/attack"
+	States
+	{
+	Spawn:
+		CFIR ABCDEFGHIJKLMOP 1
+		Stop
+	Death:
+		CFIR HIJKLMOP 1
+		Stop
+	}
+}
+
+ACTOR Cacolich 3132
+{ 
+	Health 500
+	Radius 31
+	Height 56
+	Speed 13
+	PainChance 145
+	MONSTER 
+	+NOGRAVITY
+	+FLOAT
+	Obituary "%o's spirit was eradicated by a Cacolich!"
+	SeeSound "CacoLich/Sight"
+	ActiveSound "CacoLich/Active"
+	PainSound "CacoLich/Pain"
+	DeathSound "CacoLich/Death"
+	States
+	{
+	Spawn:
+		CALI A 10 A_Look
+		Loop
+	See:
+		CALI A 4 A_Chase
+		Loop
+	Missile:
+		CALI B 0 A_Jump (128,4)
+		CALI B 5 A_FaceTarget
+		CALI C 5 A_Custommissile ("CacoLichBall",35,0,0)
+		CALI D 5 A_FaceTarget
+		Goto See
+		CALI E 5 A_FaceTarget
+		CALI F 5 A_FaceTarget
+		CALI G 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 0 A_Custommissile ("GasstreamNoDamage",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 0 A_Custommissile ("GasstreamNoDamage",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI G 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 0 A_Custommissile ("GasstreamNoDamage",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI G 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI G 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI F 0 A_Custommissile ("Gasstream",20,0,0)
+		CALI F 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI G 2 A_FaceTarget
+		CALI F 5 A_FaceTarget
+		CALI E 5 A_FaceTarget
+		Goto See
+	Pain:
+		CALI H 5
+		CALI I 3 A_Pain
+		Goto See
+	Death:
+		CALI J 0
+		CALI J 0 A_SetFloorClip
+		CALI J 6 A_Scream
+		CALI KLMN 6
+		Wait
+	Crash:
+		CALI OP 6
+		CALI Q 6 A_NoBlocking
+		CALI R 6
+		CALI S -1
+		Stop
+	}
+}
+
+actor Gasstream
+{
+	Radius 6
+	Height 10
+	Speed 5
+	Damage 3
+	PROJECTILE
+	RENDERSTYLE ADD
+	ALPHA 0.67
+	States
+	{
+	Spawn:
+		CFIR ABCDEFGH 3 BRIGHT
+	Death:
+		CFIR IJKLMNOP 3 BRIGHT
+		Stop
+	}
+}
+
+actor GasstreamNoDamage : Gasstream
+{
+	Damage 0
+}
+
+// ChaingunGuy
+
+Actor ChaingunMajor : ChaingunGuy 3311
+{
+	Health 180
+	Painchance 40
+	Mass 5000
+	Obituary "%o was perforated by the chaingun major."
+	Decal Bulletchip
+	States
+	{
+	Spawn:
+		CPS2 AB 10 A_Look
+		Loop
+	See:
+		CPS2 AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		CPS2 E 10 A_FaceTarget
+		CPS2 FE 3 A_CPosAttack
+		CPS2 F 1 A_CPosRefire
+		Goto Missile+1
+	Pain:
+		CPS2 G 3
+		CPS2 G 3 A_Pain
+		Goto See
+	Death:
+		CPS2 H 5
+		CPS2 I 5 A_Scream
+		CPS2 J 5 A_Fall
+		CPS2 KLMNO 5
+		CPS2 P -1 A_BossDeath
+		Stop
+	XDeath:
+		CPS2 Q 5 
+		CPS2 R 5 A_XScream
+		CPS2 S 5 A_Fall
+		CPS2 TUVW 5
+		CPS2 X -1
+		Stop
+	Raise:
+		CPS2 P 5
+		CPS2 ONMLKJIH 5
+		Goto See
+	}
+}
+
+// Cyberdemon
+
+ACTOR GateKeeper 17000
+{
+	Health 6000
+	Mass 8000
+	Radius 56
+	Height 120
+	Speed 20
+	PainChance 24
+	bloodcolor "A7 3F 00"
+	MONSTER 
+	+FLOORCLIP
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	+NORADIUSDMG
+	+BOSS
+	+QUICKTORETALIATE
+	+DONTMORPH
+	+FULLVOLACTIVE
+	+DONTHURTSPECIES
+	SeeSound "gate/sight"
+	PainSound "gate/pain"
+	DeathSound "gate/death"
+	ActiveSound "gate/active"
+	Obituary "%o was killed by the mighty Gate Keeper."
+	Decal "GateKeeperBulletchip"
+	States
+	{
+	Spawn:
+		GATE C 5 A_Look
+		NULL A 0 A_Spawnitem("UPC")
+		GATE D 5 A_Look
+		NULL A 0 A_Spawnitem("UPD")
+		Loop
+	See:
+		NULL A 0 A_JumpIfInventory ("OrbitOn",1,"Walk")
+		NULL A 0 A_GiveInventory ("OrbitOn",1)
+		NULL A 0 A_CustomMissile("GateOrbit1", 32, 128, 0, -16)
+		NULL A 0 A_CustomMissile("GateOrbit2", 48, -128, -16, 0)
+	Walk:
+		GATE A 6 A_Metal
+		NULL A 0 A_Spawnitem("UPA")
+		GATE A 6 A_Chase
+		NULL A 0 A_Spawnitem("UPA")
+		GATE B 6 A_Chase
+		NULL A 0 A_Spawnitem("UPB")
+		GATE B 6 A_Chase
+		NULL A 0 A_Spawnitem("UPB")
+		GATE C 6 A_Metal
+		NULL A 0 A_Spawnitem("UPC")
+		GATE C 6 A_Chase
+		NULL A 0 A_Spawnitem("UPC")
+		GATE D 6 A_Chase
+		NULL A 0 A_Spawnitem("UPD")
+		GATE D 6 A_Chase
+		NULL A 0 A_Spawnitem("UPD")
+		Loop
+	Missile:
+		NULL A 0 A_Jump (128,"Missile1","Missile1","Missile2","Missile2","Missile3")
+		NULL A 0 A_Jump (128,"Missile4","Missile4","Missile5","Missile5","Missile6")
+		Loop
+	Missile1:
+		NULL A 0 A_JumpIfCloser(320,"Flamefire")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 3 A_FaceTarget
+		NULL A 0 A_Spawnitem("UPE")
+		GATE F 3 BRIGHT A_CustomMissile("GateKeeperBlast1", 48, 32,  0, 0)  
+		NULL A 0 A_Spawnitem("UPF")
+		GATE E 2 A_FaceTarget
+		GATE E 1 A_CPosRefire
+		NULL A 0 A_Spawnitem("UPE")
+		Goto Missile1+7
+	Missile2:
+		NULL A 0 A_JumpIfCloser(320,"Flamefire")
+		NULL A 0 A_playsound("gate/attack")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE H 4 BRIGHT A_CustomMissile("GateKeeperBlast2", 48, 0, 0)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPH")
+		Goto Walk
+	Missile3:
+		NULL A 0 A_JumpIfCloser(320,"Flamefire")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPE")
+		GATE F 6 BRIGHT A_CustomMissile("Laser", 48, 0, 0)
+		NULL A 0 A_Spawnitem("UPF")
+		Goto Walk
+	Missile4:
+		NULL A 0 A_JumpIfCloser(320,"Flamefire")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  4, -8)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  -4, 8)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  -4, 16)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  4, -16)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  4, -8)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  -4, 8)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  -4, 16)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE E 6 BRIGHT A_CustomMissile("PlasmaGernade", 48, 32,  4, -16)
+		NULL A 0 A_Spawnitem("UPE")
+		NULL A 0 a_playsound("weapons/rocklf")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE P 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		Goto Walk
+	Missile5:
+		GATE P 6 A_FaceTarget
+		NULL A 0 A_Spawnitem("UPP")
+		GATE F 3 BRIGHT A_CustomBulletAttack(25, 4, 4, 1, "GateBulletPuff")
+		NULL A 0 BRIGHT A_CustomBulletAttack(25, 4, 4, 1, "GateBulletPuff")
+		NULL A 0 A_Spawnitem("UPF")
+		NULL A 0 A_playsound("gate/PLASMASHOT")
+		GATE E 3 A_FaceTarget
+		NULL A 0 A_Spawnitem("UPE")
+		GATE F 3 BRIGHT A_CustomBulletAttack(25, 4, 4, 1, "GateBulletPuff")
+		NULL A 0 BRIGHT A_CustomBulletAttack(25, 4, 4, 1, "GateBulletPuff")
+		NULL A 0 A_Spawnitem("UPF")
+		NULL A 0 A_playsound("gate/PLASMASHOT")
+		GATE E 3 A_FaceTarget
+		GATE E 1 A_CPosRefire
+		NULL A 0 A_Spawnitem("UPE")
+		Goto Missile5+2
+	Missile6:
+		NULL A 0 A_playsound("gate/yell")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE H 6 BRIGHT A_PainAttack("DarkLostSoul")
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 6 BRIGHT A_PainAttack("DarkLostSoul")
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 6 BRIGHT A_PainAttack("DarkLostSoul")
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 6 BRIGHT A_PainAttack("DarkLostSoul")
+		NULL A 0 A_Spawnitem("UPH")
+		Goto Walk
+	Flamefire:
+		NULL A 0 A_playsound("gate/attack")
+		NULL A 0 A_SetInvulnerable
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE G 4 BRIGHT A_FaceTarget
+		NULL A 0 A_Spawnitem("UPG")
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, 4, 0)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, -4, 0)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, 4, 4)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, -4, 4)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, -4, -4)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, 0, 4)
+		NULL A 0 A_Spawnitem("UPH")
+		GATE H 1 BRIGHT A_FaceTarget
+		GATE H 3 BRIGHT A_CustomMissile("FlameBreath", 48, 0, 0, -4)
+		NULL A 0 A_Spawnitem("UPH")
+		NULL A 0 A_UnSetInvulnerable
+		GATE G 12 BRIGHT A_FaceTarget
+		Goto Walk
+	Pain:
+		GATE G 3 A_SetInvulnerable
+		NULL A 0 A_Spawnitem("UPG")
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 0)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 20)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 40)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 60)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 80)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 100)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 120)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 140)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 160)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 180)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 200)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 220)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 240)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 260)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 280)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 300)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 320)
+		NULL B 0 A_CustomMissile("GateKeeperPainBlast", 48, 2, 340)
+		GATE G 3 A_Pain
+		NULL A 0 A_Spawnitem("UPG")
+		NULL A 0 A_UnSetInvulnerable
+		NULL A 0 A_Jump (64,"Teleport")
+		Goto Walk
+	Teleport:
+		GATE G 0 A_SetInvulnerable
+		GATE G 1 A_SetTranslucent(0.90)
+		GATE G 1 A_SetTranslucent(0.80)
+		GATE G 1 A_SetTranslucent(0.70)
+		GATE G 1 A_SetTranslucent(0.60)
+		GATE G 1 A_SetTranslucent(0.50)
+		GATE G 1 A_SetTranslucent(0.40)
+		GATE G 1 A_SetTranslucent(0.30)
+		GATE G 1 A_SetTranslucent(0.20)
+		GATE G 1 A_SetTranslucent(0.10)
+		GATE G 0 A_Jump(128,25)
+		NULL AAAAAAAAAAAAAAAAAAAAAAAA 0 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Jump(128,25)
+		NULL AAAAAAAAAAAAAAAAAAAAAAAA 0 A_ExtChase(0,0,1,1)
+		GATE G 1 A_SetTranslucent(0.10)
+		GATE G 1 A_SetTranslucent(0.20)
+		GATE G 1 A_SetTranslucent(0.30)
+		GATE G 1 A_SetTranslucent(0.40)
+		GATE G 1 A_SetTranslucent(0.50)
+		GATE G 1 A_SetTranslucent(0.60)
+		GATE G 1 A_SetTranslucent(0.70)
+		GATE G 1 A_SetTranslucent(0.80)
+		GATE G 1 A_SetTranslucent(0.90)
+		GATE G 1 A_SetTranslucent(1.0)
+		GATE G 0 A_UnSetInvulnerable
+		Goto See
+	Death:
+		NULL A 0 A_Jump (128,"AltDeath")
+		GATE I 24 A_Scream
+		GATE J 24
+		GATE K 20 A_Fall
+		GATE L 16
+		GATE M 12
+		GATE N 12 A_BossDeath
+		GATE O 32
+	DeathWait:
+		GATE O 128 A_Jump(128,"DeathFade")
+		Loop
+	DeathFade:
+		NULL A 0 A_playsound("bodyfade")
+		GATE O 4 A_SetTranslucent (0.9,1)
+		NULL A 0 A_Spawnitem("DeathOut1")
+		GATE O 4 A_SetTranslucent (0.9,1)
+		NULL A 0 A_Spawnitem("DeathOut1")
+		GATE O 4 A_SetTranslucent (0.8,1)
+		NULL A 0 A_Spawnitem("DeathOut2")
+		GATE O 4 A_SetTranslucent (0.8,1)
+		NULL A 0 A_Spawnitem("DeathOut2")
+		GATE O 4 A_SetTranslucent (0.7,1)
+		NULL A 0 A_Spawnitem("DeathOut3")
+		GATE O 4 A_SetTranslucent (0.7,1)
+		NULL A 0 A_Spawnitem("DeathOut3")
+		GATE O 4 A_SetTranslucent (0.6,1)
+		NULL A 0 A_Spawnitem("DeathOut4")
+		GATE O 4 A_SetTranslucent (0.6,1)
+		NULL A 0 A_Spawnitem("DeathOut4")
+		GATE O 4 A_SetTranslucent (0.5,1)
+		NULL A 0 A_Spawnitem("DeathOut5")
+		GATE O 4 A_SetTranslucent (0.5,1)
+		NULL A 0 A_Spawnitem("DeathOut5")
+		GATE O 4 A_SetTranslucent (0.4,1)
+		NULL A 0 A_Spawnitem("DeathOut6")
+		GATE O 4 A_SetTranslucent (0.4,1)
+		NULL A 0 A_Spawnitem("DeathOut6")
+		GATE O 4 A_SetTranslucent (0.3,1)
+		NULL A 0 A_Spawnitem("DeathOut7")
+		GATE O 4 A_SetTranslucent (0.3,1)
+		NULL A 0 A_Spawnitem("DeathOut7")
+		GATE O 4 A_SetTranslucent (0.2,1)
+		NULL A 0 A_Spawnitem("DeathOut8")
+		GATE O 4 A_SetTranslucent (0.2,1)
+		NULL A 0 A_Spawnitem("DeathOut8")
+		GATE O 4 A_SetTranslucent (0.1,1)
+		NULL A 0 A_Spawnitem("DeathOut9")
+		GATE O 4 A_SetTranslucent (0.1,1)
+		NULL A 0 A_Spawnitem("DeathOut9")
+		Stop
+	AltDeath:
+		GATE A 4 A_Scream
+		NULL A 0 A_BossDeath
+		GATE A 2 A_playsound("bodyfade")
+		Goto AltDeathFade
+	AltDeathFade:
+		GATE AA 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE BB 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE CC 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE DD 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE AA 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Pain
+		NULL A 0 A_Fadeout
+		GATE BB 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE CC 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Fadeout
+		GATE DD 6 A_ExtChase(0,0,1,1)
+		NULL A 0 A_Pain
+		NULL A 0 A_Fadeout
+		Loop
+	}
+}
+
+actor OrbitOn : Inventory
+{
+	Inventory.MaxAmount 1
+}
+
+actor GateOrbit1 : DoomImpBall
+{
+	SeeSound ""
+	+NOCLIP
+	Speed 3
+	MissileHeight 0
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		NULL AA 2 A_SpawnItem("CubeTailD",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailC",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailB",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailA",-8,0)
+		NULL A 0 A_CustomMissile("GateOrbit1", 0, 0, 75)
+		Stop
+	Death:
+		NULL A 1
+		Stop
+	}
+}
+
+actor GateOrbit2 : DoomImpBall
+{
+	SeeSound ""
+	+NOCLIP
+	Speed 3
+	MissileHeight 0
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		NULL AA 2 A_SpawnItem("CubeTailA",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailB",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailC",-8,0)
+		NULL AA 2 A_SpawnItem("CubeTailD",-8,0)
+		NULL A 0 A_CustomMissile("GateOrbit2", 0, 0, -75)
+		Stop
+	Death:
+		NULL A 1
+		Stop
+	}
+}
+Actor CubeTailA
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	states
+	{
+	Spawn:
+		CORB A 1 A_Fadeout
+		loop
+	}
+}
+Actor CubeTailB
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	states
+	{
+	Spawn:
+		CORB B 1 A_Fadeout
+		loop
+	}
+}
+Actor CubeTailC
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	states
+	{
+	Spawn:
+		CORB C 1 A_Fadeout
+		loop
+	}
+}
+Actor CubeTailD
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	states
+	{
+	Spawn:
+		CORB D 1 A_Fadeout
+		loop
+	}
+}
+ACTOR GateKeeperBlast1
+{
+	Radius 6
+	Height 16
+	Speed 20
+	FastSpeed 25
+	Damage 20
+	DamageType lightning
+	Projectile 
+	+RANDOMIZE
+	+BLOODLESSIMPACT
+	renderstyle Translucent
+	alpha 0.6
+	SeeSound "gate/PLASMA"
+	DeathSound "weapons/plasmax"
+	Decal "LowerPlasma"
+	States
+	{
+	Spawn:
+		RING B 2 BRIGHT A_Spawnitem("BlastTail1")
+		Loop
+	Death:
+		DEAD BCDEF 6 BRIGHT A_Fadeout
+		Stop
+	}
+}
+Actor BlastTail1
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	states
+	{
+	Spawn:
+		NULL A 2
+		RING B 2 A_Fadeout
+		Goto Spawn+1
+	}
+}
+ACTOR GateKeeperPainBlast
+{
+	Radius 6
+	Height 16
+	Speed 20
+	FastSpeed 25
+	Damage 20
+	DamageType lightning
+	Projectile 
+	+RANDOMIZE
+	+BLOODLESSIMPACT
+	renderstyle Translucent
+	alpha 0.6
+	SeeSound "gate/PLASMA"
+	DeathSound "weapons/plasmax"
+	Decal "GateKeeperPlasma"
+	States
+	{
+	Spawn:
+		RPLS AAAA 1 BRIGHT A_Spawnitem("PainTailA")
+		RPLS BBBB 1 BRIGHT A_Spawnitem("PainTailB")
+		Loop
+	Death:
+		DEAD BCDEF 6 BRIGHT
+		Stop
+	}
+}
+Actor PainTailA
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	states
+	{
+	Spawn:
+		NULL A 2
+		RPLS A 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor PainTailB
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	states
+	{
+	Spawn:
+		NULL A 2
+		RPLS B 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+ACTOR GateKeeperBlast2
+{
+	Radius 6
+	Height 16
+	Speed 15
+	Damage 100
+	DamageType lightning
+	Projectile 
+	+RANDOMIZE
+	+BLOODLESSIMPACT
+	renderstyle Translucent
+	alpha 0.9
+	SeeSound "fire"
+	DeathSound "IMPACT"
+	Decal "LaserScorch"
+	States
+	{
+	Spawn:
+		RING A 4 BRIGHT A_Spawnitem("BlastTail2")
+		Loop
+	Death:
+		LASX ABCDEFGHI 3 BRIGHT
+		LASX JKLMN 3 BRIGHT A_Fadeout
+		Stop
+	}
+}
+Actor BlastTail2
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	states
+	{
+	Spawn:
+		NULL A 4
+		RING ABCDE 8
+		Stop
+	}
+}
+Actor Laser : Plasmaball
+{
+	+BLOODLESSIMPACT
+	seesound "fire"
+	Deathsound "IMPACT"
+	speed 25
+	damage 600
+	DamageType lightning
+	renderstyle Translucent
+	alpha 0.6
+	decal "LaserScorch"
+	States
+	{
+	Spawn:
+		SLGK A 1 bright A_SpawnItem("Lasertrail")
+		loop
+	Death:
+		LASX ABCDEFGHI 3 BRIGHT
+		LASX JKLMN 3 BRIGHT A_Fadeout
+		Stop
+	}
+}
+Actor Lasertrail
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	states
+	{
+	Spawn:
+		SLGK A 1 bright A_Fadeout
+		loop
+	}
+}
+ACTOR PlasmaGernade
+{
+	Radius 11
+	Height 8
+	Speed 25
+	Damage 20
+	DamageType lightning
+	Projectile
+	+DoomBounce
+	-NoGravity
+	SeeSound ""
+	DeathSound "gate/PLASMA"
+	States
+	{
+	Spawn:
+		DEAD A 4 A_SpawnItem("PlasmaGernadetrail", 0, 0, 0)
+		Loop
+	Death:
+		NULL A 0 A_SetTranslucent (0.8,1) 
+		DEAD B 3 BRIGHT A_Explode
+		DEAD C 3 BRIGHT
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,0,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,20,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,40,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,60,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,80,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,100,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,120,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,140,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,160,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,180,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,200,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,220,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,240,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,260,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,280,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,300,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,320,2,0)
+		NULL A 0 Bright A_custommissile("PlasmaGernadeblast",0,0,340,2,0)
+		DEAD DEF 3 BRIGHT
+		Stop
+	}
+}
+ACTOR PlasmaGernadetrail
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle "Translucent"
+	alpha 0.6
+	scale .33
+	states
+	{
+	Spawn:
+		NULL A 4
+		SMKE ABCDEFG 2 Bright
+		SMKE HIJKLMN 2 Bright A_fadeout
+		Stop
+	}
+}
+actor PlasmaGernadeblast
+{
+	Radius 6
+	Height 12
+	Speed 5
+	Damage 2
+	DamageType lightning
+	PROJECTILE
+	RENDERSTYLE "Translucent"
+	+Ripper
+	ALPHA 0.8
+	SeeSound ""
+	DeathSound ""
+	States
+	{
+	Spawn:
+		RPLS AB 4 Bright
+		DEAD BCDEF 2 Bright A_Fadeout
+		Stop
+	}
+}
+Actor FlameBreath : BaronBall
+{
+	SeeSound "FLAME"
+	Deathsound ""
+	speed 10
+	damage 15
+	DamageType fire
+	renderstyle Translucent
+	alpha 0.6
+	Scale .75
+	+RIPPER
+	+BLOODLESSIMPACT
+	decal "GateScorch"
+	States
+	{
+	Spawn:
+		LASX ABCDEFGHIJ 6 bright A_Explode (2, 62, 0)
+	Death:
+		LASX KLMN 6 bright
+		Stop
+	}
+}
+ACTOR GateBulletPuff
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ALLOWPARTICLES
+	+RANDOMIZE
+	+PUFFONACTORS
+	RenderStyle "Translucent"
+	Alpha 0.85
+	VSpeed 1
+	Mass 5
+	Scale .33
+	States
+	{
+	Spawn:
+		SMKE ABCDEFG 2
+		SMKE H 2 A_SetTranslucent (0.8,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE I 2 A_SetTranslucent (0.6,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE J 2 A_SetTranslucent (0.5,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE K 2 A_SetTranslucent (0.4,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE L 2 A_SetTranslucent (0.3,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE M 2 A_SetTranslucent (0.2,1)
+		NULL A 0 A_BishopMissileWeave
+		SMKE N 2 A_SetTranslucent (0.1,1)
+		NULL A 0 A_BishopMissileWeave
+		Stop
+	}
+}
+Actor UpA
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE A 2 A_Fadeout
+		loop
+	}
+}
+Actor UpB
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE B 2 A_Fadeout
+		loop
+	}
+}
+Actor UpC
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE C 2 A_Fadeout
+		loop
+	}
+}
+Actor UpD
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE D 2 A_Fadeout
+		loop
+	}
+}
+Actor UpE
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		NULL A 2
+		GATE E 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor UpF
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		NULL A 2
+		GATE E 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor UpG
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		NULL A 2
+		GATE G 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor UpH
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		NULL A 2
+		GATE H 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor UpP
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		NULL A 2
+		GATE P 1 A_Fadeout
+		Goto Spawn+1
+	}
+}
+Actor DeathOut1
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.9
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut2
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.8
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut3
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.7
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut4
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.6
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut5
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.5
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut6
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.4
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut7
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.3
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut8
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.2
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+Actor DeathOut9
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle Translucent
+	alpha 0.1
+	VSpeed 5
+	states
+	{
+	Spawn:
+		GATE O 5 A_Fadeout
+		loop
+	}
+}
+//end of gatekeeper
+//sprites by zrrion
+ACTOR DarkLostSoul : LostSoul
+{
+	Health 100
+	Radius 16
+	Height 56
+	Mass 50
+	Speed 8
+	Damage 5
+	DamageType fire
+	PainChance 256
+	Monster
+	renderstyle normal
+	+FLOAT
+	+NOGRAVITY
+	+MISSILEMORE
+	+DONTFALL
+	+NOICEDEATH
+	+NOBLOOD
+	+NORADIUSDMG
+	+NOTARGET
+	AttackSound ""
+	PainSound "skull/pain"
+	DeathSound "skull/death"
+	ActiveSound "skull/active"
+	Obituary "%o was eaten by a dark soul"
+	States
+	{
+	Spawn:
+		SKU2 A 3 BRIGHT A_Look
+		NULl A 0 A_SpawnItem("Dskulltail")
+		SKU2 A 3 BRIGHT A_Look
+		NULL A 0 A_SpawnItem("Dskulltail")
+		SKU2 B 3 BRIGHT A_Look
+		NULL A 0 A_SpawnItem("Dskulltail")
+		SKU2 B 3 BRIGHT A_Look
+		NULL A 0 A_SpawnItem("Dskulltail")
+		Loop
+	See:
+		SKU2 A 3 BRIGHT
+		NULl A 0 A_SpawnItem("Dskulltail")
+		SKU2 A 3 BRIGHT A_Chase
+		NULL A 0 A_SpawnItem("Dskulltail")
+		SKU2 B 3 BRIGHT
+		NULL A 0 A_SpawnItem("Dskulltail")
+		SKU2 B 3 BRIGHT A_Chase
+		NULL A 0 A_SpawnItem("Dskulltail")
+		Loop
+	Missile:
+		SKU2 C 2 BRIGHT A_FaceTarget
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 C 2 BRIGHT A_FaceTarget
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 C 2 BRIGHT A_FaceTarget
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 C 2 BRIGHT A_FaceTarget
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 C 2 BRIGHT A_FaceTarget
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		NULL A 0 A_Playsound("skull/melee")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT A_SkullAttack
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 C 2 BRIGHT
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		SKU2 D 2 BRIGHT
+		NULL A 0 A_SpawnItem("Dskulltail2")
+		Goto Missile+2
+	Pain:
+		SKU2 E 3 BRIGHT
+		SKU2 E 3 BRIGHT A_Pain
+		Goto See
+	Death:
+		SKU2 F 6 BRIGHT
+		SKU2 G 6 BRIGHT A_Scream
+		SKU2 H 6 BRIGHT A_Explode
+		SKU2 I 6 BRIGHT A_NoBlocking
+		SKU2 JK 6
+		Stop
+	}
+}
+Actor Dskulltail
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle ADD
+	alpha 0.6
+	VSpeed 1
+	states
+	{
+	Spawn:
+		SKU2 AB 2 A_fadeout
+		loop
+	}
+}
+Actor Dskulltail2
+{
+	+NOCLIP
+	+NOINTERACTION
+	+NOGRAVITY
+	renderstyle ADD
+	alpha 0.6
+	states
+	{
+	Spawn:
+		SKU2 CD 2 A_fadeout
+		loop
+	}
+}
+
+// DoomImp
+
+Actor Devil 3102
+{
+	Health 55
+	Radius 20
+	Height 56
+	Speed 11
+	PainChance 200
+	MONSTER 
+	+FLOORCLIP
+	SeeSound "imp/sight"
+	PainSound "imp/pain"
+	DeathSound "imp/death"
+	ActiveSound "imp/active"
+	Obituary "%o was burned by an imp."
+	HitObituary "%o was slashed by an imp."
+	States
+	{
+	Spawn:
+		TRO3 AB 10 A_Look
+		Loop
+	See:
+		TRO3 AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		TRO3 EF 8 A_FaceTarget
+		TRO3 G 6 A_CustomComboAttack("SmallImpBall",32,2,"imp/melee")
+		Goto See
+	Pain:
+		TRO3 H 2
+		TRO3 H 2 A_Pain
+		Goto See
+	Death:
+		TRO3 I 8
+		TRO3 J 8 A_Scream
+		TRO3 K 6
+		TRO3 L 6 A_Fall
+		TRO3 M -1
+		Stop
+	XDeath:
+		TROO N 5
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_Fall
+		TROO RST 5
+		TROO U -1
+		Stop
+	Raise:
+		TRO3 ML 8
+		TRO3 KJI 6
+		Goto See
+	}
+}
+
+Actor SmallImpBall
+{
+	Radius 8
+	Height 6
+	Speed 18
+	FastSpeed 20
+	Damage 2
+	Scale .75
+	PROJECTILE
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 0.67
+	SeeSound "imp/attack"
+	DeathSound "imp/shotx"
+	Decal DoomImpScorch
+	States
+	{
+	Spawn:
+		BAL1 AB 4 bright
+		Loop
+	Death:
+		BAL1 CDE 6 bright
+		Stop
+	}   
+}
+
+// Mancubus/Fatso
+
+Actor HectebusClone
+{
+	Health 1500
+	Radius 56
+	Height 80
+	Scale 1.25
+	Speed 12
+	PainChance 100
+	BloodColor "73 00 00"
+	Mass 1500
+	SeeSound "Hectebus/Sight"
+	PainSound "Hectebus/Pain"
+	DeathSound "Hectebus/Death"
+	ActiveSound "Hectebus/Active"
+	Monster
+	+FloorClip
+	+MissileMore
+	Obituary "%o was cremated by a Hectebus."
+	States
+	{
+	Spawn:
+		HECT AAAAAAAAAABBBBBBBBBB 1 A_Look
+		Loop
+	See:
+		HECT ABC 6 A_Chase
+		HECT D 0 A_PlaySoundEx("Hectebus/Step", "SoundSlot7", 0)
+		HECT DEF 6 A_Chase
+		HECT A 0 A_PlaySoundEx("Hectebus/Step", "SoundSlot7", 0)
+		Loop
+	Missile:
+		HECT G 0 A_PlaySoundEx("Hectebus/Attack", "SoundSlot6", 0)
+		HECT GGGG 4 A_FaceTarget
+		HECT G 0 A_Jump(64, "Missile2")
+		HECT U 4 Bright A_CustomMissile("Hecteball", 35, 41, 0)
+		HECT IGG 4 A_FaceTarget
+		HECT K 0 A_SpidReFire
+		HECT V 4 Bright A_CustomMissile("Hecteball", 35, -41, 0)
+		HECT IGG 4 A_FaceTarget
+		HECT K 0 A_Jump(96, 2)
+		HECT K 0 A_SpidReFire
+		Goto Missile+6
+		HECT K 0
+		Goto See
+	Missile2:
+		HECT H 0 Bright A_CustomMissile("Hecteball", 35, 41, Random(-4, 2))
+		HECT H 4 Bright A_CustomMissile("Hecteball", 35, -41, Random(-2, 4))
+		HECT IGG 4 A_FaceTarget
+		HECT H 0 Bright A_CustomMissile("Hecteball", 35, 41, Random(-4, 2))
+		HECT H 4 Bright A_CustomMissile("Hecteball", 35, -41, Random(-2, 4))
+		HECT IGG 4 A_FaceTarget
+		HECT H 0 Bright A_CustomMissile("Hecteball", 35, 41, Random(-4, 2))
+		HECT H 4 Bright A_CustomMissile("Hecteball", 35, -41, Random(-2, 4))
+		HECT IGG 4 A_FaceTarget
+		HECT K 0 A_Jump(200, 2)
+		HECT K 0 A_SpidReFire
+		Goto Missile2
+		HECT K 0
+		Goto See
+	Pain:
+		HECT J 8 A_Pain
+		Goto See
+	Death:
+		HECT K 6 A_Scream
+		HECT L 6
+		HECT M 6
+		HECT N 6 A_Fall
+		HECT O 6
+		HECT P 6
+		HECT Q 6
+		HECT R 6
+		HECT S 6
+		HECT T -1
+		Stop
+	}
+}
+
+Actor Hecteball //Hectebus Fireball
+{
+	Radius 10
+	Height 8
+	Speed 20
+	Damage 16
+	Projectile
+	RenderStyle Add
+	Alpha 0.97
+	SeeSound "Imp/Attack"
+	DeathSound "Imp/ShotX"
+	Decal Scorch
+	States
+	{
+	Spawn:
+		HECF AB 4 Bright
+		Loop
+	Death:
+		HECF CDE 4 Bright
+		Stop
+	}
+}
+
+// HellKnight
+
+ACTOR ProfaneOne 2722
+{
+	Health 2000
+	Radius 24
+	Height 64
+	Mass 1000
+	Speed 10
+	PainChance 45
+	Monster
+	+FLOORCLIP
+	+BOSS
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	Poisondamage 10
+	SeeSound "profane/sight"
+	PainSound "baron/pain"
+	DeathSound "profane/death"
+	ActiveSound "baron/active"
+	Obituary "%o is now the Profane One's trophy."
+	HitObituary "The Profane One mauled %o."
+	States
+	{
+	Spawn:
+		BOSX AB 10 A_Look 
+		Loop
+	See:
+		BOSX AABB 3 A_VileChase
+		BOSX CCDD 3 A_VileChase
+		Loop
+	Melee:
+		BOSX EF 8 A_FaceTarget
+		BOSX G 8 A_CustomMeleeAttack (10, "profane/melee", Poison)
+		Goto See
+	Missile:
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Jump(128,"Poison","Blood")
+	Poison:
+		BOSX EF 7 A_FaceTarget
+		BOSX G 0 Bright A_CustomMissile ("PoisonBall",28,4,1,0)
+		BOSX G 7 Bright A_CustomMissile ("PoisonBall",28,-4,-1,0)
+		BOSX F 7 A_FaceTarget
+		BOSX G 0 Bright A_CustomMissile ("PoisonBall",28,4,1,0)
+		BOSX G 7 Bright A_CustomMissile ("PoisonBall",28,-4,-1,0)
+		BOSX F 7 A_FaceTarget
+		BOSX G 0 Bright A_CustomMissile ("PoisonBall",28,4,1,0)
+		BOSX G 7 Bright A_CustomMissile ("PoisonBall",28,-4,-1,0)
+		Goto See
+	Blood:
+		BOSX H 0 A_PlaySound("profane/vomit")
+		BOSX H 15 A_FaceTarget
+		BOSX H 0 A_CustomMissile ("BloodPuke", 60, 0, random(-10,10), 2, random(10,20))
+		BOSX H 0 A_CustomMissile ("BloodPuke", 59, 0, random(-10,10), 2, random(10,20))
+		BOSX H 0 A_CustomMissile ("BloodPuke", 58, 0, random(-10,10), 2, random(10,20))
+		BOSX H 0 A_CustomMissile ("BloodPuke", 59, 0, random(-10,10), 2, random(10,20))
+		BOSX H 0 A_CustomMissile ("BloodPuke", 60, 0, random(-10,10), 2, random(10,20))
+		Goto See
+	Pain:
+		BOSX H 2
+		BOSX H 2 A_Pain
+		Goto See
+	Heal:
+		BOSX HH 10
+		Goto See
+	Death:
+		BOSX I  8 A_Scream
+		BOSX J  8 A_PlaySound("profane/die")
+		BOSX K  8
+		BOSX L  8 A_NoBlocking
+		BOSX MN 8 A_Mushroom ("BloodPuke", 10)
+		BOSX O -1 A_BossDeath   
+		Stop
+	Raise:
+		BOSX O 8
+		BOSX NMLKJI  8
+		Goto See
+	}
+}
+
+actor PoisonBall : CStaffMissile
+{
+	radius 3
+	height 3
+	damage 10
+	speed 20
+	Renderstyle Add
+	Alpha 0.90
+	Poisondamage 10
+	Damagetype PoisonCloud
+	seesound "profane/poison"
+	deathsound "profane/poisondie"
+	PROJECTILE
+	+EXPLODEONWATER
+	states
+	{
+	Spawn:
+		FVN1 A 1 A_BishopMissileWeave
+		FVN1 A 0 A_SpawnItemEx("PoisonTrail",0,0,0,0,0,0,0,0,10)
+		FVN1 B 1 A_BishopMissileWeave
+		FVN1 B 0 A_SpawnItemEx("PoisonTrail",0,0,0,0,0,0,0,0,10)
+		FVN1 C 1 A_BishopMissileWeave
+		FVN1 C 0 A_SpawnItemEx("PoisonTrail",0,0,0,0,0,0,0,0,10)
+		FVN1 D 1 A_BishopMissileWeave
+		FVN1 D 0 A_SpawnItemEx("PoisonTrail",0,0,0,0,0,0,0,0,10)
+		loop
+	Death:
+		FVN1 EFGHIJ 4 
+		Stop
+	}
+}
+
+actor BloodPuke
+{
+	radius 4
+	height 4
+	damage 7
+	speed 20
+	Scale 0.80
+	deathsound "profane/blood"
+	PROJECTILE
+	+EXTREMEDEATH
+	-NOGRAVITY
+	states
+	{
+	Spawn:
+		FGOR ABCDEF 3 bright A_SpawnItemEx ("Blood",0,0,0,0,0,0,0,0,10)
+		loop
+	Death:
+		FGOR GHIJ 5 bright
+		Stop
+	}
+}
+
+ACTOR Poisontrail
+{   
+	Radius 0
+	Height 1
+	PROJECTILE
+	RENDERSTYLE ADD
+	ALPHA 0.80
+	States
+	{
+	Spawn:
+		NULL A 1 Bright
+		SSFX ABCDEFG 2 Bright
+		Stop 
+	}
+}
+
+// LostSoul
+
+Actor ForgottenOne
+{
+	Obituary "A Forgotten One rammed %o"
+	Health 40
+	Radius 14
+	Height 30
+	Mass 50
+	Speed 8
+	PainChance 230
+	Scale 0.7
+	PainSound "Forgotten/Pain"
+	DeathSound "Forgotten/Death"
+	ActiveSound "Forgotten/Active"
+	Damage 3
+	Monster
+	+FloorClip
+	+Float
+	+NoGravity
+	+NoIceDeath
+	+DontFall
+	+FloatBob
+	+NoBlood
+	States
+	{
+	Spawn:
+		FRGO A 0 Bright
+		FRGO A 0 Bright A_ChangeFlag("FloatBob", 1)
+		FRGO AAAAAABBBBBB 1 Bright A_Look
+		Loop
+	See:
+		FRGO A 0 A_ChangeFlag("FloatBob", 1)
+		FRGO AABB 3 Bright A_Chase
+		Loop
+	Missile:
+		FRGO C 0 A_ChangeFlag("FloatBob", 0)
+		FRGO CCDDC 2 Bright A_FaceTarget
+		FRGO D 0 Bright A_PlaySound("Forgotten/Attack")
+		FRGO D 2 Bright A_SkullAttack
+		FRGO C 2 Bright
+		FRGO C 0 Bright A_JumpIfTargetInLOS(4, 75)
+		FRGO C 0 A_Jump(24, "StopCharge")
+		FRGO DC 2 Bright
+		Goto Missile+10
+		FRGO C 0 Bright
+		Goto Missile+7
+	StopCharge:
+		FRGO C 0 A_Stop
+		Goto See
+	Pain:
+		FRGO E 0 A_ChangeFlag("FloatBob", 1)
+		FRGO E 3 Bright
+		FRGO E 3 Bright A_Pain
+		Goto See
+	Death:
+		FRGO E 0 A_ChangeFlag("FloatBob", 0)
+		FRGO E 0 A_Stop
+		FRGO EF 4 Bright
+		FRGO G 6 Bright A_Scream
+		FRGO H 6 Bright
+		FRGO I 6 Bright A_NoBlocking
+		FRGO J 6 Bright
+		Stop
+	}
+}
+
+//PainElemental
+
+ACTOR Defiler 9654
+{
+	//$Category Monsters
+	Health 1000
+	Radius 31
+	Height 56
+	Mass 500
+	Speed 9
+	PainChance 15
+	Monster 
+	+NOGRAVITY
+    +FLOAT 
+	+DROPOFF
+	+MISSILEMORE
+	SeeSound "Defiler/Sight"
+	PainSound "baron/pain"
+	DeathSound "Defiler/Death"
+	ActiveSound "baron/active"
+	Obituary "%o was hunted down by a Defiler."
+	States
+	{
+	Spawn:
+		DEFI AB 10 A_Look
+		Loop
+	See:
+		DEFI AABBCC 2 A_VileChase
+		Loop
+	Missile:
+		DEFI D 0 BRIGHT A_Jump(65, 5)
+		DEFI D 8 BRIGHT A_FaceTarget 
+		DEFI E 8 BRIGHT	A_FaceTarget
+		DEFI F 8 BRIGHT	A_CustomMissile("DefilerShot", 15, 0, 0)
+		Goto See
+		DEFI D 8 BRIGHT A_FaceTarget 
+		DEFI E 8 BRIGHT	A_FaceTarget
+		DEFI F 0 BRIGHT A_PlaySound("Defiler/Attack")
+		DEFI F 0 BRIGHT A_CustomMissile("DefilerBall", 15, 0, -45)
+		DEFI F 0 BRIGHT A_CustomMissile("DefilerBall", 15, 0, 0)
+		DEFI F 8 BRIGHT A_CustomMissile("DefilerBall", 15, 0, 45)
+		Goto See
+	Heal:
+		DEFI N 10 BRIGHT A_SpawnItem("DefilerFire", 55)
+		DEFI OP 10 BRIGHT
+		Goto See
+	Pain:
+		DEFI G 5   
+		DEFI G 5 A_Pain
+		Goto See
+	Death:
+		DEFI H 7
+		DEFI I 7 A_Scream
+		DEFI J 7 A_NoBlocking
+		DEFI KL 7
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 0)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 45)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 90)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 135)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 180)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 225)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 270)
+		DEFI M 0 A_PlaySound("Defiler/Attack")
+		DEFI M 0 A_CustomMissile("DefilerBall", 20, 0, 315)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 0)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 45)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 90)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 135)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 180)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 225)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 270)
+		DEFI M 0 A_CustomMissile("DefilerShot", 20, 0, 315)
+		DEFI M 7
+		Stop
+	}
+}
+
+ACTOR DefilerFire
+{
+	+NOBLOCKMAP 
+	+NOGRAVITY
+	RenderStyle Add
+	Alpha 1
+	States
+	{
+	Spawn:
+		REFR A 2 BRIGHT  A_StartFire
+		REFR BAB 2 BRIGHT  A_Fire
+		REFR C 2 BRIGHT  A_FireCrackle
+		REFR BCBCDCDCDEDED 2 BRIGHT  A_Fire
+		REFR E 2 BRIGHT  A_FireCrackle
+		REFR FEFEFGHGHGH 2 BRIGHT  A_Fire
+		Stop
+	}
+}
+
+ACTOR DefilerBall
+{
+    Radius 8
+    Height 6
+    Scale 0.5
+    Speed 8
+    Damage 2
+	DeathSound "imp/shotx"
+    +SEEKERMISSILE
+    PROJECTILE
+    Renderstyle ADD
+	Decal DoomImpScorch
+    States
+    {
+    Spawn:
+        RVBA AB 2 Bright A_SeekerMissile (10,20)
+        Loop
+    Death:
+        RVBA CDEFGH 4 Bright
+        Stop
+    }
+}
+
+ACTOR DefilerShot 
+{
+	Scale 1.5
+    Radius 12
+    Height 16
+    Speed 16
+    Damage 10
+    PROJECTILE
+	RENDERSTYLE ADD
+	ALPHA 0.9
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+	Decal DoomImpScorch
+    States
+    {
+    Spawn:
+        DFSH AB 5 Bright
+        Loop
+    Death:
+        DFSH CDE 5 Bright
+        Stop
+    }
+}
+
+//Revenant
+ACTOR Incarnate 30115
+{
+	//$Title "Death Incarnate"
+	//$Category Monsters
+	Health 300
+	Radius 20
+	Height 56
+	Mass 500
+	Speed 12
+	MeleeDamage 7
+	PainChance 64
+	MONSTER
+	Damagefactor IncarnateShot, 0
+	+FLOORCLIP
+	+SHORTMISSILERANGE
+	+DONTHARMCLASS
+	Obituary "%o was killed by a Death Incarnate's glare."
+	HitObituary "%o was beaten to death by a Death Incarnate."
+	SeeSound "monster/incsit"
+	PainSound "skeleton/pain"
+	DeathSound "monster/incdth"
+	ActiveSound "monster/incact"
+	AttackSound "monster/incatk"
+	MeleeSound "monster/inchit"
+	States
+	{
+	Spawn:
+		INCA AB 10 A_Look
+		Loop
+	See:
+		INCA AABBCCDDEEFF 2 A_Chase
+		Loop
+	Melee:
+		INCA G 0 A_Jump(128,5)
+		INCA G 0 A_FaceTarget
+		INCA G 6 A_SkelWhoosh
+		INCA H 6 A_FaceTarget
+		INCA I 6 A_MeleeAttack
+		Goto See
+		INCA R 0 A_FaceTarget
+		INCA R 5 A_SkelWhoosh
+		INCA S 5 A_FaceTarget
+		INCA T 5 A_MeleeAttack
+		INCA G 0 A_FaceTarget
+		INCA G 5 A_SkelWhoosh
+		INCA H 5 A_FaceTarget
+		INCA I 5 A_MeleeAttack
+		Goto See
+	Missile:
+		INCA J 5 A_FaceTarget
+		INCA J 5
+		INCA U 10 Bright A_CustomBulletAttack(30,0,5,3,"DIpuff",1024)
+		INCA K 10
+		Goto See
+	Pain:
+		INCA L 5
+		INCA L 5 A_Pain
+		Goto See
+	Death:
+		INCA L 0 A_Jump(192,7)
+		INCA LM 7
+		INCA N 7 A_Scream
+		INCA O 7 A_NoBlocking
+		INCA P 7
+		INCA Q -1
+		Stop
+		INCA LM 7
+		INCA N 7 A_Scream
+		INCA O 7 A_NoBlocking
+		INCA P 7
+		INCA Q 0 A_Jump(192,4)
+		INCA Q 0 A_Jump(128,4)
+		INCA Q 0 A_Jump(96,4)
+		INCA Q 0 A_Jump(64,4)
+		INCA Q 115
+		INCA Q 115
+		INCA Q 115
+		INCA Q 115
+		INCA Q 115
+		INCA Q -1 Thing_Raise(0)
+		Stop
+	XDeath:
+		INCX A 10 Bright A_Playsound("monster/incexp")
+		INCX BC 5 Bright
+		INCX D 5 Bright A_NoBlocking
+		INCX D 0 Bright A_SpawnItem("HS",0,32)
+		INCX EFGHIJ 5 Bright
+		INCX K -1
+	Raise:
+		INCA Q 0 A_KillChildren
+		INCA QPONML 5
+		Goto See
+	}
+}
+
+ACTOR DIPuff
+{
+	Radius 0
+	Height 1
+	Speed 0
+	PROJECTILE
+	RENDERSTYLE NONE
+	DamageType IncarnateShot
+	States
+	{
+	Spawn:
+		TNT1 A 2 Bright
+		Stop
+	}
+}
+
+ACTOR HS 30116
+{
+	//$Title "Hades Sphere"
+	//$Category Monsters
+	Health 35
+	Radius 24
+	Height 48
+	Mass 3000
+	Speed 10
+	Obituary "%o was blown away by a Hades Sphere."
+	Monster
+	SeeSound "monster/hadsit"
+	DeathSound "monster/hadexp"
+	+LOOKALLAROUND
+	+DONTGIB
+	+NOTARGET
+	+NOGRAVITY
+	+FLOAT
+	+DONTFALL
+	States
+	{
+	Spawn:
+		TNT1 A 1 Bright A_Look
+		Loop
+	See:
+		HADE EFGH 4 Bright
+	SeeLoop:
+		HADE A 2 Bright A_Playsound("monster/hadwlk")
+		HADE ABBCCDD 2 Bright A_GiveInventory("HS_SpecialChase", 1) // [Blue Shadow] Conditional A_Chase
+		TNT1 A 0 A_CheckFlag("SKULLFLY", "SeeLoop") // [Blue Shadow] Don't bother trying to teleport out while "skull-flying"
+		TNT1 A 0 A_Jump(32, "TeleportOut")
+		Loop
+	TeleportOut:
+		TNT1 A 0 A_UnSetSolid
+		TNT1 A 0 A_UnSetShootable
+		HADE H 5 Bright A_Playsound("monster/hadtel")
+		HADE GFEIJKL 4 Bright
+	SeeTeleport:
+		TNT1 AAAAAAAA 2 A_Chase(0)
+		TNT1 A 0 A_Jump(96, "TeleportIn")
+		Loop
+	TeleportIn:
+		HADE L 3 Bright A_Playsound("monster/hadtel")
+		HADE KJIEFG 4 Bright
+		TNT1 A 0 A_SetShootable
+		TNT1 A 0 A_SetSolid
+		Goto SeeLoop
+	Melee:
+		TNT1 A 0 A_SetInvulnerable
+		HADE HGFE 4 Bright
+		TNT1 A 0 A_UnSetInvulnerable
+		TNT1 A 0 A_SetShootable
+		TNT1 A 0 A_Die
+		Stop
+	Death:
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_SetTranslucent(0.9, 1)
+		TNT1 A 0 A_Scream
+		HADE M 4 Bright A_Explode(112, 112, XF_NOTMISSILE)
+		HADE NOPQ 5 Bright
+		Stop
+	XDeath:
+		TNT1 A 0 A_Noblocking
+		HADE H 5 Bright A_PlaySound("monster/haddth")
+		HADE GFE 4 Bright
+		HADE RSTUVWX 4 Bright
+		Stop
+		Death.Ice:
+		"####" "#" 0 A_ChangeFlag("NOGRAVITY", FALSE)
+		Goto GenericFreezeDeath
+	}
+}
+
+ACTOR HS_SpecialChase : CustomInventory
+{
+	States
+	{
+	Pickup:
+		TNT1 A 0 A_CheckFlag("SKULLFLY", "ThrustChase")
+		TNT1 A 0 A_Chase
+		Stop
+	ThrustChase:
+		TNT1 A 0 A_Chase("", "")
+		Stop
+	}
+}
+
+//ShotgunGuy
+
+ACTOR AutoShotgunGuy
+{
+    Health 90
+    Radius 20
+    Height 56
+    Speed 8
+    PainChance 128
+    MONSTER
+    +FLOORCLIP
+    SeeSound "grunt/sight"
+    AttackSound "asgguy/asgfir"
+    PainSound "grunt/pain"
+    DeathSound "grunt/death"
+    ActiveSound "grunt/active"
+    Obituary "%o got emmenthal'd by an ASG guy."
+    DropItem Shell
+    States
+    {
+    Spawn:
+        ASGZ AB 10 A_Look
+        Loop
+    See:
+        ASGZ AABBCCDD 4 A_Chase
+        Loop
+    Missile:
+    	TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+    	ASGZ E 4 A_FaceTarget
+    	TNT1 A 0 A_GiveInventory ("ASGZAmmo", 1)
+    	ASGZ F 5 Bright A_CustomBulletAttack (5, 4, 3, 4, "BulletPuff", 0)
+    	ASGZ E 6
+    	TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+    	TNT1 A 0 A_PlaySound("asgguy/asgld1")
+    	ASGZ E 4 A_CPosRefire
+    	TNT1 A 0 A_GiveInventory ("ASGZAmmo", 1)
+    	ASGZ F 5 Bright A_CustomBulletAttack (5, 4, 3, 4, "BulletPuff", 0)
+    	ASGZ E 6
+    	TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+    	TNT1 A 0 A_PlaySound("asgguy/asgld1")
+    	ASGZ E 4 A_CPosRefire
+    	TNT1 A 0 A_GiveInventory ("ASGZAmmo", 1)
+    	ASGZ F 5 Bright A_CustomBulletAttack (5, 4, 3, 4, "BulletPuff", 0)
+    	ASGZ E 6
+    	TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+    	TNT1 A 0 A_PlaySound("asgguy/asgld1")
+    	ASGZ E 4 A_CPosRefire
+    	TNT1 A 0 A_GiveInventory ("ASGZAmmo", 1)
+    	ASGZ F 5 Bright A_CustomBulletAttack (5, 4, 3, 4, "BulletPuff", 0)
+    	ASGZ E 6
+    	TNT1 A 0 A_PlaySound("asgguy/asgld1")
+		TNT1 A 0 A_JumpIfInventory ("ASGZAmmo", 16, "Reload")
+        Goto See
+    Reload:
+    	TNT1 A 0 A_ChangeFlag("NoPain", 1)
+    	TNT1 A 0 A_PlaySound("asgguy/asgout")
+    	ASGZ E 48 A_TakeInventory ("ASGZAmmo", 16)
+    	ASGZ E 8 A_PlaySound("asgguy/asgin")
+    	TNT1 A 0 A_ChangeFlag("NoPain", 0)
+    	Goto See
+    Pain:
+        ASGZ G 3
+        ASGZ G 3 A_Pain
+        Goto See
+    Death:
+        ASGZ H 5
+        ASGZ I 5 A_Scream
+        ASGZ J 5 A_Fall
+        ASGZ KLM 5
+        ASGZ N -1
+        Stop
+    XDeath:
+        ASGZ O 5
+        ASGZ P 5 A_XScream
+        ASGZ Q 5 A_Fall
+        ASGZ RSTUV 5
+        ASGZ W -1
+        Stop
+    Raise:
+        ASGZ NMLKJIH 5
+        Goto See
+    }
+}
+
+ACTOR ASGZAmmo: Ammo
+{
+     Inventory.MaxAmount 16
+}
+
+// SpiderMastermind
+
+ACTOR Incubus 30083
+{
+	Health 3000
+	Radius 48
+	Height 64
+	Speed 12
+	PainChance 32
+	ReactionTime 8
+	Mass 2000
+	MONSTER
+	+FLOORCLIP
+	+DONTSQUASH
+	+DONTMORPH 
+	+DONTBLAST
+	+NOTELEOTHER
+	+DONTHURTSPECIES
+	SeeSound "incubus/sight"
+	PainSound "incubus/pain"
+	DeathSound "incubus/death"
+	ActiveSound "incubus/active"
+	Obituary "%o was destroyed by an Incubus."
+	DropItem CellPack
+	DropItem RocketBox
+	States
+	{
+	Spawn: 
+		INCB AD 10 A_Look 
+		Loop 
+	See: 
+		INCB AAABBB 4 A_Chase 
+		INCB A 0 A_PlaySound("incubus/walk")
+		INCB CCCDDD 4 A_Chase
+		INCB C 0 A_PlaySound("incubus/walk")
+		Loop
+	Missile:
+		INCB E 0 A_Jump(192,17)
+		INCB E 0 A_PlaySound("incubus/attack1")
+		INCB EEE 8 A_FaceTarget
+		INCB F 8 Bright A_CustomMissile("IncubusHomingRocketShot",35,42,359,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB G 8 Bright A_CustomMissile("IncubusHomingRocketShot",34,-39,1,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB F 8 Bright A_CustomMissile("IncubusHomingRocketShot",35,42,359,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB G 8 Bright A_CustomMissile("IncubusHomingRocketShot",34,-39,1,0)
+		INCB EE 8 A_FaceTarget
+		Goto See
+		INCB E 0 A_PlaySound("incubus/attack2")
+		INCB EEE 8 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusPhotonShot",72,-12,359,0)
+		INCB H 5 Bright A_CustomMissile("IncubusPhotonShot",72,12,1,0)
+		INCB E 5 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusPhotonShot",72,-12,359,0)
+		INCB H 5 Bright A_CustomMissile("IncubusPhotonShot",72,12,1,0)
+		INCB E 5 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusPhotonShot",72,-12,359,0)
+		INCB H 5 Bright A_CustomMissile("IncubusPhotonShot",72,12,1,0)
+		INCB EE 8 A_FaceTarget
+		Goto See
+	Pain:
+		INCB D 5
+		INCB C 5 A_Pain
+		Goto See
+	Death:
+		INCB I 12 A_Scream
+		INCB J 12
+		INCB K 8 A_Fall
+		INCB LM 8
+		INCB N -1
+		Stop
+	XDeath:
+		INCB I 12 A_Scream
+		INCB J 12
+		INCB K 2 A_Fall
+		INCB LM 8
+		INCB N -1
+		Stop
+	Raise:
+		INCB NMLKJI 10
+		Goto See
+	}
+}
+
+ACTOR HomingRocketShot
+{
+	Radius 11
+	Height 8 
+	Speed 23
+	Damage 15
+	PROJECTILE
+	+SEEKERMISSILE
+	ExplosionDamage 96
+	ExplosionRadius 78
+	DeathSound "weapons/homingexplode"
+	States
+	{
+	Spawn:
+		MSLH A 1 Bright A_SeekerMissile(9,6)
+		MSLH A 2 Bright A_SpawnItemEx("HomingRocketTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+		Loop
+	Death:
+		MISL E 0 A_SetTranslucent(0.8,1)
+		MISL E 4 Bright A_Explode
+		MISL F 5 Bright
+		MISL GHI 6 Bright
+		MISL J 5 Bright
+		MISL K 4 Bright
+		Stop
+	}
+}
+
+
+ACTOR HomingRocketShot2
+{
+	Radius 11
+	Height 8 
+	Speed 23
+	Damage 15
+	PROJECTILE
+	+SEEKERMISSILE
+	ExplosionDamage 96
+	ExplosionRadius 78
+	DeathSound "weapons/homingexplode"
+	States
+	{
+	Spawn:
+		MSLH A 1 Bright A_SeekerMissile(9,6)
+		MSLH A 2 Bright A_SpawnItemEx("HomingRocketTrail", 0, 0, 0, 1, 0, 0, 0, 128)
+		Loop
+	Death:
+		BOOM A 0 A_SetTranslucent(0.8,1)
+		BOOM A 3 Bright A_Explode
+		BOOM BCDEFGHIJKLMNOPQRSTUVXY 3 Bright
+		Stop
+	}
+}
+
+ACTOR HomingRocketTrail
+{
+	Radius 4
+	Height 3
+	Speed 1
+	Scale 0.6
+	+NOGRAVITY
+	+NOTELEPORT
+	RenderStyle Translucent
+	Alpha 0.33
+	States
+	{
+	Spawn:
+		MTRL A 2
+		MTRL BCD 3
+		MTRL E 4 A_SetTranslucent(0.2)
+		MTRL F 5 A_SetTranslucent(0.1)
+		Stop 
+	}
+}
+
+ACTOR IncubusHomingRocketShot : HomingRocketShot
+{
+	SeeSound "weapons/rocklf"
+	States
+	{
+	Spawn:
+		MSLH A 1 Bright A_SeekerMissile(5,0)
+		MSLH A 1 Bright A_SpawnItemEx("HomingRocketTrail",0,0,0,1,0,0,0,128)
+		Loop
+	}
+}
+
+ACTOR IncubusPhotonShot
+{
+	Radius 3
+	Height 4
+	Speed 35
+	Damage 12
+	Scale 0.5
+	PROJECTILE
+	+STRIFEDAMAGE
+	SeeSound "incubus/shot"
+	DeathSound "incubus/hit"
+	Renderstyle Add
+	Alpha 1.0
+	States
+	{
+	Spawn:
+		INCS AB 3 Bright
+		Loop
+	Death:
+		INCS C 6 Bright
+		INCS D 6 Bright
+		INCS E 6 Bright
+		Stop
+	}
+}
+
+
+ACTOR GreaterIncubus 30084
+{
+	Health 5000
+	Radius 48
+	Height 64
+	Speed 12
+	Scale 1.35
+	PainChance 24
+	ReactionTime 8
+	Mass 5000
+	MONSTER
+	+BOSS
+	+FLOORCLIP 
+	+DONTBLAST 
+	+MISSILEMORE
+	+MISSILEEVENMORE 
+	+DONTHURTSPECIES
+	BloodColor "Blue"
+	SeeSound "incubus2/sight"
+	PainSound "incubus2/pain"
+	DeathSound "incubus2/death"
+	ActiveSound "incubus2/active"
+	Translation "64:79=32:47", "48:63=16:31", "128:151=32:47", "236:239=44:47", "9:15=41:47", "169:191=192:207"
+	Obituary "%o stood in awe of the Greater Incubus"
+	DropItem BackPack
+	DropItem GreenArmor
+	States
+	{
+	Spawn: 
+		INCB AC 10 A_Look 
+		Loop
+	See: 
+		INCB AAABBB 4 A_Chase 
+		INCB A 0 A_PlaySound("incubus2/walk")
+		INCB CCCDDD 4 A_Chase
+		INCB C 0 A_PlaySound("incubus2/walk")
+		Loop
+	Missile:
+		INCB E 0 A_Jump(192,17)
+		INCB E 0 A_PlaySound("incubus2/attack1")
+		INCB EEE 8 A_FaceTarget
+		INCB F 8 Bright A_CustomMissile("IncubusHomingRocketShot2",47,55,-2,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB G 8 Bright A_CustomMissile("IncubusHomingRocketShot2",44,-51,2,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB F 8 Bright A_CustomMissile("IncubusHomingRocketShot2",47,55,-2,0)
+		INCB E 4 A_FaceTarget
+		INCB E 4 A_CPosReFire
+		INCB G 8 Bright A_CustomMissile("IncubusHomingRocketShot2",44,-51,2,0)
+		INCB EE 8 A_FaceTarget
+		Goto See
+		INCB E 0 A_PlaySound("incubus2/attack2")
+		INCB EEE 8 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusFlameBall",94,-21,-2,0)
+		INCB H 5 Bright A_CustomMissile("IncubusFlameBall",94,13,2,0)
+		INCB E 5 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusFlameBall",94,-21,3,0)
+		INCB H 5 Bright A_CustomMissile("IncubusFlameBall",94,13,-3,0)
+		INCB E 5 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusFlameBall",94,-21,-6,0)
+		INCB H 5 Bright A_CustomMissile("IncubusFlameBall",94,13,6,0)
+		INCB E 5 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusFlameBall",94,-21,3,0)
+		INCB H 5 Bright A_CustomMissile("IncubusFlameBall",94,13,-3,0)
+		INCB EE 8 A_FaceTarget
+		INCB H 0 A_CustomMissile("IncubusFlameBall",94,-21,-1,0)
+		INCB H 5 Bright A_CustomMissile("IncubusFlameBall",94,13,1,0)
+		INCB EE 8 A_FaceTarget
+		Goto See
+	Pain:
+		INCB D 5
+		INCB C 5 A_Pain
+		Goto See
+	Death:
+		INCB I 12 A_Scream
+		INCB J 12
+		INCB K 8 A_Fall
+		INCB LM 8
+		INCB N -1
+		Stop
+	XDeath:
+		INCB I 12 A_Scream
+		INCB J 12
+		INCB K 2 A_Fall
+		INCB LM 8
+		INCB N -1
+		Stop
+	Raise:
+		INCB NMLKJI 10
+		Goto See
+	}
+}
+
+ACTOR IncubusFlameBall
+{
+	Radius 12
+	Height 8
+	Speed 27
+	Damage 25
+	Scale 0.7
+	PROJECTILE
+	Damagetype Fire
+	ExplosionDamage 112
+	ExplosionRadius 96
+	SeeSound "vile/firecrkl"
+	DeathSound "weapons/flameballexplode"
+	States
+	{
+	Spawn:
+		FLAM A 1 Bright A_SpawnItemEx("FlameBallTrail",0,0,0,0,0,0,0,128)
+		FLAM A 1 A_CustomMissile("IncubusFlameBall2",0,0,0)
+		Loop
+	Death:
+		TNT1 A 1 A_CustomMissile("FlameBallExplosion",0,0,0,0)
+		Stop
+	}
+}
+
+actor IncubusFlameBall2
+{
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Scale 0.6
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+		FLAM A 1 Bright A_SpawnItemEx("FlameBallTrail2",0,0,0,1,0,0,128)
+		FLAM ABC 4 Bright
+		Stop
+	}
+}
+
+ACTOR FlameBallTrail
+{
+	Radius 4
+	Height 3
+	Speed 1
+	Scale 2.5
+	+NOGRAVITY
+	+NOTELEPORT
+	RenderStyle Translucent
+	Alpha 0.33
+	States
+	{
+	Spawn:
+		MTRL CCDD 2
+		MTRL E 4 A_SetTranslucent(0.2)
+		MTRL F 5 A_SetTranslucent(0.1)
+		Stop 
+	}
+}
+
+ACTOR FlameBallTrail2
+{
+	Radius 4
+	Height 3
+	Speed 1
+	Scale 2.0
+	+NOGRAVITY
+	+NOTELEPORT
+	RenderStyle Translucent
+	Alpha 0.33
+	States
+	{
+	Spawn:
+		MTRL CCDD 2
+		MTRL E 4 A_SetTranslucent(0.2)
+		MTRL F 5 A_SetTranslucent(0.1)
+		Stop 
+	}
+}
+
+ACTOR FlameBallExplosion
+{
+	Radius 1
+	Height 1
+	Damagetype Fire
+	Renderstyle ADD
+	Scale 2.0
+	PROJECTILE
+	DONTHURTSHOOTER
+	+MISSILE
+	+DONTFALL
+	+GHOST
+	+FORCERADIUSDMG 
+	ExplosionDamage 128
+	ExplosionRadius 112
+	SeeSound "weapons/flameballexplode"
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_Die
+	Death:
+		MISL E 0 A_SetTranslucent(0.8,1)
+		MISL E 4 Bright A_Explode
+		MISL F 5 Bright
+		MISL GHI 6 Bright
+		MISL J 5 Bright
+		MISL K 4 Bright
+		Stop
+	}
+}
+
+ACTOR IncubusHomingRocketShot2 : HomingRocketShot2
+{
+	SeeSound "weapons/rocklf"
+	Scale 1.5
+	ExplosionDamage 112
+	ExplosionRadius 96
+	Translation "197:207=184:191"
+	States
+	{
+	Spawn:
+		MSLH A 1 Bright A_SeekerMissile(5,0)
+		MSLH A 1 Bright A_SpawnItemEx("HomingRocketTrail2",0,0,0,1,0,0,0,128)
+		Loop
+	}
+}
+
+ACTOR HomingRocketTrail2 : HomingRocketTrail
+{
+	Scale 1.5
+}
+
+// ZombieMan
+
+ACTOR DuneWarrior 30040
+{
+	OBITUARY "%o was killed by a dune warrior."
+	Health 120
+	Radius 20
+	Height 56
+	Mass 100
+	Speed 12
+	PainChance 160
+	SEESOUND "dune/sight"
+	ATTACKSOUND "chainguy/attack"
+	PAINSOUND "dune/pain"
+	DEATHSOUND "dune/death"
+	DropItem "Clip" 128
+	DropItem "Shell" 128
+	DropItem "RocketAmmo" 128
+	MONSTER
+	+FloorClip
+	Decal Bulletchip
+	states
+	{
+	Spawn:
+		ZHRT AB 10 A_Look
+		Loop
+	See:
+		ZHRT AABBCCDD 4 A_Chase
+		Loop
+	Missile:
+		ZHRT E 0 A_Jump(80, 6)
+		ZHRT E 0 A_Jump(80, 20)
+		ZHRT E 0 A_Jump(80, 24)
+		ZHRT E 10 A_FaceTarget
+		ZHRT F 10 A_CustomMissile("DuneWarriorGrenade", 32, 0, random(16,-16), 0)
+		ZHRT E 10
+		Goto See
+		ZHRT E 10 A_FaceTarget
+		ZHRT FE 4 BRIGHT A_CPosAttack
+		ZHRT F 1
+		ZHRT FE 4 BRIGHT A_CPosAttack
+		ZHRT F 1
+		ZHRT FE 4 BRIGHT A_CPosAttack
+		ZHRT F 1
+		ZHRT FE 4 BRIGHT A_CPosAttack
+		ZHRT F 1
+		ZHRT FE 4 BRIGHT A_CPosAttack
+		ZHRT F 1 
+		Goto See
+		ZHRT E 6 A_FaceTarget
+		ZHRT F 12 A_CustomMissile("Rocket", 32, 0, random(16,-16), 0)
+		ZHRT E 12 A_FaceTarget
+		ZHRT F 12 A_CustomMissile("Rocket", 32, 0, random(16,-16), 0)
+		Goto See
+		ZHRT A 0 A_SetInvulnerable 
+		ZHRT A 0 A_UnSetShootable 
+		ZHRT A 0 A_UnSetSolid 
+		ZHRT A 0 A_PlaySound("dune/active")
+		ZHRT A 1 A_SetTranslucent(0.8, 0)
+		ZHRT A 1 A_SetTranslucent(0.6, 0)
+		ZHRT A 1 A_SetTranslucent(0.4, 0)
+		ZHRT A 1 A_SetTranslucent(0.3, 0)
+		ZHRT A 1 A_SetTranslucent(0.0, 0)
+		ZHRT AABBCCDDAABBCCDDAABBCCDDAABBCCDD 4 A_ExtChase(0,0)
+		ZHRT A 0 A_PlaySound("dune/active")
+		ZHRT C 1 A_SetTranslucent(0.2, 0)
+		ZHRT C 1 A_SetTranslucent(0.4, 0)
+		ZHRT D 1 A_SetTranslucent(0.6, 0)
+		ZHRT D 1 A_SetTranslucent(0.8, 0)
+		ZHRT D 1 A_SetTranslucent(1.0, 0)   
+		ZHRT A 0 A_UnsetInvulnerable
+		ZHRT A 0 A_SetShootable
+		ZHRT A 0 A_SetSolid
+		Goto Missile+22
+	Pain:
+		ZHRT G 3
+		ZHRT G 3 A_Pain
+		ZHRT G 0 A_Jump(128,1)
+		Goto Missile
+		ZHRT G 0       
+		Goto Missile+27
+	Death:
+		ZHRT H 5
+		ZHRT I 5 A_Scream
+		ZHRT J 5 A_NoBlocking
+		ZHRT K 5
+		ZHRT L -1
+		Stop
+	XDeath:
+		ZHRT O 5
+		ZHRT P 5 A_XScream
+		ZHRT Q 5 A_NoBlocking
+		ZHRT RTUV 5
+		ZHRT W -1
+		Stop
+	Raise:
+		ZHRT KJIH 5
+		Goto See
+	}
+}
+
+ACTOR DuneWarriorGrenade
+{
+	Radius 6
+	Height 8
+	Speed 20
+	SEESOUND "dune/bounce"
+	DEATHSOUND "catharsi/shotdth"
+	PROJECTILE
+	-Shootable
+	+DoomBounce
+	+Randomize
+	-NoGravity
+	states
+	{
+	Spawn:
+		THR2 A 4 A_PlaySound("catharsi/thermtick")
+		THR2 B 16 
+		THR2 A 4 A_PlaySound("catharsi/thermtick")
+		THR2 B 16
+		THR2 A 4 A_PlaySound("catharsi/thermtick")
+		THR2 B 16
+		THR2 A 4 A_PlaySound("catharsi/thermtick")  
+		THR2 B 16
+		THR2 A 4 A_PlaySound("catharsi/thermtick")  
+		THR2 B 16  
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 0)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 20)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 40)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 60)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 80)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 100)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 120)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 140)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 160)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 180)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 200)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 220)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 240)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 260)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 280)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 300)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 320)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 340)
+		SDFB BCDE 6 BRIGHT A_Die
+		Loop
+	Death:
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 0)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 20)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 40)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 60)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 80)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 100)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 120)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 140)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 160)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 180)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 200)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 220)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 240)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 260)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 280)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 300)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 320)
+		SDFB B 0 A_CustomMissile("CatharsiBall", 4, 2, 340)
+		SDFB BCDE 6 BRIGHT A_Die
+		Stop
+	}
+}
+
+ACTOR CatharsiBall
+{
+	Radius 6
+	Height 8
+	Speed 15
+	Damage 3
+	RENDERSTYLE Add
+	SEESOUND "catharsi/shotsit"
+	DEATHSOUND "catharsi/shotdth"
+	PROJECTILE
+	+Randomize
+	Decal PlasmaScorchLower
+	states
+	{
+	Spawn:
+		SDFB A 4 BRIGHT
+		Loop
+	Death:
+		SDFB BCDE 6 BRIGHT
+		Stop
+	}
+}
+
 // BOSS
 
-ACTOR GreaterBaron : BaronOfHell 14910
+ACTOR GreaterBaron : ProfaneOne 14910
 {
 	+NoInFighting
 	Health 24000
@@ -732,7 +4251,7 @@ ACTOR RedNemezdaBest : cacodemon 10660
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -752,7 +4271,7 @@ ACTOR RedNemezdaBest : cacodemon 10660
 		MISL BCD 8 A_Mushroom("RedNemezdaIceBall",8)
 		TNT1 A 0 A_NoBlocking
 		TNT1 A -1 A_SetFloorClip
-		stop
+		Stop
 	Raise:
 		HEAD L 8 A_UnSetFloorClip
 		HEAD KJIHG 8
@@ -801,7 +4320,7 @@ ACTOR PainElemental2 replaces PainElemental
 		PAIN G 6
 		PAIN I 0 A_GiveToTarget ("RechargeHealth",10)
 		PAIN G 6 A_Pain
-		goto See
+		Goto See
 	Death:
 		PAIN H 8 bright
 		PAIN H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -809,7 +4328,7 @@ ACTOR PainElemental2 replaces PainElemental
 		PAIN JK 8 bright
 		PAIN L 8 bright A_PainDie       
 		PAIN M 8 bright
-		stop
+		Stop
 	Death.Cube:
 		PAIN H 8 bright
 		PAIN H 0 A_GiveToTarget ("RechargeHealth", 200)
@@ -817,7 +4336,7 @@ ACTOR PainElemental2 replaces PainElemental
 		PAIN JK 8 bright
 		PAIN L 8 bright A_PainDie       
 		PAIN M 8 bright
-		stop
+		Stop
 	Raise:
 		PAIN MLKJIH 8
 		Goto See
@@ -868,7 +4387,7 @@ ACTOR PainElemental3
 		PAIN G 6
 		PAIN I 0 A_GiveToTarget ("RechargeHealth",10)
 		PAIN G 6 A_Pain
-		goto See
+		Goto See
 	Death:
 		PAIN H 8 bright
 		PAIN H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -876,7 +4395,7 @@ ACTOR PainElemental3
 		PAIN JK 8 bright
 		PAIN L 8 bright A_PainDie       
 		PAIN M 8 bright
-		stop
+		Stop
 	Death.Cube:
 		PAIN H 8 bright
 		PAIN H 0 A_GiveToTarget ("RechargeHealth", 200)
@@ -884,7 +4403,7 @@ ACTOR PainElemental3
 		PAIN JK 8 bright
 		PAIN L 8 bright A_PainDie       
 		PAIN M 8 bright
-		stop
+		Stop
 	Raise:
 		PAIN MLKJIH 8
 		Goto See
@@ -1062,7 +4581,7 @@ ACTOR SuperImp 12000
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -1070,7 +4589,7 @@ ACTOR SuperImp 12000
 		TROO K 6
 		TROO L 6 A_NoBlocking
 		TROO M -1
-		stop
+		Stop
 	Death.Cube:
 		TROO H 0 A_GiveToTarget ("RechargeHealth", 60)
 		TROO I 8
@@ -1078,7 +4597,7 @@ ACTOR SuperImp 12000
 		TROO K 6
 		TROO L 6 A_NoBlocking
 		TROO M -1
-		stop
+		Stop
 	XDeath:
 		TROO M 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO N 5
@@ -1087,7 +4606,7 @@ ACTOR SuperImp 12000
 		TROO Q 5 A_NoBlocking
 		TROO RST 5
 		TROO U -1
-		stop
+		Stop
 	Raise:
 		TROO MLKJI 8
 		Goto See
@@ -1176,7 +4695,7 @@ ACTOR PossessedArmor : SuperImp 12001
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -1184,7 +4703,7 @@ ACTOR PossessedArmor : SuperImp 12001
 		TROO K 6
 		TROO L 6 A_NoBlocking
 		TROO M -1
-		stop
+		Stop
 	Death.Cube:
 		TROO H 0 A_GiveToTarget ("RechargeHealth", 60)
 		TROO I 8
@@ -1192,7 +4711,7 @@ ACTOR PossessedArmor : SuperImp 12001
 		TROO K 6
 		TROO L 6 A_NoBlocking
 		TROO M -1
-		stop
+		Stop
 	XDeath:
 		TROO M 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO N 5
@@ -1201,7 +4720,7 @@ ACTOR PossessedArmor : SuperImp 12001
 		TROO Q 5 A_NoBlocking
 		TROO RST 5
 		TROO U -1
-		stop
+		Stop
 	}
 }
 
@@ -1301,7 +4820,7 @@ ACTOR ZombieMan1 : ZombieMan
 		POSS O 5 A_NoBlocking
 		POSS PQRST 5
 		POSS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1582,7 +5101,7 @@ ACTOR ShotgunGuy1 : shotgunguy
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1590,7 +5109,7 @@ ACTOR ShotgunGuy1 : shotgunguy
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1598,7 +5117,7 @@ ACTOR ShotgunGuy1 : shotgunguy
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1606,7 +5125,7 @@ ACTOR ShotgunGuy1 : shotgunguy
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1627,7 +5146,7 @@ ACTOR ShotgunGuy2 : ShotgunGuy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1635,7 +5154,7 @@ ACTOR ShotgunGuy2 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1643,7 +5162,7 @@ ACTOR ShotgunGuy2 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1651,7 +5170,7 @@ ACTOR ShotgunGuy2 : ShotgunGuy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1672,7 +5191,7 @@ ACTOR ShotgunGuy3 : ShotgunGuy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1680,7 +5199,7 @@ ACTOR ShotgunGuy3 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1688,7 +5207,7 @@ ACTOR ShotgunGuy3 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1696,7 +5215,7 @@ ACTOR ShotgunGuy3 : ShotgunGuy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1717,7 +5236,7 @@ ACTOR ShotgunGuy4 : ShotgunGuy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1725,7 +5244,7 @@ ACTOR ShotgunGuy4 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1733,7 +5252,7 @@ ACTOR ShotgunGuy4 : ShotgunGuy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1741,7 +5260,7 @@ ACTOR ShotgunGuy4 : ShotgunGuy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1763,7 +5282,7 @@ ACTOR ShotgunGuy5 : shotgunguy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1771,7 +5290,7 @@ ACTOR ShotgunGuy5 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1779,7 +5298,7 @@ ACTOR ShotgunGuy5 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1787,7 +5306,7 @@ ACTOR ShotgunGuy5 : shotgunguy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1811,7 +5330,7 @@ ACTOR ShotgunGuy6 : shotgunguy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1819,7 +5338,7 @@ ACTOR ShotgunGuy6 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1827,7 +5346,7 @@ ACTOR ShotgunGuy6 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1835,7 +5354,7 @@ ACTOR ShotgunGuy6 : shotgunguy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1862,7 +5381,7 @@ ACTOR ShotgunGuy7 : shotgunguy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1870,7 +5389,7 @@ ACTOR ShotgunGuy7 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1878,7 +5397,7 @@ ACTOR ShotgunGuy7 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1886,7 +5405,7 @@ ACTOR ShotgunGuy7 : shotgunguy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1930,7 +5449,7 @@ ACTOR ShotgunGuy8 : shotgunguy1
 		SPOS G 3
 		SPOS H 0 A_GiveToTarget ("RechargeHealth",10)
 		SPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS H 5
@@ -1938,7 +5457,7 @@ ACTOR ShotgunGuy8 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	Death.Cube:
 		SPOS H 0 A_GiveToTarget ("RechargeHealth", 30)
 		SPOS H 5
@@ -1946,7 +5465,7 @@ ACTOR ShotgunGuy8 : shotgunguy1
 		SPOS J 5 A_NoBlocking
 		SPOS K 5
 		SPOS L -1
-		stop
+		Stop
 	XDeath:
 		SPOS M 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPOS M 5
@@ -1954,7 +5473,7 @@ ACTOR ShotgunGuy8 : shotgunguy1
 		SPOS O 5 A_NoBlocking
 		SPOS PQRST 5
 		SPOS U -1
-		stop
+		Stop
 	}
 }
 
@@ -1975,7 +5494,7 @@ ACTOR ChaingunGuy1 : ChaingunGuy
 		CPOS G 3
 		CPOS G 0 A_GiveToTarget ("RechargeHealth",10)
 		CPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		CPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		CPOS H 5
@@ -2020,7 +5539,7 @@ ACTOR ChaingunGuy2 : ChaingunGuy1
 		CPOS G 3
 		CPOS G 0 A_GiveToTarget ("RechargeHealth",10)
 		CPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		CPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		CPOS H 5
@@ -2065,7 +5584,7 @@ ACTOR ChaingunGuy3 : ChaingunGuy1
 		CPOS G 3
 		CPOS G 0 A_GiveToTarget ("RechargeHealth",10)
 		CPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		CPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		CPOS H 5
@@ -2113,7 +5632,7 @@ ACTOR ChaingunGuy4 : ChaingunGuy1
 		CPOS G 3
 		CPOS G 0 A_GiveToTarget ("RechargeHealth",10)
 		CPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		CPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		CPOS H 5
@@ -2188,7 +5707,7 @@ ACTOR ChaingunGuy5 : ChaingunGuy1
 		CPOS G 3
 		CPOS G 0 A_GiveToTarget ("RechargeHealth",10)
 		CPOS G 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		CPOS H 0 A_GiveToTarget ("CubeAmmo", 1)
 		CPOS H 5
@@ -2230,7 +5749,7 @@ ACTOR DoomImp1 : Doomimp
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -2272,7 +5791,7 @@ ACTOR DoomImp2 : DoomImp1
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -2315,7 +5834,7 @@ ACTOR DoomImp3 : DoomImp1
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -2365,7 +5884,7 @@ ACTOR DoomImp4 : DoomImp1
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -2434,7 +5953,7 @@ ACTOR DoomImp5 : DoomImp1
 		TROO H 2
 		TROO H 0 A_GiveToTarget ("RechargeHealth",10)
 		TROO H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		TROO H 0 A_GiveToTarget ("CubeAmmo", 1)
 		TROO I 8
@@ -2771,13 +6290,13 @@ actor AcidDrop
 	{
 	Spawn:
 		ACIP ABCD 4
-		goto Active
+		Goto Active
 	Active:
 		ACIP D 4
 		loop
 	Death:
 		TNT1 A 0 A_CustomMissile ("BulletPuff", 0, 0)
-		stop
+		Stop
 	}
 }
 
@@ -3187,7 +6706,7 @@ ACTOR CacoDemon1 : Cacodemon
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3220,7 +6739,7 @@ ACTOR CacoDemon2 : CacoDemon1
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3261,7 +6780,7 @@ ACTOR CacoDemon3 : CacoDemon1
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3306,7 +6825,7 @@ ACTOR CacoDemon4 : CacoDemon1
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3366,7 +6885,7 @@ ACTOR CacoDemon5 : CacoDemon1
 		HEAD E 3
 		HEAD E 3 A_Pain
 		HEAD F 6
-		goto See
+		Goto See
 	Death:
 		HEAD G 8
 		HEAD H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3412,7 +6931,7 @@ ACTOR HellKnight1 : HellKnight
 		BOS2 H 2
 		BOS2 I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOS2 H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOS2 I 8
 		BOS2 H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3450,7 +6969,7 @@ ACTOR HellKnight2 : HellKnight1
 		BOS2 H 2
 		BOS2 I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOS2 H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOS2 I 8
 		BOS2 H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3500,7 +7019,7 @@ ACTOR HellKnight3 : HellKnight1
 		BOS2 H 2
 		BOS2 I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOS2 H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOS2 I 8
 		BOS2 H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3561,7 +7080,7 @@ ACTOR HellKnight4 : HellKnight1
 		BOS2 H 2
 		BOS2 I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOS2 H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOS2 I 8
 		BOS2 H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3623,7 +7142,7 @@ ACTOR HellKnight5 : HellKnight1
 		BOS2 H 2
 		BOS2 I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOS2 H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOS2 I 8
 		BOS2 H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3645,7 +7164,7 @@ ACTOR HellKnight5 : HellKnight1
 	}
 }
 
-ACTOR BaronOfHell1 : baronofhell
+ACTOR ProfaneOne1 : ProfaneOne
 {
 	DropItem "Heal2" 45
 	DropItem "Heal4" 25
@@ -3671,7 +7190,7 @@ ACTOR BaronOfHell1 : baronofhell
 	}
 }
 
-ACTOR BaronOfHell2 : BaronOfHell1
+ACTOR ProfaneOne2 : ProfaneOne1
 {
 	Speed 16
 	States
@@ -3683,7 +7202,7 @@ ACTOR BaronOfHell2 : BaronOfHell1
 		BOSS H 2
 		BOSS I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOSS H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOSS I 8
 		BOSS H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3705,7 +7224,7 @@ ACTOR BaronOfHell2 : BaronOfHell1
 	}
 }
 
-ACTOR BaronOfHell3 : BaronOfHell1
+ACTOR ProfaneOne3 : ProfaneOne1
 {
 	Speed 16
 	+MISSILEMORE
@@ -3733,7 +7252,7 @@ ACTOR BaronOfHell3 : BaronOfHell1
 		BOSS H 2
 		BOSS I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOSS H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOSS I 8
 		BOSS H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3755,7 +7274,7 @@ ACTOR BaronOfHell3 : BaronOfHell1
 	}
 }
 
-ACTOR BaronOfHell4 : BaronOfHell1
+ACTOR ProfaneOne4 : ProfaneOne1
 {
 	Speed 16
 	DropItem Medikit 92
@@ -3796,7 +7315,7 @@ ACTOR BaronOfHell4 : BaronOfHell1
 		BOSS H 2
 		BOSS I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOSS H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOSS I 8
 		BOSS H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3818,7 +7337,7 @@ ACTOR BaronOfHell4 : BaronOfHell1
 	}
 }
 
-ACTOR BaronOfHell5 : BaronOfHell1
+ACTOR ProfaneOne5 : ProfaneOne1
 {
 	States
 	{
@@ -3859,7 +7378,7 @@ ACTOR BaronOfHell5 : BaronOfHell1
 		BOSS H 2
 		BOSS I 0 A_GiveToTarget ("RechargeHealth",10)
 		BOSS H 2 A_Pain
-		goto See
+		Goto See
 	Death:
 		BOSS I 8
 		BOSS H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3897,7 +7416,7 @@ ACTOR CyberDemon1 : CyberDemon
 	Pain.Cube:
 		CYBR I 0 A_GiveToTarget ("RechargeHealth",10)
 		CYBR G 10 A_Pain
-		goto See
+		Goto See
 	Death:
 		CYBR H 10
 		CYBR H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -3947,7 +7466,7 @@ ACTOR CyberDemon2 : CyberDemon1
 	Pain.Cube:
 		CYBR I 0 A_GiveToTarget ("RechargeHealth",10)
 		CYBR G 10 A_Pain
-		goto See
+		Goto See
 	Death:
 		CYBR H 10
 		CYBR H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4001,7 +7520,7 @@ ACTOR CyberDemon3 : CyberDemon1
 	Pain.Cube:
 		CYBR I 0 A_GiveToTarget ("RechargeHealth",10)
 		CYBR G 10 A_Pain
-		goto See
+		Goto See
 	Death:
 		CYBR H 10
 		CYBR H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4081,7 +7600,7 @@ ACTOR CyberDemon4 : CyberDemon1
 	Pain.Cube:
 		CYBR I 0 A_GiveToTarget ("RechargeHealth",10)
 		CYBR G 10 A_Pain
-		goto See
+		Goto See
 	Death:
 		CYBR H 10
 		CYBR H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4178,7 +7697,7 @@ ACTOR CyberDemon5 : CyberDemon1
 	Pain.Cube:
 		CYBR I 0 A_GiveToTarget ("RechargeHealth",10)
 		CYBR G 10 A_Pain
-		goto See
+		Goto See
 	Death:
 		CYBR H 10
 		CYBR H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4216,7 +7735,7 @@ ACTOR Revenant1 : revenant
 		SKEL L 5
 		SKEL I 0 A_GiveToTarget ("RechargeHealth",10)
 		SKEL L 5 A_Pain
-		goto See
+		Goto See
 	Death:
 		SKEL LM 7
 		SKEL H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4254,7 +7773,7 @@ ACTOR Revenant2 : Revenant1
 		SKEL L 5
 		SKEL I 0 A_GiveToTarget ("RechargeHealth",10)
 		SKEL L 5 A_Pain
-		goto See
+		Goto See
 	Death:
 		SKEL LM 7
 		SKEL H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4296,7 +7815,7 @@ ACTOR Revenant3 : Revenant1
 		SKEL L 5
 		SKEL I 0 A_GiveToTarget ("RechargeHealth",10)
 		SKEL L 5 A_Pain
-		goto See
+		Goto See
 	Death:
 		SKEL LM 7
 		SKEL H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4346,7 +7865,7 @@ ACTOR Revenant4 : Revenant1
 		SKEL L 5
 		SKEL I 0 A_GiveToTarget ("RechargeHealth",10)
 		SKEL L 5 A_Pain
-		goto See
+		Goto See
 	Death:
 		SKEL LM 7
 		SKEL H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4421,7 +7940,7 @@ ACTOR Revenant5 : Revenant1
 		SKEL L 5
 		SKEL I 0 A_GiveToTarget ("RechargeHealth",10)
 		SKEL L 5 A_Pain
-		goto See
+		Goto See
 	Death:
 		SKEL LM 7
 		SKEL H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4456,7 +7975,7 @@ ACTOR Fatso1 : Fatso
 		FATT J 3
 		FATT I 0 A_GiveToTarget ("RechargeHealth",10)
 		FATT J 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		FATT K 6
 		FATT H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4496,7 +8015,7 @@ ACTOR Fatso2 : Fatso1
 		FATT J 3
 		FATT I 0 A_GiveToTarget ("RechargeHealth",10)
 		FATT J 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		FATT K 6
 		FATT H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4542,7 +8061,7 @@ ACTOR Fatso3 : Fatso1
 		FATT J 3
 		FATT I 0 A_GiveToTarget ("RechargeHealth",10)
 		FATT J 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		FATT K 6
 		FATT H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4590,7 +8109,7 @@ ACTOR Fatso4 : Fatso1
 		FATT J 3
 		FATT I 0 A_GiveToTarget ("RechargeHealth",10)
 		FATT J 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		FATT K 6
 		FATT H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4666,7 +8185,7 @@ ACTOR Fatso5 : Fatso1
 		FATT J 3
 		FATT I 0 A_GiveToTarget ("RechargeHealth",10)
 		FATT J 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		FATT K 6
 		FATT H 0 A_GiveToTarget ("CubeAmmo", 1)
@@ -4937,7 +8456,7 @@ ACTOR SpiderMasterMind1 : SpiderMasterMind
 		SPID I 3
 		SPID I 0 A_GiveToTarget ("RechargeHealth",10)
 		SPID I 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPID H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPID J 20 A_Scream
@@ -4974,7 +8493,7 @@ ACTOR SpiderMasterMind2 : SpiderMasterMind1
 		SPID I 3
 		SPID I 0 A_GiveToTarget ("RechargeHealth",10)
 		SPID I 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPID H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPID J 20 A_Scream
@@ -5013,7 +8532,7 @@ ACTOR SpiderMasterMind3 : SpiderMasterMind1
 		SPID I 3
 		SPID I 0 A_GiveToTarget ("RechargeHealth",10)
 		SPID I 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPID H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPID J 20 A_Scream
@@ -5062,7 +8581,7 @@ ACTOR SpiderMasterMind4 : SpiderMasterMind1
 		SPID I 3
 		SPID I 0 A_GiveToTarget ("RechargeHealth",10)
 		SPID I 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPID H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPID J 20 A_Scream
@@ -5127,7 +8646,7 @@ ACTOR SpiderMasterMind5 : SpiderMasterMind1
 		SPID I 3
 		SPID I 0 A_GiveToTarget ("RechargeHealth",10)
 		SPID I 3 A_Pain
-		goto See
+		Goto See
 	Death:
 		SPID H 0 A_GiveToTarget ("CubeAmmo", 1)
 		SPID J 20 A_Scream
