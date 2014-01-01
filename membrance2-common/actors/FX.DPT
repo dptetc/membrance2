@@ -1,4 +1,8 @@
-actor DoomImpFireBall : doomimpball replaces Doomimpball
+ACTOR MonsterArrow
+{
+// Spawn("MonsterArrow", GetActorX(0), GetActorY(0), ((GetActorZ(0) + (local0 << 16)) + 262144), local1, 0);
+} 
+ACTOR DoomImpFireBall : doomimpball replaces Doomimpball
 {
 	Height 16
 	Radius 21

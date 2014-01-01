@@ -1506,3 +1506,74 @@ BrightMap Sprite ZHRTJ0
 	Map "shaders/brightmaps/DuneWarrior/BMZHRTJ0.png"
 	DisableFullBright
 }
+//Cube
+BrightMap Sprite CUBED1
+{
+	Map "shaders/brightmaps/Cube/BMCUBED1.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBED2D8
+{
+	Map "shaders/brightmaps/Cube/BMCUBED2.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBED3D7
+{
+	Map "shaders/brightmaps/Cube/BMCUBED3.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBED4D6
+{
+	Map "shaders/brightmaps/Cube/BMCUBED4.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBED5
+{
+	Map "shaders/brightmaps/Cube/BMCUBED5.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEE1
+{
+	Map "shaders/brightmaps/Cube/BMCUBEE1.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEE2E8
+{
+	Map "shaders/brightmaps/Cube/BMCUBEE2.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEE3E7
+{
+	Map "shaders/brightmaps/Cube/BMCUBEE3.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEE4E6
+{
+	Map "shaders/brightmaps/Cube/BMCUBEE4.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEE5
+{
+	Map "shaders/brightmaps/Cube/BMCUBEE5.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEF0
+{
+	Map "shaders/brightmaps/Cube/BMCUBEF0.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEG0
+{
+	Map "shaders/brightmaps/Cube/BMCUBEG0.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEH0
+{
+	Map "shaders/brightmaps/Cube/BMCUBEH0.png"
+	DisableFullBright
+}
+BrightMap Sprite CUBEI0
+{
+	Map "shaders/brightmaps/Cube/BMCUBEI0.png"
+	DisableFullBright
+}

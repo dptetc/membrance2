@@ -1,3 +1,18 @@
+//Menu
+menu/activate			_Select	// Activate a new menu
+menu/backup			_Back	// Backup to previous menu
+menu/prompt			_Error	// Activate a prompt "menu"
+menu/cursor			_Move		// Move cursor up/down
+menu/change			dsnull	// Select new value for option
+menu/invalid			_Error		// Menu not available
+menu/dismiss			_Back	// Dismiss a prompt message
+menu/choose			_Select	// Choose a menu item
+menu/clear			_Back	// Close top menu
+
+SZero SZero
+
+$random menu/quit1 { SZero }
+$random menu/quit2 { SZero }
 
 /* VOICE */
 
@@ -311,20 +326,6 @@ world/defaultterrain		dsdefter
 
 TRUKIDLE TRUKIDLE
 
-/* MENU */
-
-menu/activate				dscursor
-menu/backup					dscursor
-menu/prompt					dscursor
-menu/cursor					dscursor
-menu/change					dscursor
-menu/invalid				dscursor
-menu/dismiss				dscursor
-menu/choose					dscursor
-menu/clear					dscursor
-menu/quit1					dscursor
-menu/quit2					dscursor
-
 /* WEAPONS */
 
 Weapons/RailgunFire			NEWRAILF
@@ -392,3 +393,10 @@ Steam/Loop	STEMLOOP
 Steam/Fire	STEMFIRE
 
 NOAMMO NOAMMO
+
+monster/cubsit dscubsit
+weapons/bounc1 dsbounc1
+monster/cubfly dscubfly
+monster/cubdth dscubdth
+weapons/firsfi dsfirsfi
+weapons/maceex dsmaceex
